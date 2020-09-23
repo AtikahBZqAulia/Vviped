@@ -1,30 +1,48 @@
 package com.example.vviped
 
-import android.os.Bundle
-import com.google.android.material.floatingactionbutton.FloatingActionButton
-import com.google.android.material.snackbar.Snackbar
-import com.google.android.material.tabs.TabLayout
-import androidx.viewpager.widget.ViewPager
 import androidx.appcompat.app.AppCompatActivity
-import android.view.Menu
+import android.os.Bundle
 import android.view.MenuItem
-import com.example.vviped.ui.main.SectionsPagerAdapter
+import android.widget.TextView
+import androidx.fragment.app.Fragment
+import com.example.vviped.ui.home.HomeFragment
+import com.example.vviped.ui.profile.ProfileFragment
+import com.example.vviped.ui.search.SearchFragment
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemSelectedListener {
+
+    override fun onNavigationItemSelected(item: MenuItem): Boolean {
+        when(item.itemId) {
+            R.id.navigation_home -> {
+                var homeFragment = HomeFragment()
+                supportFragmentManager.beginTransaction()
+                    .replace(R.id.fragment_layout, homeFragment).commit()
+                return true
+            }
+            R.id.navigation_search -> {
+                var searchFragment = SearchFragment()
+                supportFragmentManager.beginTransaction()
+                    .replace(R.id.fragment_layout, searchFragment).commit()
+                return true
+            }
+            R.id.navigation_profile -> {
+                var profileFragment = ProfileFragment()
+                supportFragmentManager.beginTransaction()
+                    .replace(R.id.fragment_layout, profileFragment).commit()
+                return true
+            }
+            else -> return false
+
+        }
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        val sectionsPagerAdapter = SectionsPagerAdapter(this, supportFragmentManager)
-        val viewPager: ViewPager = findViewById(R.id.view_pager)
-        viewPager.adapter = sectionsPagerAdapter
-        val tabs: TabLayout = findViewById(R.id.tabs)
-        tabs.setupWithViewPager(viewPager)
-        val fab: FloatingActionButton = findViewById(R.id.fab)
 
-        fab.setOnClickListener { view ->
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                    .setAction("Action", null).show()
-        }
+        val navView: BottomNavigationView = findViewById(R.id.nav_view)
+        navView.setOnNavigationItemSelectedListener(this)
+
     }
 }
