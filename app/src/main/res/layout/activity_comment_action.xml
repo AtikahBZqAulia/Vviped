@@ -3,20 +3,17 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".comment_action">
+    android:layout_height="match_parent">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appBar_Layout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        >
+        android:layout_height="wrap_content">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="horizontal"
-            />
+            android:orientation="horizontal" />
 
         <androidx.appcompat.widget.Toolbar
             android:layout_width="match_parent"
@@ -29,8 +26,8 @@
                 android:layout_height="wrap_content"
                 android:text="Choose action"
                 android:textColor="@color/colorBlack"
-                android:textStyle="bold"
-                android:textSize="18dp"/>
+                android:textSize="18dp"
+                android:textStyle="bold" />
 
         </androidx.appcompat.widget.Toolbar>
 
@@ -57,41 +54,38 @@
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_margin="10dp"
-                    android:src="@drawable/profilpic"/>
+                    android:src="@drawable/profilpic" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
                     android:layout_marginRight="10dp"
-                    android:padding="5dp"
                     android:orientation="vertical"
-                    >
+                    android:padding="5dp">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="akunjahat"
                         android:textColor="@color/colorBlack"
-                        android:textStyle="bold"/>
+                        android:textStyle="bold" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="you are stupid"
-                        android:textColor="@color/colorBlack"/>
+                        android:textColor="@color/colorBlack" />
 
                 </LinearLayout>
             </LinearLayout>
-
 
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:orientation="horizontal"
-                >
+                android:orientation="horizontal">
 
                 <Button
                     android:id="@+id/hide_button"
