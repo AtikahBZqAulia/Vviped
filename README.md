@@ -8,4 +8,16 @@ Members :
 - Maura Qoonitah
 
 Screenshots from emulator :
+
+Intro Layout
 ![Intro Layout](https://github.com/AtikahBZqAulia/Vviped/blob/Sprint-2/photo_2020-09-24_10-34-01.jpg)
+Login Layout
+![Login Layout](https://github.com/AtikahBZqAulia/Vviped/blob/Sprint-2/photo_2020-09-24_10-34-05.jpg)
+Profile Layout
+![Profile Layout](https://github.com/AtikahBZqAulia/Vviped/blob/Sprint-2/photo_2020-09-24_10-34-08.jpg)
+Feeds Layout
+![Feeds Layout](https://github.com/AtikahBZqAulia/Vviped/blob/Sprint-2/photo_2020-09-24_10-34-14.jpg)
+Comments Layout
+![Comments Layout](https://github.com/AtikahBZqAulia/Vviped/blob/Sprint-2/photo_2020-09-24_10-34-16.jpg)
+Action Layout
+![Action Layout](https://github.com/AtikahBZqAulia/Vviped/blob/Sprint-2/photo_2020-09-24_10-34-19.jpg)
