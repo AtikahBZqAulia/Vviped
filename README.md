@@ -14,13 +14,13 @@ Members :
 
 #### Intro Layout
 <img src="https://github.com/AtikahBZqAulia/Vviped/blob/Sprint-2/photo_2020-09-24_10-34-01.jpg" width="300" />
-#### Login Layout
+Login Layout
 <img src="https://github.com/AtikahBZqAulia/Vviped/blob/Sprint-2/photo_2020-09-24_10-34-05.jpg" width="300" />
-#### Profile Layout
+Profile Layout
 <img src="https://github.com/AtikahBZqAulia/Vviped/blob/Sprint-2/photo_2020-09-24_10-34-08.jpg" width="300" />
-#### Feeds Layout
+Feeds Layout
 <img src="https://github.com/AtikahBZqAulia/Vviped/blob/Sprint-2/photo_2020-09-24_10-34-14.jpg" width="300" />
-#### Comments Layout
+Comments Layout
 <img src="https://github.com/AtikahBZqAulia/Vviped/blob/Sprint-2/photo_2020-09-24_10-34-16.jpg" width="300" />
-#### Action Layout
+Action Layout
 <img src="https://github.com/AtikahBZqAulia/Vviped/blob/Sprint-2/photo_2020-09-24_10-34-19.jpg" width="300" />
