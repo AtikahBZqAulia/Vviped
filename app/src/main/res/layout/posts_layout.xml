@@ -61,6 +61,16 @@
                 android:textColor="@color/colorBlack" />
 
 
+<<<<<<< HEAD
+            <TextView
+                android:id="@+id/comments_post"
+                android:layout_width="148dp"
+                android:layout_height="match_parent"
+                android:text="200 Comments"
+                android:textAlignment="textEnd"
+                android:textColor="@color/colorBlack"
+                android:textSize="13dp" />
+=======
 
             <TextView
                 android:id="@+id/comments_post"
@@ -70,6 +80,7 @@
                 android:textAlignment="textEnd"
                 android:textSize="13dp"
                 android:textColor="@color/colorBlack" />
+>>>>>>> 2482bde56db7d78386b5c5362cdfd812072d25c2
         </LinearLayout>
 
         <TextView

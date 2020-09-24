@@ -52,6 +52,10 @@
                     android:src="@drawable/profilpic"/>
 
                 <LinearLayout
+<<<<<<< HEAD
+                    android:id="@+id/comment_act"
+=======
+>>>>>>> 2482bde56db7d78386b5c5362cdfd812072d25c2
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
@@ -59,6 +63,43 @@
                     android:padding="5dp"
                     android:orientation="vertical">
 
+<<<<<<< HEAD
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="221dp"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <TextView
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="akunjahat"
+                                android:textColor="@color/colorBlack"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="you are stupid"
+                                android:textColor="@color/colorBlack" />
+
+                        </LinearLayout>
+
+                        <ImageView
+                            android:id="@+id/imageView3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/alert"
+                            >
+
+                        </ImageView>
+                    </LinearLayout>
+=======
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -71,6 +112,7 @@
                         android:layout_height="wrap_content"
                         android:text="you are stupid"
                         android:textColor="@color/colorBlack"/>
+>>>>>>> 2482bde56db7d78386b5c5362cdfd812072d25c2
 
                 </LinearLayout>
             </LinearLayout>
