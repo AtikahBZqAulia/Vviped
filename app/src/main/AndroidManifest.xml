@@ -9,14 +9,31 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+<<<<<<< HEAD
+        <activity android:name=".comment_action">
+
+        </activity>
+        <activity android:name=".LoginActivity"></activity>
+        <activity android:name=".activity_landing">
+=======
         <activity android:name=".ui.CommentsActivity"></activity>
         <activity android:name=".MainActivity">
+>>>>>>> 2482bde56db7d78386b5c5362cdfd812072d25c2
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+<<<<<<< HEAD
+        <activity android:name=".ui.CommentsActivity" />
+        <activity android:name=".MainActivity"></activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+=======
+>>>>>>> 2482bde56db7d78386b5c5362cdfd812072d25c2
     </application>
 
 </manifest>
