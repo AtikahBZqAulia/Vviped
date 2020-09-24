@@ -13,7 +13,8 @@ Members :
 ### Screenshots from emulator :
 
 #### Intro Layout
-![Intro Layout](https://github.com/AtikahBZqAulia/Vviped/blob/Sprint-2/photo_2020-09-24_10-34-01.jpg)
+![Intro Layout]()
+<img src="https://github.com/AtikahBZqAulia/Vviped/blob/Sprint-2/photo_2020-09-24_10-34-01.jpg" width="200" />
 #### Login Layout
 ![Login Layout](https://github.com/AtikahBZqAulia/Vviped/blob/Sprint-2/photo_2020-09-24_10-34-05.jpg)
 #### Profile Layout
