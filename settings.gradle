@@ -1,2 +1,7 @@
+<<<<<<< HEAD
 include ':app'
 rootProject.name = "vviped"
+=======
+include ':app'
+rootProject.name = "vviped"
+>>>>>>> 2482bde56db7d78386b5c5362cdfd812072d25c2
