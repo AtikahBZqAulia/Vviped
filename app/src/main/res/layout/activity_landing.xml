@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center_vertical"
+    android:orientation="vertical"
+    android:padding="20dp"
+    tools:context=".activity_landing">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="139dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="150dp"
+        app:srcCompat="@drawable/logo_full"
+        android:contentDescription="@string/title" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:fontFamily="@font/cabin_medium"
+        android:gravity="center_horizontal"
+        android:text="@string/title"
+        android:textColor="#FF555555"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/sign_ig_link"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="50dp"
+        android:padding="15dp"
+        android:text="@string/login_ig"
+        android:textAllCaps="false"
+        android:background="@drawable/button"
+        android:textColor="@color/colorWhite"
+        android:textSize="18sp" />
+
+
+</LinearLayout>

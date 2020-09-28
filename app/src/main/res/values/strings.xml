@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">VVIPED</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">fragment for search</string>
+    <string name="tab_text_1">tab1</string>
+    <string name="tab_text_2">tab2</string>
+    <string name="tab_text_3">tab3</string>
+    <string name="title">Filtering hate speech and offensive comments to your account</string>
+    <string name="login_ig">Sign in with Instagram</string>
+    <string name="tagline">Log In to your Instagram account and get ready to blabla the anxiety!</string>
+
+</resources>
