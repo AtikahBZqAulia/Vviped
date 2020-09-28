@@ -1,4 +1,4 @@
-#Sun Sep 27 00:00:50 ICT 2020
-base.0=C\:\\Users\\User\\AndroidStudioProjects\\vviped_mora\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
+#Mon Sep 28 11:04:45 ICT 2020
+base.0=C\:\\Users\\LENOVO\\AndroidStudioProjects\\vviped_mora-master\\vviped_mora-master\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
 path.0=classes.dex
 renamed.0=classes.dex
