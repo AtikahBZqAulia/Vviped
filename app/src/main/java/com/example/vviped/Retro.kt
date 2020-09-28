@@ -1,4 +1,4 @@
-package com.example.serius
+package com.example.vviped
 
 import com.google.gson.GsonBuilder
 import retrofit2.Retrofit
