@@ -8,5 +8,6 @@
     <string name="title">Filtering hate speech and offensive comments to your account</string>
     <string name="login_ig">Sign in with Instagram</string>
     <string name="tagline">Log In to your Instagram account and get ready to blabla the anxiety!</string>
+    <string name="search">Search for username</string>
 
 </resources>
