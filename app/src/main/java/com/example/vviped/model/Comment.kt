@@ -1,4 +1,4 @@
-package com.example.serius.model
+package com.example.vviped.model
 
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
