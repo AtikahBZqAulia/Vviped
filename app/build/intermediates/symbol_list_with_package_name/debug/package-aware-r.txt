@@ -1725,6 +1725,7 @@ id chip2
 id chip3
 id chip_group
 id chronometer
+id circleImageView
 id clear_text
 id clip_horizontal
 id clip_vertical
@@ -1734,6 +1735,7 @@ id commentsLayout
 id comments_post
 id confirm_button
 id constraintLayout
+id constraintLayout5
 id container
 id content
 id contentPanel
@@ -1810,7 +1812,6 @@ id ignore
 id ignoreRequest
 id image
 id imageView
-id imageView3
 id imagepost_layout
 id info
 id invisible
@@ -1826,8 +1827,12 @@ id likes_post
 id line1
 id line3
 id linear
+id linearLayout
+id linearLayout2
+id linearLayout3
 id listMode
 id list_item
+id login_activity
 id login_button
 id logoapp
 id logovviped_w
@@ -1993,6 +1998,7 @@ id textEnd
 id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
+id textView
 id text_input_end_icon
 id text_input_start_icon
 id textinput_counter
