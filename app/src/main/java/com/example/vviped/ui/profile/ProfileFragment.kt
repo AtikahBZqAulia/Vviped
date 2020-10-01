@@ -47,6 +47,11 @@ class ProfileFragment : Fragment() {
             // set the custom adapter to the RecyclerView
             adapter = GridPhotosAdapter()
         }
-
+        setting_btn.setOnClickListener{
+                requireActivity().run{
+                    startActivity(Intent(this, Setting::class.java))
+                    finish()
+                }
+        }
     }
 }
