@@ -13,6 +13,7 @@ import com.example.vviped.R
 import com.example.vviped.model.GridPhotosAdapter
 import com.example.vviped.model.PostAdapter
 import com.example.vviped.ui.CommentsActivity
+import com.example.vviped.Setting
 import kotlinx.android.synthetic.main.fragment_home.*
 import kotlinx.android.synthetic.main.fragment_profile.*
 
@@ -47,6 +48,11 @@ class ProfileFragment : Fragment() {
             // set the custom adapter to the RecyclerView
             adapter = GridPhotosAdapter()
         }
-
+        setting_btn.setOnClickListener{
+                requireActivity().run{
+                    startActivity(Intent(this, Setting::class.java))
+                    finish()
+                }
+        }
     }
 }
