@@ -11,31 +11,9 @@ import com.example.vviped.ui.search.SearchFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemSelectedListener {
-
-    override fun onNavigationItemSelected(item: MenuItem): Boolean {
-        when(item.itemId) {
-            R.id.navigation_home -> {
-                var homeFragment = HomeFragment()
-                supportFragmentManager.beginTransaction()
-                    .replace(R.id.fragment_layout, homeFragment).commit()
-                return true
-            }
-            R.id.navigation_search -> {
-                var searchFragment = SearchFragment()
-                supportFragmentManager.beginTransaction()
-                    .replace(R.id.fragment_layout, searchFragment).commit()
-                return true
-            }
-            R.id.navigation_profile -> {
-                var profileFragment = ProfileFragment()
-                supportFragmentManager.beginTransaction()
-                    .replace(R.id.fragment_layout, profileFragment).commit()
-                return true
-            }
-            else -> return false
-
-        }
-    }
+    private var homeFragment = HomeFragment()
+    private var searchFragment = SearchFragment()
+    private var profileFragment = ProfileFragment()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -45,4 +23,33 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
         navView.setOnNavigationItemSelectedListener(this)
 
     }
+
+    override fun onStart() {
+        super.onStart()
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.fragment_layout, homeFragment).commit()
+    }
+
+    override fun onNavigationItemSelected(item: MenuItem): Boolean {
+        when(item.itemId) {
+            R.id.navigation_home -> {
+                supportFragmentManager.beginTransaction()
+                    .replace(R.id.fragment_layout, homeFragment).commit()
+                return true
+            }
+            R.id.navigation_search -> {
+                supportFragmentManager.beginTransaction()
+                    .replace(R.id.fragment_layout, searchFragment).commit()
+                return true
+            }
+            R.id.navigation_profile -> {
+                supportFragmentManager.beginTransaction()
+                    .replace(R.id.fragment_layout, profileFragment).commit()
+                return true
+            }
+            else -> return false
+
+        }
+    }
+
 }
