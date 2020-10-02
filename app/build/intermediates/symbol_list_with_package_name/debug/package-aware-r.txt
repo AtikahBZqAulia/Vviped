@@ -1580,6 +1580,7 @@ drawable ic_person_black_24dp
 drawable ic_search_black_24dp
 drawable inputs_background
 drawable logo_full
+drawable logo_vviped_background
 drawable logo_w
 drawable logoapp
 drawable material_ic_calendar_black_24dp
@@ -1725,7 +1726,6 @@ id chip2
 id chip3
 id chip_group
 id chronometer
-id circleImageView
 id clear_text
 id clip_horizontal
 id clip_vertical
@@ -1733,9 +1733,11 @@ id collapseActionView
 id comment_act
 id commentsLayout
 id comments_post
+id comments_profpic
+id comments_text
+id comments_uname
 id confirm_button
 id constraintLayout
-id constraintLayout5
 id container
 id content
 id contentPanel
@@ -1800,6 +1802,7 @@ id graph
 id graph_wrap
 id group_divider
 id groups
+id hate_speech_on_off
 id hide_button
 id hideable
 id home
@@ -1828,7 +1831,6 @@ id line1
 id line3
 id linear
 id linearLayout
-id linearLayout2
 id linearLayout3
 id listMode
 id list_item
@@ -1888,6 +1890,7 @@ id num_followers
 id num_followings
 id num_posts
 id off
+id offensive_words_on_off
 id on
 id outline
 id packed
@@ -1913,6 +1916,7 @@ id publisher_post
 id radio
 id ratio
 id rectangles
+id recycleView_comments
 id recycleView_home
 id recycleView_profile_gridphotos
 id reverseSawtooth
@@ -1930,13 +1934,13 @@ id scroll
 id scrollIndicatorDown
 id scrollIndicatorUp
 id scrollView
-id scrollView_profile
 id scrollable
 id search_badge
 id search_bar
 id search_button
 id search_close_btn
 id search_edit_frame
+id search_edit_text
 id search_go_btn
 id search_mag_icon
 id search_plate
@@ -1945,6 +1949,7 @@ id search_voice_btn
 id section_label
 id select_dialog_listview
 id selected
+id setting_btn
 id shortcut
 id showCustom
 id showHome
@@ -1998,7 +2003,6 @@ id textEnd
 id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
-id textView
 id text_input_end_icon
 id text_input_start_icon
 id textinput_counter
@@ -2106,6 +2110,8 @@ layout activity_comments
 layout activity_landing
 layout activity_login
 layout activity_main
+layout activity_setting
+layout comment_layout
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
@@ -2193,6 +2199,9 @@ menu bottom_nav_menu
 mipmap ic_launcher
 mipmap ic_launcher_foreground
 mipmap ic_launcher_round
+mipmap logo_vviped
+mipmap logo_vviped_foreground
+mipmap logo_vviped_round
 plurals mtrl_badge_content_description
 string abc_action_bar_home_description
 string abc_action_bar_up_description
@@ -2280,12 +2289,15 @@ string path_password_eye
 string path_password_eye_mask_strike_through
 string path_password_eye_mask_visible
 string path_password_strike_through
+string search
 string search_menu_title
+string settings
 string status_bar_notification_info_overflow
 string tab_text_1
 string tab_text_2
 string tab_text_3
 string tagline
+string text_filter__comment_setting
 string title
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light
