@@ -4,9 +4,13 @@
 Problem : These days cyber bullying has led to several severe mental health issues and suicide even worse.
 Idea / Solution : An app which aims to promote anti cyber-bullying especially in social media by displaying only good or neutral comments and automatically remove any comments which contains hate speech or offensive words.
 Members :
-- Atikah Aulia Putri
+- Atikah Aulia Putri (Team leader)
 - Octarina Salsabila
 - Maura Qoonitah
+
+[Click here to see our product backlogs](https://www.notion.so/0cb3638b1c284c1eb3f79f7f59e96a30?v=8cd37891c4d14f6fa1b0f9ca61ecf47a)
+
+[Click here to see our sprint backlogs](https://github.com/AtikahBZqAulia/Vviped/milestones)
 
 [Click here to see VVIPED-Backend Repo](https://github.com/AtikahBZqAulia/Vviped-Backend/)
 
