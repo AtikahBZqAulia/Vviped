@@ -1,7 +1,7 @@
 package com.example.vviped.model
 
-class CommentItem(
+data class CommentItem(
     val imagecomment : Int,
-    val unamecomment : String,
-    val textcomment : String
+    var unamecomment : String,
+    var textcomment : String
 )
