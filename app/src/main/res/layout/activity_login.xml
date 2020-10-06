@@ -18,19 +18,19 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.049"
+        app:layout_constraintVertical_bias="0.252"
         app:srcCompat="@drawable/logoapp" />
 
     <TextView
         android:id="@+id/tagline"
         android:layout_width="300dp"
-        android:layout_height="57dp"
+        android:layout_height="wrap_content"
         android:fontFamily="@font/cabin_medium"
         android:lineSpacingExtra="5dp"
         android:text="@string/tagline"
         android:textAlignment="center"
         android:textColor="#FF555555"
-        android:textSize="16sp"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.503"
@@ -38,32 +38,37 @@
         app:layout_constraintTop_toBottomOf="@+id/logoapp"
         app:layout_constraintVertical_bias="0.0" />
 
+
     <EditText
         android:id="@+id/email_login"
+        android:fontFamily="@font/cabin_medium"
         android:layout_width="280dp"
         android:layout_height="wrap_content"
-        android:autofillHints=""
         android:background="@drawable/inputs_background"
         android:hint="Email or username"
+        android:drawableRight="@drawable/ic_person_black_24dp"
         android:inputType="textEmailAddress"
-        android:padding="10dp"
+        android:padding="13dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tagline"
-        app:layout_constraintVertical_bias="0.04"></EditText>
+        app:layout_constraintVertical_bias="0.186"
+
+
+        ></EditText>
 
     <EditText
         android:id="@+id/password_login"
+        android:fontFamily="@font/cabin_medium"
         android:layout_width="280dp"
         android:layout_height="wrap_content"
-        android:autofillHints=""
         android:background="@drawable/inputs_background"
+        android:drawableRight="@android:drawable/ic_lock_lock"
         android:hint="Password"
         android:inputType="textPassword"
         android:padding="10dp"
-        android:selectAllOnFocus="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.503"
@@ -74,9 +79,11 @@
 
     <Button
         android:id="@+id/login_button"
+        android:fontFamily="@font/cabin_medium"
         android:layout_width="280dp"
         android:layout_height="wrap_content"
         android:background="@drawable/button"
+
         android:text="Log In"
         android:textAllCaps="false"
         android:textColor="@color/colorWhite"
@@ -85,6 +92,10 @@
         app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/password_login"
-        app:layout_constraintVertical_bias="0.04"
-        tools:ignore="MissingConstraints"></Button>
+        app:layout_constraintVertical_bias="0.094"
+        tools:ignore="MissingConstraints">
+
+    </Button>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
