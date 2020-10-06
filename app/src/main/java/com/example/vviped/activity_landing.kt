@@ -13,5 +13,8 @@ class activity_landing : AppCompatActivity() {
         sign_ig_link.setOnClickListener{
         startActivity(Intent(this, LoginActivity::class.java))
     }
+        btn_login_twitter.setOnClickListener{
+            startActivity(Intent(this, com.example.vviped.ui.twitter.LandingActivity::class.java))
+        }
 }
 }

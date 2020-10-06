@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-ldltr-v21\\values-ldltr-v21.xml",
+            "outputFile": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-ldltr-v21\\values-ldltr-v21.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Octarina Salsa\\.gradle\\caches\\transforms-2\\files-2.1\\284a2a218f7f6f43d29c2ab8e18ab1ed\\appcompat-1.2.0\\res\\values-ldltr-v21\\values-ldltr-v21.xml",
+                    "source": "C:\\Users\\User\\.gradle\\caches\\transforms-2\\files-2.1\\284a2a218f7f6f43d29c2ab8e18ab1ed\\appcompat-1.2.0\\res\\values-ldltr-v21\\values-ldltr-v21.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

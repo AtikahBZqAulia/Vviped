@@ -1,398 +1,446 @@
 [
     {
-        "merged": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_search_black_24dp.png.flat",
-        "source": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_search_black_24dp.png"
+        "merged": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\intermediates\\res\\merged\\debug\\drawable_logoapp.png.flat",
+        "source": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\src\\main\\res\\drawable\\logoapp.png"
     },
     {
-        "merged": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_launcher_background.png.flat",
-        "source": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_launcher_background.png"
+        "merged": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\intermediates\\res\\merged\\debug\\drawable_button.xml.flat",
+        "source": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\src\\main\\res\\drawable\\button.xml"
     },
     {
-        "merged": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_launcher_background.png.flat",
-        "source": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_launcher_background.png"
+        "merged": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_logo_vviped_background.png.flat",
+        "source": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\logo_vviped_background.png"
     },
     {
-        "merged": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_home_black_24dp.png.flat",
-        "source": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_home_black_24dp.png"
+        "merged": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_logo_vviped.png.flat",
+        "source": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\src\\main\\res\\mipmap-mdpi\\logo_vviped.png"
     },
     {
-        "merged": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_launcher_background.png.flat",
-        "source": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_launcher_background.png"
+        "merged": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_launcher_background.png.flat",
+        "source": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_launcher_background.png"
     },
     {
-        "merged": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_search_black_24dp.png.flat",
-        "source": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_search_black_24dp.png"
+        "merged": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\intermediates\\res\\merged\\debug\\layout-land_activity_login.xml.flat",
+        "source": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\src\\main\\res\\layout-land\\activity_login.xml"
     },
     {
-        "merged": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_comments.xml.flat",
-        "source": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\src\\main\\res\\layout\\activity_comments.xml"
+        "merged": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_twitter_logo_whiteonblue.png.flat",
+        "source": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_twitter_logo_whiteonblue.png"
     },
     {
-        "merged": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_logo_vviped_foreground.png.flat",
-        "source": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\src\\main\\res\\mipmap-xhdpi\\logo_vviped_foreground.png"
+        "merged": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_dashboard_black_24dp.png.flat",
+        "source": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_dashboard_black_24dp.png"
     },
     {
-        "merged": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_search_black_24dp.png.flat",
-        "source": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_search_black_24dp.png"
+        "merged": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_launcher_background.png.flat",
+        "source": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_launcher_background.png"
     },
     {
-        "merged": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
-        "source": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+        "merged": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_person_black_24dp.png.flat",
+        "source": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_person_black_24dp.png"
     },
     {
-        "merged": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_logo_vviped_foreground.png.flat",
-        "source": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\src\\main\\res\\mipmap-mdpi\\logo_vviped_foreground.png"
+        "merged": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_person_black_24dp.png.flat",
+        "source": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_person_black_24dp.png"
     },
     {
-        "merged": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_person_black_24dp.png.flat",
-        "source": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_person_black_24dp.png"
+        "merged": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
     },
     {
-        "merged": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher.png.flat",
-        "source": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
+        "merged": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\intermediates\\res\\merged\\debug\\drawable_logo_full.png.flat",
+        "source": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\src\\main\\res\\drawable\\logo_full.png"
     },
     {
-        "merged": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
+        "merged": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_logo_vviped.png.flat",
+        "source": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\src\\main\\res\\mipmap-xhdpi\\logo_vviped.png"
     },
     {
-        "merged": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher.png.flat",
-        "source": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
+        "merged": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\intermediates\\res\\merged\\debug\\layout_profilphotosgrid_layout.xml.flat",
+        "source": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\src\\main\\res\\layout\\profilphotosgrid_layout.xml"
     },
     {
-        "merged": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_dashboard_black_24dp.png.flat",
-        "source": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_dashboard_black_24dp.png"
+        "merged": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_search_black_24dp.png.flat",
+        "source": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_search_black_24dp.png"
     },
     {
-        "merged": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher_round.png.flat",
-        "source": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.png"
+        "merged": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\intermediates\\res\\merged\\debug\\drawable_logo_w.png.flat",
+        "source": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\src\\main\\res\\drawable\\logo_w.png"
     },
     {
-        "merged": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_notifications_black_24dp.xml.flat",
-        "source": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_notifications_black_24dp.xml"
+        "merged": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_search_black_24dp.xml.flat",
+        "source": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_search_black_24dp.xml"
     },
     {
-        "merged": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_home_black_24dp.xml.flat",
-        "source": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_home_black_24dp.xml"
+        "merged": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_twitter_logo_whiteonblue.png.flat",
+        "source": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_twitter_logo_whiteonblue.png"
     },
     {
-        "merged": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\build\\intermediates\\res\\merged\\debug\\layout_posts_layout.xml.flat",
-        "source": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\src\\main\\res\\layout\\posts_layout.xml"
+        "merged": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_foreground.png"
     },
     {
-        "merged": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_search.xml.flat",
-        "source": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\src\\main\\res\\layout\\fragment_search.xml"
+        "merged": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\intermediates\\res\\merged\\debug\\layout_posts_layout.xml.flat",
+        "source": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\src\\main\\res\\layout\\posts_layout.xml"
     },
     {
-        "merged": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_notifications_black_24dp.png.flat",
-        "source": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_notifications_black_24dp.png"
+        "merged": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\build\\intermediates\\res\\merged\\debug\\layout-land_activity_login.xml.flat",
-        "source": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\src\\main\\res\\layout-land\\activity_login.xml"
+        "merged": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_home_black_24dp.png.flat",
+        "source": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_home_black_24dp.png"
     },
     {
-        "merged": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_notifications_black_24dp.png.flat",
-        "source": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_notifications_black_24dp.png"
+        "merged": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_dashboard_black_24dp.png.flat",
+        "source": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_dashboard_black_24dp.png"
     },
     {
-        "merged": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_ic_launcher_foreground.xml.flat",
-        "source": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\src\\main\\res\\drawable-v24\\ic_launcher_foreground.xml"
+        "merged": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_logo_vviped_round.png.flat",
+        "source": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\src\\main\\res\\mipmap-xhdpi\\logo_vviped_round.png"
     },
     {
-        "merged": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher_foreground.png.flat",
-        "source": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_foreground.png"
+        "merged": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_dashboard_black_24dp.png.flat",
+        "source": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_dashboard_black_24dp.png"
     },
     {
-        "merged": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_dashboard_black_24dp.png.flat",
-        "source": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_dashboard_black_24dp.png"
+        "merged": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_person_black_24dp.png.flat",
+        "source": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_person_black_24dp.png"
     },
     {
-        "merged": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_dashboard_black_24dp.png.flat",
-        "source": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_dashboard_black_24dp.png"
+        "merged": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_home_black_24dp.xml.flat",
+        "source": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_home_black_24dp.xml"
     },
     {
-        "merged": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_dashboard_black_24dp.png.flat",
-        "source": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_dashboard_black_24dp.png"
+        "merged": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21_alert_icon.png.flat",
+        "source": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\src\\main\\res\\drawable-v21\\alert_icon.png"
     },
     {
-        "merged": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_person_black_24dp.xml.flat",
-        "source": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_person_black_24dp.xml"
+        "merged": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_profile.xml.flat",
+        "source": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\src\\main\\res\\layout\\fragment_profile.xml"
     },
     {
-        "merged": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_logo_vviped_background.png.flat",
-        "source": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\logo_vviped_background.png"
+        "merged": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_notifications_black_24dp.png.flat",
+        "source": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_notifications_black_24dp.png"
     },
     {
-        "merged": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_logo_vviped_background.png.flat",
-        "source": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\logo_vviped_background.png"
+        "merged": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\intermediates\\res\\merged\\debug\\menu_bottom_nav_menu.xml.flat",
+        "source": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\src\\main\\res\\menu\\bottom_nav_menu.xml"
     },
     {
-        "merged": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\build\\intermediates\\res\\merged\\debug\\drawable_button.xml.flat",
-        "source": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\src\\main\\res\\drawable\\button.xml"
+        "merged": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_setting.xml.flat",
+        "source": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\src\\main\\res\\layout\\activity_setting.xml"
     },
     {
-        "merged": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher.png.flat",
-        "source": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
+        "merged": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_launcher_background.png.flat",
+        "source": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_launcher_background.png"
     },
     {
-        "merged": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\build\\intermediates\\res\\merged\\debug\\font_cabin_medium.xml.flat",
-        "source": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\src\\main\\res\\font\\cabin_medium.xml"
+        "merged": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_landing.xml.flat",
+        "source": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\src\\main\\res\\layout\\activity_landing.xml"
     },
     {
-        "merged": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_logo_vviped_round.png.flat",
-        "source": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\src\\main\\res\\mipmap-xhdpi\\logo_vviped_round.png"
+        "merged": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_foreground.png"
     },
     {
-        "merged": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_person_black_24dp.png.flat",
-        "source": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_person_black_24dp.png"
+        "merged": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_person_black_24dp.xml.flat",
+        "source": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_person_black_24dp.xml"
     },
     {
-        "merged": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher.png.flat",
-        "source": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
+        "merged": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_search_black_24dp.png.flat",
+        "source": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_search_black_24dp.png"
     },
     {
-        "merged": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_person_black_24dp.png.flat",
-        "source": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_person_black_24dp.png"
+        "merged": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_logo_vviped_background.png.flat",
+        "source": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\logo_vviped_background.png"
     },
     {
-        "merged": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_logo_vviped_background.png.flat",
-        "source": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\logo_vviped_background.png"
+        "merged": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_search_black_24dp.png.flat",
+        "source": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_search_black_24dp.png"
     },
     {
-        "merged": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\build\\intermediates\\res\\merged\\debug\\layout_profilphotosgrid_layout.xml.flat",
-        "source": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\src\\main\\res\\layout\\profilphotosgrid_layout.xml"
+        "merged": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
     },
     {
-        "merged": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\build\\intermediates\\res\\merged\\debug\\drawable_logo_w.png.flat",
-        "source": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\src\\main\\res\\drawable\\logo_w.png"
+        "merged": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_twitter_logo_whiteonblue.png.flat",
+        "source": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_twitter_logo_whiteonblue.png"
     },
     {
-        "merged": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_logo_vviped_background.xml.flat",
-        "source": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\logo_vviped_background.xml"
+        "merged": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_twitter_landing.xml.flat",
+        "source": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\src\\main\\res\\layout\\activity_twitter_landing.xml"
     },
     {
-        "merged": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_main.xml.flat",
-        "source": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\src\\main\\res\\layout\\activity_main.xml"
+        "merged": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
     },
     {
-        "merged": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_round.png.flat",
-        "source": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.png"
+        "merged": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_login.xml.flat",
+        "source": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\src\\main\\res\\layout\\activity_login.xml"
     },
     {
-        "merged": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_launcher_background.png.flat",
-        "source": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_launcher_background.png"
+        "merged": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_logo_vviped_round.png.flat",
+        "source": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\src\\main\\res\\mipmap-mdpi\\logo_vviped_round.png"
     },
     {
-        "merged": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_login.xml.flat",
-        "source": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\src\\main\\res\\layout\\activity_login.xml"
+        "merged": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
     },
     {
-        "merged": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_search_black_24dp.png.flat",
-        "source": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_search_black_24dp.png"
+        "merged": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_round.png.flat",
-        "source": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.png"
+        "merged": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\intermediates\\res\\merged\\debug\\font_cabin_medium.xml.flat",
+        "source": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\src\\main\\res\\font\\cabin_medium.xml"
     },
     {
-        "merged": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_home_black_24dp.png.flat",
-        "source": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_home_black_24dp.png"
+        "merged": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_person_black_24dp.png.flat",
+        "source": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_person_black_24dp.png"
     },
     {
-        "merged": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\build\\intermediates\\res\\merged\\debug\\drawable_profilpic.png.flat",
-        "source": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\src\\main\\res\\drawable\\profilpic.png"
+        "merged": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_dashboard_black_24dp.png.flat",
+        "source": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_dashboard_black_24dp.png"
     },
     {
-        "merged": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_dashboard_black_24dp.png.flat",
-        "source": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_dashboard_black_24dp.png"
+        "merged": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\intermediates\\res\\merged\\debug\\xml_activity_twitter_landing_scene.xml.flat",
+        "source": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\src\\main\\res\\xml\\activity_twitter_landing_scene.xml"
     },
     {
-        "merged": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_logo_vviped_background.png.flat",
-        "source": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\logo_vviped_background.png"
+        "merged": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_foreground.png"
     },
     {
-        "merged": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_launcher_background.png.flat",
-        "source": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_launcher_background.png"
+        "merged": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\intermediates\\res\\merged\\debug\\drawable_alert.png.flat",
+        "source": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\src\\main\\res\\drawable\\alert.png"
     },
     {
-        "merged": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\build\\intermediates\\res\\merged\\debug\\drawable_logo_full.png.flat",
-        "source": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\src\\main\\res\\drawable\\logo_full.png"
+        "merged": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_home_black_24dp.png.flat",
-        "source": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_home_black_24dp.png"
+        "merged": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_home_black_24dp.png.flat",
+        "source": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_home_black_24dp.png"
     },
     {
-        "merged": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_notifications_black_24dp.png.flat",
-        "source": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_notifications_black_24dp.png"
+        "merged": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21_alert_red.png.flat",
+        "source": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\src\\main\\res\\drawable-v21\\alert_red.png"
     },
     {
-        "merged": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_search_black_24dp.xml.flat",
-        "source": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_search_black_24dp.xml"
+        "merged": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_dashboard_black_24dp.xml.flat",
+        "source": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_dashboard_black_24dp.xml"
     },
     {
-        "merged": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_home.xml.flat",
-        "source": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\src\\main\\res\\layout\\fragment_home.xml"
+        "merged": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_logo_vviped_background.png.flat",
+        "source": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\logo_vviped_background.png"
     },
     {
-        "merged": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_home_black_24dp.png.flat",
-        "source": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_home_black_24dp.png"
+        "merged": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_home_black_24dp.png.flat",
+        "source": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_home_black_24dp.png"
     },
     {
-        "merged": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_profile.xml.flat",
-        "source": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\src\\main\\res\\layout\\fragment_profile.xml"
+        "merged": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_setting.xml.flat",
-        "source": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\src\\main\\res\\layout\\activity_setting.xml"
+        "merged": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_logo_vviped_background.png.flat",
+        "source": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\logo_vviped_background.png"
     },
     {
-        "merged": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_logo_vviped_background.png.flat",
-        "source": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\logo_vviped_background.png"
+        "merged": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_logo_vviped_background.xml.flat",
+        "source": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\logo_vviped_background.xml"
     },
     {
-        "merged": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\build\\intermediates\\res\\merged\\debug\\layout-land_activity_landing.xml.flat",
-        "source": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\src\\main\\res\\layout-land\\activity_landing.xml"
+        "merged": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_twitter_logo_whiteonblue.png.flat",
+        "source": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_twitter_logo_whiteonblue.png"
     },
     {
-        "merged": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_logo_vviped.png.flat",
-        "source": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\src\\main\\res\\mipmap-xhdpi\\logo_vviped.png"
+        "merged": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_notifications_black_24dp.png.flat",
+        "source": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_notifications_black_24dp.png"
     },
     {
-        "merged": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\build\\intermediates\\res\\merged\\debug\\font_cabin.xml.flat",
-        "source": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\src\\main\\res\\font\\cabin.xml"
+        "merged": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_person_black_24dp.png.flat",
+        "source": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_person_black_24dp.png"
     },
     {
-        "merged": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_logo_vviped_background.png.flat",
-        "source": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\logo_vviped_background.png"
+        "merged": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_twitter_logo_whiteonblue.png.flat",
+        "source": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_twitter_logo_whiteonblue.png"
     },
     {
-        "merged": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_search_black_24dp.png.flat",
-        "source": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_search_black_24dp.png"
+        "merged": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_logo_vviped_background.png.flat",
+        "source": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\logo_vviped_background.png"
     },
     {
-        "merged": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher.png.flat",
-        "source": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
+        "merged": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_foreground.png"
     },
     {
-        "merged": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_foreground.png.flat",
-        "source": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_foreground.png"
+        "merged": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_dashboard_black_24dp.png.flat",
+        "source": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_dashboard_black_24dp.png"
     },
     {
-        "merged": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\build\\intermediates\\res\\merged\\debug\\drawable_inputs_background.xml.flat",
-        "source": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\src\\main\\res\\drawable\\inputs_background.xml"
+        "merged": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_launcher_background.png.flat",
+        "source": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_launcher_background.png"
     },
     {
-        "merged": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_foreground.png.flat",
-        "source": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_foreground.png"
+        "merged": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_search_black_24dp.png.flat",
+        "source": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_search_black_24dp.png"
     },
     {
-        "merged": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_logo_vviped_round.png.flat",
-        "source": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\src\\main\\res\\mipmap-mdpi\\logo_vviped_round.png"
+        "merged": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_notifications_black_24dp.png.flat",
+        "source": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_notifications_black_24dp.png"
     },
     {
-        "merged": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher_round.png.flat",
-        "source": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.png"
+        "merged": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_comments.xml.flat",
+        "source": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\src\\main\\res\\layout\\activity_comments.xml"
     },
     {
-        "merged": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\build\\intermediates\\res\\merged\\debug\\drawable_alert.png.flat",
-        "source": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\src\\main\\res\\drawable\\alert.png"
+        "merged": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_comment_action.xml.flat",
+        "source": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\src\\main\\res\\layout\\activity_comment_action.xml"
     },
     {
-        "merged": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_dashboard_black_24dp.png.flat",
-        "source": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_dashboard_black_24dp.png"
+        "merged": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_notifications_black_24dp.xml.flat",
+        "source": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_notifications_black_24dp.xml"
     },
     {
-        "merged": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_main.xml.flat",
-        "source": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\src\\main\\res\\layout\\fragment_main.xml"
+        "merged": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
     },
     {
-        "merged": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21_ic_launcher_background.xml.flat",
-        "source": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\src\\main\\res\\drawable-v21\\ic_launcher_background.xml"
+        "merged": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_main.xml.flat",
+        "source": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\src\\main\\res\\layout\\fragment_main.xml"
     },
     {
-        "merged": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_landing.xml.flat",
-        "source": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\src\\main\\res\\layout\\activity_landing.xml"
+        "merged": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_dashboard_black_24dp.png.flat",
+        "source": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_dashboard_black_24dp.png"
     },
     {
-        "merged": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_person_black_24dp.png.flat",
-        "source": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_person_black_24dp.png"
+        "merged": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\intermediates\\res\\merged\\debug\\layout-land_activity_landing.xml.flat",
+        "source": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\src\\main\\res\\layout-land\\activity_landing.xml"
     },
     {
-        "merged": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_launcher_background.png.flat",
-        "source": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_launcher_background.png"
+        "merged": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_twitter_logo_whiteonblue.png.flat",
+        "source": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_twitter_logo_whiteonblue.png"
     },
     {
-        "merged": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\build\\intermediates\\res\\merged\\debug\\menu_bottom_nav_menu.xml.flat",
-        "source": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\src\\main\\res\\menu\\bottom_nav_menu.xml"
+        "merged": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_logo_vviped_background.png.flat",
+        "source": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\logo_vviped_background.png"
     },
     {
-        "merged": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_search_black_24dp.png.flat",
-        "source": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_search_black_24dp.png"
+        "merged": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_ic_launcher_foreground.xml.flat",
+        "source": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\src\\main\\res\\drawable-v24\\ic_launcher_foreground.xml"
     },
     {
-        "merged": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_dashboard_black_24dp.xml.flat",
-        "source": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_dashboard_black_24dp.xml"
+        "merged": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_home_black_24dp.png.flat",
+        "source": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_home_black_24dp.png"
     },
     {
-        "merged": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\build\\intermediates\\res\\merged\\debug\\drawable_logoapp.png.flat",
-        "source": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\src\\main\\res\\drawable\\logoapp.png"
+        "merged": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_search_black_24dp.png.flat",
+        "source": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_search_black_24dp.png"
     },
     {
-        "merged": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_launcher_background.xml.flat",
-        "source": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_launcher_background.xml"
+        "merged": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21_alert_yellow.png.flat",
+        "source": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\src\\main\\res\\drawable-v21\\alert_yellow.png"
     },
     {
-        "merged": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_comment_action.xml.flat",
-        "source": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\src\\main\\res\\layout\\activity_comment_action.xml"
+        "merged": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_home_black_24dp.png.flat",
+        "source": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_home_black_24dp.png"
     },
     {
-        "merged": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_home_black_24dp.png.flat",
-        "source": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_home_black_24dp.png"
+        "merged": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_notifications_black_24dp.png.flat",
+        "source": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_notifications_black_24dp.png"
     },
     {
-        "merged": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher_foreground.png.flat",
-        "source": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_foreground.png"
+        "merged": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_foreground.png"
     },
     {
-        "merged": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher_foreground.png.flat",
-        "source": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_foreground.png"
+        "merged": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_notifications_black_24dp.png.flat",
+        "source": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_notifications_black_24dp.png"
     },
     {
-        "merged": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_home_black_24dp.png.flat",
-        "source": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_home_black_24dp.png"
+        "merged": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\intermediates\\res\\merged\\debug\\drawable_profilpic.png.flat",
+        "source": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\src\\main\\res\\drawable\\profilpic.png"
     },
     {
-        "merged": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_notifications_black_24dp.png.flat",
-        "source": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_notifications_black_24dp.png"
+        "merged": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_launcher_background.png.flat",
+        "source": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_launcher_background.png"
     },
     {
-        "merged": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
-        "source": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.png"
+        "merged": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
     },
     {
-        "merged": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\build\\intermediates\\res\\merged\\debug\\layout_comment_layout.xml.flat",
-        "source": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\src\\main\\res\\layout\\comment_layout.xml"
+        "merged": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_logo_vviped_foreground.png.flat",
+        "source": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\src\\main\\res\\mipmap-xhdpi\\logo_vviped_foreground.png"
     },
     {
-        "merged": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_logo_vviped.png.flat",
-        "source": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\src\\main\\res\\mipmap-mdpi\\logo_vviped.png"
+        "merged": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_notifications_black_24dp.png.flat",
-        "source": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_notifications_black_24dp.png"
+        "merged": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_logo_vviped_foreground.png.flat",
+        "source": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\src\\main\\res\\mipmap-mdpi\\logo_vviped_foreground.png"
     },
     {
-        "merged": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_person_black_24dp.png.flat",
-        "source": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_person_black_24dp.png"
+        "merged": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_launcher_background.png.flat",
+        "source": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_launcher_background.png"
     },
     {
-        "merged": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_person_black_24dp.png.flat",
-        "source": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_person_black_24dp.png"
+        "merged": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_home_black_24dp.png.flat",
+        "source": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_home_black_24dp.png"
     },
     {
-        "merged": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_notifications_black_24dp.png.flat",
-        "source": "E:\\Salsa's Files\\VVIPED Branch 3\\Vviped\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_notifications_black_24dp.png"
+        "merged": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\src\\main\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_person_black_24dp.png.flat",
+        "source": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_person_black_24dp.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_search.xml.flat",
+        "source": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\src\\main\\res\\layout\\fragment_search.xml"
+    },
+    {
+        "merged": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\src\\main\\res\\drawable-v21\\ic_launcher_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\intermediates\\res\\merged\\debug\\layout_comment_layout.xml.flat",
+        "source": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\src\\main\\res\\layout\\comment_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_launcher_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\intermediates\\res\\merged\\debug\\drawable_inputs_background.xml.flat",
+        "source": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\src\\main\\res\\drawable\\inputs_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_home.xml.flat",
+        "source": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\src\\main\\res\\layout\\fragment_home.xml"
+    },
+    {
+        "merged": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_search_black_24dp.png.flat",
+        "source": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_search_black_24dp.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\intermediates\\res\\merged\\debug\\font_cabin.xml.flat",
+        "source": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\src\\main\\res\\font\\cabin.xml"
+    },
+    {
+        "merged": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_notifications_black_24dp.png.flat",
+        "source": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_notifications_black_24dp.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_twitter_logo_whiteonblue.xml.flat",
+        "source": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_twitter_logo_whiteonblue.xml"
+    },
+    {
+        "merged": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
     }
 ]
