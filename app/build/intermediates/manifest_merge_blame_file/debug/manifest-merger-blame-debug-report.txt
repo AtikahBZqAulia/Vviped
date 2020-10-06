@@ -11,7 +11,7 @@
 9-->C:\Users\User\AndroidStudioProjects\Sprint4\app\src\main\AndroidManifest.xml
 10
 11    <application
-11-->C:\Users\User\AndroidStudioProjects\Sprint4\app\src\main\AndroidManifest.xml:5:5-33:19
+11-->C:\Users\User\AndroidStudioProjects\Sprint4\app\src\main\AndroidManifest.xml:5:5-37:19
 12        android:allowBackup="true"
 12-->C:\Users\User\AndroidStudioProjects\Sprint4\app\src\main\AndroidManifest.xml:6:9-35
 13        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
@@ -36,47 +36,51 @@
 23-->C:\Users\User\AndroidStudioProjects\Sprint4\app\src\main\AndroidManifest.xml:15:9-60
 23-->C:\Users\User\AndroidStudioProjects\Sprint4\app\src\main\AndroidManifest.xml:15:19-48
 24        <activity android:name="com.example.vviped.activity_landing" >
-24-->C:\Users\User\AndroidStudioProjects\Sprint4\app\src\main\AndroidManifest.xml:16:9-22:20
+24-->C:\Users\User\AndroidStudioProjects\Sprint4\app\src\main\AndroidManifest.xml:16:9-18:20
 24-->C:\Users\User\AndroidStudioProjects\Sprint4\app\src\main\AndroidManifest.xml:16:19-51
-25            <intent-filter>
-25-->C:\Users\User\AndroidStudioProjects\Sprint4\app\src\main\AndroidManifest.xml:17:13-21:29
-26                <action android:name="android.intent.action.MAIN" />
-26-->C:\Users\User\AndroidStudioProjects\Sprint4\app\src\main\AndroidManifest.xml:18:17-69
-26-->C:\Users\User\AndroidStudioProjects\Sprint4\app\src\main\AndroidManifest.xml:18:25-66
-27
-28                <category android:name="android.intent.category.LAUNCHER" />
-28-->C:\Users\User\AndroidStudioProjects\Sprint4\app\src\main\AndroidManifest.xml:20:17-77
-28-->C:\Users\User\AndroidStudioProjects\Sprint4\app\src\main\AndroidManifest.xml:20:27-74
-29            </intent-filter>
-30        </activity>
-31        <activity android:name="com.example.vviped.ui.CommentsActivity" />
-31-->C:\Users\User\AndroidStudioProjects\Sprint4\app\src\main\AndroidManifest.xml:23:9-57
-31-->C:\Users\User\AndroidStudioProjects\Sprint4\app\src\main\AndroidManifest.xml:23:19-54
-32        <activity android:name="com.example.vviped.MainActivity" />
-32-->C:\Users\User\AndroidStudioProjects\Sprint4\app\src\main\AndroidManifest.xml:24:9-59
-32-->C:\Users\User\AndroidStudioProjects\Sprint4\app\src\main\AndroidManifest.xml:24:19-47
-33        <activity android:name="com.example.vviped.ui.twitter.LandingActivity" >
-33-->C:\Users\User\AndroidStudioProjects\Sprint4\app\src\main\AndroidManifest.xml:26:9-28:20
-33-->C:\Users\User\AndroidStudioProjects\Sprint4\app\src\main\AndroidManifest.xml:26:19-61
-34        </activity>
-35
-36        <meta-data
-36-->C:\Users\User\AndroidStudioProjects\Sprint4\app\src\main\AndroidManifest.xml:30:9-32:57
-37            android:name="preloaded_fonts"
-37-->C:\Users\User\AndroidStudioProjects\Sprint4\app\src\main\AndroidManifest.xml:31:13-43
-38            android:resource="@array/preloaded_fonts" />
-38-->C:\Users\User\AndroidStudioProjects\Sprint4\app\src\main\AndroidManifest.xml:32:13-54
-39
-40        <provider
-40-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\User\.gradle\caches\transforms-2\files-2.1\b4dd2bf19774dff90e7155c082dcf970\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:25:9-29:43
-41            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
-41-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\User\.gradle\caches\transforms-2\files-2.1\b4dd2bf19774dff90e7155c082dcf970\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:26:13-79
-42            android:authorities="com.example.vviped.lifecycle-process"
-42-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\User\.gradle\caches\transforms-2\files-2.1\b4dd2bf19774dff90e7155c082dcf970\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:27:13-69
-43            android:exported="false"
-43-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\User\.gradle\caches\transforms-2\files-2.1\b4dd2bf19774dff90e7155c082dcf970\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:28:13-37
-44            android:multiprocess="true" />
-44-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\User\.gradle\caches\transforms-2\files-2.1\b4dd2bf19774dff90e7155c082dcf970\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:29:13-40
-45    </application>
-46
-47</manifest>
+25        </activity>
+26        <activity android:name="com.example.vviped.ui.CommentsActivity" />
+26-->C:\Users\User\AndroidStudioProjects\Sprint4\app\src\main\AndroidManifest.xml:19:9-57
+26-->C:\Users\User\AndroidStudioProjects\Sprint4\app\src\main\AndroidManifest.xml:19:19-54
+27        <activity android:name="com.example.vviped.MainActivity" />
+27-->C:\Users\User\AndroidStudioProjects\Sprint4\app\src\main\AndroidManifest.xml:20:9-59
+27-->C:\Users\User\AndroidStudioProjects\Sprint4\app\src\main\AndroidManifest.xml:20:19-47
+28        <activity android:name="com.example.vviped.twitter.LandingActivity" >
+28-->C:\Users\User\AndroidStudioProjects\Sprint4\app\src\main\AndroidManifest.xml:22:9-24:20
+28-->C:\Users\User\AndroidStudioProjects\Sprint4\app\src\main\AndroidManifest.xml:22:19-58
+29        </activity>
+30        <activity android:name="com.example.vviped.twitter.SplashScreenActivity" >
+30-->C:\Users\User\AndroidStudioProjects\Sprint4\app\src\main\AndroidManifest.xml:26:9-32:20
+30-->C:\Users\User\AndroidStudioProjects\Sprint4\app\src\main\AndroidManifest.xml:26:19-63
+31            <intent-filter>
+31-->C:\Users\User\AndroidStudioProjects\Sprint4\app\src\main\AndroidManifest.xml:27:13-31:29
+32                <action android:name="android.intent.action.MAIN" />
+32-->C:\Users\User\AndroidStudioProjects\Sprint4\app\src\main\AndroidManifest.xml:28:17-69
+32-->C:\Users\User\AndroidStudioProjects\Sprint4\app\src\main\AndroidManifest.xml:28:25-66
+33
+34                <category android:name="android.intent.category.LAUNCHER" />
+34-->C:\Users\User\AndroidStudioProjects\Sprint4\app\src\main\AndroidManifest.xml:30:17-77
+34-->C:\Users\User\AndroidStudioProjects\Sprint4\app\src\main\AndroidManifest.xml:30:27-74
+35            </intent-filter>
+36        </activity>
+37
+38        <meta-data
+38-->C:\Users\User\AndroidStudioProjects\Sprint4\app\src\main\AndroidManifest.xml:34:9-36:57
+39            android:name="preloaded_fonts"
+39-->C:\Users\User\AndroidStudioProjects\Sprint4\app\src\main\AndroidManifest.xml:35:13-43
+40            android:resource="@array/preloaded_fonts" />
+40-->C:\Users\User\AndroidStudioProjects\Sprint4\app\src\main\AndroidManifest.xml:36:13-54
+41
+42        <provider
+42-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\User\.gradle\caches\transforms-2\files-2.1\b4dd2bf19774dff90e7155c082dcf970\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:25:9-29:43
+43            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
+43-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\User\.gradle\caches\transforms-2\files-2.1\b4dd2bf19774dff90e7155c082dcf970\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:26:13-79
+44            android:authorities="com.example.vviped.lifecycle-process"
+44-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\User\.gradle\caches\transforms-2\files-2.1\b4dd2bf19774dff90e7155c082dcf970\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:27:13-69
+45            android:exported="false"
+45-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\User\.gradle\caches\transforms-2\files-2.1\b4dd2bf19774dff90e7155c082dcf970\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:28:13-37
+46            android:multiprocess="true" />
+46-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\User\.gradle\caches\transforms-2\files-2.1\b4dd2bf19774dff90e7155c082dcf970\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:29:13-40
+47    </application>
+48
+49</manifest>

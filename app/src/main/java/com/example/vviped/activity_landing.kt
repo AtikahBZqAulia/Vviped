@@ -3,6 +3,7 @@ package com.example.vviped
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.vviped.twitter.LandingActivity
 import kotlinx.android.synthetic.main.activity_landing.*
 
 class activity_landing : AppCompatActivity() {
@@ -14,7 +15,7 @@ class activity_landing : AppCompatActivity() {
         startActivity(Intent(this, LoginActivity::class.java))
     }
         btn_login_twitter.setOnClickListener{
-            startActivity(Intent(this, com.example.vviped.ui.twitter.LandingActivity::class.java))
+            startActivity(Intent(this, LandingActivity::class.java))
         }
 }
 }

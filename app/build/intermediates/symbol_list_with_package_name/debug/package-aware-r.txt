@@ -1971,6 +1971,7 @@ id snackbar_text
 id snap
 id snapMargins
 id spacer
+id splash
 id spline
 id split_action_bar
 id spread
@@ -2119,6 +2120,7 @@ layout activity_landing
 layout activity_login
 layout activity_main
 layout activity_setting
+layout activity_splash_screen
 layout activity_twitter_landing
 layout comment_layout
 layout custom_dialog

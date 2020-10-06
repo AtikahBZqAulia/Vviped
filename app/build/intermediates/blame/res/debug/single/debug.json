@@ -12,12 +12,12 @@
         "source": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\logo_vviped_background.png"
     },
     {
-        "merged": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_logo_vviped.png.flat",
-        "source": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\src\\main\\res\\mipmap-mdpi\\logo_vviped.png"
-    },
-    {
         "merged": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_launcher_background.png.flat",
         "source": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_launcher_background.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_logo_vviped.png.flat",
+        "source": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\src\\main\\res\\mipmap-mdpi\\logo_vviped.png"
     },
     {
         "merged": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\intermediates\\res\\merged\\debug\\layout-land_activity_login.xml.flat",
@@ -28,16 +28,16 @@
         "source": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_twitter_logo_whiteonblue.png"
     },
     {
-        "merged": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_dashboard_black_24dp.png.flat",
-        "source": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_dashboard_black_24dp.png"
+        "merged": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_person_black_24dp.png.flat",
+        "source": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_person_black_24dp.png"
     },
     {
         "merged": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_launcher_background.png.flat",
         "source": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_launcher_background.png"
     },
     {
-        "merged": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_person_black_24dp.png.flat",
-        "source": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_person_black_24dp.png"
+        "merged": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_dashboard_black_24dp.png.flat",
+        "source": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_dashboard_black_24dp.png"
     },
     {
         "merged": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_person_black_24dp.png.flat",
@@ -84,16 +84,16 @@
         "source": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\src\\main\\res\\layout\\posts_layout.xml"
     },
     {
-        "merged": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_round.png.flat",
-        "source": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.png"
+        "merged": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_dashboard_black_24dp.png.flat",
+        "source": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_dashboard_black_24dp.png"
     },
     {
         "merged": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_home_black_24dp.png.flat",
         "source": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_home_black_24dp.png"
     },
     {
-        "merged": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_dashboard_black_24dp.png.flat",
-        "source": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_dashboard_black_24dp.png"
+        "merged": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.png"
     },
     {
         "merged": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_logo_vviped_round.png.flat",
@@ -410,6 +410,10 @@
     {
         "merged": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\intermediates\\res\\merged\\debug\\layout_comment_layout.xml.flat",
         "source": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\src\\main\\res\\layout\\comment_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_splash_screen.xml.flat",
+        "source": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\src\\main\\res\\layout\\activity_splash_screen.xml"
     },
     {
         "merged": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_launcher_background.xml.flat",

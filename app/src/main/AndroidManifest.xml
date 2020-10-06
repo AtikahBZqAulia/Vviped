@@ -14,17 +14,21 @@
         </activity>
         <activity android:name=".LoginActivity"></activity>
         <activity android:name=".activity_landing">
+
+        </activity>
+        <activity android:name=".ui.CommentsActivity" />
+        <activity android:name=".MainActivity"></activity>
+
+        <activity android:name=".twitter.LandingActivity">
+
+        </activity>
+
+        <activity android:name=".twitter.SplashScreenActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <activity android:name=".ui.CommentsActivity" />
-        <activity android:name=".MainActivity"></activity>
-
-        <activity android:name=".ui.twitter.LandingActivity">
-
         </activity>
 
         <meta-data

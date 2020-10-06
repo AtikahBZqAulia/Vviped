@@ -23,15 +23,17 @@
         </activity>
         <activity android:name="com.example.vviped.LoginActivity" />
         <activity android:name="com.example.vviped.activity_landing" >
+        </activity>
+        <activity android:name="com.example.vviped.ui.CommentsActivity" />
+        <activity android:name="com.example.vviped.MainActivity" />
+        <activity android:name="com.example.vviped.twitter.LandingActivity" >
+        </activity>
+        <activity android:name="com.example.vviped.twitter.SplashScreenActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <activity android:name="com.example.vviped.ui.CommentsActivity" />
-        <activity android:name="com.example.vviped.MainActivity" />
-        <activity android:name="com.example.vviped.ui.twitter.LandingActivity" >
         </activity>
 
         <meta-data

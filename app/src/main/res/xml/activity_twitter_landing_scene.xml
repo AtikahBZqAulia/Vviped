@@ -11,7 +11,7 @@
         motion:duration="1000">
        <KeyFrameSet>
            <KeyAttribute
-               motion:motionTarget="@+id/tw_logosplash"
+               motion:motionTarget="@+id/splash"
                motion:framePosition="20"
                android:scaleX="0.7"
                android:scaleY="0.7" />
@@ -20,13 +20,10 @@
                motion:framePosition="50"
                android:scaleX="0.7"
                android:scaleY="0.7" />
-           <KeyAttribute
-               motion:motionTarget="@+id/tw_logosplash"
-               motion:framePosition="100"
-               android:scaleX="50"
-               android:scaleY="50" />
        </KeyFrameSet>
         <OnClick motion:targetId="@+id/tw_logosplash" />
+        <OnClick />
+
     </Transition>
 
     <ConstraintSet android:id="@+id/start">
