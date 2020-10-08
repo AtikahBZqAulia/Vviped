@@ -1582,6 +1582,7 @@ drawable ic_mtrl_chip_close_circle
 drawable ic_notifications_black_24dp
 drawable ic_person_black_24dp
 drawable ic_search_black_24dp
+drawable ic_twitter_logo_blue
 drawable ic_twitter_logo_whiteonblue
 drawable inputs_background
 drawable instagram_icon
