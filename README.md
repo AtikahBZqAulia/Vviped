@@ -13,6 +13,10 @@ Members :
 
 [Click here to see VVIPED-Backend Repo](https://github.com/AtikahBZqAulia/Vviped-Backend/)
 
+[Click here to watch our Sprint Planning Meeting III](https://youtu.be/1cqt8pq-6Sc/)
+
+[Click here to watch our Sprint Review Meeting III](https://youtu.be/Gp_oSB66XRQ/)
+
 ### Screenshots from emulator :
 
 #### Intro Layout
