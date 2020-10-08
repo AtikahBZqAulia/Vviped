@@ -17,6 +17,6 @@ Members :
 
 [Click here to watch our Sprint Review Meeting III](https://youtu.be/Gp_oSB66XRQ/)
 
-### Screenshots from emulator : [Click here to watch our working prototype on Sprint 3](https://youtu.be/sNGZL8K4KVw/)
+### Screenshots from emulator : [Click here to watch our working prototype demo on Sprint 3](https://youtu.be/sNGZL8K4KVw/)
 
 
