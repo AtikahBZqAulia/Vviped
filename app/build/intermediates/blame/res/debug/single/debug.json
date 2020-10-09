@@ -172,10 +172,6 @@
         "source": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_twitter_logo_whiteonblue.png"
     },
     {
-        "merged": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_twitter_landing.xml.flat",
-        "source": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\src\\main\\res\\layout\\activity_twitter_landing.xml"
-    },
-    {
         "merged": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher.png.flat",
         "source": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
     },
@@ -196,6 +192,10 @@
         "source": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
     },
     {
+        "merged": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\intermediates\\res\\merged\\debug\\drawable_roundtext.xml.flat",
+        "source": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\src\\main\\res\\drawable\\roundtext.xml"
+    },
+    {
         "merged": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher_round.png.flat",
         "source": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.png"
     },
@@ -206,6 +206,10 @@
     {
         "merged": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_person_black_24dp.png.flat",
         "source": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_person_black_24dp.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_home_twitter.xml.flat",
+        "source": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\src\\main\\res\\layout\\activity_home_twitter.xml"
     },
     {
         "merged": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_dashboard_black_24dp.png.flat",
@@ -230,6 +234,10 @@
     {
         "merged": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher_round.png.flat",
         "source": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\intermediates\\res\\merged\\debug\\drawable_instagram_fill.png.flat",
+        "source": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\src\\main\\res\\drawable\\instagram_fill.png"
     },
     {
         "merged": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_home_black_24dp.png.flat",
@@ -264,6 +272,10 @@
         "source": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\logo_vviped_background.png"
     },
     {
+        "merged": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_twitter_login.xml.flat",
+        "source": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\src\\main\\res\\layout\\activity_twitter_login.xml"
+    },
+    {
         "merged": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_twitter_logo_whiteonblue.png.flat",
         "source": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_twitter_logo_whiteonblue.png"
     },
@@ -288,8 +300,16 @@
         "source": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_twitter_logo_whiteonblue.png"
     },
     {
+        "merged": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_instagram_splash.xml.flat",
+        "source": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\src\\main\\res\\layout\\activity_instagram_splash.xml"
+    },
+    {
         "merged": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_logo_vviped_background.png.flat",
         "source": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\logo_vviped_background.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\intermediates\\res\\merged\\debug\\drawable_cursorblue.xml.flat",
+        "source": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\src\\main\\res\\drawable\\cursorblue.xml"
     },
     {
         "merged": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher_foreground.png.flat",
@@ -350,6 +370,10 @@
     {
         "merged": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_ic_launcher_foreground.xml.flat",
         "source": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\src\\main\\res\\drawable-v24\\ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\intermediates\\res\\merged\\debug\\drawable_instagram_bg.png.flat",
+        "source": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\src\\main\\res\\drawable\\instagram_bg.png"
     },
     {
         "merged": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_home_black_24dp.png.flat",
@@ -428,6 +452,10 @@
         "source": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\src\\main\\res\\layout\\activity_main.xml"
     },
     {
+        "merged": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\intermediates\\res\\merged\\debug\\drawable_corner.xml.flat",
+        "source": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\src\\main\\res\\drawable\\corner.xml"
+    },
+    {
         "merged": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_person_black_24dp.png.flat",
         "source": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_person_black_24dp.png"
     },
@@ -448,6 +476,10 @@
         "source": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\src\\main\\res\\layout\\activity_splash_screen.xml"
     },
     {
+        "merged": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\intermediates\\res\\merged\\debug\\drawable_btn_corner_tw.xml.flat",
+        "source": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\src\\main\\res\\drawable\\btn_corner_tw.xml"
+    },
+    {
         "merged": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_launcher_background.xml.flat",
         "source": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_launcher_background.xml"
     },
@@ -462,6 +494,10 @@
     {
         "merged": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_search_black_24dp.png.flat",
         "source": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_search_black_24dp.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_twitter_splash.xml.flat",
+        "source": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\src\\main\\res\\layout\\activity_twitter_splash.xml"
     },
     {
         "merged": "C:\\Users\\User\\AndroidStudioProjects\\Sprint4\\app\\build\\intermediates\\res\\merged\\debug\\font_cabin.xml.flat",

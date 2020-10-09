@@ -41,10 +41,10 @@
 
     <Button
         android:id="@+id/sign_ig_link"
-        android:layout_width="280dp"
-        android:layout_height="wrap_content"
+        android:layout_width="220dp"
+        android:layout_height="45dp"
         android:layout_marginTop="24dp"
-        android:background="@drawable/button"
+        android:background="@drawable/corner"
         android:padding="10dp"
         android:text="@string/login_ig"
         android:textAllCaps="false"
@@ -52,29 +52,29 @@
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.549"
+        app:layout_constraintHorizontal_bias="0.53"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/title"
-        app:layout_constraintVertical_bias="0.116"
+        app:layout_constraintVertical_bias="0.104"
         tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/btn_login_twitter"
-        android:layout_width="280dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:background="@color/mainBlue"
+        android:layout_width="220dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/btn_corner_tw"
         android:padding="10dp"
-        android:text="Login with twitter"
+        android:text="Log in with twitter"
         android:textAllCaps="false"
         android:textColor="@color/colorWhite"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.534"
+        app:layout_constraintHorizontal_bias="0.54"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/sign_ig_link"
-        app:layout_constraintVertical_bias="0.062" />
+        app:layout_constraintVertical_bias="0.017" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

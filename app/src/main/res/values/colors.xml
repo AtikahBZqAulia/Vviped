@@ -4,9 +4,24 @@
     <color name="colorPrimary">#F56040</color>
     <color name="colorPrimaryDark">#F77737</color>
     <color name="colorAccent">#F56040</color>
-
     <color name="colorWhite">#ffffff</color>
     <color name="colorBlack">#000000</color>
     <color name="ColorGrey">#C7C4C4</color>
     <color name="mainBlue">#1DA1F2</color>
+    <color name="nightTw">#141d26</color>
+    <color name="DarkGreyTw">#657786</color>
+    <color name="LightGreyTw">#AAB8C2</color>
+
+
+<!--    instagram background-->
+    <color name="purple_500">#9C27B0</color>
+    <color name="deep_purple_500">#673AB7</color>
+    <color name="indigo_500">#3F51B5</color>
+    <color name="red1">#EE0016</color>
+    <color name="cyan_500">#00BCD4</color>
+    <color name="light_blue_500">#03A9F4</color>
+
+
+
+
 </resources>

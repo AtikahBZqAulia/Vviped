@@ -904,6 +904,8 @@ bool abc_allow_stacked_button_bar
 bool abc_config_actionMenuItemAllCaps
 bool mtrl_btn_textappearance_all_caps
 color ColorGrey
+color DarkGreyTw
+color LightGreyTw
 color abc_background_cache_hint_selector_material_dark
 color abc_background_cache_hint_selector_material_light
 color abc_btn_colored_borderless_text_material
@@ -955,6 +957,8 @@ color colorBlack
 color colorPrimary
 color colorPrimaryDark
 color colorWhite
+color cyan_500
+color deep_purple_500
 color design_bottom_navigation_shadow_color
 color design_box_stroke_color
 color design_dark_default_color_background
@@ -1003,6 +1007,8 @@ color foreground_material_dark
 color foreground_material_light
 color highlighted_text_material_dark
 color highlighted_text_material_light
+color indigo_500
+color light_blue_500
 color mainBlue
 color material_blue_grey_800
 color material_blue_grey_900
@@ -1083,6 +1089,7 @@ color mtrl_textinput_disabled_color
 color mtrl_textinput_filled_box_default_background_color
 color mtrl_textinput_focused_box_stroke_color
 color mtrl_textinput_hovered_box_stroke_color
+color nightTw
 color notification_action_color_filter
 color notification_icon_bg_color
 color notification_material_background_media_default_color
@@ -1094,7 +1101,9 @@ color primary_text_default_material_dark
 color primary_text_default_material_light
 color primary_text_disabled_material_dark
 color primary_text_disabled_material_light
+color purple_500
 color radiobutton_themeable_attribute_color
+color red1
 color ripple_material_dark
 color ripple_material_light
 color secondary_text_default_material_dark
@@ -1560,11 +1569,14 @@ drawable btn_checkbox_checked_mtrl
 drawable btn_checkbox_checked_to_unchecked_mtrl_animation
 drawable btn_checkbox_unchecked_mtrl
 drawable btn_checkbox_unchecked_to_checked_mtrl_animation
+drawable btn_corner_tw
 drawable btn_radio_off_mtrl
 drawable btn_radio_off_to_on_mtrl_animation
 drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
 drawable button
+drawable corner
+drawable cursorblue
 drawable design_bottom_navigation_item_background
 drawable design_fab_background
 drawable design_ic_visibility
@@ -1585,6 +1597,8 @@ drawable ic_search_black_24dp
 drawable ic_twitter_logo_blue
 drawable ic_twitter_logo_whiteonblue
 drawable inputs_background
+drawable instagram_bg
+drawable instagram_fill
 drawable instagram_icon
 drawable logo_full
 drawable logo_vviped_background
@@ -1620,6 +1634,7 @@ drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
 drawable profilpic
+drawable roundtext
 drawable test_custom_background
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
@@ -1820,10 +1835,12 @@ id honorRequest
 id icon
 id icon_group
 id ifRoom
+id ig_logosplash
 id ignore
 id ignoreRequest
 id image
 id imageView
+id imageView2
 id imagepost_layout
 id info
 id invisible
@@ -2013,7 +2030,9 @@ id textEnd
 id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
+id textView3
 id textView4
+id text_email
 id text_input_end_icon
 id text_input_start_icon
 id textinput_counter
@@ -2041,7 +2060,10 @@ id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
 id triangle
+id tw_email
 id tw_logosplash
+id tw_password
+id twitterLogin
 id unchecked
 id uniform
 id unlabeled
@@ -2119,12 +2141,15 @@ layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_comment_action
 layout activity_comments
+layout activity_home_twitter
+layout activity_instagram_splash
 layout activity_landing
 layout activity_login
 layout activity_main
 layout activity_setting
 layout activity_splash_screen
-layout activity_twitter_landing
+layout activity_twitter_login
+layout activity_twitter_splash
 layout comment_layout
 layout custom_dialog
 layout design_bottom_navigation_item

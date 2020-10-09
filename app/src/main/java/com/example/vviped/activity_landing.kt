@@ -12,7 +12,7 @@ class activity_landing : AppCompatActivity() {
         setContentView(R.layout.activity_landing)
 
         sign_ig_link.setOnClickListener{
-        startActivity(Intent(this, LoginActivity::class.java))
+        startActivity(Intent(this, InstagramSplash::class.java))
     }
         btn_login_twitter.setOnClickListener{
             startActivity(Intent(this, LandingActivity::class.java))
