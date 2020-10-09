@@ -35,9 +35,7 @@ Members :
 <img src="https://github.com/AtikahBZqAulia/Vviped/blob/Sprint-4/Screenshot_20201010-015202.png" width="300" />
 
 #### Instagram Comments Layout
-<img src="https://github.com/AtikahBZqAulia/Vviped/blob/Sprint-4/Screenshot_20201010-015157.png" width="300 />
-
-#### Instagram Comments Layout
+<img src="https://github.com/AtikahBZqAulia/Vviped/blob/Sprint-4/Screenshot_20201010-015157.png" width="300" />
 <img src="https://github.com/AtikahBZqAulia/Vviped/blob/Sprint-2/photo_2020-09-24_10-34-16.jpg" width="300" />
 
 #### Instagram Comments Action Layout
@@ -47,6 +45,6 @@ Members :
 <img src="https://github.com/AtikahBZqAulia/Vviped/blob/Sprint-4/Screenshot_20201010-020704.png" width="300" />
 
 #### Twitter Login Layout
-<img src="https://github.com/AtikahBZqAulia/Vviped/blob/Sprint-4/Screenshot_20201010-015317.png" width="300 />
+<img src="https://github.com/AtikahBZqAulia/Vviped/blob/Sprint-4/Screenshot_20201010-015317.png" width="300" />
                                                  
-#### -
+
