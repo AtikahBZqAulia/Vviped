@@ -47,4 +47,5 @@ Members :
 #### Twitter Login Layout
 <img src="https://github.com/AtikahBZqAulia/Vviped/blob/Sprint-4/Screenshot_20201010-015317.png" width="300" />
                                                  
-
+#### Twitter main fragment
+<img src="https://github.com/AtikahBZqAulia/Vviped/blob/Sprint-4/PhotoGrid_1602317635199.png"/>
