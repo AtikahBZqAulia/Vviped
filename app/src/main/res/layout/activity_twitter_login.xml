@@ -99,21 +99,19 @@
             android:background="@color/DarkGreyTw"
             />
 
-        <TextView
+        <Button
             android:id="@+id/btn_login_twitter"
             android:layout_width="80dp"
             android:layout_height="35dp"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
             android:layout_marginEnd="16dp"
-            android:background="@drawable/roundtext"
-            android:padding="5dp"
+            android:background="@drawable/roundbtn"
             android:text="Log in"
+            android:textAllCaps="false"
             android:textAlignment="center"
             android:textColor="@color/colorWhite"
             android:textStyle="bold"
-
-
             />
     </RelativeLayout>
 

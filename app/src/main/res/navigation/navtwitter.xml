@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navtwitter"
+    app:startDestination="@id/twitterHomeFragment">
+
+    <fragment
+        android:id="@+id/twitterHomeFragment"
+        android:name="com.example.vviped.twitter.ui.home.TwitterHomeFragment"
+        android:label="fragment_twitter_home"
+        tools:layout="@layout/fragment_twitter_home" />
+    <fragment
+        android:id="@+id/twitterProfileFragment"
+        android:name="com.example.vviped.twitter.ui.profile.TwitterProfileFragment"
+        android:label="fragment_twitter_profile"
+        tools:layout="@layout/fragment_twitter_profile" />
+    <fragment
+        android:id="@+id/twitterSearchFragment"
+        android:name="com.example.vviped.twitter.ui.search.TwitterSearchFragment"
+        android:label="fragment_twitter_search"
+        tools:layout="@layout/fragment_twitter_search" />
+</navigation>

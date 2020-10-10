@@ -18,25 +18,15 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/AppTheme" >
-        <activity android:name="com.example.vviped.HomeTwitter" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+        <activity android:name="com.example.vviped.twitter.twitterMain" >
         </activity>
-        <activity android:name="com.example.vviped.InstagramSplash" >
+        <activity android:name="com.example.vviped.twitter.TwitterHome" >
         </activity>
+        <activity android:name="com.example.vviped.InstagramSplash" />
         <activity android:name="com.example.vviped.twitter.twitter_login" />
         <activity android:name="com.example.vviped.comment_action" />
         <activity android:name="com.example.vviped.LoginActivity" />
-        <activity android:name="com.example.vviped.activity_landing" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <activity android:name="com.example.vviped.activity_landing" />
         <activity android:name="com.example.vviped.ui.CommentsActivity" />
         <activity android:name="com.example.vviped.MainActivity" />
         <activity android:name="com.example.vviped.twitter.LandingActivity" />
