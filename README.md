@@ -7,7 +7,7 @@
 
 ### IMPORTANT!!!
 
-### WHY WE DECIDED TO PIVOT : 1. Instagram blocked our HTTPS GET request and the official Facebook Graph API doesn't offer comments data access. 2. We have applied for The Official Twitter API and have been granted for the usage of API, yet Twitter API restricted the number of tweets allowed to fetch. We, the app, can only fetch 800 tweets per day. Therefore it's not possible to reach 1000 users with that limitation. 
+### WHY WE DECIDED TO PIVOT : 1. Instagram blocked our HTTPS GET request and the official Facebook Graph API doesn't offer comments data access. 2. We applied for The Official Twitter API and have been granted for the usage of API, yet Twitter API restricted the number of tweets allowed to fetch. We, the app, can only fetch 800 tweets per day. Therefore it's not possible to reach 1000 users with that limitation. 
 
 Problem : COVID-19 pandemic has led to Global economic crisis and turned market behavior on consumption. People tends to save their money. However the trend also shows that [people, especially Indonesians are still willing to make a donation](https://www.liputan6.com/health/read/3987796/indonesia-melesat-jadi-negara-paling-dermawan-di-dunia). We need a platform to fill the gap between the desire of make donation and the need to save money.
 
