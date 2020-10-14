@@ -32,3 +32,15 @@ Members :
 - Octarina Salsabila
 - Maura Qoonitah
 
+### Screenshots from emulator :
+
+<img src="https://github.com/AtikahBZqAulia/Vviped/blob/Sprint-5/ss1.jpeg" width="300"/>
+
+#### Intro Layout
+<img src="https://github.com/AtikahBZqAulia/Vviped/blob/Sprint-5/ss2.jpeg" width="300" />
+
+#### Login Layout
+<img src="https://github.com/AtikahBZqAulia/Vviped/blob/Sprint-5/ss3.jpeg" width="300" />
+
+#### Sign Up Layout 
+<img src="https://github.com/AtikahBZqAulia/Vviped/blob/Sprint-5/ss4.jpeg" width="300" />
