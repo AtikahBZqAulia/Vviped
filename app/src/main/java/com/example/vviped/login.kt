@@ -3,16 +3,15 @@ package com.example.vviped
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import kotlinx.android.synthetic.main.activity_landing.*
+import kotlinx.android.synthetic.main.activity_login.*
 
-class Landing : AppCompatActivity() {
+class login : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_landing)
+        setContentView(R.layout.activity_login)
 
-        btn_login.setOnClickListener {
-            startActivity(Intent(this, login::class.java))
+        textCreateAccount.setOnClickListener{
+            startActivity(Intent(this, Register::class.java))
         }
-
     }
 }
