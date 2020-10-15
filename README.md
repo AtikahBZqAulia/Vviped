@@ -24,6 +24,19 @@ Members :
 
 [Click here to see VVIPED-Backend Repo](https://github.com/AtikahBZqAulia/Vviped-Backend/)
 
+<img src="https://github.com/AtikahBZqAulia/Vviped/blob/Sprint-5/ss1.jpeg" width="300"/>
+
+#### Intro Layout
+<img src="https://github.com/AtikahBZqAulia/Vviped/blob/Sprint-5/ss2.jpeg" width="300" />
+
+#### Login Layout
+<img src="https://github.com/AtikahBZqAulia/Vviped/blob/Sprint-5/ss3.jpeg" width="300" />
+
+#### Sign Up Layout 
+<img src="https://github.com/AtikahBZqAulia/Vviped/blob/Sprint-5/ss4.jpeg" width="300" />
+
+
+
 ## BEFORE SPRINT PLANNING MEETING V
 Problem : These days cyber bullying has led to several severe mental health issues and suicide even worse.
 Idea / Solution : An app which aims to promote anti cyber-bullying especially in social media by displaying only good or neutral comments and automatically remove any comments which contains hate speech or offensive words.
@@ -64,3 +77,5 @@ Members :
                                                  
 #### Twitter main fragment
 <img src="https://github.com/AtikahBZqAulia/Vviped/blob/Sprint-4/PhotoGrid_1602317635199.png"/>
+
+
