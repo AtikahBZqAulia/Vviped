@@ -46,10 +46,11 @@
             android:id="@+id/profpic"
             android:layout_width="110sp"
             android:layout_height="110sp"
-            android:layout_marginRight="10dp"
+            android:layout_marginStart="10dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/info_layout"
-            android:src="@drawable/profilpic" />
+            android:src="@drawable/profilpic"
+            android:layout_marginLeft="10dp" />
 
         <LinearLayout
             android:id="@+id/info_layout"
@@ -87,14 +88,15 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+
                     android:orientation="horizontal">
 
                     <TextView
                         android:id="@+id/total_posts"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="25dp"
                         android:text="Posts"
+                        android:layout_marginLeft="25sp"
                         android:textColor="@color/colorBlack"
                         android:textSize="13sp"
                         android:textStyle="bold" />
@@ -103,9 +105,9 @@
                         android:id="@+id/num_posts"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginRight="25dp"
                         android:text="0"
-                        android:textAlignment="textEnd"
+                        android:textAlignment="viewEnd"
+                        android:layout_marginRight="35sp"
                         android:textColor="@color/colorBlack"
                         android:textSize="13sp"
                         android:textStyle="bold"
@@ -119,6 +121,7 @@
                 android:layout_width="170dp"
                 android:layout_height="27dp"
                 android:layout_marginTop="10dp"
+                android:gravity="center"
                 android:background="@color/ColorGrey"
                 android:text="SETTING"
                 android:translationX="20dp" />
