@@ -10,9 +10,9 @@ class login : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
-        btn_login_account.setOnClickListener{
-            startActivity(Intent(this, MainActivity::class.java))
-        }
+//        btn_login_account.setOnClickListener{
+//            startActivity(Intent(this, MainActivity::class.java))
+//        }
 
         textCreateAccount.setOnClickListener{
             startActivity(Intent(this, Register::class.java))

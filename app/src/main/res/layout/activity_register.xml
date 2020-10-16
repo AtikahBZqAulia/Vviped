@@ -31,8 +31,8 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:paddingLeft="24dp"
-                android:paddingRight="24dp">
+                android:paddingLeft="32dp"
+                android:paddingRight="32dp">
 
                 <ImageView
                     android:id="@+id/logoapp"
@@ -57,61 +57,14 @@
                     android:textSize="25sp"
                     app:layout_constraintTop_toTopOf="parent" />
 
-                <LinearLayout
-                    android:id="@+id/layoutName"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="140dp"
-                    android:background="@drawable/btn_corner"
-                    android:gravity="center_vertical"
-                    android:orientation="horizontal"
-                    app:layout_constraintTop_toTopOf="parent">
-
-                    <ImageView
-                        android:layout_width="25dp"
-                        android:layout_height="25dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginLeft="10dp"
-                        android:contentDescription="@string/app_name"
-                        android:src="@drawable/ic_account"
-                        app:tint="@color/colorAccent" />
-
-                    <EditText
-                        android:layout_width="match_parent"
-                        android:layout_height="55dp"
-                        android:background="@null"
-                        android:hint="Full Name"
-                        android:inputType="text"
-                        android:paddingStart="10dp"
-                        android:paddingEnd="10dp"
-                        android:textColor="@color/colorTextPrimary"
-                        android:textSize="16sp"
-                        android:textStyle="bold" />
-                </LinearLayout>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="41dp"
-                    android:layout_marginLeft="41dp"
-                    android:background="@color/colorWhite"
-                    android:paddingStart="6dp"
-                    android:paddingEnd="6dp"
-                    android:text="Full Name"
-                    android:textAllCaps="true"
-                    android:textColor="@color/colorTextPrimary"
-                    android:textStyle="bold"
-                    app:layout_constraintBottom_toTopOf="@+id/layoutName"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="@+id/layoutName" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:paddingLeft="24dp"
-                android:paddingRight="24dp">
+                android:paddingLeft="32dp"
+                android:paddingRight="32dp">
 
                 <LinearLayout
                     android:id="@+id/layoutCreateEmail"
@@ -133,15 +86,16 @@
                         app:tint="@color/colorAccent" />
 
                     <EditText
+                        android:id="@+id/user_email"
                         android:layout_width="match_parent"
-                        android:layout_height="55dp"
+                        android:layout_height="44dp"
                         android:background="@null"
                         android:hint="you@email.com"
                         android:inputType="textEmailAddress"
                         android:paddingStart="10dp"
                         android:paddingEnd="10dp"
                         android:textColor="@color/colorTextPrimary"
-                        android:textSize="16sp"
+                        android:textSize="14sp"
                         android:textStyle="bold" />
                 </LinearLayout>
 
@@ -167,8 +121,8 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:paddingLeft="24dp"
-                android:paddingRight="24dp">
+                android:paddingLeft="32dp"
+                android:paddingRight="32dp">
 
                 <LinearLayout
                     android:id="@+id/layoutPassword"
@@ -190,8 +144,9 @@
                         app:tint="@color/colorAccent" />
 
                     <EditText
+                        android:id="@+id/user_password"
                         android:layout_width="match_parent"
-                        android:layout_height="55dp"
+                        android:layout_height="44dp"
                         android:background="@null"
                         android:hint="@string/password_hint"
                         android:imeOptions="actionNext"
@@ -200,7 +155,7 @@
                         android:paddingStart="10dp"
                         android:paddingEnd="10dp"
                         android:textColor="@color/colorTextPrimary"
-                        android:textSize="16sp"
+                        android:textSize="14sp"
                         android:textStyle="bold" />
                 </LinearLayout>
 
@@ -226,14 +181,14 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <Button
-                android:id="@+id/btn_create_account"
+                android:id="@+id/btn_register_account"
                 android:layout_width="match_parent"
-                android:layout_marginLeft="24dp"
-                android:layout_marginRight="24dp"
-                android:layout_height="wrap_content"
+                android:layout_height="44dp"
                 android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="32dp"
                 android:layout_marginTop="30dp"
-                                android:background="@drawable/btn_register_login"
+                android:layout_marginRight="32dp"
+                android:background="@drawable/btn_register_login"
                 android:text="create account"
                 android:textColor="@color/colorWhite"
                 android:textStyle="bold" />
