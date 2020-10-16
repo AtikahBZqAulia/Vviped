@@ -20,7 +20,7 @@ Members :
 
 [Click here to see our product backlogs](https://www.notion.so/0cb3638b1c284c1eb3f79f7f59e96a30?v=8cd37891c4d14f6fa1b0f9ca61ecf47a)
 
-[Click here to see our sprint backlogs](https://github.com/AtikahBZqAulia/Vviped/milestones)
+[Click here to see our sprint backlogs](https://www.notion.so/2211bb67dff7463aa22412926b6de731?v=850f8478b92c4e679cc2df9f4f9802e7)
 
 [Click here to see VVIPED-Backend Repo](https://github.com/AtikahBZqAulia/Vviped-Backend/)
 
