@@ -7,7 +7,7 @@
 
 ### IMPORTANT!!!
 
-### WHY WE DECIDED TO PIVOT : 1. Instagram blocked our HTTPS GET request and the official Facebook Graph API doesn't offer comments data access. 2. We have applied for The Official Twitter API and have been granted for the usage of API, yet Twitter API restricted the number of tweets allowed to fetch. We, the app, can only fetch 800 tweets per day. Therefore it's not possible to reach 1000 users with that limitation. 
+### WHY WE DECIDED TO PIVOT : 1. Instagram blocked our HTTPS GET request and the official Facebook Graph API doesn't offer comments data access. 2. We applied for The Official Twitter API and have been granted for the usage of API, yet Twitter API restricted the number of tweets allowed to fetch. We, the app, can only fetch 800 tweets per day. Therefore it's not possible to reach 1000 users with that limitation. 
 
 Problem : COVID-19 pandemic has led to Global economic crisis and turned market behavior on consumption. People tends to save their money. However the trend also shows that [people, especially Indonesians are still willing to make a donation](https://www.liputan6.com/health/read/3987796/indonesia-melesat-jadi-negara-paling-dermawan-di-dunia). We need a platform to fill the gap between the desire of make donation and the need to save money.
 
@@ -47,31 +47,18 @@ Members :
 
 ### Screenshots from emulator :
 
+<img src="https://github.com/AtikahBZqAulia/Vviped/blob/Sprint-5/ss1.jpeg" width="300"/>
+
 #### Intro Layout
-<img src="https://github.com/AtikahBZqAulia/Vviped/blob/Sprint-4/Screenshot_20201010-015146.png" width="300" />
+<img src="https://github.com/AtikahBZqAulia/Vviped/blob/Sprint-5/ss2.jpeg" width="300" />
 
 #### Login Layout
-<img src="https://github.com/AtikahBZqAulia/Vviped/blob/Sprint-4/Screenshot_20201010-015150.png" width="300" />
+<img src="https://github.com/AtikahBZqAulia/Vviped/blob/Sprint-5/ss3.jpeg" width="300" />
 
-#### Instagram Splash Screen 
-<img src="https://github.com/AtikahBZqAulia/Vviped/blob/Sprint-4/Screenshot_20201010-020700.png" width="300" />
 
-#### Instagram Feeds Layout
-<img src="https://github.com/AtikahBZqAulia/Vviped/blob/Sprint-4/Screenshot_20201010-015154.png" width="300" />
-
-#### Instagram Profile Layout
-<img src="https://github.com/AtikahBZqAulia/Vviped/blob/Sprint-4/Screenshot_20201010-015202.png" width="300" />
-
-#### Instagram Comments Layout
-<img src="https://github.com/AtikahBZqAulia/Vviped/blob/Sprint-4/Screenshot_20201010-015157.png" width="300" />
-<img src="https://github.com/AtikahBZqAulia/Vviped/blob/Sprint-2/photo_2020-09-24_10-34-16.jpg" width="300" />
-
-#### Instagram Comments Action Layout
-<img src="https://github.com/AtikahBZqAulia/Vviped/blob/Sprint-2/photo_2020-09-24_10-34-19.jpg" width="300" />
-
-#### Twitter Splash Screen
-<img src="https://github.com/AtikahBZqAulia/Vviped/blob/Sprint-4/Screenshot_20201010-020704.png" width="300" />
-
+#### Sign Up Layout 
+<img src="https://github.com/AtikahBZqAulia/Vviped/blob/Sprint-5/ss4.jpeg" width="300" />
+=======
 #### Twitter Login Layout
 <img src="https://github.com/AtikahBZqAulia/Vviped/blob/Sprint-4/Screenshot_20201010-015317.png" width="300" />
                                                  
