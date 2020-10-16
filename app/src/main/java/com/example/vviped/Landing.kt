@@ -10,8 +10,10 @@ class Landing : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_landing)
 
-        btn_login.setOnClickListener {
-            startActivity(Intent(this, login::class.java))
+        btn_to_login.setOnClickListener {
+            startActivity(Intent(this, login::class.java).also {
+                it.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+            })
         }
 
     }

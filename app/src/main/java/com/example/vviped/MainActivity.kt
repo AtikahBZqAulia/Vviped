@@ -1,5 +1,6 @@
 package com.example.vviped
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
@@ -9,11 +10,15 @@ import com.example.vviped.ui.HomeFragment
 import com.example.vviped.ui.ProfileFragment
 import com.example.vviped.ui.UploadFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.google.firebase.auth.FirebaseAuth
+import kotlinx.android.synthetic.main.fragment_profile.*
 
 class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemSelectedListener {
     private var homeFragment = HomeFragment()
     private var profileFragment = ProfileFragment()
     private var uploadFragment = UploadFragment()
+    private lateinit var auth: FirebaseAuth   //user logout
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -21,6 +26,14 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
 
         val navView: BottomNavigationView = findViewById(R.id.nav_view)
         navView.setOnNavigationItemSelectedListener(this)
+//
+//        auth = FirebaseAuth.getInstance()
+//        btn_logout.setOnClickListener{
+//            auth.signOut()
+//            startActivity(Intent(this@MainActivity, Landing::class.java).also {
+//                it.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+//            })
+//            }
 
     }
 

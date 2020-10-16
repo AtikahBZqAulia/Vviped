@@ -10,7 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".Register"></activity>
-        <activity android:name=".login"></activity>
+        <activity android:name=".login">
+
+        </activity>
         <activity android:name=".Landing" />
         <activity android:name=".splashScreen">
             <intent-filter>
