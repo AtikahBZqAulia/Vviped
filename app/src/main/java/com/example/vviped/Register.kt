@@ -67,15 +67,15 @@ class Register : AppCompatActivity() {
                 }
             }
     }
-//    // if user has logged in
-//    override fun onStart() {
-//        super.onStart()
-//        if (auth.currentUser != null)
-//            startActivity(Intent(this, MainActivity::class.java).also {
-//                it.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
-//            })
-//
-//    }
+    // if user has logged in
+    override fun onStart() {
+        super.onStart()
+        if (auth.currentUser != null)
+            startActivity(Intent(this, MainActivity::class.java).also {
+                it.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+            })
+
+    }
 
 
 }

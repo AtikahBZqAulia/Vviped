@@ -49,7 +49,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tagline"
-        tools:textSize="18sp" />
+        tools:textSize="20sp" />
 
     <ImageView
         android:id="@+id/imageView"
@@ -66,11 +66,12 @@
     <Button
         android:id="@+id/btn_to_login"
         android:layout_width="wrap_content"
-        android:layout_height="40dp"
-        android:layout_marginTop="8dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:layout_marginBottom="60dp"
         android:background="@drawable/btn_register_login"
-        android:text="Log In"
+        android:text="Log in"
+        android:textAllCaps="false"
         android:textColor="@color/colorWhite"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
