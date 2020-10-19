@@ -15,7 +15,7 @@
        >
 
         <ImageView
-            android:id="@+id/BackFromChat"
+            android:id="@+id/btn_BackFromChat"
             android:layout_width="wrap_content"
             android:layout_weight=".5"
             android:layout_height="40dp"
@@ -28,7 +28,7 @@
             android:id="@+id/UserName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="6"
+            android:layout_weight="5.5"
             android:fontFamily="@font/cabin"
             android:gravity="center_horizontal"
             android:text="foxy.goodthings"
@@ -38,6 +38,35 @@
 
 
     </LinearLayout>
+
+    <RadioGroup
+        android:id="@+id/radiogroup_chat"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/appBar_user"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        >
+
+        <RadioButton
+            android:id="@+id/radioButton_user"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:checked="true"
+            android:textColor="@color/ColorGrey"
+            android:text="seller" />
+
+        <RadioButton
+            android:id="@+id/radioButton_myself"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/ColorGrey"
+            android:layout_weight="1"
+            android:text="buyer" />
+    </RadioGroup>
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/product_in_chat"
         android:layout_width="wrap_content"
@@ -46,18 +75,16 @@
         android:paddingRight="20dp"
         android:layout_margin="16dp"
         android:background="@drawable/btn_corner"
-        android:layout_below="@id/appBar_user">
+        android:layout_below="@id/radiogroup_chat">
 
         <ImageView
             android:id="@+id/product_img"
             android:layout_width="54dp"
             android:layout_height="54dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginLeft="8dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
             android:layout_marginTop="8dp"
-            android:layout_marginBottom="8dp"
             android:src="@android:drawable/sym_def_app_icon"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -71,6 +98,7 @@
             android:paddingLeft="5dp"
             android:text="Uniqlo x Kaws Shirt "
             android:textColor="@color/colorBlack"
+            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toEndOf="@+id/product_img"
@@ -83,14 +111,54 @@
             android:layout_marginStart="8dp"
             android:layout_marginLeft="8dp"
             android:layout_marginBottom="8dp"
-            android:paddingRight="5dp"
             android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text="Rp125.000"
             android:textColor="@color/colorAccent2"
             android:textStyle="bold"
-            android:text="Rp125.000"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@+id/product_img"
-            app:layout_constraintTop_toBottomOf="@+id/product_name" />
+            app:layout_constraintTop_toBottomOf="@+id/product_name"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/campaign"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/btn_background"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:text="Campaign"
+            android:textColor="@color/colorWhite"
+            android:textSize="12sp"
+            android:textStyle="bold|italic"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/product_img"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/product_campaign"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginBottom="8dp"
+            android:paddingLeft="5dp"
+            android:text="Sembako untuk ribuan pemulung "
+            android:textColor="@color/colorAccent2"
+            android:textSize="12sp"
+            android:textStyle="italic"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/product_img"
+            app:layout_constraintTop_toBottomOf="@+id/campaign"
+            app:layout_constraintVertical_bias="0.0" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -120,14 +188,17 @@
             android:paddingTop="10dp">
 
             <EditText
-                android:id="@+id/etMessage"
-                android:layout_width="0dp"
+                android:id="@+id/input_message"
+                android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="@drawable/btn_corner"
                 android:fontFamily="@font/cabin"
                 android:hint="@string/type_message"
+                android:imeOptions="actionSend"
                 android:inputType="text"
+                android:maxLines="2"
+                android:singleLine="false"
                 android:padding="12dp"
                 android:textColor="@color/colorBlack"
                />
@@ -137,15 +208,10 @@
                 android:layout_width="40dp"
                 android:layout_height="37dp"
                 android:layout_marginLeft="10dp"
-                android:background="@drawable/btn_background"
+                android:background="@drawable/btn_send_msg"
                 android:src="@drawable/ic_send"
-                android:text="@string/btn_sign_up"
                 android:textColor="@color/colorWhite" />
 
         </LinearLayout>
-
-
     </RelativeLayout>
-
-
 </RelativeLayout>
