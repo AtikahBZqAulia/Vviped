@@ -10,14 +10,15 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
+
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
         <activity
             android:name=".UploadSellingActivity"
             android:label="@string/title_activity_upload_selling"
             android:theme="@style/AppTheme.NoActionBar"></activity>
-        <activity android:name=".Register" />
-        <activity android:name=".login" />
+        <activity android:name=".Register"></activity>
+        <activity android:name=".login"></activity>
         <activity android:name=".Landing" />
         <activity android:name=".splashScreen">
             <intent-filter>

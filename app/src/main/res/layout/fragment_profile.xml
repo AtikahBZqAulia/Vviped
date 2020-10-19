@@ -18,17 +18,43 @@
             android:layout_height="match_parent"
             android:background="@color/colorWhite">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="50sp"
-                android:layout_centerVertical="true"
-                android:gravity="center"
-                android:text="akunsaya"
-                android:textColor="@color/colorBlack"
-                android:textSize="20sp"
-                android:textStyle="bold" />
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="50sp"
+                    android:layout_centerVertical="true"
+                    android:gravity="center"
+                    android:text="akunsaya"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <ImageButton
+                    android:id="@+id/btn_logout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginRight="16dp"
+                    android:background="@color/colorWhite"
+                    android:src="@drawable/ic_logout"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
 
         </androidx.appcompat.widget.Toolbar>
+
+
+
     </com.google.android.material.appbar.AppBarLayout>
 
     <LinearLayout
@@ -41,6 +67,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/appBar_Layout"
         tools:ignore="MissingConstraints">
+
+
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/profpic"
@@ -116,15 +144,7 @@
 
             </LinearLayout>
 
-            <Button
-                android:id="@+id/setting_btn"
-                android:layout_width="170dp"
-                android:layout_height="27dp"
-                android:layout_marginTop="10dp"
-                android:gravity="center"
-                android:background="@color/ColorGrey"
-                android:text="SETTING"
-                android:translationX="20dp" />
+
 
         </LinearLayout>
 
