@@ -10,7 +10,7 @@
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appBar_Layout"
         android:layout_width="match_parent"
-        android:layout_height="60sp"
+        android:layout_height="50sp"
         tools:ignore="MissingConstraints">
 
         <androidx.appcompat.widget.Toolbar
@@ -18,13 +18,25 @@
             android:layout_height="match_parent"
             android:background="@color/colorWhite">
 
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="8dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:src="@drawable/logoapp" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text="Campaign Lists"
                 android:gravity="center"
-                android:textSize="20dp"
-                android:textStyle="bold"/>
+                android:text="Campaign Lists"
+                android:textSize="18dp"
+                android:textColor="@color/colorAccent2"
+                android:textStyle="bold" />
 
         </androidx.appcompat.widget.Toolbar>
 

@@ -4,11 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
-    tools:context=".Chat">
+    tools:context=".MainChat">
 
     <LinearLayout
-        android:id="@+id/l1"
+        android:id="@+id/appBar_user"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:gravity="center_vertical"
@@ -16,43 +15,93 @@
        >
 
         <ImageView
-            android:id="@+id/imgBack"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="32dp"
+            android:id="@+id/BackFromChat"
+            android:layout_width="wrap_content"
+            android:layout_weight=".5"
+            android:layout_height="40dp"
             android:padding="5dp"
             android:src="@drawable/ic_keyboard_backspace"
             />
 
 
-        <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/imgProfile"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="42dp"
-            android:padding="5dp"
-            android:gravity="center_horizontal"
-            android:src="@drawable/profilpic" />
         <TextView
-            android:id="@+id/tvUserName"
-            android:layout_width="0dp"
+            android:id="@+id/UserName"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="5"
+            android:layout_weight="6"
             android:fontFamily="@font/cabin"
-            android:text="mauraputri"
+            android:gravity="center_horizontal"
+            android:text="foxy.goodthings"
             android:textSize="18sp"
             android:textStyle="bold"
             />
 
 
-
     </LinearLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/product_in_chat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingRight="20dp"
+        android:layout_margin="16dp"
+        android:background="@drawable/btn_corner"
+        android:layout_below="@id/appBar_user">
+
+        <ImageView
+            android:id="@+id/product_img"
+            android:layout_width="54dp"
+            android:layout_height="54dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:src="@android:drawable/sym_def_app_icon"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/product_name"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:paddingLeft="5dp"
+            android:text="Uniqlo x Kaws Shirt "
+            android:textColor="@color/colorBlack"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/product_img"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/product_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginBottom="8dp"
+            android:paddingRight="5dp"
+            android:paddingLeft="5dp"
+            android:textColor="@color/colorAccent2"
+            android:textStyle="bold"
+            android:text="Rp125.000"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/product_img"
+            app:layout_constraintTop_toBottomOf="@+id/product_name" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
     <androidx.recyclerview.widget.RecyclerView
-        android:layout_below="@id/l1"
+        android:id="@+id/chatRecyclerView"
+        android:layout_below="@id/product_in_chat"
         android:layout_width="match_parent"
         android:layout_above="@id/r1"
         android:layout_height="match_parent"
-        android:id="@+id/chatRecyclerView"/>
+        />
 
     <RelativeLayout
         android:id="@+id/r1"
@@ -65,7 +114,10 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:orientation="horizontal"
-            android:padding="20dp">
+            android:paddingBottom="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="10dp">
 
             <EditText
                 android:id="@+id/etMessage"
@@ -78,7 +130,7 @@
                 android:inputType="text"
                 android:padding="12dp"
                 android:textColor="@color/colorBlack"
-                android:textSize="18dp" />
+               />
 
             <ImageButton
                 android:id="@+id/btnSendMessage"
