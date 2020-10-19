@@ -5,11 +5,11 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import com.example.vviped.ui.CampaignListFragment
 import androidx.navigation.findNavController
 import androidx.navigation.ui.setupActionBarWithNavController
 import com.example.vviped.ui.HomeFragment
 import com.example.vviped.ui.ProfileFragment
-import com.example.vviped.ui.UploadFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_main.*
@@ -18,7 +18,8 @@ import kotlinx.android.synthetic.main.fragment_profile.*
 class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemSelectedListener {
     private var homeFragment = HomeFragment()
     private var profileFragment = ProfileFragment()
-    private var uploadFragment = UploadFragment()
+    private var campaignListFrament = CampaignListFragment()
+
     private lateinit var auth: FirebaseAuth   //user logout
 
 
@@ -30,8 +31,6 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
 
         val navView: BottomNavigationView = findViewById(R.id.nav_view)
         navView.setOnNavigationItemSelectedListener(this)
-
-
 
     }
 
@@ -47,9 +46,9 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
                     .replace(R.id.fragment_layout, homeFragment).commit()
                 return true
             }
-            R.id.navigation_upload -> {
+            R.id.navigation_campaignlist -> {
                 supportFragmentManager.beginTransaction()
-                    .replace(R.id.fragment_layout, uploadFragment).commit()
+                    .replace(R.id.fragment_layout, campaignListFrament).commit()
                 return true
             }
             R.id.navigation_profile -> {
