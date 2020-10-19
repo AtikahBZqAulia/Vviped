@@ -20,7 +20,7 @@ Members :
 
 [Click here to see our product backlogs](https://www.notion.so/0cb3638b1c284c1eb3f79f7f59e96a30?v=8cd37891c4d14f6fa1b0f9ca61ecf47a)
 
-[Click here to see our sprint backlogs](https://github.com/AtikahBZqAulia/Vviped/milestones)
+[Click here to see our sprint backlogs](https://www.notion.so/2211bb67dff7463aa22412926b6de731?v=850f8478b92c4e679cc2df9f4f9802e7)
 
 [Click here to see VVIPED-Backend Repo](https://github.com/AtikahBZqAulia/Vviped-Backend/)
 
@@ -55,15 +55,15 @@ Members :
 #### Login Layout
 <img src="https://github.com/AtikahBZqAulia/Vviped/blob/Sprint-5/ss3.jpeg" width="300" />
 
-<<<<<<< HEAD
+#### Sign Up Layout 
+<img src="https://github.com/AtikahBZqAulia/Vviped/blob/Sprint-5/ss4.jpeg" width="300" />
+
 #### Twitter Login Layout
 <img src="https://github.com/AtikahBZqAulia/Vviped/blob/Sprint-4/Screenshot_20201010-015317.png" width="300" />
                                                  
 #### Twitter main fragment
 <img src="https://github.com/AtikahBZqAulia/Vviped/blob/Sprint-4/PhotoGrid_1602317635199.png"/>
 
-
-=======
 #### Sign Up Layout 
 <img src="https://github.com/AtikahBZqAulia/Vviped/blob/Sprint-5/ss4.jpeg" width="300" />
->>>>>>> fe7073f9c35d250414b9a10ebd42d3446c64d8ef
+
