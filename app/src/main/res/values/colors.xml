@@ -5,11 +5,15 @@
     <color name="colorAccent">#F77737</color>
     <color name="colorBlack">#212121</color>
     <color name="colorAccent2">#F56040</color>
+    <color name="colorAccentLight"> #ff926c</color>
+    <color name="colorAccentLighter">#ffc39b</color>
 
     <color name="colorTextPrimary">#212121</color>
     <color name="colorTextSecondary">#757575</color>
     <color name="colorDivider">#BDBDBD</color>
     <color name="ColorGrey">#C7C4C4</color>
+    <color name="ColorLightGrey">#eceff1</color>
+
     <color name="colorWhite">#FFFFFF</color>
 
 
