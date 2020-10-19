@@ -16,10 +16,16 @@
         <activity
             android:name=".UploadSellingActivity"
             android:label="@string/title_activity_upload_selling"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar"
+            ></activity>
 
-        <activity android:name=".Register"></activity>
-        <activity android:name=".login"></activity>
+        <activity
+            android:name=".Register"
+            android:windowSoftInputMode="stateHidden"
+            ></activity>
+        <activity android:name=".login"
+            android:windowSoftInputMode="stateHidden"
+            ></activity>
         <activity android:name=".Landing" />
         <activity android:name=".splashScreen">
             <intent-filter>
