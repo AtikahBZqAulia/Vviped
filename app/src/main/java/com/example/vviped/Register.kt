@@ -17,4 +17,5 @@ class Register : AppCompatActivity() {
             onBackPressed()
         }
     }
+
 }

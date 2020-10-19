@@ -3,17 +3,15 @@ package com.example.vviped
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
-import android.widget.TextView
-import androidx.fragment.app.Fragment
+import com.example.vviped.ui.CampaignListFragment
 import com.example.vviped.ui.HomeFragment
 import com.example.vviped.ui.ProfileFragment
-import com.example.vviped.ui.UploadFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemSelectedListener {
     private var homeFragment = HomeFragment()
     private var profileFragment = ProfileFragment()
-    private var uploadFragment = UploadFragment()
+    private var campaignListFrament = CampaignListFragment()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -37,9 +35,9 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
                     .replace(R.id.fragment_layout, homeFragment).commit()
                 return true
             }
-            R.id.navigation_upload -> {
+            R.id.navigation_campaignlist -> {
                 supportFragmentManager.beginTransaction()
-                    .replace(R.id.fragment_layout, uploadFragment).commit()
+                    .replace(R.id.fragment_layout, campaignListFrament).commit()
                 return true
             }
             R.id.navigation_profile -> {
