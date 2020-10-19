@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".ui.HomeFragment">
+    tools:context=".ui.CampaignListFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <com.google.android.material.appbar.AppBarLayout
@@ -18,21 +18,20 @@
             android:layout_height="match_parent"
             android:background="@color/colorWhite">
 
-            <ImageView
-                android:id="@+id/logovviped_w"
-                android:layout_width="150dp"
-                android:layout_height="40dp"
-                android:layout_gravity="center_horizontal"
-                app:srcCompat="@drawable/logo_w"
-                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Campaign Lists"
+                android:gravity="center"
+                android:textSize="20dp"
+                android:textStyle="bold"/>
 
         </androidx.appcompat.widget.Toolbar>
-
 
     </com.google.android.material.appbar.AppBarLayout>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recycleView_home"
+        android:id="@+id/recycleView_campaign"
         android:layout_width="match_parent"
         android:layout_height="655dp"
         app:layout_constraintEnd_toEndOf="parent"
