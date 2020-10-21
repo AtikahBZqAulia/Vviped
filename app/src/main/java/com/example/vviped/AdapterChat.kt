@@ -42,10 +42,16 @@ class AdapterChat constructor(private val listViewType: List<Int>,
                     chat.apply {
                         viewHolderChatItemMySelf.textViewDateTime.text = this.dateTime
                         viewHolderChatItemMySelf.textViewMessage.text = this.message
+                        val bitmap = BitmapFactory.decodeFile(this.image)
+                        viewHolderChatItemMySelf.imageViewMessage.setImageBitmap(bitmap)
+
                         if (this.message.isEmpty()) {
                             viewHolderChatItemMySelf.textViewMessage.visibility = View.GONE
+                            viewHolderChatItemMySelf.imageViewMessage.visibility = View.VISIBLE
                         } else {
                             viewHolderChatItemMySelf.textViewMessage.visibility = View.VISIBLE
+                            viewHolderChatItemMySelf.imageViewMessage.visibility = View.GONE
+
                         }
                     }
                 }
@@ -54,10 +60,18 @@ class AdapterChat constructor(private val listViewType: List<Int>,
                     chat.apply {
                         viewHolderChatUser.textViewDateTime.text = chat.dateTime
                         viewHolderChatUser.textViewMessage.text = chat.message
+                        val bitmap = BitmapFactory.decodeFile(this.image)
+                        viewHolderChatUser.imageViewMessage.setImageBitmap(bitmap)
+
+
                         if (this.message.isEmpty()) {
                             viewHolderChatUser.textViewMessage.visibility = View.GONE
+                            viewHolderChatUser.imageViewMessage.visibility = View.VISIBLE
+
                         } else {
                             viewHolderChatUser.textViewMessage.visibility = View.VISIBLE
+                            viewHolderChatUser.imageViewMessage.visibility = View.GONE
+
                         }
                     }
                 }
@@ -75,6 +89,7 @@ class AdapterChat constructor(private val listViewType: List<Int>,
 
         val textViewDateTime: TextView = itemView.findViewById(R.id.date_chat_my_self)
         val textViewMessage: TextView = itemView.findViewById(R.id.text_chat_my_self)
+        val imageViewMessage: ImageView = itemView.findViewById(R.id.image_chat_myself)
 
     }
 
@@ -82,6 +97,8 @@ class AdapterChat constructor(private val listViewType: List<Int>,
 
         val textViewDateTime: TextView = itemView.findViewById(R.id.date_chat_user)
         val textViewMessage: TextView = itemView.findViewById(R.id.text_chat_user)
+        val imageViewMessage: ImageView = itemView.findViewById(R.id.image_chat_user)
+
 
     }
 

@@ -190,26 +190,34 @@
             <EditText
                 android:id="@+id/input_message"
                 android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@drawable/btn_corner"
+                android:layout_height="44dp"
+                android:layout_weight="2"
+                android:background="@drawable/btn_typing"
                 android:fontFamily="@font/cabin"
                 android:hint="@string/type_message"
                 android:imeOptions="actionSend"
                 android:inputType="text"
-                android:maxLines="2"
-                android:singleLine="false"
                 android:padding="12dp"
                 android:textColor="@color/colorBlack"
                />
 
             <ImageButton
                 android:id="@+id/btnSendMessage"
-                android:layout_width="40dp"
-                android:layout_height="37dp"
-                android:layout_marginLeft="10dp"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="5dp"
                 android:background="@drawable/btn_send_msg"
                 android:src="@drawable/ic_send"
+                android:textColor="@color/colorWhite" />
+
+
+            <ImageButton
+                android:id="@+id/btnSendImage"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/btn_send_msg"
+                android:src="@drawable/ic_camera"
                 android:textColor="@color/colorWhite" />
 
         </LinearLayout>

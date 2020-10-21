@@ -34,8 +34,17 @@
             android:textColor="@color/colorBlack"
             android:textSize="16sp" />
 
-
     </RelativeLayout>
+    <ImageView
+        android:id="@+id/image_chat_myself"
+        android:layout_width="180dp"
+        android:layout_height="200dp"
+        android:layout_alignParentRight="true"
+        android:scaleType="fitEnd"
+        android:padding="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="16dp"
+        tools:ignore="NotSibling" />
 
     <TextView
         android:id="@+id/date_chat_my_self"
@@ -48,6 +57,13 @@
         android:paddingLeft="5dp"
         android:paddingRight="5dp"
         android:textSize="10sp" />
+
+
+
+
+
+
+
 
 
 
