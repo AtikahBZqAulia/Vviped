@@ -29,9 +29,9 @@ class CampaignListFragment : Fragment() {
     private var campaignListAdapter: CampaignListAdapter? = null
 
     val campaignLists = arrayListOf<CampaignItem>(
-        CampaignItem(R.drawable.profilpic,"Bantu Pak Somat Mengobati Kanker", "desc here", "Bekasi, Jawa Barat"),
-        CampaignItem(R.drawable.profilpic,"Bantu Soni untuk Sekolah", "desc here", "Rawamangun, Jakarta Timur"),
-        CampaignItem(R.drawable.profilpic,"Bantu Ibu Jumilah Mengobati Kakinya", "desc here", "Malang, Jawa Timur"),
+        CampaignItem("organisasi1", R.drawable.profilpic, R.drawable.profilpic,"Bantu Pak Somat Mengobati Kanker", "desc here", "Bekasi, Jawa Barat"),
+        CampaignItem("organisasi2", R.drawable.profilpic, R.drawable.profilpic,"Bantu Soni untuk Sekolah", "desc here", "Rawamangun, Jakarta Timur"),
+        CampaignItem("organisasi1", R.drawable.profilpic, R.drawable.profilpic,"Bantu Ibu Jumilah Mengobati Kakinya", "desc here", "Malang, Jawa Timur"),
         )
 
     override fun onCreateView(

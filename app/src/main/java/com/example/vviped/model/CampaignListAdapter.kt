@@ -20,6 +20,8 @@ class CampaignListAdapter(
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
+        val organizationnamepost = itemView.findViewById<TextView>(R.id.organizationname_post)
+        val organizationprofpict_post = itemView.findViewById<ImageView>(R.id.organization_profpict_post)
         val imagecampaign = itemView.findViewById<ImageView>(R.id.imagecampaign_layout)
         val campaignname = itemView.findViewById<TextView>(R.id.campaign_name)
         val campaigndesc = itemView.findViewById<TextView>(R.id.campaign_deskripsi)
@@ -27,6 +29,8 @@ class CampaignListAdapter(
         val donatebyselling = itemView.findViewById<Button>(R.id.donatewithselling_btn)
 
         fun bindView(campaignItem: CampaignItem) {
+            organizationnamepost.text = campaignItem.organization_name
+            organizationprofpict_post.setImageResource(campaignItem.organization_profpict)
             imagecampaign.setImageResource(campaignItem.image_campaign)
             campaignname.text = campaignItem.campaign_name
             campaigndesc.text = campaignItem.campaign_desc

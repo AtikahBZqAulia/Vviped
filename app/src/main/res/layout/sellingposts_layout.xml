@@ -39,6 +39,7 @@
                 android:layout_height="match_parent"
                 android:layout_marginLeft="5dp"
                 android:gravity="center"
+                android:textStyle="bold"
                 android:text="akunsaya"
                 android:textColor="@color/colorBlack" />
         </LinearLayout>
