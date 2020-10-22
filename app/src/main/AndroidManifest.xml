@@ -3,6 +3,11 @@
     package="com.example.vviped">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-feature android:name="android.hardware.camera"
+        android:required="true" />
 
     <application
         android:allowBackup="true"
@@ -11,15 +16,22 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
-        android:usesCleartextTraffic="true">
+        android:usesCleartextTraffic="true"
+        android:requestLegacyExternalStorage="true">
 
         <activity
             android:name=".UploadSellingActivity"
             android:label="@string/title_activity_upload_selling"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar"
+            ></activity>
 
-        <activity android:name=".Register"></activity>
-        <activity android:name=".login"></activity>
+        <activity
+            android:name=".Register"
+            android:windowSoftInputMode="stateHidden"
+            ></activity>
+        <activity android:name=".login"
+            android:windowSoftInputMode="stateHidden"
+            ></activity>
         <activity android:name=".Landing" />
         <activity android:name=".splashScreen">
             <intent-filter>
@@ -27,9 +39,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Chat"></activity>
-        <activity android:name=".chat_left"/>
-        <activity android:name=".chat_right"/>
+        <activity android:name=".MainChat">
+
+        </activity>
+        <activity android:name=".chat_user"/>
+        <activity android:name=".chat_myself"/>
 
         <activity android:name=".MainActivity" />
 

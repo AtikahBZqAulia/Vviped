@@ -74,7 +74,7 @@
                         android:paddingStart="10dp"
                         android:paddingEnd="10dp"
                         android:textColor="@color/colorTextPrimary"
-                        android:textSize="14sp"
+                        android:textSize="16sp"
                         android:textStyle="bold"
                         android:imeOptions="actionNext"/>
                 </LinearLayout>
@@ -88,6 +88,7 @@
                     android:paddingStart="6dp"
                     android:paddingEnd="6dp"
                     android:text="Email"
+                    android:textSize="14dp"
                     android:textAllCaps="true"
                     android:textColor="@color/colorTextPrimary"
                     android:textStyle="bold"
@@ -132,7 +133,7 @@
                             android:paddingStart="10dp"
                             android:paddingEnd="10dp"
                             android:textColor="@color/colorTextPrimary"
-                            android:textSize="14sp"
+                            android:textSize="16sp"
                             android:textStyle="bold" />
                     </LinearLayout>
 
@@ -145,6 +146,7 @@
                         android:paddingStart="6dp"
                         android:paddingEnd="6dp"
                         android:text="@string/password"
+                        android:textSize="14dp"
                         android:textAllCaps="true"
                         android:textColor="@color/colorTextPrimary"
                         android:textStyle="bold"

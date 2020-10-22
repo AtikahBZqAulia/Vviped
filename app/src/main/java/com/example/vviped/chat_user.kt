@@ -3,9 +3,9 @@ package com.example.vviped
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 
-class Chat : AppCompatActivity() {
+class chat_user : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_chat)
+        setContentView(R.layout.activity_chat_user)
     }
 }
