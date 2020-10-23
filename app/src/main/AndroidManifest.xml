@@ -23,6 +23,7 @@
             android:name=".UploadSellingActivity"
             android:label="@string/title_activity_upload_selling"
             android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden"
             ></activity>
 
         <activity
@@ -45,7 +46,9 @@
         <activity android:name=".chat_user"/>
         <activity android:name=".chat_myself"/>
 
-        <activity android:name=".MainActivity" />
+        <activity android:name=".MainActivity"
+            android:windowSoftInputMode="stateHidden"/>
+
 
         <meta-data
             android:name="preloaded_fonts"

@@ -2,14 +2,25 @@ package com.example.vviped.model
 
 import android.content.Context
 import android.content.Intent
+import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
+import com.example.vviped.MainChat
 import com.example.vviped.R
+import com.example.vviped.UploadSellingActivity
+import com.example.vviped.ui.CampaignListFragment
+import com.example.vviped.ui.HomeFragment
+import com.example.vviped.ui.ProfileFragment
+import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.google.firebase.auth.FirebaseAuth
+import kotlinx.android.synthetic.main.sellingposts_layout.*
 
 class SellingPostsAdapter(
     private var context: Context,
@@ -26,6 +37,8 @@ class SellingPostsAdapter(
         val productprice = itemView.findViewById<TextView>(R.id.harga_produk)
         val productdesc = itemView.findViewById<TextView>(R.id.produk_deskripsi)
         val sellerlocation = itemView.findViewById<TextView>(R.id.lokasi_penjual)
+        val buyButton = itemView.findViewById<Button>(R.id.btn_buy)
+
 
         fun bindView(sellingPost: SellingPostItem) {
             usernamepost.text = sellingPost.usernamepost
@@ -35,6 +48,13 @@ class SellingPostsAdapter(
             productprice.text = sellingPost.product_price
             productdesc.text = sellingPost.product_description
             sellerlocation.text = sellingPost.seller_location
+
+            buyButton.setOnClickListener() {
+                val context = buyButton.context
+                val intent = Intent(context, MainChat::class.java)
+                context.startActivity(intent)
+            }
+
 
         }
 
@@ -56,6 +76,8 @@ class SellingPostsAdapter(
     override fun getItemCount(): Int {
         return sellingPosts.size
     }
+
+
 
 
 
