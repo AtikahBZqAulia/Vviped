@@ -5,16 +5,19 @@ import android.content.Intent
 import android.net.Uri
 import android.os.Build
 import android.os.Bundle
+import android.widget.EditText
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import com.example.vviped.model.*
 import kotlinx.android.synthetic.main.activity_upload_selling.*
 import okhttp3.MediaType
 import okhttp3.MultipartBody
+import okhttp3.MultipartBody.FORM
 import okhttp3.RequestBody
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
+import retrofit2.http.FormUrlEncoded
 import java.io.File
 import java.io.FileInputStream
 import java.io.FileOutputStream
@@ -66,6 +69,10 @@ class UploadSellingActivity : AppCompatActivity(), UploadRequestBody.UploadCallb
             return
         }
 
+        val productprice = findViewById<EditText>(R.id.text_priceproduct)
+        val productname = findViewById<EditText>(R.id.text_productname)
+        val productdesc = findViewById<EditText>(R.id.text_productdesc)
+        val sellerlocation = findViewById<EditText>(R.id.text_productloc)
 
         val parcelFileDescriptor = contentResolver.openFileDescriptor(selectedImageUri!!, "r", null) ?: return
 
@@ -82,7 +89,10 @@ class UploadSellingActivity : AppCompatActivity(), UploadRequestBody.UploadCallb
                 file.name,
                 body
             ),
-            RequestBody.create(MediaType.parse("multipart/form-data"), "json")
+            RequestBody.create(MediaType.parse("multipart/form-data"), productprice.text.toString()),
+            RequestBody.create(MediaType.parse("multipart/form-data"), productname.text.toString()),
+            RequestBody.create(MediaType.parse("multipart/form-data"), productdesc.text.toString()),
+            RequestBody.create(MediaType.parse("multipart/form-data"), sellerlocation.text.toString()),
         ).enqueue(object : Callback<UploadResponse> {
             override fun onFailure(call: Call<UploadResponse>, t: Throwable) {
                 layout_root.snackbar(t.message!!)
