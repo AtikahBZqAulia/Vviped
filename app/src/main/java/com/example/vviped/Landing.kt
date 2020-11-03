@@ -19,6 +19,11 @@ class Landing : AppCompatActivity() {
                 it.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
             })
         }
+        btn_to_register.setOnClickListener{
+            startActivity(Intent(this, Register::class.java).also {
+                it.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+            })
+        }
 
     }
 
