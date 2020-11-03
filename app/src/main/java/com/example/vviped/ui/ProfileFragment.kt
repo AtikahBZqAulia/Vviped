@@ -1,15 +1,18 @@
 package com.example.vviped.ui
 
+import android.content.DialogInterface
 import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.vviped.Landing
+import com.example.vviped.MainActivity
 import com.example.vviped.R
 import com.example.vviped.login
 import com.example.vviped.model.SellingPostItem
@@ -92,19 +95,42 @@ class ProfileFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         auth = FirebaseAuth.getInstance()
-
-
+        
         btn_logout.setOnClickListener{
+            onAlertDialog(view)
+          }
+
+        }
+    fun onAlertDialog(view: View) {
+        //Instantiate builder variable
+        val alertDialogBuilder = AlertDialog.Builder(view.context)
+
+        // set title
+        alertDialogBuilder.setTitle("Log out")
+
+        //set content area
+        alertDialogBuilder.setMessage("Are you sure?")
+
+        //set negative button
+        alertDialogBuilder.setPositiveButton(
+            "OK") { dialog, id ->
+            // User clicked Update Now button
             auth.signOut()
             val intent = Intent(activity, Landing::class.java)
             startActivity(intent)
             Toast.makeText(
                 activity,
-                "you've been logged out",
+                "You've been logged out.",
                 Toast.LENGTH_SHORT
             ).show()
-          }
-
-
         }
+
+        //set positive button
+        alertDialogBuilder.setNegativeButton(
+            "Cancel") { dialog, id ->
+            // User cancelled the dialog
+        }
+
+        alertDialogBuilder.show()
+    }
     }
