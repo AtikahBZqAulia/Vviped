@@ -14,7 +14,10 @@ interface RetrofitInterface {
     @POST("api.php?apicall=upload")
     fun uploadImage(
         @Part image: MultipartBody.Part,
-        @Part("desc") desc: RequestBody
+        @Part("product_price") product_price: RequestBody,
+        @Part("product_name") product_name: RequestBody,
+        @Part("product_desc") product_desc: RequestBody,
+        @Part("seller_loc") seller_loc: RequestBody
     ): Call<UploadResponse>
 
     companion object {
