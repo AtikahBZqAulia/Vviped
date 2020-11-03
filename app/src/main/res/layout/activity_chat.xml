@@ -84,14 +84,17 @@
 
         <ImageView
             android:id="@+id/product_img"
-            android:layout_width="54dp"
+            android:layout_width="64dp"
             android:layout_height="54dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginLeft="16dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginLeft="4dp"
             android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
             android:src="@android:drawable/sym_def_app_icon"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.516" />
 
         <TextView
             android:id="@+id/product_name"
@@ -101,7 +104,7 @@
             android:layout_marginLeft="8dp"
             android:layout_marginTop="8dp"
             android:paddingLeft="5dp"
-            android:text="Product Name"
+            android:text="Baju Atasan Lengan Panjang"
             android:textColor="@color/colorBlack"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
@@ -118,7 +121,7 @@
             android:layout_marginBottom="8dp"
             android:paddingLeft="5dp"
             android:paddingRight="5dp"
-            android:text="Price"
+            android:text="Rp70.000"
             android:textColor="@color/colorAccent2"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -126,42 +129,53 @@
             app:layout_constraintTop_toBottomOf="@+id/product_name"
             app:layout_constraintVertical_bias="0.0" />
 
-        <TextView
-            android:id="@+id/campaign"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginTop="4dp"
-            android:layout_marginBottom="8dp"
-            android:background="@drawable/btn_background"
-            android:paddingLeft="8dp"
-            android:paddingRight="8dp"
-            android:text="Campaign"
-            android:textColor="@color/colorWhite"
-            android:textStyle="bold|italic"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/product_img"
-            app:layout_constraintVertical_bias="0.0" />
 
-        <TextView
-            android:id="@+id/product_campaign"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginBottom="8dp"
-            android:paddingLeft="5dp"
-            android:text="Campaign Title"
-            android:textColor="@color/colorAccent2"
-            android:textStyle="italic"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="321dp"
+            android:layout_height="30dp"
+            android:layout_marginBottom="4dp"
+            android:layout_marginTop="4dp"
+            android:orientation="horizontal"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toEndOf="@+id/product_img"
-            app:layout_constraintTop_toBottomOf="@+id/campaign"
-            app:layout_constraintVertical_bias="0.0" />
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@id/product_img"
+            app:layout_constraintTop_toBottomOf="@+id/product_price"
+            app:layout_constraintVertical_bias="0.0">
+
+            <ImageView
+                android:id="@+id/icon_campaign"
+                android:layout_width="17dp"
+                android:layout_height="17dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginLeft="4dp"
+                android:src="@drawable/ic_campaign"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/product_campaign"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/product_campaign"
+                android:layout_width="244dp"
+                android:layout_height="0dp"
+                android:layout_marginEnd="28dp"
+                android:layout_marginRight="28dp"
+                android:text="Donasi Hijrah by Salim FMIPA UNJ"
+                android:textColor="@color/colorAccent2"
+                android:textSize="12sp"
+                android:textStyle="italic"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/icon_campaign"
+
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.545" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
