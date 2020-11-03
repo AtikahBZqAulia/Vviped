@@ -1,5 +1,6 @@
 package com.example.vviped.ui
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -7,11 +8,15 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.vviped.MainChat
 import com.example.vviped.R
+import com.example.vviped.create_campaign
 import com.example.vviped.model.CampaignItem
 import com.example.vviped.model.CampaignListAdapter
 import com.example.vviped.model.SellingPostItem
 import com.example.vviped.model.SellingPostsAdapter
+import kotlinx.android.synthetic.main.fragment_campaign_list.*
+import kotlinx.android.synthetic.main.fragment_home.*
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -50,5 +55,14 @@ class CampaignListFragment : Fragment() {
 
         return view
     }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
 
+        btn_create_campaign.setOnClickListener{
+            val intent = Intent(activity, create_campaign::class.java)
+            startActivity(intent)
+        }
+
+
+    }
 }
