@@ -65,21 +65,43 @@
         app:layout_constraintTop_toBottomOf="@+id/tagline2"
         app:srcCompat="@drawable/donate" />
 
-    <Button
-        android:id="@+id/btn_to_login"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.541"
+        android:orientation="horizontal">
+        <Button
+        android:id="@+id/btn_to_login"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
         android:layout_marginTop="16dp"
         android:layout_marginBottom="60dp"
         android:background="@drawable/btn_register_login"
         android:text="Log in"
         android:textAllCaps="false"
         android:textColor="@color/colorWhite"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
-        app:layout_constraintVertical_bias="0.541" />
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="15dp"
+        />
+        <Button
+            android:id="@+id/btn_to_register"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="60dp"
+            android:background="@color/colorBlack"
+            android:text="Register"
+            android:textAllCaps="false"
+            android:textColor="@color/colorWhite"
+            android:layout_marginRight="30dp"
+            />
 
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
