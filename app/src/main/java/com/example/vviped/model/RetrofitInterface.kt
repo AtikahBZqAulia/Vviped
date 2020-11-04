@@ -20,6 +20,18 @@ interface RetrofitInterface {
         @Part("seller_loc") seller_loc: RequestBody
     ): Call<UploadResponse>
 
+    @Multipart
+    @POST("api.php?apicall=uploadCampaign")
+    fun uploadCampaign(
+        @Part image: MultipartBody.Part,
+        @Part("campaign_category") campaign_category: RequestBody,
+        @Part("campaign_title") campaign_title: RequestBody,
+        @Part("campaign_desc") campaign_desc: RequestBody,
+        @Part("donation_goes") donation_goes: RequestBody,
+        @Part("usage_details") usage_details: RequestBody
+
+    ): Call<UploadResponse>
+
     companion object {
         operator fun invoke(): RetrofitInterface {
             return Retrofit.Builder()
