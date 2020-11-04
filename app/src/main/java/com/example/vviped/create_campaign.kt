@@ -81,6 +81,8 @@ class create_campaign : AppCompatActivity(), UploadRequestBody.UploadCallback {
         val campaigndesc = findViewById<EditText>(R.id.campaign_deskripsi)
         val donationgoes = findViewById<EditText>(R.id.campaign_penerima)
         val usagedetails = findViewById<EditText>(R.id.usage_detail)
+        val phonenumber = findViewById<EditText>(R.id.campaign_phone)
+
 
 
         val parcelFileDescriptor = contentResolver.openFileDescriptor(selectedImageUri!!, "r", null) ?: return
@@ -103,7 +105,8 @@ class create_campaign : AppCompatActivity(), UploadRequestBody.UploadCallback {
             RequestBody.create(MediaType.parse("multipart/form-data"), campaigntitle.text.toString()),
             RequestBody.create(MediaType.parse("multipart/form-data"), campaigndesc.text.toString()),
             RequestBody.create(MediaType.parse("multipart/form-data"), donationgoes.text.toString()),
-            RequestBody.create(MediaType.parse("multipart/form-data"), usagedetails.text.toString())
+            RequestBody.create(MediaType.parse("multipart/form-data"), usagedetails.text.toString()),
+            RequestBody.create(MediaType.parse("multipart/form-data"), phonenumber.text.toString())
         ).enqueue(object : Callback<UploadResponse> {
             override fun onFailure(call: Call<UploadResponse>, t: Throwable) {
                 layout_campaign.snackbar(t.message!!)

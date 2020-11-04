@@ -28,8 +28,8 @@ interface RetrofitInterface {
         @Part("campaign_title") campaign_title: RequestBody,
         @Part("campaign_desc") campaign_desc: RequestBody,
         @Part("donation_goes") donation_goes: RequestBody,
-        @Part("usage_details") usage_details: RequestBody
-
+        @Part("usage_details") usage_details: RequestBody,
+        @Part("phone_number") phone_number: RequestBody
     ): Call<UploadResponse>
 
     companion object {
