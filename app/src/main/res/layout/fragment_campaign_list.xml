@@ -59,12 +59,15 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycleView_campaign"
-        android:layout_width="423dp"
-        android:layout_height="614dp"
+        android:layout_width="match_parent"
+        android:layout_height="575dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text_campaign_list"
-        tools:ignore="MissingConstraints"></androidx.recyclerview.widget.RecyclerView>
+        tools:ignore="MissingConstraints"
+        android:layout_marginBottom="500dp">
+
+    </androidx.recyclerview.widget.RecyclerView>
 
 
     <TextView

@@ -25,7 +25,6 @@ class CampaignListAdapter(
         val imagecampaign = itemView.findViewById<ImageView>(R.id.imagecampaign_layout)
         val campaignname = itemView.findViewById<TextView>(R.id.campaign_name)
         val campaigndesc = itemView.findViewById<TextView>(R.id.campaign_deskripsi)
-        val campaignlocation = itemView.findViewById<TextView>(R.id.lokasi_campaign)
         val donatebyselling = itemView.findViewById<Button>(R.id.donatewithselling_btn)
 
         fun bindView(campaignItem: CampaignItem) {
@@ -34,7 +33,6 @@ class CampaignListAdapter(
             imagecampaign.setImageResource(campaignItem.image_campaign)
             campaignname.text = campaignItem.campaign_name
             campaigndesc.text = campaignItem.campaign_desc
-            campaignlocation.text = campaignItem.campaign_location
 
             donatebyselling.setOnClickListener() {
                 val context = donatebyselling.context
