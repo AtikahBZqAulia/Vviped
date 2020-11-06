@@ -34,9 +34,9 @@ class HomeFragment : Fragment() {
     private var sellingPostAdapter: SellingPostsAdapter? = null
 
     val sellingPosts = arrayListOf<SellingPostItem>(
-        SellingPostItem("inisaya", R.drawable.profilpic, R.drawable.profilpic, "Buku Materi Matematika SMA", "Rp 70000", "Kondisi buku masih bagus.", "Bekasi, Jawa Barat"),
-        SellingPostItem("akunbaru", R.drawable.profilpic, R.drawable.profilpic, "Buku Novel Andaikan Aku Menjadi", "Rp 30000", "Kondisi buku 80%", "Rawamangun, Jakarta Timur"),
-        SellingPostItem("anakbaik", R.drawable.profilpic, R.drawable.profilpic, "Hoodie White", "Rp 80000", "Kondisi hoodie masih sekitar 90%", "Malang, Jawa Timur"),
+        SellingPostItem("inisaya", R.drawable.profilpic, R.drawable.profilpic, "Buku Materi Matematika SMA", "Rp 70000", "Kondisi buku masih bagus.", "Bekasi, Jawa Barat", "SOLD"),
+        SellingPostItem("akunbaru", R.drawable.profilpic, R.drawable.profilpic, "Buku Novel Andaikan Aku Menjadi", "Rp 30000", "Kondisi buku 80%", "Rawamangun, Jakarta Timur", "SOLD"),
+        SellingPostItem("anakbaik", R.drawable.profilpic, R.drawable.profilpic, "Hoodie White", "Rp 80000", "Kondisi hoodie masih sekitar 90%", "Malang, Jawa Timur", "SOLD"),
 
         )
 
