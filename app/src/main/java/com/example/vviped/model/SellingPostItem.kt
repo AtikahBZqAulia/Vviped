@@ -12,7 +12,8 @@ data class SellingPostItem (
     val product_name: String,
     val product_price: String,
     val product_description: String,
-    val seller_location: String
+    val seller_location: String,
+    val sold: String
 ) : Parcelable{
         val attributionUrl get() = "http://127.0.0.1:5000/api/v1/search?object=$product_name"
 }
