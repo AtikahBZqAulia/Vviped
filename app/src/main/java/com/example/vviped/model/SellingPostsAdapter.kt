@@ -38,6 +38,7 @@ class SellingPostsAdapter(
         val productdesc = itemView.findViewById<TextView>(R.id.produk_deskripsi)
         val sellerlocation = itemView.findViewById<TextView>(R.id.lokasi_penjual)
         val buyButton = itemView.findViewById<Button>(R.id.btn_buy)
+        val soldTextView = itemView.findViewById<TextView>(R.id.sold_tv)
 
 
         fun bindView(sellingPost: SellingPostItem) {
@@ -48,6 +49,7 @@ class SellingPostsAdapter(
             productprice.text = sellingPost.product_price
             productdesc.text = sellingPost.product_description
             sellerlocation.text = sellingPost.seller_location
+            soldTextView.text = sellingPost.sold
 
             buyButton.setOnClickListener() {
                 val context = buyButton.context
