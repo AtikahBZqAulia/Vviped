@@ -19,6 +19,7 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
     private var homeFragment = HomeFragment()
     private var profileFragment = ProfileFragment()
     private var campaignListFrament = CampaignListFragment()
+    private var notificationFragment = NotificationFragment()
 
     private lateinit var auth: FirebaseAuth   //user logout
 
@@ -50,6 +51,12 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
             R.id.navigation_campaignlist -> {
                 supportFragmentManager.beginTransaction()
                     .replace(R.id.fragment_layout, campaignListFrament).commit()
+                return true
+            }
+
+            R.id.navigation_notification -> {
+                supportFragmentManager.beginTransaction()
+                    .replace(R.id.fragment_layout, notificationFragment).commit()
                 return true
             }
             R.id.navigation_profile -> {

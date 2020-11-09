@@ -56,7 +56,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
-            android:layout_marginBottom="12dp"
+            android:layout_marginBottom="5dp"
             android:layout_marginTop="5dp"
 
             android:text="Buku Materi Matematika SMA"
@@ -72,11 +72,11 @@
 
             <ImageView
                 android:id="@+id/icon_campaign"
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:layout_marginLeft="20dp"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
-                android:src="@drawable/ic_campaign"
+                android:src="@drawable/ic_campaign_heart"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/campaign_title"
                 app:layout_constraintHorizontal_bias="0.551"
@@ -91,7 +91,7 @@
                 android:paddingLeft="5dp"
                 android:paddingRight="5dp"
                 android:text="Donasi Hijrah by Salim FMIPA UNJ"
-                android:textColor="@color/colorAccent2"
+                android:textColor="@color/colorBlack"
                 android:textSize="14sp"
                 app:layout_constraintStart_toEndOf="@id/icon_campaign"
                 app:layout_constraintBottom_toBottomOf="parent"

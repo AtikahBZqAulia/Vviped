@@ -34,7 +34,7 @@
                 android:layout_height="match_parent"
                 android:gravity="center"
                 android:text="Campaign Lists"
-                android:textColor="@color/colorAccent2"
+                android:textColor="@color/colorBlack"
                 android:textSize="18dp"
                 android:textStyle="bold" />
 
