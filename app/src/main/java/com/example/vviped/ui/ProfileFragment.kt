@@ -33,40 +33,7 @@ private const val ARG_PARAM2 = "param2"
 class ProfileFragment : Fragment() {
     // TODO: Rename and change types of parameters
     private var recyclerView: RecyclerView? = null
-    private var sellingPostAdapter: SellingPostsAdapter? = null
     private lateinit var auth: FirebaseAuth
-
-    val sellingPosts = arrayListOf<SellingPostItem>(
-        SellingPostItem(
-            "inisaya",
-            R.drawable.profilpic,
-            R.drawable.profilpic,
-            "Buku Materi Matematika SMA",
-            "Rp 70000",
-            "Kondisi buku masih bagus.",
-            "Bekasi, Jawa Barat"
-        ),
-        SellingPostItem(
-            "inisaya",
-            R.drawable.profilpic,
-            R.drawable.profilpic,
-            "Baju Atasan Lengan Panjang",
-            "Rp 45000",
-            "Kondisi masih sekitar 95%",
-            "Bekasi, Jakarta Timur"
-        ),
-        SellingPostItem(
-            "inisaya",
-            R.drawable.profilpic,
-            R.drawable.profilpic,
-            "Komik One Piece",
-            "Rp 20000",
-            "Kondisi buku 70%",
-            "Bekasi, Jawa Timur"
-        ),
-
-        )
-
 
 
     override fun onCreateView(
@@ -75,18 +42,6 @@ class ProfileFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_profile, container, false)
-
-        recyclerView = view.findViewById(R.id.recycleView_sellingPostProfile)
-        recyclerView?.setHasFixedSize(true)
-        recyclerView?.layoutManager = LinearLayoutManager(context)
-
-        sellingPostAdapter = context?.let { SellingPostsAdapter(
-            it,
-            sellingPosts as ArrayList<SellingPostItem>,
-            true
-        ) }
-        recyclerView?.adapter = sellingPostAdapter
-
 
            return view
     }
