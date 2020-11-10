@@ -9,7 +9,7 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.example.vviped.R
-import kotlinx.android.synthetic.main.row_notification.view.*
+import kotlinx.android.synthetic.main.notification_layout.view.*
 
 class NotificationAdapter(
     private var context: Context,
@@ -33,7 +33,7 @@ class NotificationAdapter(
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val v = LayoutInflater.from(parent.context).inflate(R.layout.row_notification, parent, false)
+        val v = LayoutInflater.from(parent.context).inflate(R.layout.notification_layout, parent, false)
         return ViewHolder(v)
     }
 
@@ -58,5 +58,6 @@ class NotificationAdapter(
         return notificationList.size
 
     }
+
 }
 

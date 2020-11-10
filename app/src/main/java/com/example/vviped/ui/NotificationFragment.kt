@@ -1,5 +1,6 @@
 package com.example.vviped.ui
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -7,9 +8,13 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.vviped.MainChat
 import com.example.vviped.R
 import com.example.vviped.model.NotificationAdapter
 import com.example.vviped.model.NotificationItem
+import kotlinx.android.synthetic.main.fragment_home.*
+import kotlinx.android.synthetic.main.fragment_home.btn_chat
+import kotlinx.android.synthetic.main.fragment_notification.*
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -27,11 +32,7 @@ class NotificationFragment : Fragment() {
     private var notificationAdapter: NotificationAdapter? = null
 
     val notificationList = arrayListOf<NotificationItem>(
-        NotificationItem("You have a request", "This is notification description1This is notification description1This is notification description1", R.drawable.profilpic),
         NotificationItem("You have a request", "This is notification description2", R.drawable.ic_notifications),
-        NotificationItem("You have a request", "This is notification description3", R.drawable.profilpic),
-        NotificationItem("You have a request", "This is notification description4", R.drawable.profilpic),
-        NotificationItem("You have a request", "This is notification description5", R.drawable.profilpic),
 
         )
 
@@ -52,6 +53,22 @@ class NotificationFragment : Fragment() {
         recyclerView?.adapter = notificationAdapter
 
         return view
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        button_insertItem.setOnClickListener{
+            insertNotif(view)
+        }
+    }
+    fun insertNotif(view: View){
+        val newItem =  NotificationItem(
+            "You have a request",
+            "ada yang order barang kamu nich",
+            R.drawable.profilpic
+        )
+        notificationList.add(newItem)
+        notificationAdapter?.notifyDataSetChanged()
     }
 
 

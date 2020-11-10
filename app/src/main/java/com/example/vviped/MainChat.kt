@@ -12,9 +12,11 @@ import android.os.Build
 import android.os.Bundle
 import android.os.Environment.getExternalStorageDirectory
 import android.provider.MediaStore
+import android.view.LayoutInflater
 import android.view.View
 import android.view.inputmethod.EditorInfo
 import android.view.inputmethod.InputMethodManager
+import android.widget.FrameLayout
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
@@ -33,6 +35,7 @@ class MainChat : AppCompatActivity(), View.OnClickListener {
     private lateinit var listViewType: MutableList<Int>
     private lateinit var listChat: MutableList<Chat>
     private lateinit var adapterChat: AdapterChat
+    private lateinit var notificationsBadges: View
 
     private val requestCodeGallery = 1
     private val requestCodeCamera = 2
@@ -49,6 +52,13 @@ class MainChat : AppCompatActivity(), View.OnClickListener {
             }
             true
         }
+        buyNow_btn.setOnClickListener{
+            Toast.makeText(
+                this,
+                "buy now",
+                Toast.LENGTH_SHORT).show()
+        }
+
 
         btn_BackFromChat.setOnClickListener {
             onBackPressed()
@@ -67,6 +77,7 @@ class MainChat : AppCompatActivity(), View.OnClickListener {
 
         setupAdapterRecyclerView()
     }
+
 
     private fun checkRuntimePermissions() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
@@ -302,6 +313,7 @@ class MainChat : AppCompatActivity(), View.OnClickListener {
 
         }
     }
+
 }
 
 
