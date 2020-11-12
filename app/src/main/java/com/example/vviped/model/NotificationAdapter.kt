@@ -14,9 +14,15 @@ import kotlinx.android.synthetic.main.notification_layout.view.*
 class NotificationAdapter(
     private var context: Context,
     private var notificationList: List<NotificationItem>,
-    private var isFragment: Boolean = false
+    private var isFragment: Boolean = false,
+    private var onItemClickCallback: OnItemClickCallback? =null
+
 ) :
     RecyclerView.Adapter<NotificationAdapter.ViewHolder>() {
+
+    fun setOnItemClickCallback(onItemClickCallback: OnItemClickCallback){
+        this.onItemClickCallback = onItemClickCallback
+    }
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
         val notificationTitle = itemView.findViewById<TextView>(R.id.notif_title)
@@ -29,6 +35,10 @@ class NotificationAdapter(
             notificationTitle.text = notification.titleNotif
             notificationDesc.text = notification.descNotif
             notificationImg.setImageResource(notification.imageNotif)
+
+            itemView.setOnClickListener{
+                onItemClickCallback?.onItemClicked(notification)
+            }
         }
     }
 
@@ -39,25 +49,14 @@ class NotificationAdapter(
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.bindView(notificationList[position])
-        holder.itemView.setOnClickListener{
-            if (position == 0) {
-                Toast.makeText(
-                    context, "you clicked row 1", Toast.LENGTH_SHORT
-                ).show()
-            }
-            if (position == 1) {
-                Toast.makeText(
-                    context, "you clicked row 2", Toast.LENGTH_SHORT
-                ).show()
-            }
-        }
-
     }
 
     override fun getItemCount(): Int {
         return notificationList.size
 
     }
-
+    interface OnItemClickCallback{
+        fun onItemClicked(data:NotificationItem)
+    }
 }
 

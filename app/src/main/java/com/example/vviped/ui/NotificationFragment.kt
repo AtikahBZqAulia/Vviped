@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.vviped.MainChat
@@ -60,6 +61,13 @@ class NotificationFragment : Fragment() {
         button_insertItem.setOnClickListener{
             insertNotif(view)
         }
+        notificationAdapter?.setOnItemClickCallback(object : NotificationAdapter.OnItemClickCallback {
+            override fun onItemClicked(data: NotificationItem) {
+                Toast.makeText(getActivity()?.getBaseContext(), "notification: "+ data.descNotif, Toast.LENGTH_SHORT).show()
+            }
+        })
+
+
     }
     fun insertNotif(view: View){
         val newItem =  NotificationItem(
