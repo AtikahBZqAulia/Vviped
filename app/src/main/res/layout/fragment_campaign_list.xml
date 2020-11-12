@@ -59,16 +59,16 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycleView_campaign"
-        android:layout_width="match_parent"
-        android:layout_height="575dp"
+        android:layout_width="410dp"
+        android:layout_height="616dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text_campaign_list"
-        tools:ignore="MissingConstraints"
-        android:layout_marginBottom="500dp">
+        tools:ignore="MissingConstraints">
 
     </androidx.recyclerview.widget.RecyclerView>
-
 
     <TextView
         android:id="@+id/text_campaign_list"

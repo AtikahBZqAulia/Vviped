@@ -168,6 +168,43 @@
                         android:textSize="15dp" />
                 </LinearLayout>
 
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="10dp"
+                    android:paddingLeft="7dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Condition of Product"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="15dp" />
+
+                    <RadioGroup
+                        android:id="@+id/radiogroup"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginTop="8dp"
+                        android:orientation="vertical">
+
+                        <RadioButton
+                            android:id="@+id/radiobtn1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="New" />
+
+                        <RadioButton
+                            android:id="@+id/radiobtn2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Second" />
+
+                    </RadioGroup>
+                </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
