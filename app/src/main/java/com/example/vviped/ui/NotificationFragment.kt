@@ -10,6 +10,7 @@ import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.vviped.MainChat
+import com.example.vviped.NotificationDetails
 import com.example.vviped.R
 import com.example.vviped.model.NotificationAdapter
 import com.example.vviped.model.NotificationItem
@@ -63,7 +64,11 @@ class NotificationFragment : Fragment() {
         }
         notificationAdapter?.setOnItemClickCallback(object : NotificationAdapter.OnItemClickCallback {
             override fun onItemClicked(data: NotificationItem) {
-                Toast.makeText(getActivity()?.getBaseContext(), "notification: "+ data.descNotif, Toast.LENGTH_SHORT).show()
+//                Toast.makeText(getActivity()?.getBaseContext(), "notification: "+ data.descNotif, Toast.LENGTH_SHORT).show()
+
+                val intent = Intent(getActivity(), NotificationDetails::class.java)
+                intent.putExtra("details",data.descNotif )
+                startActivity(intent)
             }
         })
 
@@ -72,8 +77,8 @@ class NotificationFragment : Fragment() {
     fun insertNotif(view: View){
         val newItem =  NotificationItem(
             "You have a request",
-            "ada yang order barang kamu nich",
-            R.drawable.profilpic
+            "ada yang order barang kamu nich. Klik untuk konfirmasi",
+            R.drawable.ic_upload_img
         )
         notificationList.add(newItem)
         notificationAdapter?.notifyDataSetChanged()

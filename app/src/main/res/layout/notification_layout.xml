@@ -3,50 +3,49 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    app:cardCornerRadius="3dp"
-    app:cardElevation="3dp"
+    app:cardElevation="1dp"
     app:cardUseCompatPadding="true">
 
-
-
-    <RelativeLayout
-        android:id="@+id/relativelayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="16dp">
-        <ImageView
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:id="@+id/notif_img"
-            android:src="@drawable/ic_notifications"/>
-
-        <TextView
-            android:layout_width="wrap_content"
+        <RelativeLayout
+            android:id="@+id/relativelayout"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/notif_title"
-            android:textSize="16sp"
-            android:text="Request title"
-            android:textStyle="bold"
-            android:textColor="@color/colorBlack"
-            android:layout_toRightOf="@id/notif_img"
-            android:layout_toEndOf="@id/notif_img"
-            android:layout_marginLeft="10dp"
+            android:padding="16dp">
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:id="@+id/notif_img"
+                android:src="@drawable/ic_notifications"/>
 
-            />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/notif_title"
+                android:textSize="14sp"
+                android:text="Request title"
+                android:textStyle="bold"
+                android:textColor="@color/colorBlack"
+                android:layout_toRightOf="@id/notif_img"
+                android:layout_toEndOf="@id/notif_img"
+                android:layout_marginLeft="10dp"
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/notif_description"
-            android:textSize="14sp"
-            android:text="Description"
-            android:textColor="@color/colorBlack"
-            android:layout_toRightOf="@id/notif_img"
-            android:layout_toEndOf="@id/notif_img"
-            android:layout_marginLeft="10dp"
-            android:layout_below="@id/notif_title"
+                />
 
-            />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/notif_description"
+                android:textSize="12sp"
+                android:text="Description"
+                android:textColor="@color/colorTextSecondary"
+                android:layout_toRightOf="@id/notif_img"
+                android:layout_toEndOf="@id/notif_img"
+                android:layout_marginLeft="10dp"
+                android:layout_below="@id/notif_title"
 
-    </RelativeLayout>
+                />
+
+        </RelativeLayout>
+
+
 </androidx.cardview.widget.CardView>
