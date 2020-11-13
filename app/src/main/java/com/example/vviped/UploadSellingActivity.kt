@@ -93,7 +93,8 @@ class UploadSellingActivity : AppCompatActivity(), UploadRequestBody.UploadCallb
             RequestBody.create(MediaType.parse("multipart/form-data"), productprice.text.toString()),
             RequestBody.create(MediaType.parse("multipart/form-data"), productname.text.toString()),
             RequestBody.create(MediaType.parse("multipart/form-data"), productdesc.text.toString()),
-            RequestBody.create(MediaType.parse("multipart/form-data"), sellerlocation.text.toString())
+            RequestBody.create(MediaType.parse("multipart/form-data"), sellerlocation.text.toString()),
+            RequestBody.create(MediaType.parse("multipart/form-data"), "SALE")
         ).enqueue(object : Callback<UploadResponse> {
             override fun onFailure(call: Call<UploadResponse>, t: Throwable) {
                 layout_root.snackbar(t.message!!)

@@ -17,7 +17,8 @@ interface RetrofitInterface {
         @Part("product_price") product_price: RequestBody,
         @Part("product_name") product_name: RequestBody,
         @Part("product_desc") product_desc: RequestBody,
-        @Part("seller_loc") seller_loc: RequestBody
+        @Part("seller_loc") seller_loc: RequestBody,
+        @Part("selling_status") selling_status: RequestBody
     ): Call<UploadResponse>
 
     @Multipart
@@ -29,7 +30,7 @@ interface RetrofitInterface {
         @Part("campaign_desc") campaign_desc: RequestBody,
         @Part("donation_goes") donation_goes: RequestBody,
         @Part("usage_details") usage_details: RequestBody,
-        @Part("phone_number") phone_number: RequestBody
+        @Part("phone_number") phone_number: RequestBody,
     ): Call<UploadResponse>
 
     companion object {
