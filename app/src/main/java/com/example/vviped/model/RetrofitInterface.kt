@@ -16,6 +16,7 @@ interface RetrofitInterface {
         @Part image: MultipartBody.Part,
         @Part("product_price") product_price: RequestBody,
         @Part("product_name") product_name: RequestBody,
+        @Part("product_condition") product_condition: RequestBody,
         @Part("product_desc") product_desc: RequestBody,
         @Part("seller_loc") seller_loc: RequestBody,
         @Part("selling_status") selling_status: RequestBody

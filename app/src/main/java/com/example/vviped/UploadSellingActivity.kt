@@ -20,6 +20,8 @@ import retrofit2.Response
 import java.io.File
 import java.io.FileInputStream
 import java.io.FileOutputStream
+import android.widget.RadioButton
+import android.widget.RadioGroup
 
 class UploadSellingActivity : AppCompatActivity(), UploadRequestBody.UploadCallback {
 
@@ -74,6 +76,9 @@ class UploadSellingActivity : AppCompatActivity(), UploadRequestBody.UploadCallb
         val productname = findViewById<EditText>(R.id.text_productname)
         val productdesc = findViewById<EditText>(R.id.text_productdesc)
         val sellerlocation = findViewById<EditText>(R.id.text_productloc)
+        val radioGroup = findViewById<RadioGroup>(R.id.radiogroup)
+        val intSelectButton: Int = radioGroup!!.checkedRadioButtonId
+        val radioButton = findViewById<RadioButton>(intSelectButton)
 
         val parcelFileDescriptor = contentResolver.openFileDescriptor(selectedImageUri!!, "r", null) ?: return
 
@@ -92,6 +97,7 @@ class UploadSellingActivity : AppCompatActivity(), UploadRequestBody.UploadCallb
             ),
             RequestBody.create(MediaType.parse("multipart/form-data"), productprice.text.toString()),
             RequestBody.create(MediaType.parse("multipart/form-data"), productname.text.toString()),
+            RequestBody.create(MediaType.parse("multipart/form-data"), radioButton.text.toString()),
             RequestBody.create(MediaType.parse("multipart/form-data"), productdesc.text.toString()),
             RequestBody.create(MediaType.parse("multipart/form-data"), sellerlocation.text.toString()),
             RequestBody.create(MediaType.parse("multipart/form-data"), "SALE")
