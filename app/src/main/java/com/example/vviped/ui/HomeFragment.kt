@@ -47,24 +47,24 @@ class HomeFragment : Fragment() {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_home, container, false)
         
-        val campaignService = CampaignRepository.create()
-        campaignService.getCampaigns().enqueue(object : Callback<List<CampaignModel>>{
-            override fun onResponse(
-                call: Call<List<CampaignModel>>,
-                response: Response<List<CampaignModel>>
-            ) {
-                val data = response.body()
-                Log.d("tag", ":responsenya ${data?.size}")
-                data?.map {
-                    Log.d("tag", "datanya ${it.campaign_title}")
-                    Log.d("tag", "datanya ${it.path}")
-                }
-            }
+//         val campaignService = CampaignRepository.create()
+//         campaignService.getCampaigns().enqueue(object : Callback<List<CampaignModel>>{
+//             override fun onResponse(
+//                 call: Call<List<CampaignModel>>,
+//                 response: Response<List<CampaignModel>>
+//             ) {
+//                 val data = response.body()
+//                 Log.d("tag", ":responsenya ${data?.size}")
+//                 data?.map {
+//                     Log.d("tag", "datanya ${it.campaign_title}")
+//                     Log.d("tag", "datanya ${it.path}")
+//                 }
+//             }
 
-            override fun onFailure(call: Call<List<CampaignModel>>, t: Throwable) {
-                Log.e("tag", "error")
-            }
-        })
+//             override fun onFailure(call: Call<List<CampaignModel>>, t: Throwable) {
+//                 Log.e("tag", "error")
+//             }
+//         })
         recyclerView = view.findViewById(R.id.recycleView_home)
         recyclerView?.setHasFixedSize(true)
         recyclerView?.layoutManager = LinearLayoutManager(context)
