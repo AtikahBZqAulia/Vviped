@@ -34,6 +34,11 @@
             android:name=".login"
             android:windowSoftInputMode="stateHidden" />
         <activity android:name=".Landing" />
+        <activity android:name=".UserLogin"
+            android:windowSoftInputMode="stateHidden" />
+        <activity android:name=".UserRegister"
+            android:windowSoftInputMode="stateHidden" />
+
         <activity android:name=".splashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
