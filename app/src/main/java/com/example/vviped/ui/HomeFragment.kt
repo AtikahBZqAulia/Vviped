@@ -2,6 +2,7 @@ package com.example.vviped.ui
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -12,11 +13,13 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.vviped.Landing
 import com.example.vviped.MainChat
 import com.example.vviped.R
-import com.example.vviped.model.SellingPostItem
-import com.example.vviped.model.SellingPostsAdapter
+import com.example.vviped.model.*
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.fragment_home.*
 import kotlinx.android.synthetic.main.fragment_profile.*
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -46,32 +49,16 @@ class HomeFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_home, container, false)
-        
-//         val campaignService = CampaignRepository.create()
-//         campaignService.getCampaigns().enqueue(object : Callback<List<CampaignModel>>{
-//             override fun onResponse(
-//                 call: Call<List<CampaignModel>>,
-//                 response: Response<List<CampaignModel>>
-//             ) {
-//                 val data = response.body()
-//                 Log.d("tag", ":responsenya ${data?.size}")
-//                 data?.map {
-//                     Log.d("tag", "datanya ${it.campaign_title}")
-//                     Log.d("tag", "datanya ${it.path}")
-//                 }
-//             }
 
-//             override fun onFailure(call: Call<List<CampaignModel>>, t: Throwable) {
-//                 Log.e("tag", "error")
-//             }
-//         })
+
+
         recyclerView = view.findViewById(R.id.recycleView_home)
         recyclerView?.setHasFixedSize(true)
         recyclerView?.layoutManager = LinearLayoutManager(context)
 
         sellingPostAdapter = context?.let { SellingPostsAdapter(it, sellingPosts as ArrayList<SellingPostItem>, true) }
         recyclerView?.adapter = sellingPostAdapter
-
+        getData()
         return view
     }
 
@@ -85,8 +72,33 @@ class HomeFragment : Fragment() {
         }
 
 
+
     }
 
+    fun getData(){
+        val feedsService = SellingPostRepository.create()
+        feedsService.getFeeds().enqueue(object : Callback<List<SellingPostItem>> {
+            override fun onResponse(
+                call: Call<List<SellingPostItem>>,
+                response: Response<List<SellingPostItem>>
+            ) {
+                val data = response.body()
+                Log.d("tag", ":responsenya ${data?.size}")
+                data?.map {
+                    Log.d("tag", "datanya ${it.product_price}")
+//                    val d = Log.d("tag", "descnya ${it.product_description}")
+                    recyclerView?.adapter = sellingPostAdapter
+                    sellingPostAdapter?.notifyDataSetChanged()
+                }
+//                campaignListAdapter = context?.let { CampaignListAdapter1(it, data as List<CampaignItem>, true) }
 
+
+            }
+
+            override fun onFailure(call: Call<List<SellingPostItem>>, t: Throwable) {
+                Log.e("tag", t.toString())
+            }
+        })
+    }
 
 }
