@@ -37,7 +37,6 @@ interface RetrofitInterface {
     @Multipart
     @POST("api.php?apicall=register")
     fun registerUser(
-        @Part image: MultipartBody.Part,
         @Part("email") email: RequestBody,
         @Part("fullname") fullname: RequestBody,
         @Part("username") username: RequestBody,
