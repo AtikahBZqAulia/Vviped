@@ -34,6 +34,17 @@ interface RetrofitInterface {
         @Part("phone_number") phone_number: RequestBody,
     ): Call<UploadResponse>
 
+    @Multipart
+    @POST("api.php?apicall=register")
+    fun registerUser(
+        @Part image: MultipartBody.Part,
+        @Part("email") email: RequestBody,
+        @Part("fullname") fullname: RequestBody,
+        @Part("username") username: RequestBody,
+        @Part("password") password: RequestBody,
+    ): Call<UploadResponse>
+
+
     companion object {
         operator fun invoke(): RetrofitInterface {
             return Retrofit.Builder()
