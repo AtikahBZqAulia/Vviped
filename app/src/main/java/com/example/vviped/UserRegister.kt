@@ -1,31 +1,22 @@
 package com.example.vviped
 
-import android.app.Activity
 import android.content.Intent
 import android.os.Build
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Patterns
 import android.widget.EditText
 import android.widget.Toast
 import androidx.annotation.RequiresApi
+import androidx.appcompat.app.AppCompatActivity
 import com.example.vviped.model.RetrofitInterface
-import com.example.vviped.model.UploadRequestBody
 import com.example.vviped.model.UploadResponse
 import com.example.vviped.model.snackbar
-import kotlinx.android.synthetic.main.activity_create_campaign.*
-import kotlinx.android.synthetic.main.activity_create_campaign.progress_bar
-import kotlinx.android.synthetic.main.activity_register.*
-import kotlinx.android.synthetic.main.activity_upload_selling.*
-
+import com.google.android.material.snackbar.Snackbar
+import kotlinx.android.synthetic.main.activity_user_login.*
 import kotlinx.android.synthetic.main.activity_user_register.*
-import kotlinx.android.synthetic.main.activity_user_register.btn_register_account
-import kotlinx.android.synthetic.main.activity_user_register.user_email
-import kotlinx.android.synthetic.main.activity_user_register.imageBackspace
-import kotlinx.android.synthetic.main.activity_user_register.textLoginHere
+import kotlinx.android.synthetic.main.activity_user_register.layout_userRegister
 import kotlinx.android.synthetic.main.activity_user_register.user_password
 import okhttp3.MediaType
-import okhttp3.MultipartBody
 import okhttp3.RequestBody
 import retrofit2.Call
 import retrofit2.Callback
@@ -57,6 +48,11 @@ class UserRegister : AppCompatActivity() {
             }
             if(username.isEmpty()){
                 user_name.error = "username field cannot be empty"
+                user_name.requestFocus()
+                return@setOnClickListener
+            }
+            if(username.length < 6){
+                user_name.error = "Username too short"
                 user_name.requestFocus()
                 return@setOnClickListener
             }
@@ -96,7 +92,7 @@ class UserRegister : AppCompatActivity() {
     }
 
     @RequiresApi(Build.VERSION_CODES.KITKAT)
-    private fun register(email: String, fullname:String, username:String, password:String ) {
+    private fun register(email: String, fullname: String, username: String, password: String) {
         val email = findViewById<EditText>(R.id.user_email)
         val fullname = findViewById<EditText>(R.id.user_fullname)
         val username = findViewById<EditText>(R.id.user_name)
@@ -107,22 +103,37 @@ class UserRegister : AppCompatActivity() {
             RequestBody.create(MediaType.parse("multipart/form-data"), fullname.text.toString()),
             RequestBody.create(MediaType.parse("multipart/form-data"), username.text.toString()),
             RequestBody.create(MediaType.parse("multipart/form-data"), password.text.toString()),
-            ).enqueue(object : Callback<UploadResponse> {
+        ).enqueue(object : Callback<UploadResponse> {
 
             override fun onFailure(call: Call<UploadResponse>, t: Throwable) {
-                Toast.makeText(this@UserRegister, "Register Failed! Try Again.", Toast.LENGTH_LONG).show()
+//                Toast.makeText(this@UserRegister, "Register Failed! Try Again.", Toast.LENGTH_LONG)
+//                    .show()
+                val snackbar = t.message?.let {
+                    Snackbar
+                        .make(layout_userRegister, "Email already exist!", Snackbar.LENGTH_LONG)
+                }
+                snackbar?.show()
             }
 
-            override fun onResponse(call: Call<UploadResponse>,response: Response<UploadResponse>
+            override fun onResponse(
+                call: Call<UploadResponse>, response: Response<UploadResponse>
             ) {
                 response.body()?.let {
-
-                    Toast.makeText(this@UserRegister, "Success! Please Login.", Toast.LENGTH_LONG).show()
-
-                    }
+                }
+                nextActivity()
             }
         })
-
     }
 
+    private fun nextActivity() {
+        startActivity(Intent(this, UserLogin::class.java).also {
+            it.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+        })
+        Toast.makeText(
+            this,
+            "Success! Please Login.",
+            Toast.LENGTH_LONG
+        ).show()
+    }
 }
+
