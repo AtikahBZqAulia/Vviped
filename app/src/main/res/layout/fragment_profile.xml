@@ -92,7 +92,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="30sp"
-                android:layout_marginTop="20dp"
+
 
                 android:gravity="center"
                 android:orientation="horizontal">
@@ -141,12 +141,10 @@
                         android:textSize="13sp"
                         android:textStyle="bold"
                         android:layout_marginLeft="20dp"
-                        android:gravity="start" />
+                        android:gravity="start" />>
                 </LinearLayout>
 
             </LinearLayout>
-
-
 
         </LinearLayout>
 

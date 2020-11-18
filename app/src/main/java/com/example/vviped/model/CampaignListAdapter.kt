@@ -15,8 +15,13 @@ import com.example.vviped.UploadSellingActivity
 class CampaignListAdapter(
     private var context: Context,
     private var campaignLists: List<CampaignItem>,
-    private var isFragment: Boolean = false
+    private var isFragment: Boolean = false,
+    private var onItemClickCallback: CampaignListAdapter.OnItemClickCallback? =null
 ) : RecyclerView.Adapter<CampaignListAdapter.ViewHolder>() {
+
+    fun setOnItemClickCallback(onItemClickCallback: CampaignListAdapter.OnItemClickCallback){
+        this.onItemClickCallback = onItemClickCallback
+    }
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
@@ -35,9 +40,7 @@ class CampaignListAdapter(
             campaigndesc.text = campaignItem.campaign_desc
 
             donatebyselling.setOnClickListener() {
-                val context = donatebyselling.context
-                val intent = Intent(context, UploadSellingActivity::class.java)
-                context.startActivity(intent)
+                onItemClickCallback?.onItemClicked(campaignItem)
             }
 
         }
@@ -58,5 +61,9 @@ class CampaignListAdapter(
 
     override fun onBindViewHolder(viewHolder: CampaignListAdapter.ViewHolder, position: Int) {
         viewHolder.bindView(campaignLists[position])
+    }
+
+    interface OnItemClickCallback{
+        fun onItemClicked(data:CampaignItem)
     }
 }

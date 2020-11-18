@@ -8,13 +8,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.vviped.MainChat
-import com.example.vviped.R
-import com.example.vviped.create_campaign
-import com.example.vviped.model.CampaignItem
-import com.example.vviped.model.CampaignListAdapter
-import com.example.vviped.model.SellingPostItem
-import com.example.vviped.model.SellingPostsAdapter
+import com.example.vviped.*
+import com.example.vviped.model.*
 import kotlinx.android.synthetic.main.fragment_campaign_list.*
 import kotlinx.android.synthetic.main.fragment_home.*
 
@@ -62,6 +57,16 @@ class CampaignListFragment : Fragment() {
             val intent = Intent(activity, create_campaign::class.java)
             startActivity(intent)
         }
+
+        campaignListAdapter?.setOnItemClickCallback(object : CampaignListAdapter.OnItemClickCallback {
+            override fun onItemClicked(data: CampaignItem) {
+//                Toast.makeText(getActivity()?.getBaseContext(), "notification: "+ data.descNotif, Toast.LENGTH_SHORT).show()
+
+                val intent = Intent(getActivity(), UploadSellingActivity::class.java)
+                intent.putExtra("title_campaign",data.campaign_name)
+                startActivity(intent)
+            }
+        })
 
 
     }

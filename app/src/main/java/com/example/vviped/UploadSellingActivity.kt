@@ -22,6 +22,8 @@ import java.io.FileInputStream
 import java.io.FileOutputStream
 import android.widget.RadioButton
 import android.widget.RadioGroup
+import com.example.vviped.ui.CampaignListFragment
+import kotlinx.android.synthetic.main.activity_notification_details.*
 
 class UploadSellingActivity : AppCompatActivity(), UploadRequestBody.UploadCallback {
 
@@ -31,6 +33,9 @@ class UploadSellingActivity : AppCompatActivity(), UploadRequestBody.UploadCallb
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_upload_selling)
+
+        val title_campaign = intent.getStringExtra("title_campaign")
+        campaign_title.text = title_campaign
 
         image_view.setOnClickListener {
             openImageChooser()
@@ -122,6 +127,16 @@ class UploadSellingActivity : AppCompatActivity(), UploadRequestBody.UploadCallb
 
     override fun onProgressUpdate(percentage: Int) {
         progress_bar.progress = percentage
+    }
+
+    override fun onBackPressed() {
+        val newFragment = CampaignListFragment()
+        val transaction = supportFragmentManager.beginTransaction()
+        transaction.replace(R.id.fragment_layout, newFragment)
+        transaction.addToBackStack(null)
+        transaction.commit()
+
+
     }
 
     companion object {
