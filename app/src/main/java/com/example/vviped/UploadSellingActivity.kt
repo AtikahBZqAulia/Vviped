@@ -37,6 +37,7 @@ class UploadSellingActivity : AppCompatActivity(), UploadRequestBody.UploadCallb
         val title_campaign = intent.getStringExtra("title_campaign")
         campaign_title.text = title_campaign
 
+
         image_view.setOnClickListener {
             openImageChooser()
         }
