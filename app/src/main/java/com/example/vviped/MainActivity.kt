@@ -3,6 +3,7 @@ package com.example.vviped
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
+import androidx.fragment.app.Fragment
 import com.example.vviped.ui.CampaignListFragment
 import com.example.vviped.ui.HomeFragment
 import com.example.vviped.ui.NotificationFragment
@@ -27,7 +28,6 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
 
         val navView: BottomNavigationView = findViewById(R.id.nav_view)
         navView.setOnNavigationItemSelectedListener(this)
-
 
     }
 
@@ -62,6 +62,12 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
             else -> return false
 
         }
+    }
+
+    fun changeFragment(fragment: Fragment){
+        val transaction = supportFragmentManager.beginTransaction()
+        transaction.replace(R.id.fragment_layout, fragment)
+        transaction.commit()
     }
 
 }

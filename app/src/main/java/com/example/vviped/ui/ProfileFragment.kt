@@ -9,16 +9,18 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentManager
+import androidx.navigation.findNavController
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.vviped.Landing
-import com.example.vviped.MainActivity
-import com.example.vviped.R
-import com.example.vviped.login
+import com.example.vviped.*
 import com.example.vviped.model.SellingPostItem
 import com.example.vviped.model.SellingPostsAdapter
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.fragment_profile.*
+
+
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -43,19 +45,25 @@ class ProfileFragment : Fragment() {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_profile, container, false)
 
-           return view
+        return view
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
         auth = FirebaseAuth.getInstance()
-        
+
+        editprofile_btn.setOnClickListener{
+            (context as MainActivity).changeFragment(EditProfileFragment())
+        }
+
+
         btn_logout.setOnClickListener{
             onAlertDialog(view)
-          }
-
         }
+
+    }
+
     fun onAlertDialog(view: View) {
         //Instantiate builder variable
         val alertDialogBuilder = AlertDialog.Builder(view.context)
@@ -88,4 +96,6 @@ class ProfileFragment : Fragment() {
 
         alertDialogBuilder.show()
     }
-    }
+
+
+}
