@@ -22,6 +22,7 @@ import okhttp3.RequestBody
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
+import kotlinx.android.synthetic.main.activity_user_register.user_name as user_name1
 
 class UserRegister : AppCompatActivity() {
 

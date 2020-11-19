@@ -44,7 +44,7 @@ interface RetrofitInterface {
     ): Call<UploadResponse>
 
     @Multipart
-    @GET("api.php?apicall=login")
+    @POST("api.php?apicall=login")
     fun loginUser(
         @Part("username") username: RequestBody,
         @Part("password") password: RequestBody,

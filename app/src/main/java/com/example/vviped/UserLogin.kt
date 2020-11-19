@@ -20,7 +20,8 @@ import okhttp3.RequestBody
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
-
+import kotlinx.android.synthetic.main.activity_user_login.user_name as user_name1
+import kotlinx.android.synthetic.main.activity_user_login.user_password as user_password1
 
 
 @RequiresApi(Build.VERSION_CODES.KITKAT)
@@ -39,12 +40,12 @@ class UserLogin : AppCompatActivity() {
         }
 
         buttonLogin.setOnClickListener{
-            val login_username = username_login.text.toString().trim()
-            val login_password = user_password_login.text.toString().trim()
+            val login_username = user_name.text.toString().trim()
+            val login_password = user_password.text.toString().trim()
 
             if( login_username.isEmpty()){
-                username_login.error = "username cannot be empty"
-                username_login.requestFocus()
+                user_name.error = "username cannot be empty"
+                user_name.requestFocus()
                 return@setOnClickListener
             }
             if( login_username.length < 6){
@@ -53,12 +54,12 @@ class UserLogin : AppCompatActivity() {
                 return@setOnClickListener
             }
             if(login_password.isEmpty()){
-                user_password_login.error = "field cannot be empty"
-                user_password_login.requestFocus()
+                user_password.error = "field cannot be empty"
+                user_password.requestFocus()
                 return@setOnClickListener
             }
-            val username = findViewById<EditText>(R.id.username_login)
-            val password = findViewById<EditText>(R.id.user_password_login)
+            val username = findViewById<EditText>(R.id.user_name)
+            val password = findViewById<EditText>(R.id.user_password)
 
             RetrofitInterface().loginUser(
                 RequestBody.create(
