@@ -43,7 +43,13 @@ interface RetrofitInterface {
         @Part("password") password: RequestBody,
     ): Call<UploadResponse>
 
-
+    @Multipart
+    @GET("api.php?apicall=login")
+    fun loginUser(
+        @Part("username") username: RequestBody,
+        @Part("password") password: RequestBody,
+    ): Call<UploadResponse>
+    
     companion object {
         operator fun invoke(): RetrofitInterface {
             return Retrofit.Builder()
