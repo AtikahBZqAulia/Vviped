@@ -57,7 +57,6 @@ class ProfileFragment : Fragment() {
             (context as MainActivity).changeFragment(EditProfileFragment())
         }
 
-
         btn_logout.setOnClickListener{
             onAlertDialog(view)
         }

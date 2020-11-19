@@ -130,16 +130,6 @@ class UploadSellingActivity : AppCompatActivity(), UploadRequestBody.UploadCallb
         progress_bar.progress = percentage
     }
 
-    override fun onBackPressed() {
-        val newFragment = CampaignListFragment()
-        val transaction = supportFragmentManager.beginTransaction()
-        transaction.replace(R.id.fragment_layout, newFragment)
-        transaction.addToBackStack(null)
-        transaction.commit()
-
-
-    }
-
     companion object {
         const val REQUEST_CODE_PICK_IMAGE = 101
     }
