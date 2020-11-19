@@ -12,6 +12,7 @@ import com.example.vviped.model.RetrofitInterface
 import com.example.vviped.model.UploadResponse
 import com.example.vviped.model.snackbar
 import com.google.android.material.snackbar.Snackbar
+import kotlinx.android.synthetic.main.activity_upload_selling.*
 import kotlinx.android.synthetic.main.activity_user_login.*
 import kotlinx.android.synthetic.main.activity_user_register.*
 import kotlinx.android.synthetic.main.activity_user_register.layout_userRegister
@@ -104,25 +105,22 @@ class UserRegister : AppCompatActivity() {
             RequestBody.create(MediaType.parse("multipart/form-data"), username.text.toString()),
             RequestBody.create(MediaType.parse("multipart/form-data"), password.text.toString()),
         ).enqueue(object : Callback<UploadResponse> {
-
-            override fun onFailure(call: Call<UploadResponse>, t: Throwable) {
-//                Toast.makeText(this@UserRegister, "Register Failed! Try Again.", Toast.LENGTH_LONG)
-//                    .show()
-                val snackbar = t.message?.let {
-                    Snackbar
-                        .make(layout_userRegister, "Email already exist!", Snackbar.LENGTH_LONG)
+                override fun onFailure(call: Call<UploadResponse>, t: Throwable) {
+//                    layout_userRegister.snackbar(t.message!!)
+                        val snackbar = t.message?.let {
+                        Snackbar.make(layout_userRegister, "Email/username already exist!", Snackbar.LENGTH_LONG)
                 }
                 snackbar?.show()
-            }
-
-            override fun onResponse(
-                call: Call<UploadResponse>, response: Response<UploadResponse>
-            ) {
-                response.body()?.let {
                 }
-                nextActivity()
-            }
-        })
+
+                override fun onResponse(
+                    call: Call<UploadResponse>,
+                    response: Response<UploadResponse>
+                ) {
+                    response.body()?.let {}
+                    nextActivity()
+                }
+            })
     }
 
     private fun nextActivity() {
