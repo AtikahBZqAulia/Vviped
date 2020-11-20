@@ -58,6 +58,11 @@ class UserLogin : AppCompatActivity() {
                 user_password.requestFocus()
                 return@setOnClickListener
             }
+            if(login_password.length < 6){
+                user_password.error = "Password too short"
+                user_password.requestFocus()
+                return@setOnClickListener
+            }
             val username = findViewById<EditText>(R.id.user_name)
             val password = findViewById<EditText>(R.id.user_password)
 
@@ -74,10 +79,10 @@ class UserLogin : AppCompatActivity() {
 
                 override fun onFailure(call: Call<UploadResponse>, t: Throwable) {
 
-
                     val snackbar = t.message?.let {
                         Snackbar
-                            .make(layout_userLogin, "Username doesn't exist!", Snackbar.LENGTH_LONG)
+//                            .make(layout_userLogin, t.message!!, Snackbar.LENGTH_LONG)
+                            .make(layout_userLogin, "Username/password doesn't exist!", Snackbar.LENGTH_LONG)
                     }
                     snackbar?.show()
                 }
@@ -89,18 +94,17 @@ class UserLogin : AppCompatActivity() {
                         if(response.body() != null && response.isSuccessful()){
                             Toast.makeText(this@UserLogin,"Login success!", Toast.LENGTH_LONG)
                                 .show()
-                        }
-                    }
+                        }}
                     nextToMainActivity()
                 }
             })
         }
 
-        }
+    }
     private fun nextToMainActivity() {
         startActivity(Intent(this, MainActivity::class.java).also {
             it.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
         })
 
     }
-    }
+}

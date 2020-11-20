@@ -15,12 +15,12 @@ class Landing : AppCompatActivity() {
 //        auth = FirebaseAuth.getInstance()
 
         btn_to_login.setOnClickListener {
-            startActivity(Intent(this, login::class.java).also {
+            startActivity(Intent(this, UserLogin::class.java).also {
                 it.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
             })
         }
         btn_to_register.setOnClickListener{
-            startActivity(Intent(this, Register::class.java).also {
+            startActivity(Intent(this, UserRegister::class.java).also {
                 it.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
             })
         }

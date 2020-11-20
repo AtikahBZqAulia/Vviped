@@ -106,22 +106,22 @@ class UserRegister : AppCompatActivity() {
             RequestBody.create(MediaType.parse("multipart/form-data"), username.text.toString()),
             RequestBody.create(MediaType.parse("multipart/form-data"), password.text.toString()),
         ).enqueue(object : Callback<UploadResponse> {
-                override fun onFailure(call: Call<UploadResponse>, t: Throwable) {
+            override fun onFailure(call: Call<UploadResponse>, t: Throwable) {
 //                    layout_userRegister.snackbar(t.message!!)
-                        val snackbar = t.message?.let {
-                        Snackbar.make(layout_userRegister, "Email/username already exist!", Snackbar.LENGTH_LONG)
+                val snackbar = t.message?.let {
+                    Snackbar.make(layout_userRegister, "Email/username already exist!", Snackbar.LENGTH_LONG)
                 }
                 snackbar?.show()
-                }
+            }
 
-                override fun onResponse(
-                    call: Call<UploadResponse>,
-                    response: Response<UploadResponse>
-                ) {
-                    response.body()?.let {}
-                    nextActivity()
-                }
-            })
+            override fun onResponse(
+                call: Call<UploadResponse>,
+                response: Response<UploadResponse>
+            ) {
+                response.body()?.let {}
+                nextActivity()
+            }
+        })
     }
 
     private fun nextActivity() {
