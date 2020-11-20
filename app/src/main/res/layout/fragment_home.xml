@@ -92,7 +92,7 @@
                 android:scrollbarStyle="outsideOverlay">
 
                 <Button
-                    android:id="@+id/default_msg_1"
+                    android:id="@+id/kategori1"
                     style="@style/Widget.AppCompat.Button.Borderless"
                     android:layout_width="wrap_content"
                     android:layout_height="20dp"
@@ -110,7 +110,7 @@
                     tools:layout_marginTop="5dp" />
 
                 <Button
-                    android:id="@+id/default_msg_2"
+                    android:id="@+id/kategori2"
                     style="@style/Widget.AppCompat.Button.Borderless"
                     android:layout_width="wrap_content"
                     android:layout_height="20dp"
@@ -127,7 +127,7 @@
                     android:textSize="11dp" />
 
                 <Button
-                    android:id="@+id/default_msg_3"
+                    android:id="@+id/kategori3"
                     style="@style/Widget.AppCompat.Button.Borderless"
                     android:layout_width="wrap_content"
                     android:layout_height="20dp"
@@ -145,7 +145,7 @@
                     tools:layout_marginTop="5dp" />
 
                 <Button
-                    android:id="@+id/default_msg_4"
+                    android:id="@+id/kategori4"
                     style="@style/Widget.AppCompat.Button.Borderless"
                     android:layout_width="wrap_content"
                     android:layout_height="20dp"
@@ -163,7 +163,7 @@
                     tools:layout_marginTop="5dp" />
 
                 <Button
-                    android:id="@+id/default_msg_4"
+                    android:id="@+id/kategori5"
                     style="@style/Widget.AppCompat.Button.Borderless"
                     android:layout_width="wrap_content"
                     android:layout_height="20dp"
