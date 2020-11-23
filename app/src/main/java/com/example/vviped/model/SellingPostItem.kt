@@ -7,12 +7,12 @@ import kotlinx.android.parcel.Parcelize
 
 @Parcelize
 data class SellingPostItem (
-//    @SerializedName("username")
+    @SerializedName("username")
     val usernamepost: String,
-//    @SerializedName("user_profpict")
-    val user_profpict: Int,
-//    @SerializedName("path")
-    val image_post: Int,
+    @SerializedName("user_profpict")
+    val user_profpict: String,
+    @SerializedName("path")
+    val image_post: String,
     @SerializedName("product_name")
     val product_name: String,
     @SerializedName("product_price")
