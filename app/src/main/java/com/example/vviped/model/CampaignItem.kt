@@ -1,10 +1,12 @@
 package com.example.vviped.model
 
-class CampaignItem (
-    val organization_name: String,
-    val organization_profpict: Int,
-    val image_campaign: Int,
-    val campaign_name: String,
+data class CampaignModel (
+    val id : Int,
+    val path : String,
+    val campaign_category : String,
+    val campaign_title: String,
     val campaign_desc: String,
-    val campaign_location: String
+    val donation_goes: String,
+    val usage_details : String,
+    val phone_number : String
 )
