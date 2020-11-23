@@ -27,11 +27,11 @@ class CampaignListFragment : Fragment() {
     // TODO: Rename and change types of parameters
     private var recyclerView: RecyclerView? = null
     private var campaignListAdapter: CampaignListAdapter? = null
-
+    val url = "https://cdn.business2community.com/wp-content/uploads/2017/08/blank-profile-picture-973460_640.png"
     val campaignLists = arrayListOf<CampaignItem>(
-        CampaignItem("organisasi1", R.drawable.profilpic, R.drawable.profilpic,"Bantu Pak Somat Mengobati Kanker", "desc here", "Bekasi, Jawa Barat"),
-        CampaignItem("organisasi2", R.drawable.profilpic, R.drawable.profilpic,"Bantu Soni untuk Sekolah", "desc here", "Rawamangun, Jakarta Timur"),
-        CampaignItem("organisasi1", R.drawable.profilpic, R.drawable.profilpic,"Bantu Ibu Jumilah Mengobati Kakinya", "desc here", "Malang, Jawa Timur"),
+        CampaignItem("Kitabisa.com", "https://avatars0.githubusercontent.com/u/40655294?s=200&v=4", "https://kitabisa-userupload-01.s3-ap-southeast-1.amazonaws.com/_production/campaign/97098/31_97098_1545812068_232891_f.png","Bantu Pak Somat Mengobati Kanker", "desc here", "Bekasi, Jawa Barat"),
+        CampaignItem("Kitabisa.com", "https://avatars0.githubusercontent.com/u/40655294?s=200&v=4", "https://kitabisa-userupload-01.s3-ap-southeast-1.amazonaws.com/_production/campaign/128602/31_104915_1549273040_63962_f.jpg","Bantu Soni untuk Sekolah", "desc here", "Rawamangun, Jakarta Timur"),
+        CampaignItem("Kitabisa.com", "https://avatars0.githubusercontent.com/u/40655294?s=200&v=4", "https://kitabisa-userupload-01.s3-ap-southeast-1.amazonaws.com/_production/campaign/95361/31_95361_1545362552_579425_f.PNG","Bantu Ibu Jumilah Mengobati Kakinya", "desc here", "Malang, Jawa Timur"),
         )
 
     override fun onCreateView(
