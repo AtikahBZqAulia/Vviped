@@ -1,0 +1,32 @@
+package com.example.vviped.model.login
+
+import android.content.Context
+import android.content.SharedPreferences
+import android.content.SharedPreferences.Editor
+
+class PreferenceHelper (context: Context) {
+
+    private val PREFS_NAME = "loginPref"
+    private var sharedPref: SharedPreferences
+    var editor: SharedPreferences.Editor
+
+    init{
+        sharedPref = context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
+        editor = sharedPref.edit()
+    }
+
+    fun put(key: String, value: String){
+        editor.putString(key, value)
+            .apply()
+    }
+    fun getString(key: String) : String? {
+        return sharedPref.getString(key, null)
+    }
+    fun put(key: String, value: Boolean){
+        editor.putBoolean(key, value)
+            .apply()
+    }
+    fun getBoolean(key: String) : Boolean? {
+        return sharedPref.getBoolean(key, false)
+    }
+}

@@ -9,7 +9,9 @@ import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import com.example.vviped.model.RetrofitInterface
+import com.example.vviped.model.login.Constant
 import com.example.vviped.model.login.LoginResponse
+import com.example.vviped.model.login.PreferenceHelper
 import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.activity_user_login.*
 import kotlinx.android.synthetic.main.activity_user_register.*
@@ -24,12 +26,13 @@ import kotlinx.android.synthetic.main.activity_user_register.user_password as us
 
 @RequiresApi(Build.VERSION_CODES.KITKAT)
 class UserLogin : AppCompatActivity() {
-    var CheckEditText: Boolean? = null
+    lateinit var sharedPref: PreferenceHelper
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_user_login)
 
+        sharedPref = PreferenceHelper(this)
 
 
         val buttonLogin = findViewById<Button>(R.id.btn_login_account)
@@ -70,6 +73,9 @@ class UserLogin : AppCompatActivity() {
         val username = findViewById<EditText>(R.id.user_name)
         val password = findViewById<EditText>(R.id.user_password)
 
+        val login_username = user_name.text.toString().trim()
+        val login_password = user_password.text.toString().trim()
+
         RetrofitInterface().loginUser(
             RequestBody.create(
                 MediaType.parse("multipart/form-data"),
@@ -103,6 +109,9 @@ class UserLogin : AppCompatActivity() {
                             Toast.LENGTH_LONG
                         )
                             .show()
+                        saveSession(login_username, login_password)
+                        Toast.makeText(this@UserLogin,"berhasil masuk session", Toast.LENGTH_LONG)
+                            .show()
 
                         nextToMainActivity()
                     } else {
@@ -122,4 +131,22 @@ class UserLogin : AppCompatActivity() {
         })
 
     }
+
+    override fun onStart() {
+        super.onStart()
+        if(sharedPref.getBoolean(Constant.IS_LOGGED_IN)!!){
+            startActivity(Intent(this, MainActivity::class.java))
+                finish()
+
+            }
+    }
+
+    private fun saveSession(username : String, password: String) {
+        sharedPref.put(Constant.PREF_USERNAME, username)
+        sharedPref.put(Constant.PREF_PASSWORD, password)
+        sharedPref.put(Constant.IS_LOGGED_IN, true)
+
+    }
+
+
 }

@@ -35,7 +35,7 @@ private const val ARG_PARAM2 = "param2"
 class ProfileFragment : Fragment() {
     // TODO: Rename and change types of parameters
     private var recyclerView: RecyclerView? = null
-    private lateinit var auth: FirebaseAuth
+//    private lateinit var auth: FirebaseAuth
 
 
     override fun onCreateView(
@@ -51,7 +51,7 @@ class ProfileFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        auth = FirebaseAuth.getInstance()
+//        auth = FirebaseAuth.getInstance()
 
         editprofile_btn.setOnClickListener{
             (context as MainActivity).changeFragment(EditProfileFragment())
@@ -77,7 +77,7 @@ class ProfileFragment : Fragment() {
         alertDialogBuilder.setPositiveButton(
             "OK") { dialog, id ->
             // User clicked Update Now button
-            auth.signOut()
+//            auth.signOut()
             val intent = Intent(activity, Landing::class.java)
             startActivity(intent)
             Toast.makeText(
