@@ -20,6 +20,7 @@ import com.example.vviped.ui.HomeFragment
 import com.example.vviped.ui.ProfileFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.firebase.auth.FirebaseAuth
+import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.sellingposts_layout.*
 
 class SellingPostsAdapter(
@@ -43,8 +44,8 @@ class SellingPostsAdapter(
 
         fun bindView(sellingPost: SellingPostItem) {
             usernamepost.text = sellingPost.usernamepost
-            profpictpost.setImageResource(sellingPost.user_profpict)
-            imagepost.setImageResource(sellingPost.image_post)
+            Picasso.get().load(sellingPost.user_profpict).into(profpictpost)
+            Picasso.get().load(sellingPost.image_post).into(imagepost)
             productname.text = sellingPost.product_name
             productprice.text = sellingPost.product_price
             productdesc.text = sellingPost.product_description
