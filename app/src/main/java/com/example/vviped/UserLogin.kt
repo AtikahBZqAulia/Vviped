@@ -3,15 +3,13 @@ package com.example.vviped
 import android.content.Intent
 import android.os.Build
 import android.os.Bundle
-import android.text.TextUtils
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import com.example.vviped.model.RetrofitInterface
-import com.example.vviped.model.UploadResponse
-import com.example.vviped.model.snackbar
+import com.example.vviped.model.login.LoginResponse
 import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.activity_user_login.*
 import kotlinx.android.synthetic.main.activity_user_register.*
@@ -21,7 +19,7 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 import kotlinx.android.synthetic.main.activity_user_login.user_name as user_name1
-import kotlinx.android.synthetic.main.activity_user_login.user_password as user_password1
+import kotlinx.android.synthetic.main.activity_user_register.user_password as user_password1
 
 
 @RequiresApi(Build.VERSION_CODES.KITKAT)
@@ -63,44 +61,61 @@ class UserLogin : AppCompatActivity() {
                 user_password.requestFocus()
                 return@setOnClickListener
             }
-            val username = findViewById<EditText>(R.id.user_name)
-            val password = findViewById<EditText>(R.id.user_password)
-
-            RetrofitInterface().loginUser(
-                RequestBody.create(
-                    MediaType.parse("multipart/form-data"),
-                    username.text.toString()
-                ),
-                RequestBody.create(
-                    MediaType.parse("multipart/form-data"),
-                    password.text.toString()
-                ),
-            ).enqueue(object : Callback<UploadResponse> {
-
-                override fun onFailure(call: Call<UploadResponse>, t: Throwable) {
-
-                    val snackbar = t.message?.let {
-                        Snackbar
-//                            .make(layout_userLogin, t.message!!, Snackbar.LENGTH_LONG)
-                            .make(layout_userLogin, "Username/password doesn't exist!", Snackbar.LENGTH_LONG)
-                    }
-                    snackbar?.show()
-                }
-
-                override fun onResponse(
-                    call: Call<UploadResponse>, response: Response<UploadResponse>
-                ) {
-                    response.body()?.let {
-                        if(response.body() != null && response.isSuccessful()){
-                            Toast.makeText(this@UserLogin,"Login success!", Toast.LENGTH_LONG)
-                                .show()
-                        }}
-                    nextToMainActivity()
-                }
-            })
+            userLogin(login_username, login_password)
         }
 
     }
+
+    private fun userLogin(loginUsername: String, loginPassword: String) {
+        val username = findViewById<EditText>(R.id.user_name)
+        val password = findViewById<EditText>(R.id.user_password)
+
+        RetrofitInterface().loginUser(
+            RequestBody.create(
+                MediaType.parse("multipart/form-data"),
+                username.text.toString()
+            ),
+            RequestBody.create(
+                MediaType.parse("multipart/form-data"),
+                password.text.toString()
+            ),
+        ).enqueue(object : Callback<LoginResponse> {
+
+            override fun onFailure(call: Call<LoginResponse>, t: Throwable) {
+
+                val snackbar = t.message?.let {
+                    Snackbar
+//                            .make(layout_userLogin, t.message!!, Snackbar.LENGTH_LONG)
+                        .make(layout_userLogin, "Username/password doesn't exist!", Snackbar.LENGTH_LONG)
+                }
+                snackbar?.show()
+            }
+
+            override fun onResponse(
+                call: Call<LoginResponse>, response: Response<LoginResponse>
+            ) {
+                response.body()?.let {
+                    if(response.body() != null && response.body()!!.isStatus()!!){
+                        // jika password benar
+                        Toast.makeText(
+                            this@UserLogin,
+                            "Welcome, " + response.body()!!.data!!.fullname + "!",
+                            Toast.LENGTH_LONG
+                        )
+                            .show()
+
+                        nextToMainActivity()
+                    } else {
+                        // jika salah password
+                        Toast.makeText(this@UserLogin, response.body()!!.message, Toast.LENGTH_LONG)
+                            .show()
+
+                    }
+                }
+            }
+        })
+    }
+
     private fun nextToMainActivity() {
         startActivity(Intent(this, MainActivity::class.java).also {
             it.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
