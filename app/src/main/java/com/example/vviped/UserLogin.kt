@@ -110,9 +110,6 @@ class UserLogin : AppCompatActivity() {
                         )
                             .show()
                         saveSession(login_username, login_password)
-                        Toast.makeText(this@UserLogin,"berhasil masuk session", Toast.LENGTH_LONG)
-                            .show()
-
                         nextToMainActivity()
                     } else {
                         // jika salah password

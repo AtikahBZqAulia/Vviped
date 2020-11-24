@@ -7,7 +7,6 @@ import com.example.vviped.model.login.Constant
 import com.example.vviped.model.login.PreferenceHelper
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_landing.*
-import kotlinx.android.synthetic.main.activity_landing.fullname
 import kotlinx.android.synthetic.main.activity_logout.*
 
 class Landing : AppCompatActivity() {
