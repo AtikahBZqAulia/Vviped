@@ -2,21 +2,17 @@ package com.example.vviped.ui
 
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
+import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import com.example.vviped.Landing
 import com.example.vviped.MainChat
 import com.example.vviped.R
-import com.example.vviped.model.*
-import com.google.firebase.auth.FirebaseAuth
+import com.example.vviped.model.SellingPostItem
+import com.example.vviped.model.SellingPostRepository
+import com.example.vviped.model.SellingPostsAdapter
 import kotlinx.android.synthetic.main.fragment_home.*
-import kotlinx.android.synthetic.main.fragment_profile.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -33,15 +29,7 @@ private const val ARG_PARAM2 = "param2"
  */
 class HomeFragment : Fragment() {
     // TODO: Rename and change types of parameters
-    private var recyclerView: RecyclerView? = null
-    private var sellingPostAdapter: SellingPostsAdapter? = null
-
-    val sellingPosts = arrayListOf<SellingPostItem>(
-        SellingPostItem("inisaya", R.drawable.profilpic, R.drawable.profilpic, "Buku Materi Matematika SMA", "Rp 70000", "Kondisi buku masih bagus.", "Bekasi, Jawa Barat", "SOLD"),
-        SellingPostItem("akunbaru", R.drawable.profilpic, R.drawable.profilpic, "Buku Novel Andaikan Aku Menjadi", "Rp 30000", "Kondisi buku 80%", "Rawamangun, Jakarta Timur", "SOLD"),
-        SellingPostItem("anakbaik", R.drawable.profilpic, R.drawable.profilpic, "Hoodie White", "Rp 80000", "Kondisi hoodie masih sekitar 90%", "Malang, Jawa Timur", "SOLD"),
-
-        )
+    private val sellingposts = ArrayList<SellingPostItem>()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -49,15 +37,9 @@ class HomeFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_home, container, false)
+        recycleView_home.setHasFixedSize(true)
+        recycleView_home.layoutManager = LinearLayoutManager(context)
 
-
-
-        recyclerView = view.findViewById(R.id.recycleView_home)
-        recyclerView?.setHasFixedSize(true)
-        recyclerView?.layoutManager = LinearLayoutManager(context)
-
-        sellingPostAdapter = context?.let { SellingPostsAdapter(it, sellingPosts as ArrayList<SellingPostItem>, true) }
-        recyclerView?.adapter = sellingPostAdapter
         getData()
         return view
     }
@@ -70,35 +52,24 @@ class HomeFragment : Fragment() {
             val intent = Intent(activity, MainChat::class.java)
             startActivity(intent)
         }
-
-
-
     }
 
     fun getData(){
         val feedsService = SellingPostRepository.create()
-        feedsService.getFeeds().enqueue(object : Callback<List<SellingPostItem>> {
+        feedsService.getFeeds().enqueue(object : Callback<ArrayList<SellingPostItem>> {
             override fun onResponse(
-                call: Call<List<SellingPostItem>>,
-                response: Response<List<SellingPostItem>>
+                call: Call<ArrayList<SellingPostItem>>,
+                response: Response<ArrayList<SellingPostItem>>
             ) {
-                val data = response.body()
-                Log.d("tag", ":responsenya ${data?.size}")
-                data?.map {
-                    Log.d("tag", "datanya ${it.product_price}")
-//                    val d = Log.d("tag", "descnya ${it.product_description}")
-                    recyclerView?.adapter = sellingPostAdapter
-                    sellingPostAdapter?.notifyDataSetChanged()
+                response.body()?.let { sellingposts.addAll(it) }
+                val adapter = SellingPostsAdapter(sellingposts)
+                recycleView_home.adapter = adapter
                 }
+
+            override fun onFailure(call: Call<ArrayList<SellingPostItem>>, t: Throwable) {
+            }
 //                campaignListAdapter = context?.let { CampaignListAdapter1(it, data as List<CampaignItem>, true) }
 
-
-            }
-
-            override fun onFailure(call: Call<List<SellingPostItem>>, t: Throwable) {
-                Log.e("tag", t.toString())
-            }
         })
     }
-
 }
