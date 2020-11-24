@@ -36,6 +36,7 @@ class HomeFragment : Fragment() {
     private var recyclerView: RecyclerView? = null
     private var sellingPostAdapter: SellingPostsAdapter? = null
 
+
     val sellingPosts = arrayListOf<SellingPostItem>(
         SellingPostItem("orang_ganteng", "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500", "https://inkuiri.net/i/large/https%2Fs1.bukalapak.com%2Fimg%2F18591872112%2Flarge%2F16174c2383aa0d2c803100033a7af0bab_dijual_matematika_kelas_10.png", "Buku Materi Matematika SMA Kelas X", "Rp 70000", "Kondisi buku masih bagus.", "Bekasi, Jawa Barat", "SOLD"),
         SellingPostItem("lovely_suzy", "https://www.allkpop.com/upload/2020/01/content/181813/1579389188-aee70205-f9ac-4903-acb7-25d27940c050.jpeg", "https://static.republika.co.id/uploads/images/inpicture_slide/novel-terbaru-karya-tere-liye-tentang-kamu-_161026145442-103.jpg","Buku Novel Paket Tere Liye", "Rp 30000", "Kondisi buku 80%", "Rawamangun, Jakarta Timur", "SOLD"),

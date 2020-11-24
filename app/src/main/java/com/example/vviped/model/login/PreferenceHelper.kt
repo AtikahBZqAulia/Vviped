@@ -2,7 +2,6 @@ package com.example.vviped.model.login
 
 import android.content.Context
 import android.content.SharedPreferences
-import android.content.SharedPreferences.Editor
 
 class PreferenceHelper (context: Context) {
 
@@ -20,7 +19,7 @@ class PreferenceHelper (context: Context) {
             .apply()
     }
     fun getString(key: String) : String? {
-        return sharedPref.getString(key, null)
+        return sharedPref.getString(key.toString(), null)
     }
     fun put(key: String, value: Boolean){
         editor.putBoolean(key, value)
@@ -28,5 +27,11 @@ class PreferenceHelper (context: Context) {
     }
     fun getBoolean(key: String) : Boolean? {
         return sharedPref.getBoolean(key, false)
+    }
+    fun clear(){
+        val editor: SharedPreferences.Editor = sharedPref.edit()
+        editor.clear()
+        editor.apply()
+
     }
 }
