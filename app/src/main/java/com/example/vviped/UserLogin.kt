@@ -133,10 +133,9 @@ class UserLogin : AppCompatActivity() {
         super.onStart()
         if(sharedPref.getBoolean(Constant.IS_LOGGED_IN)!!){
             startActivity(Intent(this, MainActivity::class.java))
-                finish()
-
             }
     }
+
 
     private fun saveSession(username : String, password: String) {
         sharedPref.put(Constant.PREF_USERNAME, username)

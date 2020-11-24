@@ -19,7 +19,6 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
     private var profileFragment = ProfileFragment()
     private var campaignListFrament = CampaignListFragment()
     private var notificationFragment = NotificationFragment()
-    private lateinit var sharedPref: PreferenceHelper
 
 
 
@@ -38,11 +37,7 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
         super.onStart()
         supportFragmentManager.beginTransaction()
             .replace(R.id.fragment_layout, homeFragment).commit()
-//        if(sharedPref.getBoolean(Constant.IS_LOGGED_IN)!!){
-//            supportFragmentManager.beginTransaction()
-//                .replace(R.id.fragment_layout, homeFragment).commit()
-//
-//        }
+
     }
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
