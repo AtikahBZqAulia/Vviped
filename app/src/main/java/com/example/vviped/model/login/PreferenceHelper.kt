@@ -18,8 +18,15 @@ class PreferenceHelper (context: Context) {
         editor.putString(key, value)
             .apply()
     }
+    fun put(key: String, value: Int){
+        editor.putInt(key, value)
+            .apply()
+    }
     fun getString(key: String) : String? {
         return sharedPref.getString(key.toString(), null)
+    }
+    fun getInt(key: String) : Int? {
+        return sharedPref.getInt(key, -1)
     }
     fun put(key: String, value: Boolean){
         editor.putBoolean(key, value)

@@ -20,6 +20,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
+
         <activity android:name=".model.login.Logout"></activity>
         <activity android:name=".NotificationDetails" />
         <activity android:name=".create_campaign" />
@@ -28,20 +29,19 @@
             android:label="@string/title_activity_upload_selling"
             android:theme="@style/AppTheme.NoActionBar"
             android:windowSoftInputMode="stateHidden" />
-        <activity
-            android:name=".Register"
-            android:windowSoftInputMode="stateHidden" />
-        <activity
-            android:name=".login"
-            android:windowSoftInputMode="stateHidden" />
-        <activity android:name=".Landing" />
+
+        <activity android:name=".Landing"
+            android:theme="@style/AppTheme.NoStatusBar"/>
         <activity
             android:name=".UserLogin"
-            android:windowSoftInputMode="stateHidden" />
+            android:windowSoftInputMode="stateHidden"
+            android:theme="@style/AppTheme.NoStatusBar"/>
         <activity
             android:name=".UserRegister"
-            android:windowSoftInputMode="stateHidden" />
-        <activity android:name=".splashScreen">
+            android:windowSoftInputMode="stateHidden"
+            android:theme="@style/AppTheme.NoStatusBar"/>
+        <activity android:name=".splashScreen"
+            android:theme="@style/AppTheme.NoStatusBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -272,14 +272,13 @@
                     android:layout_marginTop="5dp"
                     android:layout_marginRight="5dp"
                     android:layout_marginBottom="5dp"
+                    android:background="@drawable/btn_default_msg"
                     android:paddingLeft="10dp"
                     android:paddingRight="10dp"
-                    android:background="@drawable/btn_default_msg"
                     android:text="Terima Kasih!"
                     android:textAllCaps="false"
                     android:textColor="@color/colorTextSecondary"
-                    android:textSize="11dp"
-                    />
+                    android:textSize="11dp" />
 
                 <Button
                     android:id="@+id/default_msg_3"

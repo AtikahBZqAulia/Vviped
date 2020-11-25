@@ -14,14 +14,11 @@ import com.example.vviped.model.login.LoginResponse
 import com.example.vviped.model.login.PreferenceHelper
 import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.activity_user_login.*
-import kotlinx.android.synthetic.main.activity_user_register.*
 import okhttp3.MediaType
 import okhttp3.RequestBody
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
-import kotlinx.android.synthetic.main.activity_user_login.user_name as user_name1
-import kotlinx.android.synthetic.main.activity_user_register.user_password as user_password1
 
 
 @RequiresApi(Build.VERSION_CODES.KITKAT)
@@ -102,6 +99,9 @@ class UserLogin : AppCompatActivity() {
             ) {
                 response.body()?.let {
                     if(response.body() != null && response.body()!!.isStatus()!!){
+                        val login_id = response.body()!!.data!!.id
+                        val login_email = response.body()!!.data!!.email
+                        val login_fullname = response.body()!!.data!!.fullname
                         // jika password benar
                         Toast.makeText(
                             this@UserLogin,
@@ -109,10 +109,13 @@ class UserLogin : AppCompatActivity() {
                             Toast.LENGTH_LONG
                         )
                             .show()
-                        saveSession(login_username, login_password)
-                        Toast.makeText(this@UserLogin,"berhasil masuk session", Toast.LENGTH_LONG)
-                            .show()
-
+                        if (login_id != null) {
+                            if (login_email != null) {
+                                if (login_fullname != null) {
+                                    saveSession(login_id, login_username, login_password, login_email, login_fullname)
+                                }
+                            }
+                        }
                         nextToMainActivity()
                     } else {
                         // jika salah password
@@ -136,14 +139,16 @@ class UserLogin : AppCompatActivity() {
         super.onStart()
         if(sharedPref.getBoolean(Constant.IS_LOGGED_IN)!!){
             startActivity(Intent(this, MainActivity::class.java))
-                finish()
-
-            }
+        }
     }
 
-    private fun saveSession(username : String, password: String) {
+
+    private fun saveSession(id : Int, username : String, password: String, email : String, fullname: String) {
+        sharedPref.put(Constant.PREF_ID, id)
         sharedPref.put(Constant.PREF_USERNAME, username)
         sharedPref.put(Constant.PREF_PASSWORD, password)
+        sharedPref.put(Constant.PREF_EMAIL, email)
+        sharedPref.put(Constant.PREF_FULLNAME, fullname)
         sharedPref.put(Constant.IS_LOGGED_IN, true)
 
     }

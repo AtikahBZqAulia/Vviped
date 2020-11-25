@@ -6,10 +6,11 @@ import android.net.Uri
 import android.os.Build
 import android.os.Bundle
 import android.widget.EditText
+import android.widget.RadioButton
+import android.widget.RadioGroup
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import com.example.vviped.model.*
-import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_upload_selling.*
 import okhttp3.MediaType
 import okhttp3.MultipartBody
@@ -20,10 +21,6 @@ import retrofit2.Response
 import java.io.File
 import java.io.FileInputStream
 import java.io.FileOutputStream
-import android.widget.RadioButton
-import android.widget.RadioGroup
-import com.example.vviped.ui.CampaignListFragment
-import kotlinx.android.synthetic.main.activity_notification_details.*
 
 class UploadSellingActivity : AppCompatActivity(), UploadRequestBody.UploadCallback {
 
@@ -75,8 +72,6 @@ class UploadSellingActivity : AppCompatActivity(), UploadRequestBody.UploadCallb
             layout_root.snackbar("Select an Image First")
             return
         }
-
-        val emailcurrentuser = FirebaseAuth.getInstance().currentUser!!.email
 
         val productprice = findViewById<EditText>(R.id.text_priceproduct)
         val productname = findViewById<EditText>(R.id.text_productname)
