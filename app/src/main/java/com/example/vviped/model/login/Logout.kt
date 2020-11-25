@@ -36,6 +36,5 @@ class Logout : AppCompatActivity() {
             ).show()
         }
 
-        fullname.text = sharedPref.getString(Constant.PREF_USERNAME)
     }
 }
