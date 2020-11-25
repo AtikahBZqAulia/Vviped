@@ -1,6 +1,7 @@
 package com.example.vviped
 
 import android.content.Intent
+import android.content.SharedPreferences
 import android.os.Build
 import android.os.Bundle
 import android.util.Patterns
@@ -10,6 +11,7 @@ import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import com.example.vviped.model.RetrofitInterface
 import com.example.vviped.model.UploadResponse
+import com.example.vviped.model.login.PreferenceHelper
 import com.example.vviped.model.snackbar
 import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.activity_upload_selling.*
@@ -25,11 +27,16 @@ import retrofit2.Response
 import kotlinx.android.synthetic.main.activity_user_register.user_name as user_name1
 
 class UserRegister : AppCompatActivity() {
+    lateinit var sharedPref: PreferenceHelper
+
 
     @RequiresApi(Build.VERSION_CODES.KITKAT)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_user_register)
+
+        sharedPref = PreferenceHelper(this)
+
 
         btn_register_account.setOnClickListener {
 
@@ -86,6 +93,7 @@ class UserRegister : AppCompatActivity() {
         }
 
         textLoginHere.setOnClickListener{
+            sharedPref.clear()
             startActivity(Intent(this, UserLogin::class.java).also {
                 it.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
             })
@@ -106,22 +114,22 @@ class UserRegister : AppCompatActivity() {
             RequestBody.create(MediaType.parse("multipart/form-data"), username.text.toString()),
             RequestBody.create(MediaType.parse("multipart/form-data"), password.text.toString()),
         ).enqueue(object : Callback<UploadResponse> {
-                override fun onFailure(call: Call<UploadResponse>, t: Throwable) {
+            override fun onFailure(call: Call<UploadResponse>, t: Throwable) {
 //                    layout_userRegister.snackbar(t.message!!)
-                        val snackbar = t.message?.let {
-                        Snackbar.make(layout_userRegister, "Email/username already exist!", Snackbar.LENGTH_LONG)
+                val snackbar = t.message?.let {
+                    Snackbar.make(layout_userRegister, "Email/username already exist!", Snackbar.LENGTH_LONG)
                 }
                 snackbar?.show()
-                }
+            }
 
-                override fun onResponse(
-                    call: Call<UploadResponse>,
-                    response: Response<UploadResponse>
-                ) {
-                    response.body()?.let {}
-                    nextActivity()
-                }
-            })
+            override fun onResponse(
+                call: Call<UploadResponse>,
+                response: Response<UploadResponse>
+            ) {
+                response.body()?.let {}
+                nextActivity()
+            }
+        })
     }
 
     private fun nextActivity() {

@@ -20,7 +20,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".NotificationDetails"></activity>
+        <activity android:name=".model.login.Logout"></activity>
+        <activity android:name=".NotificationDetails" />
         <activity android:name=".create_campaign" />
         <activity
             android:name=".UploadSellingActivity"
@@ -34,11 +35,12 @@
             android:name=".login"
             android:windowSoftInputMode="stateHidden" />
         <activity android:name=".Landing" />
-        <activity android:name=".UserLogin"
+        <activity
+            android:name=".UserLogin"
             android:windowSoftInputMode="stateHidden" />
-        <activity android:name=".UserRegister"
+        <activity
+            android:name=".UserRegister"
             android:windowSoftInputMode="stateHidden" />
-
         <activity android:name=".splashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -1,7 +1,6 @@
 package com.example.vviped.model
 
 import android.content.Context
-import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -10,7 +9,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.vviped.R
-import com.example.vviped.UploadSellingActivity
+import com.squareup.picasso.Picasso
 
 class CampaignListAdapter(
     private var context: Context,
@@ -34,8 +33,8 @@ class CampaignListAdapter(
 
         fun bindView(campaignItem: CampaignItem) {
             organizationnamepost.text = campaignItem.organization_name
-            organizationprofpict_post.setImageResource(campaignItem.organization_profpict)
-            imagecampaign.setImageResource(campaignItem.image_campaign)
+            Picasso.get().load(campaignItem.organization_profpict).into(organizationprofpict_post)
+            Picasso.get().load(campaignItem.image_campaign).into(imagecampaign)
             campaignname.text = campaignItem.campaign_name
             campaigndesc.text = campaignItem.campaign_desc
 

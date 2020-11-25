@@ -5,5 +5,5 @@ import retrofit2.http.GET
 
 interface SellingPostService {
     @GET("api.php?apicall=sellingproducts")
-    fun getFeeds(): Call<ArrayList<SellingPostItem>>
+    fun getFeeds(): Call<List<SellingPostItem>>
 }

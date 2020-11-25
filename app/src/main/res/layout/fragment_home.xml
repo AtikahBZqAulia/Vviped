@@ -58,6 +58,8 @@
                 android:layout_marginLeft="2dp"
                 android:background="@null"
                 android:cursorVisible="false"
+                android:inputType="text"
+                android:imeOptions="actionGo"
                 android:gravity="center_vertical"
                 android:hint="Search.." />
 
@@ -69,13 +71,14 @@
     <RelativeLayout
         android:id="@+id/kategori"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="45dp"
         android:layout_below="@id/appBar_home"
         android:background="@color/colorWhite"
         android:paddingBottom="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/appBar_home"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="0dp">
+        tools:ignore="MissingConstraints">
 
         <HorizontalScrollView
             android:layout_width="match_parent"
@@ -85,7 +88,7 @@
 
             <LinearLayout
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="30dp"
                 android:orientation="horizontal"
                 android:paddingLeft="12dp"
                 android:paddingRight="12dp"
@@ -100,12 +103,12 @@
                     android:layout_marginTop="5dp"
                     android:layout_marginRight="5dp"
                     android:layout_marginBottom="5dp"
-                    android:background="@drawable/btn_radiusbg"
-                    android:paddingLeft="10dp"
-                    android:paddingRight="10dp"
+                    android:background="@drawable/btn_corner"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
                     android:text="Pakaian"
                     android:textAllCaps="false"
-                    android:textColor="@color/colorWhite"
+                    android:textColor="@color/colorBlack"
                     android:textSize="11dp"
                     tools:layout_marginTop="5dp" />
 
@@ -118,12 +121,12 @@
                     android:layout_marginTop="5dp"
                     android:layout_marginRight="5dp"
                     android:layout_marginBottom="5dp"
-                    android:background="@drawable/btn_radiusbg"
+                    android:background="@drawable/btn_corner"
                     android:paddingLeft="10dp"
                     android:paddingRight="10dp"
                     android:text="Buku"
                     android:textAllCaps="false"
-                    android:textColor="@color/colorWhite"
+                    android:textColor="@color/colorBlack"
                     android:textSize="11dp" />
 
                 <Button
@@ -135,12 +138,12 @@
                     android:layout_marginTop="5dp"
                     android:layout_marginRight="5dp"
                     android:layout_marginBottom="5dp"
-                    android:background="@drawable/btn_radiusbg"
                     android:paddingLeft="10dp"
                     android:paddingRight="10dp"
                     android:text="Gadget"
                     android:textAllCaps="false"
-                    android:textColor="@color/colorWhite"
+                    android:background="@drawable/btn_corner"
+                    android:textColor="@color/colorBlack"
                     android:textSize="11dp"
                     tools:layout_marginTop="5dp" />
 
@@ -153,12 +156,12 @@
                     android:layout_marginTop="5dp"
                     android:layout_marginRight="5dp"
                     android:layout_marginBottom="5dp"
-                    android:background="@drawable/btn_radiusbg"
+                    android:background="@drawable/btn_corner"
+                    android:textColor="@color/colorBlack"
                     android:paddingLeft="10dp"
                     android:paddingRight="10dp"
                     android:text="Makeup"
                     android:textAllCaps="false"
-                    android:textColor="@color/colorWhite"
                     android:textSize="11dp"
                     tools:layout_marginTop="5dp" />
 
@@ -171,12 +174,12 @@
                     android:layout_marginTop="5dp"
                     android:layout_marginRight="5dp"
                     android:layout_marginBottom="5dp"
-                    android:background="@drawable/btn_radiusbg"
+                    android:background="@drawable/btn_corner"
+                    android:textColor="@color/colorBlack"
                     android:paddingLeft="10dp"
                     android:paddingRight="10dp"
                     android:text="Skincare"
                     android:textAllCaps="false"
-                    android:textColor="@color/colorWhite"
                     android:textSize="11dp"
                     tools:layout_marginTop="5dp" />
 
@@ -188,9 +191,9 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycleView_home"
-        android:layout_width="411dp"
-        android:layout_height="627dp"
-        android:layout_marginTop="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="100dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"

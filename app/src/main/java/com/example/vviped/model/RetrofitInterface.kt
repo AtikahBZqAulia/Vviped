@@ -1,5 +1,6 @@
 package com.example.vviped.model
 
+import com.example.vviped.model.login.LoginResponse
 import okhttp3.MultipartBody
 import okhttp3.RequestBody
 import retrofit2.Call
@@ -48,8 +49,8 @@ interface RetrofitInterface {
     fun loginUser(
         @Part("username") username: RequestBody,
         @Part("password") password: RequestBody,
-    ): Call<UploadResponse>
-    
+    ): Call<LoginResponse>
+
     companion object {
         operator fun invoke(): RetrofitInterface {
             return Retrofit.Builder()
