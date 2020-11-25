@@ -20,8 +20,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-
-        <activity android:name=".model.login.Logout"></activity>
+        <activity android:name=".ChatForBuying"></activity>
+        <activity android:name=".model.login.Logout" />
         <activity android:name=".NotificationDetails" />
         <activity android:name=".create_campaign" />
         <activity
@@ -29,18 +29,19 @@
             android:label="@string/title_activity_upload_selling"
             android:theme="@style/AppTheme.NoActionBar"
             android:windowSoftInputMode="stateHidden" />
-
-        <activity android:name=".Landing"
-            android:theme="@style/AppTheme.NoStatusBar"/>
+        <activity
+            android:name=".Landing"
+            android:theme="@style/AppTheme.NoStatusBar" />
         <activity
             android:name=".UserLogin"
-            android:windowSoftInputMode="stateHidden"
-            android:theme="@style/AppTheme.NoStatusBar"/>
+            android:theme="@style/AppTheme.NoStatusBar"
+            android:windowSoftInputMode="stateHidden" />
         <activity
             android:name=".UserRegister"
-            android:windowSoftInputMode="stateHidden"
-            android:theme="@style/AppTheme.NoStatusBar"/>
-        <activity android:name=".splashScreen"
+            android:theme="@style/AppTheme.NoStatusBar"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".splashScreen"
             android:theme="@style/AppTheme.NoStatusBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -51,6 +52,7 @@
         <activity android:name=".MainChat" />
         <activity android:name=".chat_user" />
         <activity android:name=".chat_myself" />
+
         <activity
             android:name=".MainActivity"
             android:windowSoftInputMode="stateHidden" />

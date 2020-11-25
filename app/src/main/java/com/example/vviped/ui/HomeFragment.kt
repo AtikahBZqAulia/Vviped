@@ -10,6 +10,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.vviped.ChatForBuying
 import com.example.vviped.Landing
 import com.example.vviped.MainChat
 import com.example.vviped.R
@@ -17,6 +18,7 @@ import com.example.vviped.model.*
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.fragment_home.*
 import kotlinx.android.synthetic.main.fragment_profile.*
+import kotlinx.android.synthetic.main.sellingposts_layout.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
