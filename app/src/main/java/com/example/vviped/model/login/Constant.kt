@@ -9,5 +9,6 @@ class Constant {
         val PREF_FULLNAME = "fullname"
         val PREF_USERNAME = "username"
         val PREF_PASSWORD = "password"
+        val PREF_PROFPIC = "user_profpic"
     }
 }

@@ -82,7 +82,7 @@ class UserRegister : AppCompatActivity() {
                 user_password.requestFocus()
                 return@setOnClickListener
             }
-            register(email, fullname, username, password)
+            register()
 
         }
 
@@ -102,7 +102,7 @@ class UserRegister : AppCompatActivity() {
     }
 
     @RequiresApi(Build.VERSION_CODES.KITKAT)
-    private fun register(email: String, fullname: String, username: String, password: String) {
+    private fun register() {
         val email = findViewById<EditText>(R.id.user_email)
         val fullname = findViewById<EditText>(R.id.user_fullname)
         val username = findViewById<EditText>(R.id.user_name)
@@ -113,6 +113,8 @@ class UserRegister : AppCompatActivity() {
             RequestBody.create(MediaType.parse("multipart/form-data"), fullname.text.toString()),
             RequestBody.create(MediaType.parse("multipart/form-data"), username.text.toString()),
             RequestBody.create(MediaType.parse("multipart/form-data"), password.text.toString()),
+            RequestBody.create(MediaType.parse("multipart/form-data"), "profpic/profpic_default.png")
+
         ).enqueue(object : Callback<UploadResponse> {
             override fun onFailure(call: Call<UploadResponse>, t: Throwable) {
 //                    layout_userRegister.snackbar(t.message!!)

@@ -14,7 +14,7 @@ data class LoginResponse(
 	val status: Boolean? = null
 ) {
 	fun isStatus(): Boolean? {
-	return status
+		return status
 	}
 }
 
@@ -30,5 +30,12 @@ data class LoginData(
 	val email: String? = null,
 
 	@field:SerializedName("username")
-	val username: String? = null
+	val username: String? = null,
+
+	@field:SerializedName("password")
+	val password: String? = null,
+
+	@field:SerializedName("user_profpic")
+	val user_profpic: String? = null
 )
+
