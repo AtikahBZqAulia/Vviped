@@ -22,7 +22,10 @@ data class SellingPostItem (
     @SerializedName("seller_loc")
     val seller_location: String,
     @SerializedName("selling_status")
-    val sold: String
+    val sold: String,
+    @SerializedName("whatsapp")
+    val whatsapp: String,
+
 
 ) : Parcelable{
         val attributionUrl get() = "https://jakartaqurban.com/api/v1/search?object=$product_name"

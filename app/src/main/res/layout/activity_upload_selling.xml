@@ -70,6 +70,8 @@
                         android:layout_height="22dp"
                         android:paddingLeft="5dp"
                         android:paddingRight="5dp"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/cabin"
                         android:text="Donasi Hijrah by Salim FMIPA UNJ"
                         android:textColor="@color/colorBlack"
                         android:textSize="14sp"
@@ -93,14 +95,15 @@
                         android:paddingRight="30dp">
 
                         <TextView
-                            android:layout_width="wrap_content"
+                            android:layout_width="150dp"
                             android:layout_height="wrap_content"
-                            android:layout_gravity="center"
                             android:paddingLeft="10dp"
-                            android:text="Choose Image"
+                            android:text="Choose photos of your product"
+                            android:fontFamily="@font/cabin"
                             android:textStyle="bold"
                             android:textColor="@color/colorBlack"
-                            android:textSize="15dp" />
+                            android:textSize="15dp"
+                            android:gravity="center_horizontal" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -119,9 +122,10 @@
                             android:id="@+id/image_view"
                             android:layout_width="wrap_content"
                             android:layout_height="100dp"
+                            android:layout_gravity="center_vertical"
                             android:layout_margin="20dp"
                             android:scaleType="fitEnd"
-                            app:srcCompat="@drawable/profilpic" />
+                            android:src="@drawable/ic_upload_img" />
                     </LinearLayout>
 
                 </LinearLayout>
@@ -142,6 +146,7 @@
                             android:layout_gravity="center"
                             android:paddingLeft="10dp"
                             android:text="Price"
+                            android:fontFamily="@font/cabin"
                             android:textColor="@color/colorBlack"
                             android:textStyle="bold"
                             android:textSize="15dp" />
@@ -180,6 +185,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Product Name"
+                        android:fontFamily="@font/cabin"
                         android:textStyle="bold"
                         android:textColor="@color/colorBlack"
                         android:textSize="15dp" />
@@ -189,11 +195,23 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
-                        android:imeOptions="actionNext"
+                        android:imeOptions="actionDone"
                         android:inputType="text"
                         android:padding="10dp"
                         android:background="@drawable/btn_corner"
                         android:textSize="15dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Include Brand of the Item."
+                        android:textSize="12dp"
+                        android:layout_marginTop="5dp"
+                        android:textColor="@color/colorTextSecondary"
+
+                        />
+
+
                 </LinearLayout>
 
                 <LinearLayout
@@ -207,6 +225,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Condition of Product"
+                        android:fontFamily="@font/cabin"
                         android:textStyle="bold"
                         android:textColor="@color/colorBlack"
                         android:textSize="15dp" />
@@ -229,7 +248,7 @@
                             android:id="@+id/radiobtn2"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Second" />
+                            android:text="Used" />
 
                     </RadioGroup>
                 </LinearLayout>
@@ -245,6 +264,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Description"
+                        android:fontFamily="@font/cabin"
                         android:textStyle="bold"
                         android:textColor="@color/colorBlack"
                         android:textSize="15dp" />
@@ -259,6 +279,17 @@
                         android:layout_marginTop="5dp"
                         android:padding="10dp"
                         android:textSize="15dp" />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Describe what you are selling and include any details a buyer might be insterested in.  "
+                        android:textSize="12dp"
+                        android:layout_marginTop="5dp"
+                        android:textColor="@color/colorTextSecondary"
+
+                        />
                 </LinearLayout>
 
 
@@ -274,6 +305,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Location"
+                        android:fontFamily="@font/cabin"
                         android:textColor="@color/colorBlack"
                         android:textSize="15dp"
                         android:textStyle="bold" />
@@ -282,12 +314,81 @@
                         android:id="@+id/text_productloc"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:imeOptions="actionDone"
+                        android:imeOptions="actionNext"
                         android:inputType="text"
                         android:textSize="15dp"
                         android:padding="10dp"
                         android:layout_marginTop="5dp"
                         android:background="@drawable/btn_corner"/>
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Help buyer to estimate the delivery fees."
+                        android:textSize="12dp"
+                        android:layout_marginTop="5dp"
+                        android:textColor="@color/colorTextSecondary"
+
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="10dp"
+                    android:paddingLeft="7dp"
+                    android:layout_marginBottom="20dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Whatsapp Number"
+                        android:fontFamily="@font/cabin"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="15dp"
+                        android:textStyle="bold" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="15dp"
+                            android:text="+62"
+                            android:layout_marginTop="5dp"
+                            android:textSize="15dp" />
+                        <EditText
+                            android:id="@+id/whatsapp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:imeOptions="actionDone"
+                            android:inputType="phone"
+                            android:textSize="15dp"
+                            android:padding="10dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/btn_corner"/>
+
+
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="The buyers will contact you if they interested in this product. Make sure the whatsapp number is active. "
+                        android:textSize="12dp"
+                        android:layout_marginTop="5dp"
+                        android:textColor="@color/colorTextSecondary"
+
+                        />
+
+
                 </LinearLayout>
 
 
@@ -314,13 +415,17 @@
 
                 <Button
                     android:id="@+id/button_upload"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_marginTop="20dp"
-                    android:layout_marginBottom="48dp"
+                    android:layout_marginBottom="100dp"
                     android:background="@drawable/btn_radiusbg"
-                    android:text="Upload"
+                    android:text="Sell my product!"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/cabin"
+                    android:textAllCaps="false"
                     android:textColor="@color/colorWhite"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"

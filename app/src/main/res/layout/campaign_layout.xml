@@ -46,7 +46,8 @@
         <ImageView
             android:id="@+id/imagecampaign_layout"
             android:layout_width="match_parent"
-            android:layout_height="250dp"
+            android:layout_height="280dp"
+            android:layout_marginTop="5dp"
             android:scaleType="centerCrop"
             android:src="@drawable/profilpic" />
 
@@ -55,8 +56,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="12dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
             android:text="Bantu Pak Somat Mengobati Penyakit Kanker"
             android:textColor="@color/colorAccent2"
             android:textSize="18dp"
@@ -69,7 +70,7 @@
             android:clickable="false"
             android:text="Description:"
             android:textColor="@color/colorBlack"
-            android:textSize="15dp"
+            android:textSize="14sp"
             android:textStyle="bold" />
 
         <RelativeLayout
@@ -92,7 +93,7 @@
                 android:layout_toLeftOf="@+id/donatewithselling_btn"
                 android:text="Description here"
                 android:textColor="@color/colorBlack"
-                android:textSize="13dp"
+                android:textSize="14sp"
                 android:layout_alignParentLeft="true" />
             <Button
                 android:id="@+id/donatewithselling_btn"
@@ -119,7 +120,7 @@
             android:layout_marginLeft="10dp"
             android:text="Category:"
             android:textColor="@color/colorBlack"
-            android:textSize="15dp"
+            android:textSize="15sp"
             android:textStyle="bold" />
 
         <TextView
@@ -131,7 +132,7 @@
             android:paddingBottom="10dp"
             android:text="Kegiatan Sosial, Kesehatan"
             android:textColor="@color/colorBlack"
-            android:textSize="13dp" />
+            android:textSize="14sp" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -139,7 +140,7 @@
             android:layout_marginLeft="10dp"
             android:text="Donation go to :"
             android:textColor="@color/colorBlack"
-            android:textSize="15dp"
+            android:textSize="14sp"
             android:textStyle="bold" />
 
         <TextView
@@ -151,7 +152,7 @@
             android:paddingBottom="10dp"
             android:text="Pak Somat Baharuddin"
             android:textColor="@color/colorBlack"
-            android:textSize="13dp" />
+            android:textSize="14sp" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -159,7 +160,7 @@
             android:layout_marginLeft="10dp"
             android:text="Usage Donation Details:"
             android:textColor="@color/colorBlack"
-            android:textSize="15dp"
+            android:textSize="14sp"
             android:textStyle="bold" />
 
         <TextView
@@ -168,10 +169,11 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
+            android:layout_marginBottom="30dp"
             android:paddingBottom="10dp"
             android:text="Biaya rumah sakit Rp.1.000.000"
             android:textColor="@color/colorBlack"
-            android:textSize="13dp" />
+            android:textSize="14sp" />
 
 
     </LinearLayout>
