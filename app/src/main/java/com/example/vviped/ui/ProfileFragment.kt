@@ -11,6 +11,7 @@ import com.example.vviped.*
 import com.example.vviped.model.login.Constant
 import com.example.vviped.model.login.Logout
 import com.example.vviped.model.login.PreferenceHelper
+import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.fragment_profile.*
 import kotlinx.android.synthetic.main.fragment_profile.view.*
 
@@ -41,6 +42,7 @@ class ProfileFragment : Fragment() {
         view.text_username.text = sharedPref.getString(Constant.PREF_USERNAME)
         view.text_fullname.text = sharedPref.getString(Constant.PREF_FULLNAME)
         view.user_email.text = sharedPref.getString(Constant.PREF_EMAIL)
+        Picasso.get().load(sharedPref.getString(Constant.PREF_PROFPIC)).into(profpic)
 
         editprofile_btn.setOnClickListener{
             (context as MainActivity).changeFragment(EditProfileFragment())
