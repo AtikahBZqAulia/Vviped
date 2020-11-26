@@ -2,34 +2,23 @@ package com.example.vviped.model
 
 import android.content.Context
 import android.content.Intent
-import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.appcompat.app.AppCompatActivity
-import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
 import com.example.vviped.MainChat
 import com.example.vviped.R
-import com.example.vviped.UploadSellingActivity
-import com.example.vviped.ui.CampaignListFragment
-import com.example.vviped.ui.HomeFragment
-import com.example.vviped.ui.ProfileFragment
-import com.google.android.material.bottomnavigation.BottomNavigationView
-import com.google.firebase.auth.FirebaseAuth
 import com.squareup.picasso.Picasso
-import kotlinx.android.synthetic.main.sellingposts_layout.*
 
 class SellingPostsAdapter(
-    private var context: Context,
-    private var sellingPosts: List<SellingPostItem>,
-    private var isFragment: Boolean = false
+    private val context: Context,
+    private val sellingPosts: MutableList<SellingPostItem>
 ) : RecyclerView.Adapter<SellingPostsAdapter.ViewHolder>() {
 
-    inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+    class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
         val usernamepost = itemView.findViewById<TextView>(R.id.username_post)
         val profpictpost = itemView.findViewById<ImageView>(R.id.user_profpict_post)
@@ -59,15 +48,22 @@ class SellingPostsAdapter(
         }
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SellingPostsAdapter.ViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
 
         val v = LayoutInflater.from(parent.context)
             .inflate(R.layout.sellingposts_layout, parent, false)
         return ViewHolder(v)
     }
 
-    override fun onBindViewHolder(viewHolder: SellingPostsAdapter.ViewHolder, position: Int) {
-        viewHolder.bindView(sellingPosts[position])
+    override fun onBindViewHolder(viewHolder: ViewHolder, position: Int) {
+        viewHolder.usernamepost.text = sellingPosts[position].usernamepost
+        Picasso.get().load(sellingPosts[position].user_profpict).into(viewHolder.profpictpost)
+        Picasso.get().load(sellingPosts[position].image_post).into(viewHolder.imagepost)
+        viewHolder.productname.text = sellingPosts[position].product_name
+        viewHolder.productprice.text = sellingPosts[position].product_price
+        viewHolder.productdesc.text = sellingPosts[position].product_description
+        viewHolder.sellerlocation.text = sellingPosts[position].seller_location
+        viewHolder.soldTextView.text = sellingPosts[position].sold
     }
 
     override fun getItemCount(): Int {

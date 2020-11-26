@@ -3,19 +3,15 @@ package com.example.vviped.ui
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
+import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.vviped.ChatForBuying
-import com.example.vviped.Landing
 import com.example.vviped.MainChat
 import com.example.vviped.R
 import com.example.vviped.model.*
-import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.fragment_home.*
 import kotlinx.android.synthetic.main.fragment_profile.*
 import kotlinx.android.synthetic.main.sellingposts_layout.*
@@ -38,7 +34,6 @@ class HomeFragment : Fragment() {
     private var recyclerView: RecyclerView? = null
     private var sellingPostAdapter: SellingPostsAdapter? = null
 
-
     val sellingPosts = arrayListOf<SellingPostItem>(
         SellingPostItem("orang_ganteng", "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500", "https://inkuiri.net/i/large/https%2Fs1.bukalapak.com%2Fimg%2F18591872112%2Flarge%2F16174c2383aa0d2c803100033a7af0bab_dijual_matematika_kelas_10.png", "Buku Materi Matematika SMA Kelas X", "Rp 70000", "Kondisi buku masih bagus.", "Bekasi, Jawa Barat", "SOLD", " "),
         SellingPostItem("lovely_suzy", "https://www.allkpop.com/upload/2020/01/content/181813/1579389188-aee70205-f9ac-4903-acb7-25d27940c050.jpeg", "https://static.republika.co.id/uploads/images/inpicture_slide/novel-terbaru-karya-tere-liye-tentang-kamu-_161026145442-103.jpg","Buku Novel Paket Tere Liye", "Rp 30000", "Kondisi buku 80%", "Rawamangun, Jakarta Timur", "SOLD", " "),
@@ -57,15 +52,12 @@ class HomeFragment : Fragment() {
         recyclerView?.setHasFixedSize(true)
         recyclerView?.layoutManager = LinearLayoutManager(context)
 
-        sellingPostAdapter = context?.let { SellingPostsAdapter(it, sellingPosts as ArrayList<SellingPostItem>, true) }
-        recyclerView?.adapter = sellingPostAdapter
         getData()
         return view
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
 
         btn_chat.setOnClickListener{
             val intent = Intent(activity, MainChat::class.java)
@@ -76,25 +68,17 @@ class HomeFragment : Fragment() {
 
     fun getData(){
         val feedsService = SellingPostRepository.create()
-        feedsService.getFeeds().enqueue(object : Callback<List<SellingPostItem>> {
+        feedsService.getFeeds().enqueue(object : Callback<MutableList<SellingPostItem>> {
             override fun onResponse(
-                call: Call<List<SellingPostItem>>,
-                response: Response<List<SellingPostItem>>
+                call: Call<MutableList<SellingPostItem>>,
+                response: Response<MutableList<SellingPostItem>>
             ) {
-                val data = response.body()
-                Log.d("tag", ":responsenya ${data?.size}")
-                data?.map {
-                    Log.d("tag", "datanya ${it.product_price}")
-//                    val d = Log.d("tag", "descnya ${it.product_description}")
-                    recyclerView?.adapter = sellingPostAdapter
-                    sellingPostAdapter?.notifyDataSetChanged()
-                }
-//                campaignListAdapter = context?.let { CampaignListAdapter1(it, data as List<CampaignItem>, true) }
-
-
+                sellingPostAdapter = context?.let { SellingPostsAdapter(it, response.body() as MutableList<SellingPostItem>) }
+                recyclerView?.adapter = sellingPostAdapter
+                sellingPostAdapter?.notifyDataSetChanged()
             }
 
-            override fun onFailure(call: Call<List<SellingPostItem>>, t: Throwable) {
+            override fun onFailure(call: Call<MutableList<SellingPostItem>>, t: Throwable) {
                 Log.e("tag", t.toString())
             }
         })

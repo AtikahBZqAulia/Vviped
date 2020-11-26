@@ -104,8 +104,6 @@ class UploadSellingActivity : AppCompatActivity(), UploadRequestBody.UploadCallb
             RequestBody.create(MediaType.parse("multipart/form-data"), sellerlocation.text.toString()),
             RequestBody.create(MediaType.parse("multipart/form-data"), "SALE"),
             RequestBody.create(MediaType.parse("multipart/form-data"), whatsapp.text.toString())
-
-
         ).enqueue(object : Callback<UploadResponse> {
             override fun onFailure(call: Call<UploadResponse>, t: Throwable) {
                 layout_root.snackbar(t.message!!)

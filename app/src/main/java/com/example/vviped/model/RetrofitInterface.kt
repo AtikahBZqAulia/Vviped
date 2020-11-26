@@ -21,7 +21,7 @@ interface RetrofitInterface {
         @Part("product_desc") product_desc: RequestBody,
         @Part("seller_loc") seller_loc: RequestBody,
         @Part("selling_status") selling_status: RequestBody,
-        @Part("whatsapp") whatsapp: RequestBody
+        @Part("whatsapp") whatsapp: RequestBody,
     ): Call<UploadResponse>
 
     @Multipart
