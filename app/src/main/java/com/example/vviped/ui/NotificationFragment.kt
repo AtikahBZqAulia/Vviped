@@ -15,7 +15,6 @@ import com.example.vviped.R
 import com.example.vviped.model.NotificationAdapter
 import com.example.vviped.model.NotificationItem
 import kotlinx.android.synthetic.main.fragment_home.*
-import kotlinx.android.synthetic.main.fragment_home.btn_chat
 import kotlinx.android.synthetic.main.fragment_notification.*
 
 // TODO: Rename parameter arguments, choose names that match

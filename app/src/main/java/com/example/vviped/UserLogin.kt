@@ -61,12 +61,12 @@ class UserLogin : AppCompatActivity() {
                 user_password.requestFocus()
                 return@setOnClickListener
             }
-            userLogin(login_username, login_password)
+            userLogin()
         }
 
     }
 
-    private fun userLogin(loginUsername: String, loginPassword: String) {
+    private fun userLogin() {
         val username = findViewById<EditText>(R.id.user_name)
         val password = findViewById<EditText>(R.id.user_password)
 

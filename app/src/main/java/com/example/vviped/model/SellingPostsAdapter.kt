@@ -8,7 +8,9 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
+import com.example.vviped.ChatForBuying
 import com.example.vviped.MainChat
 import com.example.vviped.R
 import com.squareup.picasso.Picasso
@@ -40,10 +42,11 @@ class SellingPostsAdapter(
             sellerlocation.text = sellingPost.seller_location
             soldTextView.text = sellingPost.sold
 
-            buyButton.setOnClickListener() {
+            buyButton.setOnClickListener {
                 val context = buyButton.context
-                val intent = Intent(context, MainChat::class.java)
+                val intent = Intent(context, ChatForBuying::class.java)
                 context.startActivity(intent)
+
             }
         }
     }
@@ -64,6 +67,8 @@ class SellingPostsAdapter(
         viewHolder.productdesc.text = sellingPosts[position].product_description
         viewHolder.sellerlocation.text = sellingPosts[position].seller_location
         viewHolder.soldTextView.text = sellingPosts[position].sold
+        viewHolder.bindView(sellingPosts[position])
+
     }
 
     override fun getItemCount(): Int {

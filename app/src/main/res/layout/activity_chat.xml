@@ -19,12 +19,14 @@
         >
 
         <ImageView
-            android:id="@+id/btn_BackFromChat"
-            android:layout_width="wrap_content"
+            android:id="@+id/backspace"
+            android:layout_width="40dp"
             android:layout_height="40dp"
-            android:padding="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
             android:src="@drawable/ic_keyboard_backspace"
-            />
+            app:tint="@color/colorTextPrimary" />
+
 
 
         <TextView
@@ -38,79 +40,48 @@
             android:gravity="center_horizontal"
             android:text="username"
             android:textStyle="bold"
+            android:textColor="@color/colorBlack"
             />
 
 
     </RelativeLayout>
 
-<!--    <RadioGroup-->
-<!--        android:id="@+id/radiogroup_chat"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="40dp"-->
-<!--        android:layout_below="@id/appBar_user"-->
-<!--        android:gravity="center_vertical"-->
-<!--        android:orientation="horizontal"-->
-<!--        android:paddingLeft="10dp"-->
-<!--        android:background="@color/colorWhite"-->
-
-<!--        >-->
-
-<!--        <RadioButton-->
-<!--            android:id="@+id/radioButton_user"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_weight="1"-->
-<!--            android:checked="true"-->
-<!--            android:textColor="@color/ColorGrey"-->
-<!--            android:text="user" />-->
-
-<!--        <RadioButton-->
-<!--            android:id="@+id/radioButton_myself"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:textColor="@color/ColorGrey"-->
-<!--            android:layout_weight="1"-->
-<!--            android:text="me" />-->
-<!--    </RadioGroup>-->
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/product_in_chat"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/appBar_user"
-        android:background="@color/colorWhite"
+        android:layout_height="match_parent"
+        android:layout_marginTop="50dp"
+        android:layout_alignParentBottom="true"
         android:orientation="vertical"
         android:paddingBottom="50dp">
 
+
         <ImageView
-            android:id="@+id/product_img"
-            android:layout_width="64dp"
-            android:layout_height="54dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="8dp"
-            android:src="@android:drawable/sym_def_app_icon"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.177" />
+            android:id="@+id/productimage"
+            android:layout_width="match_parent"
+            android:layout_height="280dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/profilpic"
+            app:layout_constraintBottom_toTopOf="@+id/product_name"
+            app:layout_constraintStart_toStartOf="@+id/product_name"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/product_name"
-            android:layout_width="300dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginTop="8dp"
-            android:paddingLeft="5dp"
+            android:layout_marginBottom="156dp"
+            android:gravity="center_horizontal"
             android:text="Baju Atasan Lengan Panjang"
             android:textColor="@color/colorBlack"
+            android:textSize="16sp"
             android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toEndOf="@+id/product_img"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/productimage" />
 
         <TextView
             android:id="@+id/product_price"
@@ -123,16 +94,18 @@
             android:paddingRight="5dp"
             android:text="Rp70.000"
             android:textColor="@color/colorAccent2"
+            android:textSize="16sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/product_img"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/product_name"
             app:layout_constraintVertical_bias="0.0" />
 
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/constraintLayout"
-            android:layout_width="321dp"
+            android:layout_width="match_parent"
             android:layout_height="30dp"
             android:layout_marginTop="4dp"
             android:layout_marginBottom="4dp"
@@ -140,7 +113,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toEndOf="@id/product_img"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/product_price"
             app:layout_constraintVertical_bias="0.0">
 
@@ -148,62 +121,45 @@
                 android:id="@+id/icon_campaign"
                 android:layout_width="17dp"
                 android:layout_height="17dp"
-                android:layout_marginStart="4dp"
-                android:layout_marginLeft="4dp"
-                android:src="@drawable/ic_campaign"
+                android:src="@drawable/ic_campaign_heart"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/product_campaign"
-                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0" />
+                app:layout_constraintVertical_bias="0.538" />
 
             <TextView
                 android:id="@+id/product_campaign"
                 android:layout_width="244dp"
                 android:layout_height="0dp"
-                android:layout_marginEnd="28dp"
-                android:layout_marginRight="28dp"
+                android:layout_marginLeft="20dp"
+                android:gravity="center_vertical"
                 android:text="Donasi Hijrah by Salim FMIPA UNJ"
+                android:textAlignment="center"
                 android:textColor="@color/colorAccent2"
-                android:textSize="12sp"
+                android:textSize="14sp"
                 android:textStyle="italic"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@id/icon_campaign"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.545" />
+                app:layout_constraintVertical_bias="0.545"
+                tools:ignore="RtlCompat" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-<!--        <Button-->
-<!--            android:id="@+id/buyNow_btn"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="30dp"-->
-<!--            android:layout_marginStart="104dp"-->
-<!--            android:layout_marginLeft="104dp"-->
-<!--            android:layout_marginTop="16dp"-->
-<!--            android:layout_marginBottom="10dp"-->
-<!--            android:background="@drawable/btn_background"-->
-<!--            android:text="BUY NOW"-->
-<!--            android:textColor="@color/colorWhite"-->
-<!--            android:textSize="12sp"-->
-<!--            android:textStyle="bold"-->
-<!--            app:layout_constraintBottom_toBottomOf="parent"-->
-<!--            app:layout_constraintStart_toStartOf="parent"-->
-<!--            app:layout_constraintTop_toBottomOf="@id/constraintLayout"-->
-<!--            app:layout_constraintVertical_bias="1.0">-->
-<!--        </Button>-->
-
         <Button
             android:id="@+id/chatToSeller_btn"
-            android:layout_width="wrap_content"
+            android:layout_width="120dp"
             android:layout_height="30dp"
+            android:layout_marginHorizontal="50dp"
+            android:layout_marginTop="20dp"
             android:background="@drawable/btn_corner_black"
             android:text="Chat seller"
             android:textColor="@color/colorWhite"
-            android:textSize="12sp"
+            android:textSize="13sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -221,17 +177,6 @@
         android:layout_above="@+id/chatRecyclerView"
         android:background="?android:attr/listDivider"/>
 
-<!--    <androidx.recyclerview.widget.RecyclerView-->
-<!--        android:id="@+id/chatRecyclerView"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_above="@id/default_chat"-->
-<!--        android:layout_below="@id/product_in_chat"-->
-<!--        android:background="@color/colorWhite"-->
-
-<!--        tools:scrollbarAlwaysDrawHorizontalTrack="false" />-->
-
-
 
     <RelativeLayout
         android:id="@+id/default_chat"
@@ -240,152 +185,7 @@
         android:paddingBottom="5dp"
         android:paddingTop="10dp"
         android:background="@color/colorWhite"
-
         >
-
-<!--        <HorizontalScrollView-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_centerHorizontal="true"-->
-<!--            android:layout_centerVertical="true"-->
-<!--            >-->
-
-<!--            <LinearLayout-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:orientation="horizontal"-->
-<!--                android:scrollbarStyle="outsideOverlay"-->
-<!--                android:paddingLeft="12dp"-->
-<!--                android:paddingRight="12dp">-->
-
-<!--                <Button-->
-<!--                    android:id="@+id/default_msg_1"-->
-<!--                    style="@style/Widget.AppCompat.Button.Borderless"-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="20dp"-->
-<!--                    android:layout_gravity="center_vertical"-->
-<!--                    android:layout_marginTop="5dp"-->
-<!--                    android:layout_marginRight="5dp"-->
-<!--                    android:layout_marginBottom="5dp"-->
-<!--                    android:paddingLeft="10dp"-->
-<!--                    android:paddingRight="10dp"-->
-<!--                    android:background="@drawable/btn_default_msg"-->
-<!--                    android:text="Saya ingin Beli Produk ini"-->
-<!--                    android:textAllCaps="false"-->
-<!--                    android:textColor="@color/colorTextSecondary"-->
-<!--                    android:textSize="11dp"-->
-<!--                    tools:layout_marginTop="5dp" />-->
-
-<!--                <Button-->
-<!--                    android:id="@+id/default_msg_2"-->
-<!--                    style="@style/Widget.AppCompat.Button.Borderless"-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="20dp"-->
-<!--                    android:layout_gravity="center_vertical"-->
-<!--                    android:layout_marginTop="5dp"-->
-<!--                    android:layout_marginRight="5dp"-->
-<!--                    android:layout_marginBottom="5dp"-->
-<!--                    android:background="@drawable/btn_default_msg"-->
-<!--                    android:paddingLeft="10dp"-->
-<!--                    android:paddingRight="10dp"-->
-<!--                    android:text="Terima Kasih!"-->
-<!--                    android:textAllCaps="false"-->
-<!--                    android:textColor="@color/colorTextSecondary"-->
-<!--                    android:textSize="11dp" />-->
-
-<!--                <Button-->
-<!--                    android:id="@+id/default_msg_3"-->
-<!--                    style="@style/Widget.AppCompat.Button.Borderless"-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="20dp"-->
-<!--                    android:layout_gravity="center_vertical"-->
-<!--                    android:layout_marginTop="5dp"-->
-<!--                    android:layout_marginRight="5dp"-->
-<!--                    android:layout_marginBottom="5dp"-->
-<!--                    android:paddingLeft="10dp"-->
-<!--                    android:paddingRight="10dp"-->
-<!--                    android:background="@drawable/btn_default_msg"-->
-<!--                    android:text="Apakah Masih Ada?"-->
-<!--                    android:textAllCaps="false"-->
-<!--                    android:textColor="@color/colorTextSecondary"-->
-<!--                    android:textSize="11dp"-->
-<!--                    tools:layout_marginTop="5dp" />-->
-
-<!--                <Button-->
-<!--                    android:id="@+id/default_msg_4"-->
-<!--                    style="@style/Widget.AppCompat.Button.Borderless"-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="20dp"-->
-<!--                    android:layout_gravity="center_vertical"-->
-<!--                    android:layout_marginTop="5dp"-->
-<!--                    android:layout_marginRight="5dp"-->
-<!--                    android:layout_marginBottom="5dp"-->
-<!--                    android:paddingLeft="10dp"-->
-<!--                    android:paddingRight="10dp"-->
-<!--                    android:background="@drawable/btn_default_msg"-->
-<!--                    android:text="OK"-->
-<!--                    android:textAllCaps="false"-->
-<!--                    android:textColor="@color/colorTextSecondary"-->
-<!--                    android:textSize="11dp"-->
-<!--                    tools:layout_marginTop="5dp" />-->
-
-
-<!--            </LinearLayout>-->
-
-<!--        </HorizontalScrollView>-->
     </RelativeLayout>
 
-<!--    <RelativeLayout-->
-<!--        android:id="@+id/r1"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_alignParentBottom="true">-->
-
-<!--        <LinearLayout-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:gravity="center"-->
-<!--            android:orientation="horizontal"-->
-<!--            android:paddingBottom="10dp"-->
-<!--            android:paddingLeft="10dp"-->
-<!--            android:paddingRight="10dp"-->
-<!--            android:paddingTop="10dp">-->
-
-<!--            <EditText-->
-<!--                android:id="@+id/input_message"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="40dp"-->
-<!--                android:layout_weight="1"-->
-<!--                android:background="@drawable/btn_typing"-->
-<!--                android:fontFamily="@font/cabin"-->
-<!--                android:hint="@string/type_message"-->
-<!--                android:imeOptions="actionSend"-->
-<!--                android:inputType="text"-->
-<!--                android:textSize="15sp"-->
-<!--                android:paddingLeft="12dp"-->
-<!--                android:textColor="@color/colorBlack"-->
-<!--                />-->
-
-
-<!--            <ImageButton-->
-<!--                android:id="@+id/btnSendImage"-->
-<!--                android:layout_width="35dp"-->
-<!--                android:layout_height="35dp"-->
-<!--                android:layout_marginLeft="5dp"-->
-<!--                android:background="@drawable/btn_send_msg"-->
-<!--                android:src="@drawable/ic_camera"-->
-<!--                android:textColor="@color/colorWhite" />-->
-<!--            <ImageButton-->
-<!--                android:id="@+id/btnSendMessage"-->
-<!--                android:layout_width="35dp"-->
-<!--                android:layout_height="35dp"-->
-<!--                android:layout_marginLeft="5dp"-->
-<!--                android:background="@drawable/btn_send_msg"-->
-<!--                android:src="@drawable/ic_send"-->
-<!--                android:textColor="@color/colorWhite" />-->
-
-
-
-<!--        </LinearLayout>-->
-<!--    </RelativeLayout>-->
 </RelativeLayout>

@@ -9,9 +9,11 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.vviped.ChatForBuying
 import com.example.vviped.MainChat
 import com.example.vviped.R
 import com.example.vviped.model.*
+import com.example.vviped.model.login.Logout
 import kotlinx.android.synthetic.main.fragment_home.*
 import kotlinx.android.synthetic.main.fragment_profile.*
 import kotlinx.android.synthetic.main.sellingposts_layout.*
@@ -59,10 +61,7 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        btn_chat.setOnClickListener{
-            val intent = Intent(activity, MainChat::class.java)
-            startActivity(intent)
-        }
+
 
     }
 
