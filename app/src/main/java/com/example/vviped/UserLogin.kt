@@ -102,6 +102,7 @@ class UserLogin : AppCompatActivity() {
                         val login_id = response.body()!!.data!!.id
                         val login_email = response.body()!!.data!!.email
                         val login_fullname = response.body()!!.data!!.fullname
+                        val login_profpic = response.body()!!.data!!.user_profpic
                         // jika password benar
                         Toast.makeText(
                             this@UserLogin,
@@ -112,7 +113,9 @@ class UserLogin : AppCompatActivity() {
                         if (login_id != null) {
                             if (login_email != null) {
                                 if (login_fullname != null) {
-                                    saveSession(login_id, login_username, login_password, login_email, login_fullname)
+                                    if (login_profpic != null) {
+                                        saveSession(login_id, login_username, login_password, login_email, login_fullname, login_profpic)
+                                    }
                                 }
                             }
                         }
@@ -143,12 +146,20 @@ class UserLogin : AppCompatActivity() {
     }
 
 
-    private fun saveSession(id : Int, username : String, password: String, email : String, fullname: String) {
+    private fun saveSession(
+        id: Int,
+        username: String,
+        password: String,
+        email: String,
+        fullname: String,
+        profpic: String
+    ) {
         sharedPref.put(Constant.PREF_ID, id)
         sharedPref.put(Constant.PREF_USERNAME, username)
         sharedPref.put(Constant.PREF_PASSWORD, password)
         sharedPref.put(Constant.PREF_EMAIL, email)
         sharedPref.put(Constant.PREF_FULLNAME, fullname)
+        sharedPref.put(Constant.PREF_PROFPIC, profpic)
         sharedPref.put(Constant.IS_LOGGED_IN, true)
 
     }
