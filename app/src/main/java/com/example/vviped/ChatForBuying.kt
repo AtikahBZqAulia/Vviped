@@ -7,10 +7,13 @@ import android.net.Uri
 import android.os.Bundle
 import android.telephony.PhoneNumberUtils
 import android.widget.EditText
+import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_chat_for_buying.*
+import kotlinx.android.synthetic.main.activity_chat_for_buying.product_name
+import kotlinx.android.synthetic.main.sellingposts_layout.*
 
 
 class ChatForBuying : AppCompatActivity() {
@@ -19,37 +22,56 @@ class ChatForBuying : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_chat_for_buying)
 
-        val sellerName = findViewById<TextView>(R.id.seller_username)
-        val nameProduct = findViewById<TextView>(R.id.product_name)
-        val priceProduct = findViewById<TextView>(R.id.product_price)
-        val campaignProduct = findViewById<TextView>(R.id.product_campaign)
+        val productName = intent.getStringExtra("product_name")
+        product_name.text = productName
 
-        val strSellerName = sellerName.text.toString()
-        val strProductName = nameProduct.text.toString()
-        val strPriceProduct = priceProduct.text.toString()
-        val strCampaignProduct = campaignProduct.text.toString()
+        val seller_name = intent.getStringExtra("seller_username")
+        seller_username.text = seller_name
+
+        val productPrice = intent.getStringExtra("product_price")
+        product_price.text = productPrice
+
+        val whatsappNumber = intent.getStringExtra("whatsapp")
+        whatsapp_number_chat.text = whatsappNumber
 
 
         btnSendMessage.setOnClickListener {
-            val message = "_[VVIPED APP NOTIFICATION]_ \n\n" +
-                    "Hai, ```"+  strSellerName + "```. \n" +
-                    "Saya tertarik dengan produk anda:  \n \n" +
-                    "*" +strProductName + "*" + "\n\n" +
-                    "Harga: " + strPriceProduct + "\n" +
-                    "Untuk campaign: " + strCampaignProduct + "\n"
-            openWhatsApp(message)
+            openWhatsApp()
         }
         backspace.setOnClickListener {
             onBackPressed()
         }
     }
 
-    private fun openWhatsApp(message: Any) {
+    private fun openWhatsApp() {
         val isWhatsappInstalled = whatsappInstalledOrNot("com.whatsapp")
         if (isWhatsappInstalled) {
-            val toNumber = "6287883520021"
+
+            val whatsapp = findViewById<TextView>(R.id.whatsapp_number_chat)
+            val strWhatsapp = whatsapp.text.toString()
+
+            val sellerName = findViewById<TextView>(R.id.seller_username)
+            val strSellerName = sellerName.text.toString()
+
+            val nameProduct = findViewById<TextView>(R.id.product_name)
+            val strProductName = nameProduct.text.toString()
+
+            val priceProduct = findViewById<TextView>(R.id.product_price)
+            val strPriceProduct = priceProduct.text.toString()
+
+            val campaignProduct = findViewById<TextView>(R.id.product_campaign)
+            val strCampaignProduct = campaignProduct.text.toString()
+
+
+            val message = "_*[VVIPED APP NOTIFICATION]*_ \n\n" +
+                    "Hai, ```"+  strSellerName + "```! \n" +
+                    "Saya tertarik dengan produk anda:  \n \n" +
+                    "*" +strProductName + "*" + "\n\n" +
+                    "*dengan harga:* \n Rp" + strPriceProduct + "\n" +
+                    "*untuk campaign:* \n" + strCampaignProduct + "\n"
+
             val intent = Intent(Intent.ACTION_VIEW)
-            intent.data = Uri.parse("http://api.whatsapp.com/send?phone=" + toNumber + "&text=" + message)
+            intent.data = Uri.parse("http://api.whatsapp.com/send?phone=" + strWhatsapp + "&text=" + message)
             startActivity(intent)
 
         } else {

@@ -9,9 +9,11 @@ import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
+import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.example.vviped.ChatForBuying
 import com.example.vviped.MainChat
+import com.example.vviped.NotificationDetails
 import com.example.vviped.R
 import com.squareup.picasso.Picasso
 
@@ -31,6 +33,7 @@ class SellingPostsAdapter(
         val sellerlocation = itemView.findViewById<TextView>(R.id.lokasi_penjual)
         val buyButton = itemView.findViewById<Button>(R.id.btn_buy)
         val soldTextView = itemView.findViewById<TextView>(R.id.sold_tv)
+        val whatsappNumber = itemView.findViewById<TextView>(R.id.whatsapp_number)
 
         fun bindView(sellingPost: SellingPostItem) {
             usernamepost.text = sellingPost.usernamepost
@@ -41,11 +44,27 @@ class SellingPostsAdapter(
             productdesc.text = sellingPost.product_description
             sellerlocation.text = sellingPost.seller_location
             soldTextView.text = sellingPost.sold
+            whatsappNumber.text = sellingPost.whatsapp
+
+            val seller_username = usernamepost.text.toString()
+            val product_name = productname.text.toString()
+            val product_price =  productprice.text.toString()
+            val whatsappNumber = whatsappNumber.text.toString()
+
 
             buyButton.setOnClickListener {
                 val context = buyButton.context
                 val intent = Intent(context, ChatForBuying::class.java)
+
+                intent.putExtra("seller_username", seller_username )
+                intent.putExtra("product_name", product_name )
+                intent.putExtra("product_price", product_price )
+                intent.putExtra("whatsapp", whatsappNumber )
+
+
                 context.startActivity(intent)
+
+
 
             }
         }
@@ -67,6 +86,7 @@ class SellingPostsAdapter(
         viewHolder.productdesc.text = sellingPosts[position].product_description
         viewHolder.sellerlocation.text = sellingPosts[position].seller_location
         viewHolder.soldTextView.text = sellingPosts[position].sold
+        viewHolder.whatsappNumber.text = sellingPosts[position].whatsapp
         viewHolder.bindView(sellingPosts[position])
 
     }
@@ -75,3 +95,4 @@ class SellingPostsAdapter(
         return sellingPosts.size
     }
 }
+

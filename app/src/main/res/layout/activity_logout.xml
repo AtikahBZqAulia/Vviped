@@ -60,6 +60,7 @@
         android:layout_height="40dp"
         android:layout_marginTop="5dp"
         android:layout_marginBottom="112dp"
+        android:layout_marginLeft="10dp"
         android:paddingHorizontal="20dp"
         android:text="No, maybe later."
         android:textStyle="bold"
