@@ -11,6 +11,8 @@ import android.widget.RadioGroup
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import com.example.vviped.model.*
+import com.example.vviped.model.login.Constant
+import com.example.vviped.model.login.PreferenceHelper
 import kotlinx.android.synthetic.main.activity_upload_selling.*
 import okhttp3.MediaType
 import okhttp3.MultipartBody
@@ -81,6 +83,7 @@ class UploadSellingActivity : AppCompatActivity(), UploadRequestBody.UploadCallb
         val intSelectButton: Int = radioGroup!!.checkedRadioButtonId
         val radioButton = findViewById<RadioButton>(intSelectButton)
         val whatsapp = findViewById<EditText>(R.id.whatsapp)
+        val sharedPref = PreferenceHelper(this)
 
         val parcelFileDescriptor = contentResolver.openFileDescriptor(selectedImageUri!!, "r", null) ?: return
 
@@ -103,7 +106,8 @@ class UploadSellingActivity : AppCompatActivity(), UploadRequestBody.UploadCallb
             RequestBody.create(MediaType.parse("multipart/form-data"), productdesc.text.toString()),
             RequestBody.create(MediaType.parse("multipart/form-data"), sellerlocation.text.toString()),
             RequestBody.create(MediaType.parse("multipart/form-data"), "SALE"),
-            RequestBody.create(MediaType.parse("multipart/form-data"), whatsapp.text.toString())
+            RequestBody.create(MediaType.parse("multipart/form-data"), whatsapp.text.toString()),
+            sharedPref.getInt(Constant.PREF_ID)!!
         ).enqueue(object : Callback<UploadResponse> {
             override fun onFailure(call: Call<UploadResponse>, t: Throwable) {
                 layout_root.snackbar(t.message!!)
