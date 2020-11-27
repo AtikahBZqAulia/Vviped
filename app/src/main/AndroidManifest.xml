@@ -19,8 +19,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
-        android:usesCleartextTraffic="true">
-        <activity android:name=".ChatForBuying"></activity>
+        android:usesCleartextTraffic="true"
+        >
+        <activity
+            android:name=".IntroSlider"
+            android:theme="@style/AppTheme.NoStatusBar">
+        </activity>
+        <activity android:name=".ChatForBuying" />
         <activity android:name=".model.login.Logout" />
         <activity android:name=".NotificationDetails" />
         <activity android:name=".create_campaign" />
@@ -52,11 +57,9 @@
         <activity android:name=".MainChat" />
         <activity android:name=".chat_user" />
         <activity android:name=".chat_myself" />
-
         <activity
             android:name=".MainActivity"
             android:windowSoftInputMode="stateHidden" />
-
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />

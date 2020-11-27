@@ -19,7 +19,7 @@ class splashScreen : AppCompatActivity() {
 
         handler = Handler()
         handler.postDelayed({
-            val intent = Intent(this,Landing::class.java )
+            val intent = Intent(this,IntroSlider::class.java )
             startActivity(intent)
             finish()
         }, 2000) //delay 3sec and open landing activity

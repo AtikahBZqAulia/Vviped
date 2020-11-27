@@ -27,30 +27,31 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:fontFamily="@font/cabin"
-        android:text="Sale to Donate"
+        android:text="Sale to donate"
         android:textColor="@color/colorAccent"
         android:textSize="25sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/logoapp" />
-    
-    <TextView
-        android:id="@+id/tagline2"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
-        android:text="sell your products and each purchase will be donated to a charity campaign!"
-        android:textAlignment="center"
-        android:textColor="@color/colorBlack"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/imageView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tagline"
-        tools:textSize="20sp" />
+
+<!--    <TextView-->
+<!--        android:id="@+id/tagline2"-->
+<!--        android:layout_width="250dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_gravity="center_horizontal"-->
+<!--        android:layout_marginTop="8dp"-->
+<!--        android:layout_marginBottom="8dp"-->
+<!--        android:text="sell your products and each purchase will be donated to a charity campaign!"-->
+<!--        android:textAlignment="center"-->
+<!--        android:textColor="@color/colorBlack"-->
+<!--        android:textStyle="bold"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/imageView"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.496"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/tagline"-->
+<!--        tools:textSize="20sp" />-->
 
     <ImageView
         android:id="@+id/imageView"
@@ -61,7 +62,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tagline2"
+        app:layout_constraintTop_toBottomOf="@+id/tagline"
         app:srcCompat="@drawable/donate" />
 
     <LinearLayout
@@ -74,7 +75,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView"
-        app:layout_constraintVertical_bias="0.044">
+        app:layout_constraintVertical_bias="0.484">
 
         <Button
             android:id="@+id/btn_to_login"
@@ -87,6 +88,8 @@
             android:layout_weight="1"
             android:background="@drawable/btn_register_login"
             android:text="Log in"
+            android:textStyle="bold"
+            android:textSize="16sp"
             android:textAllCaps="false"
             android:textColor="@color/colorWhite" />
 
@@ -99,8 +102,9 @@
             android:layout_marginBottom="20dp"
             android:layout_weight="1"
             android:background="@drawable/btn_corner_black"
-
             android:text="Register"
+            android:textStyle="bold"
+            android:textSize="16sp"
             android:textAllCaps="false"
             android:textColor="@color/colorWhite" />
 
