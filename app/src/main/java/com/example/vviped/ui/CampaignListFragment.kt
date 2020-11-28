@@ -2,16 +2,20 @@ package com.example.vviped.ui
 
 import android.content.Intent
 import android.os.Bundle
-import androidx.fragment.app.Fragment
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.vviped.*
 import com.example.vviped.model.*
 import kotlinx.android.synthetic.main.fragment_campaign_list.*
 import kotlinx.android.synthetic.main.fragment_home.*
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -27,12 +31,6 @@ class CampaignListFragment : Fragment() {
     // TODO: Rename and change types of parameters
     private var recyclerView: RecyclerView? = null
     private var campaignListAdapter: CampaignListAdapter? = null
-    val url = "https://cdn.business2community.com/wp-content/uploads/2017/08/blank-profile-picture-973460_640.png"
-    val campaignLists = arrayListOf<CampaignItem>(
-        CampaignItem("Kitabisa.com", "https://avatars0.githubusercontent.com/u/40655294?s=200&v=4", "https://kitabisa-userupload-01.s3-ap-southeast-1.amazonaws.com/_production/campaign/97098/31_97098_1545812068_232891_f.png","Bantu Pak Somat Mengobati Kanker", "desc here", "Bekasi, Jawa Barat"),
-        CampaignItem("Kitabisa.com", "https://avatars0.githubusercontent.com/u/40655294?s=200&v=4", "https://kitabisa-userupload-01.s3-ap-southeast-1.amazonaws.com/_production/campaign/128602/31_104915_1549273040_63962_f.jpg","Bantu Soni untuk Sekolah", "desc here", "Rawamangun, Jakarta Timur"),
-        CampaignItem("Kitabisa.com", "https://avatars0.githubusercontent.com/u/40655294?s=200&v=4", "https://kitabisa-userupload-01.s3-ap-southeast-1.amazonaws.com/_production/campaign/95361/31_95361_1545362552_579425_f.PNG","Bantu Ibu Jumilah Mengobati Kakinya", "desc here", "Malang, Jawa Timur"),
-        )
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -45,9 +43,7 @@ class CampaignListFragment : Fragment() {
         recyclerView?.setHasFixedSize(true)
         recyclerView?.layoutManager = LinearLayoutManager(context)
 
-        campaignListAdapter = context?.let { CampaignListAdapter(it, campaignLists as ArrayList<CampaignItem>, true) }
-        recyclerView?.adapter = campaignListAdapter
-
+        getData()
         return view
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -57,17 +53,23 @@ class CampaignListFragment : Fragment() {
             val intent = Intent(activity, create_campaign::class.java)
             startActivity(intent)
         }
+    }
 
-        campaignListAdapter?.setOnItemClickCallback(object : CampaignListAdapter.OnItemClickCallback {
-            override fun onItemClicked(data: CampaignItem) {
-//                Toast.makeText(getActivity()?.getBaseContext(), "notification: "+ data.descNotif, Toast.LENGTH_SHORT).show()
+    fun getData(){
+        val campaignService = CampaignRepository.create()
+        campaignService.getCampaigns().enqueue(object : Callback<MutableList<CampaignModel>> {
+            override fun onResponse(
+                call: Call<MutableList<CampaignModel>>,
+                response: Response<MutableList<CampaignModel>>
+            ) {
+                campaignListAdapter = context?.let { CampaignListAdapter(it, response.body() as MutableList<CampaignModel>) }
+                recyclerView?.adapter = campaignListAdapter
+                campaignListAdapter?.notifyDataSetChanged()
+            }
 
-                val intent = Intent(getActivity(), UploadSellingActivity::class.java)
-                intent.putExtra("title_campaign",data.campaign_name)
-                startActivity(intent)
+            override fun onFailure(call: Call<MutableList<CampaignModel>>, t: Throwable) {
+                Log.e("tag", t.toString())
             }
         })
-
-
     }
 }

@@ -22,7 +22,8 @@ interface RetrofitInterface {
         @Part("seller_loc") seller_loc: RequestBody,
         @Part("selling_status") selling_status: RequestBody,
         @Part("whatsapp") whatsapp: RequestBody,
-        @Part("user_id") user_id: Int
+        @Part("user_id") user_id: Int,
+        @Part("campaign_id") campaign_id: Int
         ): Call<UploadResponse>
 
     @Multipart

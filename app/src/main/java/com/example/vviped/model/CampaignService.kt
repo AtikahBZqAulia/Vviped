@@ -6,7 +6,7 @@ import retrofit2.http.GET
 interface CampaignService {
 
     @GET("api.php?apicall=campaigns")
-    fun getCampaigns(): Call<List<CampaignModel>>
+    fun getCampaigns(): Call<MutableList<CampaignModel>>
 
 
 }

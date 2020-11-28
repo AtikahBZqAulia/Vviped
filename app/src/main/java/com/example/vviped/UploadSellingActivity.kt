@@ -84,6 +84,7 @@ class UploadSellingActivity : AppCompatActivity(), UploadRequestBody.UploadCallb
         val radioButton = findViewById<RadioButton>(intSelectButton)
         val whatsapp = findViewById<EditText>(R.id.whatsapp)
         val sharedPref = PreferenceHelper(this)
+        val campaign_id = intent.getIntExtra("campaign_id", -1)
 
         val parcelFileDescriptor = contentResolver.openFileDescriptor(selectedImageUri!!, "r", null) ?: return
 
@@ -107,7 +108,8 @@ class UploadSellingActivity : AppCompatActivity(), UploadRequestBody.UploadCallb
             RequestBody.create(MediaType.parse("multipart/form-data"), sellerlocation.text.toString()),
             RequestBody.create(MediaType.parse("multipart/form-data"), "SALE"),
             RequestBody.create(MediaType.parse("multipart/form-data"), whatsapp.text.toString()),
-            sharedPref.getInt(Constant.PREF_ID)!!
+            sharedPref.getInt(Constant.PREF_ID)!!,
+            campaign_id
         ).enqueue(object : Callback<UploadResponse> {
             override fun onFailure(call: Call<UploadResponse>, t: Throwable) {
                 layout_root.snackbar(t.message!!)

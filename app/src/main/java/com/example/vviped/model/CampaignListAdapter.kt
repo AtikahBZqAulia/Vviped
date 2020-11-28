@@ -1,6 +1,7 @@
 package com.example.vviped.model
 
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -9,11 +10,12 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.vviped.R
+import com.example.vviped.UploadSellingActivity
 import com.squareup.picasso.Picasso
 
 class CampaignListAdapter(
     private var context: Context,
-    private var campaignLists: List<CampaignItem>,
+    private var campaignLists: MutableList<CampaignModel>,
     private var isFragment: Boolean = false,
     private var onItemClickCallback: CampaignListAdapter.OnItemClickCallback? =null
 ) : RecyclerView.Adapter<CampaignListAdapter.ViewHolder>() {
@@ -29,17 +31,31 @@ class CampaignListAdapter(
         val imagecampaign = itemView.findViewById<ImageView>(R.id.imagecampaign_layout)
         val campaignname = itemView.findViewById<TextView>(R.id.campaign_name)
         val campaigndesc = itemView.findViewById<TextView>(R.id.campaign_deskripsi)
+        val campaigncategory = itemView.findViewById<TextView>(R.id.campaign_category)
+        val campaignreceiver = itemView.findViewById<TextView>(R.id.campaign_penerima)
+        val usagedetails = itemView.findViewById<TextView>(R.id.usage_detail)
         val donatebyselling = itemView.findViewById<Button>(R.id.donatewithselling_btn)
 
-        fun bindView(campaignItem: CampaignItem) {
+        fun bindView(campaignItem: CampaignModel) {
             organizationnamepost.text = campaignItem.organization_name
             Picasso.get().load(campaignItem.organization_profpict).into(organizationprofpict_post)
             Picasso.get().load(campaignItem.image_campaign).into(imagecampaign)
-            campaignname.text = campaignItem.campaign_name
+            campaignname.text = campaignItem.campaign_title
             campaigndesc.text = campaignItem.campaign_desc
+            campaigncategory.text = campaignItem.campaign_category
+            campaignreceiver.text = campaignItem.donation_goes
+            usagedetails.text = campaignItem.usage_details
+
+            val campaign_id = campaignItem.id
 
             donatebyselling.setOnClickListener() {
-                onItemClickCallback?.onItemClicked(campaignItem)
+                val context = donatebyselling.context
+                val intent = Intent(context, UploadSellingActivity::class.java)
+
+                intent.putExtra("title_campaign", campaignname.text.toString() )
+                intent.putExtra("campaign_id", campaign_id )
+
+                context.startActivity(intent)
             }
 
         }
@@ -63,6 +79,6 @@ class CampaignListAdapter(
     }
 
     interface OnItemClickCallback{
-        fun onItemClicked(data:CampaignItem)
+        fun onItemClicked(data:CampaignModel)
     }
 }

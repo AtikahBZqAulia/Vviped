@@ -57,20 +57,10 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
-            android:layout_marginBottom="20dp"
+            android:layout_marginBottom="5dp"
             android:text="Bantu Pak Somat Mengobati Penyakit Kanker"
             android:textColor="@color/colorAccent2"
             android:textSize="18dp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:clickable="false"
-            android:text="Description:"
-            android:textColor="@color/colorBlack"
-            android:textSize="14sp"
             android:textStyle="bold" />
 
         <RelativeLayout
@@ -81,37 +71,49 @@
             app:layout_constraintEnd_toEndOf="@+id/linear_layout1">
 
             <TextView
-                android:id="@+id/campaign_deskripsi"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
-                android:layout_marginEnd="10dp"
-                android:layout_marginRight="10dp"
-                android:paddingLeft="10dp"
-                android:layout_alignParentStart="true"
-                android:layout_toStartOf="@+id/donatewithselling_btn"
-                android:layout_toLeftOf="@+id/donatewithselling_btn"
-                android:text="Description here"
+                android:clickable="false"
+                android:text="Description:"
                 android:textColor="@color/colorBlack"
                 android:textSize="14sp"
-                android:layout_alignParentLeft="true" />
+                android:textStyle="bold" />
+
             <Button
                 android:id="@+id/donatewithselling_btn"
-
-            android:layout_width="wrap_content"
-            android:layout_height="22dp"
-            android:layout_marginRight="16dp"
-            android:layout_marginBottom="5dp"
-            android:background="@drawable/btn_background"
-            android:paddingLeft="10dp"
-            android:paddingRight="10dp"
-            android:text="Donate by Selling"
-            android:textColor="@color/colorWhite"
-            android:textSize="14dp"
-            android:textStyle="bold"
-            android:layout_alignParentRight="true" />
+                android:layout_width="wrap_content"
+                android:layout_height="22dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/btn_background"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="Donate by Selling"
+                android:textColor="@color/colorWhite"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:layout_alignParentRight="true" />
 
         </RelativeLayout>
+
+        <TextView
+            android:id="@+id/campaign_deskripsi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:paddingLeft="10dp"
+            android:layout_alignParentStart="true"
+            android:layout_toStartOf="@+id/donatewithselling_btn"
+            android:layout_toLeftOf="@+id/donatewithselling_btn"
+            android:text="Description here"
+            android:justificationMode="inter_word"
+            android:textColor="@color/colorBlack"
+            android:paddingBottom="5dp"
+            android:textSize="14sp"
+            android:layout_alignParentLeft="true" />
 
         <TextView
             android:id="@+id/category"
@@ -129,7 +131,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
-            android:paddingBottom="10dp"
+            android:paddingBottom="3dp"
             android:text="Kegiatan Sosial, Kesehatan"
             android:textColor="@color/colorBlack"
             android:textSize="14sp" />
@@ -149,7 +151,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
-            android:paddingBottom="10dp"
+            android:paddingBottom="3dp"
             android:text="Pak Somat Baharuddin"
             android:textColor="@color/colorBlack"
             android:textSize="14sp" />
@@ -170,7 +172,7 @@
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:layout_marginBottom="30dp"
-            android:paddingBottom="10dp"
+            android:paddingBottom="6dp"
             android:text="Biaya rumah sakit Rp.1.000.000"
             android:textColor="@color/colorBlack"
             android:textSize="14sp" />
