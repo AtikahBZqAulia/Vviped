@@ -39,16 +39,17 @@ class IntroSlider : AppCompatActivity() {
         val onBoardingData: MutableList<OnBoardingData> = ArrayList()
          onBoardingData.add(OnBoardingData(
             "WELCOME TO VVIPED",
-            "Sell your products and the profit should be donated to a charity campaign you made " +
+            "List your products to sell it, and the profit should be donated to a charity campaign you made. " +
                     "or you can choose others campaign too!",
             R.drawable.logoapp))
         onBoardingData.add(OnBoardingData(
-            "CREATE YOUR CAMPAIGN",
-            "Start by creating your own campaign before uploading the products. " ,
+            "PURCHASE THE PRODUCTS TO DONATE THE CAMPAIGN",
+            "You can be both seller of your own products or the buyer of other' products." +
+                    "You will get a message if someone interested in your product and finish the payment and transaction." ,
             R.drawable.profilpic))
         onBoardingData.add(OnBoardingData(
             "GETTING STARTED IS EASY",
-            "By getting started, you already took the biggest step in sharing your kindness to help each other",
+            "By getting started, you already took the biggest step in sharing your kindness to help each other. ",
             R.drawable.profilpic))
 
         setOnBoardingViewPagerAdapter(onBoardingData)
