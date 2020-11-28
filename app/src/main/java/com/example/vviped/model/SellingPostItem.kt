@@ -7,6 +7,8 @@ import kotlinx.android.parcel.Parcelize
 @Parcelize
 data class SellingPostItem (
 
+    @field:SerializedName("id")
+    val id: Int? = null,
     @field:SerializedName("username")
     val usernamepost: String? = null,
     @field:SerializedName("user_profpict")
@@ -15,6 +17,8 @@ data class SellingPostItem (
     val image_post: String? = null,
     @field:SerializedName("product_name")
     val product_name: String? = null,
+    @field:SerializedName("product_condition")
+    val product_condition: String? = null,
     @field:SerializedName("product_price")
     val product_price: String? = null,
     @field:SerializedName("product_desc")
@@ -25,6 +29,10 @@ data class SellingPostItem (
     val sold: String? = null,
     @field:SerializedName("whatsapp")
     val whatsapp: String? = null,
+    @field:SerializedName("campaign_id")
+    val campaign_id: Int? = null,
+    @field:SerializedName("campaign_title")
+    val campaign_title: String? = null
 
 
 ) : Parcelable{

@@ -8,12 +8,8 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
-import android.widget.Toast
-import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.example.vviped.ChatForBuying
-import com.example.vviped.MainChat
-import com.example.vviped.NotificationDetails
 import com.example.vviped.R
 import com.squareup.picasso.Picasso
 
@@ -28,6 +24,8 @@ class SellingPostsAdapter(
         val profpictpost = itemView.findViewById<ImageView>(R.id.user_profpict_post)
         val imagepost = itemView.findViewById<ImageView>(R.id.imagepost_layout)
         val productname = itemView.findViewById<TextView>(R.id.product_name)
+        val productcondition = itemView.findViewById<TextView>(R.id.produk_kondisi)
+        val campaignname = itemView.findViewById<TextView>(R.id.campaign_title)
         val productprice = itemView.findViewById<TextView>(R.id.harga_produk)
         val productdesc = itemView.findViewById<TextView>(R.id.produk_deskripsi)
         val sellerlocation = itemView.findViewById<TextView>(R.id.lokasi_penjual)
@@ -40,6 +38,8 @@ class SellingPostsAdapter(
             Picasso.get().load(sellingPost.user_profpict).into(profpictpost)
             Picasso.get().load(sellingPost.image_post).into(imagepost)
             productname.text = sellingPost.product_name
+            productcondition.text = sellingPost.product_condition
+            campaignname.text = sellingPost.campaign_title
             productprice.text = sellingPost.product_price
             productdesc.text = sellingPost.product_description
             sellerlocation.text = sellingPost.seller_location
