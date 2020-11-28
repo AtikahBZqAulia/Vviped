@@ -36,6 +36,7 @@ interface RetrofitInterface {
         @Part("donation_goes") donation_goes: RequestBody,
         @Part("usage_details") usage_details: RequestBody,
         @Part("phone_number") phone_number: RequestBody,
+        @Part("user_id") user_id: Int
     ): Call<UploadResponse>
 
     @Multipart

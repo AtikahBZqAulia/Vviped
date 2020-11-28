@@ -4,15 +4,15 @@ import android.app.Activity
 import android.content.Intent
 import android.net.Uri
 import android.os.Build
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.EditText
 import androidx.annotation.RequiresApi
+import androidx.appcompat.app.AppCompatActivity
 import com.example.vviped.model.*
+import com.example.vviped.model.login.Constant
+import com.example.vviped.model.login.PreferenceHelper
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_create_campaign.*
-import kotlinx.android.synthetic.main.activity_create_campaign.button_upload
-import kotlinx.android.synthetic.main.activity_create_campaign.progress_bar
 import okhttp3.MediaType
 import okhttp3.MultipartBody
 import okhttp3.RequestBody
@@ -82,8 +82,7 @@ class create_campaign : AppCompatActivity(), UploadRequestBody.UploadCallback {
         val donationgoes = findViewById<EditText>(R.id.campaign_penerima)
         val usagedetails = findViewById<EditText>(R.id.usage_detail)
         val phonenumber = findViewById<EditText>(R.id.campaign_phone)
-
-
+        val sharedPref = PreferenceHelper(this)
 
         val parcelFileDescriptor = contentResolver.openFileDescriptor(selectedImageUri!!, "r", null) ?: return
 
@@ -106,7 +105,8 @@ class create_campaign : AppCompatActivity(), UploadRequestBody.UploadCallback {
             RequestBody.create(MediaType.parse("multipart/form-data"), campaigndesc.text.toString()),
             RequestBody.create(MediaType.parse("multipart/form-data"), donationgoes.text.toString()),
             RequestBody.create(MediaType.parse("multipart/form-data"), usagedetails.text.toString()),
-            RequestBody.create(MediaType.parse("multipart/form-data"), phonenumber.text.toString())
+            RequestBody.create(MediaType.parse("multipart/form-data"), phonenumber.text.toString()),
+            sharedPref.getInt(Constant.PREF_ID)!!
         ).enqueue(object : Callback<UploadResponse> {
             override fun onFailure(call: Call<UploadResponse>, t: Throwable) {
                 layout_campaign.snackbar(t.message!!)
