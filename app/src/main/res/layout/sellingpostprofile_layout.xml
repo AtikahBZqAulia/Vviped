@@ -23,6 +23,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
+            android:paddingTop="8dp"
             android:orientation="horizontal">
 
             <de.hdodenhof.circleimageview.CircleImageView
@@ -189,11 +190,11 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
-            android:paddingBottom="10dp"
+            android:paddingBottom="5dp"
             android:text="Rawamangun, Jakarta Timur"
             android:textColor="@color/colorBlack"
             android:textSize="14sp"
-            android:layout_marginBottom="30dp"/>
+            android:layout_marginBottom="20dp"/>
 
         <TextView
             android:id="@+id/whatsapp_number"

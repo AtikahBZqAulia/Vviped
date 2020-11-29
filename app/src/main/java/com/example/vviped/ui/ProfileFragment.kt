@@ -2,6 +2,7 @@ package com.example.vviped.ui
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -9,6 +10,8 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.vviped.*
+import com.example.vviped.model.RetrofitInterface
+import com.example.vviped.model.SellingPostItem
 import com.example.vviped.model.SellingPostProfileAdapter
 import com.example.vviped.model.login.Constant
 import com.example.vviped.model.login.Logout
@@ -17,6 +20,9 @@ import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.activity_user_login.*
 import kotlinx.android.synthetic.main.fragment_profile.*
 import kotlinx.android.synthetic.main.fragment_profile.view.*
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 
 
 /**
@@ -36,7 +42,7 @@ class ProfileFragment : Fragment() {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_profile, container, false)
 
-
+        getData()
 
         return view
     }
@@ -67,7 +73,28 @@ class ProfileFragment : Fragment() {
 
     }
 
+    fun getData(){
 
+        val sharedPref = PreferenceHelper(requireActivity())
+
+        RetrofitInterface().sellingPostProfile(
+            sharedPref.getInt(Constant.PREF_ID)!!
+        ).enqueue(object : Callback<MutableList<SellingPostItem>> {
+
+            override fun onResponse(
+                call: Call<MutableList<SellingPostItem>>,
+                response: Response<MutableList<SellingPostItem>>
+            ) {
+                sellingPostProfileAdapter = context?.let { SellingPostProfileAdapter(it, response.body() as MutableList<SellingPostItem>) }
+                recyclerView?.adapter = sellingPostProfileAdapter
+                sellingPostProfileAdapter?.notifyDataSetChanged()
+            }
+
+            override fun onFailure(call: Call<MutableList<SellingPostItem>>, t: Throwable) {
+                Log.e("tag", t.toString())
+            }
+        })
+    }
 
 }
 
