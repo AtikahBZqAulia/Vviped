@@ -6,12 +6,15 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.vviped.*
+import com.example.vviped.model.SellingPostProfileAdapter
 import com.example.vviped.model.login.Constant
 import com.example.vviped.model.login.Logout
 import com.example.vviped.model.login.PreferenceHelper
 import com.squareup.picasso.Picasso
+import kotlinx.android.synthetic.main.activity_user_login.*
 import kotlinx.android.synthetic.main.fragment_profile.*
 import kotlinx.android.synthetic.main.fragment_profile.view.*
 
@@ -22,7 +25,9 @@ import kotlinx.android.synthetic.main.fragment_profile.view.*
  * create an instance of this fragment.
  */
 class ProfileFragment : Fragment() {
+
     private var recyclerView: RecyclerView? = null
+    private var sellingPostProfileAdapter: SellingPostProfileAdapter? = null
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -30,6 +35,8 @@ class ProfileFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_profile, container, false)
+
+
 
         return view
     }
@@ -54,42 +61,15 @@ class ProfileFragment : Fragment() {
             startActivity(intent)
         }
 
+        recyclerView = view.findViewById(R.id.recycleView_profile)
+        recyclerView?.setHasFixedSize(true)
+        recyclerView?.layoutManager = LinearLayoutManager(context)
+
     }
 
 
-//    fun onAlertDialog(view: View) {
-//        //Instantiate builder variable
-//        val alertDialogBuilder = AlertDialog.Builder(view.context)
-//
-//        // set title
-//        alertDialogBuilder.setTitle("Log out")
-//
-//        //set content area
-//        alertDialogBuilder.setMessage("Are you sure?")
-//
-//        //set negative button
-//        alertDialogBuilder.setPositiveButton(
-//            "OK"
-//        ) { dialog, id ->
-//            val intent = Intent(activity, Landing::class.java)
-//            startActivity(intent)
-//            Toast.makeText(
-//                activity,
-//                "You've been logged out.",
-//                Toast.LENGTH_SHORT
-//            ).show()
-//        }
-//
-//        //set positive button
-//        alertDialogBuilder.setNegativeButton(
-//            "Cancel"
-//        ) { dialog, id ->
-//            // User cancelled the dialog
-//        }
-//
-//        alertDialogBuilder.show()
-//    }
-
 
 }
+
+
 

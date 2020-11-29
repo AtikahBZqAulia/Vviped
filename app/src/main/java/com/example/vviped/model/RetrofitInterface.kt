@@ -40,6 +40,12 @@ interface RetrofitInterface {
     ): Call<UploadResponse>
 
     @Multipart
+    @POST("api.php?apicall=sellingpost_profile")
+    fun sellingPostProfile(
+        @Part("user_id") user_id: Int
+    ): Call<MutableList<SellingPostItem>>
+
+    @Multipart
     @POST("api.php?apicall=register")
     fun registerUser(
         @Part("email") email: RequestBody,

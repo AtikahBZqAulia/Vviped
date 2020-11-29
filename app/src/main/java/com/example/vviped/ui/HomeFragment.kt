@@ -52,6 +52,7 @@ class HomeFragment : Fragment() {
     }
 
     fun getData(){
+
         val feedsService = SellingPostRepository.create()
         feedsService.getFeeds().enqueue(object : Callback<MutableList<SellingPostItem>> {
             override fun onResponse(
