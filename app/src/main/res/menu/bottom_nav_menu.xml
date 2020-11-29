@@ -12,10 +12,10 @@
         android:title="Campaign" />
 
 
-    <item
-        android:id="@+id/navigation_notification"
-        android:icon="@drawable/ic_notifications"
-        android:title="Notification" />
+<!--    <item-->
+<!--        android:id="@+id/navigation_notification"-->
+<!--        android:icon="@drawable/ic_notifications"-->
+<!--        android:title="Notification" />-->
 
 
     <item
