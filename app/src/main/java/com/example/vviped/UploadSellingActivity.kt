@@ -8,11 +8,13 @@ import android.os.Bundle
 import android.widget.EditText
 import android.widget.RadioButton
 import android.widget.RadioGroup
+import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import com.example.vviped.model.*
 import com.example.vviped.model.login.Constant
 import com.example.vviped.model.login.PreferenceHelper
+import com.example.vviped.ui.HomeFragment
 import kotlinx.android.synthetic.main.activity_upload_selling.*
 import okhttp3.MediaType
 import okhttp3.MultipartBody
@@ -107,7 +109,7 @@ class UploadSellingActivity : AppCompatActivity(), UploadRequestBody.UploadCallb
             RequestBody.create(MediaType.parse("multipart/form-data"), productdesc.text.toString()),
             RequestBody.create(MediaType.parse("multipart/form-data"), sellerlocation.text.toString()),
             RequestBody.create(MediaType.parse("multipart/form-data"), "SALE"),
-            RequestBody.create(MediaType.parse("multipart/form-data"), whatsapp.text.toString()),
+            RequestBody.create(MediaType.parse("multipart/form-data"), "62"+whatsapp.text.toString()),
             sharedPref.getInt(Constant.PREF_ID)!!,
             campaign_id
         ).enqueue(object : Callback<UploadResponse> {
@@ -121,8 +123,20 @@ class UploadSellingActivity : AppCompatActivity(), UploadRequestBody.UploadCallb
                 response: Response<UploadResponse>
             ) {
                 response.body()?.let {
-                    layout_root.snackbar(it.message)
+                    //layout_root.snackbar(it.message)
                     progress_bar.progress = 100
+                    Toast.makeText(
+                        this@UploadSellingActivity,
+                        "Uploaded Successfully!",
+                        Toast.LENGTH_LONG
+                    )
+                        .show()
+
+                    var homeFragment: HomeFragment = HomeFragment()
+                    supportFragmentManager.beginTransaction().add(R.id.fragment_layout, homeFragment)
+                        .commit()
+
+
                 }
             }
         })

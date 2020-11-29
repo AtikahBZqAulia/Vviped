@@ -58,6 +58,7 @@ class SellingPostsAdapter(
                 intent.putExtra("seller_username", seller_username )
                 intent.putExtra("product_name", product_name )
                 intent.putExtra("product_price", product_price )
+                intent.putExtra("campaign_title", sellingPost.campaign_title.toString() )
                 intent.putExtra("whatsapp", whatsappNumber )
 
 

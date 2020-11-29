@@ -1,19 +1,13 @@
 package com.example.vviped
 
-import android.content.ComponentName
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.net.Uri
 import android.os.Bundle
-import android.telephony.PhoneNumberUtils
-import android.widget.EditText
-import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_chat_for_buying.*
-import kotlinx.android.synthetic.main.activity_chat_for_buying.product_name
-import kotlinx.android.synthetic.main.sellingposts_layout.*
 
 
 class ChatForBuying : AppCompatActivity() {
@@ -30,6 +24,9 @@ class ChatForBuying : AppCompatActivity() {
 
         val productPrice = intent.getStringExtra("product_price")
         product_price.text = productPrice
+
+        val campaignTitle = intent.getStringExtra("campaign_title")
+        product_campaign.text = campaignTitle
 
         val whatsappNumber = intent.getStringExtra("whatsapp")
         whatsapp_number_chat.text = whatsappNumber
