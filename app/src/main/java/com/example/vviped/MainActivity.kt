@@ -53,11 +53,11 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
                 return true
             }
 
-            R.id.navigation_notification -> {
-                supportFragmentManager.beginTransaction()
-                    .replace(R.id.fragment_layout, notificationFragment).commit()
-                return true
-            }
+//            R.id.navigation_notification -> {
+//                supportFragmentManager.beginTransaction()
+//                    .replace(R.id.fragment_layout, notificationFragment).commit()
+//                return true
+//            }
             R.id.navigation_profile -> {
                 supportFragmentManager.beginTransaction()
                     .replace(R.id.fragment_layout, profileFragment).commit()
