@@ -46,11 +46,11 @@ class IntroSlider : AppCompatActivity() {
             "PURCHASE THE PRODUCTS TO DONATE THE CAMPAIGN",
             "You can be both seller or buyer. " +
                     "Get notified by a message if someone interested in your product, deal with the transaction, and finish the payment." ,
-            R.drawable.profilpic))
+            R.drawable.logoapp))
         onBoardingData.add(OnBoardingData(
             "GETTING STARTED IS EASY",
             "By getting started, you already took the biggest step in sharing your kindness to help each other. ",
-            R.drawable.profilpic))
+            R.drawable.logoapp))
 
         setOnBoardingViewPagerAdapter(onBoardingData)
 

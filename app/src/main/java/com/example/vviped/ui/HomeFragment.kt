@@ -1,14 +1,16 @@
 package com.example.vviped.ui
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.vviped.R
+import com.example.vviped.*
 import com.example.vviped.model.*
 import kotlinx.android.synthetic.main.fragment_home.*
 import kotlinx.android.synthetic.main.fragment_profile.*
@@ -39,6 +41,7 @@ class HomeFragment : Fragment() {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_home, container, false)
 
+
         recyclerView = view.findViewById(R.id.recycleView_home)
         recyclerView?.setHasFixedSize(true)
         recyclerView?.layoutManager = LinearLayoutManager(context)
@@ -49,7 +52,30 @@ class HomeFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+
+
+        kategori2.setOnClickListener {
+            (context as MainActivity).changeFragment(FilteredCategoriesFragment())
+
+        }
+
+        kategori1.setOnClickListener {
+            (context as MainActivity).changeFragment(FilteredCategoriesFragment())
+        }
+
+        kategori3.setOnClickListener {
+            (context as MainActivity).changeFragment(FilteredCategoriesFragment())
+        }
+        kategori4.setOnClickListener {
+            (context as MainActivity).changeFragment(FilteredCategoriesFragment())
+        }
+        kategori5.setOnClickListener {
+            (context as MainActivity).changeFragment(FilteredCategoriesFragment())
+        }
+
     }
+
 
     fun getData(){
 

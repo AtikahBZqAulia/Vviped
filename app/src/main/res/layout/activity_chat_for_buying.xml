@@ -57,31 +57,38 @@
         android:paddingBottom="50dp">
 
 
-        <ImageView
-            android:id="@+id/productimage"
-            android:layout_width="match_parent"
-            android:layout_height="280dp"
-            android:scaleType="fitCenter"
-            android:src="@drawable/profilpic"
-            app:layout_constraintBottom_toTopOf="@+id/product_name"
-            app:layout_constraintStart_toStartOf="@+id/product_name"
-            app:layout_constraintTop_toTopOf="parent" />
-
         <TextView
             android:id="@+id/product_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="156dp"
+            android:layout_marginBottom="376dp"
             android:gravity="center_horizontal"
             android:text="Baju Atasan Lengan Panjang"
             android:textColor="@color/colorBlack"
-            android:textSize="16sp"
+            android:textSize="18sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/productimage" />
+
+        <TextView
+            android:id="@+id/rp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+
+            android:text="Rp"
+            android:textColor="@color/colorAccent2"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
+            app:layout_constraintEnd_toStartOf="@+id/product_price"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/product_name"
+            app:layout_constraintVertical_bias="0.0" />
 
         <TextView
             android:id="@+id/product_price"
@@ -92,7 +99,7 @@
             android:layout_marginBottom="8dp"
             android:paddingLeft="5dp"
             android:paddingRight="5dp"
-            android:text="Rp70.000"
+            android:text="70.000"
             android:textColor="@color/colorAccent2"
             android:textSize="16sp"
             android:textStyle="bold"
@@ -103,53 +110,33 @@
             app:layout_constraintVertical_bias="0.0" />
 
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/constraintLayout"
-            android:layout_width="match_parent"
+        <ImageView
+            android:id="@+id/icon_campaign"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="12dp"
+            android:src="@drawable/ic_campaign_heart"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/product_price" />
+
+        <TextView
+            android:id="@+id/product_campaign"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:layout_marginBottom="4dp"
-            android:orientation="horizontal"
+            android:gravity="center_horizontal"
+            android:paddingHorizontal="60dp"
+            android:text="Bantu Adik Misya untuk Sekolah"
+            android:textAlignment="center"
+            android:textSize="14sp"
+            android:textStyle="italic"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/product_price"
-            app:layout_constraintVertical_bias="0.0">
-
-            <ImageView
-                android:id="@+id/icon_campaign"
-                android:layout_width="17dp"
-                android:layout_height="17dp"
-                android:src="@drawable/ic_campaign_heart"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/product_campaign"
-                app:layout_constraintHorizontal_bias="1.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.538" />
-
-            <TextView
-                android:id="@+id/product_campaign"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:gravity="center_vertical"
-                android:text="Donasi Hijrah by Salim FMIPA UNJ"
-                android:textAlignment="center"
-                android:textColor="@color/colorAccent2"
-                android:textSize="14sp"
-                android:textStyle="italic"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.545"
-                tools:ignore="RtlCompat" />
-
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
+            app:layout_constraintTop_toBottomOf="@id/icon_campaign"
+            app:layout_constraintVertical_bias="0.0"
+            tools:ignore="RtlCompat" />
 
         <ImageView
             android:layout_width="35dp"
@@ -158,10 +145,10 @@
             android:src="@drawable/ic_whatsapp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/btnSendMessage"
-            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintHorizontal_bias="0.984"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
-            app:layout_constraintVertical_bias="0.722">
+            app:layout_constraintTop_toBottomOf="@+id/product_campaign"
+            app:layout_constraintVertical_bias="0.125">
 
         </ImageView>
 
@@ -179,10 +166,10 @@
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.547"
+            app:layout_constraintHorizontal_bias="0.588"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
-            app:layout_constraintVertical_bias="0.68">
+            app:layout_constraintTop_toBottomOf="@+id/product_campaign"
+            app:layout_constraintVertical_bias="0.053">
 
         </Button>
 

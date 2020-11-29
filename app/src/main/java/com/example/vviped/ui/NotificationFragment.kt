@@ -68,6 +68,7 @@ class NotificationFragment : Fragment() {
                 val intent = Intent(getActivity(), NotificationDetails::class.java)
                 intent.putExtra("details",data.descNotif )
                 startActivity(intent)
+
             }
         })
 
