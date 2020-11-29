@@ -44,8 +44,8 @@ class IntroSlider : AppCompatActivity() {
             R.drawable.logoapp))
         onBoardingData.add(OnBoardingData(
             "PURCHASE THE PRODUCTS TO DONATE THE CAMPAIGN",
-            "You can be both seller of your own products or the buyer of other' products." +
-                    "You will get a message if someone interested in your product and finish the payment and transaction." ,
+            "You can be both seller or buyer. " +
+                    "Get notified by a message if someone interested in your product, deal with the transaction, and finish the payment." ,
             R.drawable.profilpic))
         onBoardingData.add(OnBoardingData(
             "GETTING STARTED IS EASY",
