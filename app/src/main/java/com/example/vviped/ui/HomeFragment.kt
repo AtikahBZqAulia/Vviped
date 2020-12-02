@@ -54,7 +54,17 @@ class HomeFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
 
+        search_edit_text.setOnKeyListener(View.OnKeyListener { v, keyCode, event ->
+            if (keyCode == KeyEvent.KEYCODE_ENTER && event.action == KeyEvent.ACTION_UP) {
+                //Perform Code
+                (context as MainActivity).changeFragment(FilteredCategoriesFragment())
 
+
+                return@OnKeyListener true
+            }
+            false
+        })
+        
         kategori2.setOnClickListener {
             (context as MainActivity).changeFragment(FilteredCategoriesFragment())
 
