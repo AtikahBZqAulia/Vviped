@@ -63,24 +63,28 @@ class HomeFragment : Fragment() {
             }
             false
         })
-        
         kategori2.setOnClickListener {
             (context as MainActivity).changeFragment(FilteredCategoriesFragment())
+//            title_category_appbar.setText(kategori2.getText().toString())
 
         }
 
         kategori1.setOnClickListener {
             (context as MainActivity).changeFragment(FilteredCategoriesFragment())
+//            title_category_appbar.setText(kategori1.getText().toString())
         }
 
         kategori3.setOnClickListener {
             (context as MainActivity).changeFragment(FilteredCategoriesFragment())
+//            title_category_appbar.setText(kategori3.getText().toString())
         }
         kategori4.setOnClickListener {
             (context as MainActivity).changeFragment(FilteredCategoriesFragment())
+//            title_category_appbar.setText(kategori4.getText().toString())
         }
         kategori5.setOnClickListener {
             (context as MainActivity).changeFragment(FilteredCategoriesFragment())
+//            title_category_appbar.setText(kategori5.getText().toString())
         }
 
     }
