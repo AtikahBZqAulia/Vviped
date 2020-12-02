@@ -56,10 +56,9 @@ class HomeFragment : Fragment() {
 
         search_edit_text.setOnKeyListener(View.OnKeyListener { v, keyCode, event ->
             if (keyCode == KeyEvent.KEYCODE_ENTER && event.action == KeyEvent.ACTION_UP) {
-                //Perform Code
-                (context as MainActivity).changeFragment(FilteredCategoriesFragment())
-
-
+                (context as MainActivity).changeFragment(SearchFragment())
+                v.hideKeyboard()
+                v.clearFocus()
                 return@OnKeyListener true
             }
             false
@@ -104,6 +103,12 @@ class HomeFragment : Fragment() {
                 Log.e("tag", t.toString())
             }
         })
+    }
+    
+    fun View.hideKeyboard() {
+        val inputMethodManager = requireContext().getSystemService(android.content.Context.INPUT_METHOD_SERVICE) as? InputMethodManager
+        inputMethodManager?.hideSoftInputFromWindow(this.windowToken, 0)
+
     }
 
 }
