@@ -36,7 +36,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:gravity="center"
-                    android:text="Pakaian"
+                    android:text="Kategori"
                     android:layout_marginLeft="12dp"
                     android:textColor="@color/colorBlack"
                     android:textSize="18dp"
