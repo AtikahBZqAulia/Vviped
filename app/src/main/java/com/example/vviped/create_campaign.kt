@@ -11,7 +11,6 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.vviped.model.*
 import com.example.vviped.model.login.Constant
 import com.example.vviped.model.login.PreferenceHelper
-import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_create_campaign.*
 import okhttp3.MediaType
 import okhttp3.MultipartBody
@@ -73,8 +72,6 @@ class create_campaign : AppCompatActivity(), UploadRequestBody.UploadCallback {
             layout_campaign.snackbar("Select an Image First")
             return
         }
-
-        val emailcurrentuser = FirebaseAuth.getInstance().currentUser!!.email
 
         val campaigncategory = findViewById<EditText>(R.id.campaign_category)
         val campaigntitle = findViewById<EditText>(R.id.campaign_name)
