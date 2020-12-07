@@ -6,7 +6,6 @@ import android.view.MenuItem
 import androidx.fragment.app.Fragment
 import com.mobcomp.vviped.ui.CampaignListFragment
 import com.mobcomp.vviped.ui.HomeFragment
-import com.mobcomp.vviped.ui.NotificationFragment
 import com.mobcomp.vviped.ui.ProfileFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
@@ -14,7 +13,6 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
     private var homeFragment = HomeFragment()
     private var profileFragment = ProfileFragment()
     private var campaignListFrament = CampaignListFragment()
-    private var notificationFragment = NotificationFragment()
 
 
 
