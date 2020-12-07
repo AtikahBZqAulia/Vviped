@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.vviped">
+    package="com.mobcomp.vviped">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
@@ -22,31 +22,31 @@
         android:usesCleartextTraffic="true"
         >
         <activity
-            android:name=".IntroSlider"
+            android:name="com.mobcomp.vviped.IntroSlider"
             android:theme="@style/AppTheme.NoStatusBar">
         </activity>
-        <activity android:name=".ChatForBuying" />
-        <activity android:name=".model.login.Logout" />
-        <activity android:name=".NotificationDetails" />
-        <activity android:name=".create_campaign" />
+        <activity android:name="com.mobcomp.vviped.ChatForBuying" />
+        <activity android:name="com.mobcomp.vviped.model.login.Logout" />
+        <activity android:name="com.mobcomp.vviped.NotificationDetails" />
+        <activity android:name="com.mobcomp.vviped.create_campaign" />
         <activity
-            android:name=".UploadSellingActivity"
+            android:name="com.mobcomp.vviped.UploadSellingActivity"
             android:label="@string/title_activity_upload_selling"
             android:theme="@style/AppTheme.NoActionBar"
             android:windowSoftInputMode="stateHidden" />
         <activity
-            android:name=".Landing"
+            android:name="com.mobcomp.vviped.Landing"
             android:theme="@style/AppTheme.NoStatusBar" />
         <activity
-            android:name=".UserLogin"
+            android:name="com.mobcomp.vviped.UserLogin"
             android:theme="@style/AppTheme.NoStatusBar"
             android:windowSoftInputMode="stateHidden" />
         <activity
-            android:name=".UserRegister"
+            android:name="com.mobcomp.vviped.UserRegister"
             android:theme="@style/AppTheme.NoStatusBar"
             android:windowSoftInputMode="stateHidden" />
         <activity
-            android:name=".splashScreen"
+            android:name="com.mobcomp.vviped.splashScreen"
             android:theme="@style/AppTheme.NoStatusBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -54,11 +54,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainChat" />
-        <activity android:name=".chat_user" />
-        <activity android:name=".chat_myself" />
+        <activity android:name="com.mobcomp.vviped.MainChat" />
+        <activity android:name="com.mobcomp.vviped.chat_user" />
+        <activity android:name="com.mobcomp.vviped.chat_myself" />
         <activity
-            android:name=".MainActivity"
+            android:name="com.mobcomp.vviped.MainActivity"
             android:windowSoftInputMode="stateHidden" />
         <meta-data
             android:name="preloaded_fonts"

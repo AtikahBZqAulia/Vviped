@@ -6,7 +6,7 @@
 
     <fragment
         android:id="@+id/profileFragment"
-        android:name="com.example.vviped.ui.ProfileFragment"
+        android:name="com.mobcomp.vviped.ui.ProfileFragment"
         android:label="@string/first_fragment_label"
         tools:layout="@layout/fragment_profile">
 
@@ -16,7 +16,7 @@
     </fragment>
     <fragment
         android:id="@+id/editprofileFragment"
-        android:name="com.example.vviped.EditProfileFragment"
+        android:name="com.mobcomp.vviped.EditProfileFragment"
         android:label="@string/second_fragment_label"
         tools:layout="@layout/fragment_edit_profile">
 
