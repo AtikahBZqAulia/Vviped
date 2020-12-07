@@ -1,4 +1,4 @@
-# VVIPED - Group A
+#### Group A
 [You are now in the page of VVIPED-Frontend Repo](https://github.com/AtikahBZqAulia/Vviped)
 
 [Click here to see VVIPED- **Backend Repo**](https://github.com/AtikahBZqAulia/Vviped-Backend/)
@@ -8,24 +8,31 @@
 [Click here to see our  **sprint Backlogs**](https://www.notion.so/2211bb67dff7463aa22412926b6de731?v=850f8478b92c4e679cc2df9f4f9802e7)
 
 
-## Members :
+#### Members :
 - Atikah Aulia Putri (Team leader)
 - Octarina Salsabila
 - Maura Qoonitah Putri
 
-# About Vviped
-Problem : COVID-19 pandemic has led to Global economic crisis and turned market behavior on consumption. People tends to save their money. However the trend also shows that [people, especially Indonesians are still willing to make a donation](https://www.liputan6.com/health/read/3987796/indonesia-melesat-jadi-negara-paling-dermawan-di-dunia). **We need a platform to fill the gap between the desire of make donation and the need to save money.**
+# VVIPED
+#### VVIPED adalah aplikasi media sosial untuk penggalangan dana secara online dengan cara jual-beli barang sekaligus berdonasi.
 
-Idea / Solution : An app which helps anyone who wants to **donate by selling their goods with bidding and enable anyone who wants to buy goods in both the lowest dan highest prices (for pride) as possible**. In short, it's a modern-high-tech social e-commerce. 
+Kamu bisa menjual produk yang masih layak pakai, ataupun menjual produk kamu sendiri dan hasil penjualannya akan disumbangkan untuk penggalangan dana yang bisa kamu buat sendiri ataupun ikut dengan galang dana milik orang lain. Tidak ada biaya tambahan untuk membeli dan menjual. Benar-benar gratis!
 
-## Screenshot Vviped App
+> Untuk Penjual  : 
+- Buat campaign untuk menggalang dana yang kamu buat sendiri dan gunakan untuk donasi dari hasil penjualan barang-mu. Kamu juga dapat menggunakan galang dana milik orang lain. Lihat di halaman campaign untuk mencari galang dana yang kamu minati dan mulai menjual barang-mu!
 
-#### Intro Layout
-<img src="https://github.com/AtikahBZqAulia/Vviped/blob/Sprint-6/ss1.jpeg" width="800"/>
+- Daftarkan produk yang akan kamu jual. Upload produk kamu dengan mengisi form jual dan isi detail produk nya, semakin rinci deskripsi produk-mu, pembeli akan semakin tertarik!
 
-#### Main Layout
-<img src="https://github.com/AtikahBZqAulia/Vviped/blob/Sprint-6/ss2.jpeg" width="800" />
+- Dapatkan pemberitahuan pesan melalui obrolan Whatsapp dari pembeli jika mereka ingin tahu lebih lanjut atau jika tertarik dengan barang kamu.
 
-#### Sell Product and Chat Layout
-<img src="https://github.com/AtikahBZqAulia/Vviped/blob/Sprint-6/ss3.jpeg" width="600" />
+> Untuk Pembeli :
+- Lihat daftar produk yang ingin kamu beli, dan pastikan tujuan galang dana yang tertera sudah kamu ketahui. 
+
+- Tertarik dengan produknya dan sudah mengetahui tujuan donasi untuk produk tersebut? Tekan tombol beli dan akan langsung tertuju ke obrolan WhatsApp penjual. Pastikan untuk bertanya lebih rinci tentang kondisi produk, detil galangan dana, detil transaksi ataupun menegosiasikan harga sebelum kamu membelinya.
+
+## Our app is now available on Google Play : 
+<https://play.google.com/store/apps/details?id=com.mobcomp.vviped>
+
+_(Aplikasi ini belum dirilis secara resmi dan masih memiliki beberapa fitur yang belum diimplementasikan)_
+ 
 
