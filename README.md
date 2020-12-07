@@ -13,7 +13,9 @@
 - Octarina Salsabila
 - Maura Qoonitah Putri
 
-# VVIPED
+
+<img src="https://github.com/AtikahBZqAulia/Vviped/blob/Sprint-11/logo_full.png" width="250"> 
+
 #### VVIPED adalah aplikasi media sosial untuk penggalangan dana secara online dengan cara jual-beli barang sekaligus berdonasi.
 
 Kamu bisa menjual produk yang masih layak pakai, ataupun menjual produk kamu sendiri dan hasil penjualannya akan disumbangkan untuk penggalangan dana yang bisa kamu buat sendiri ataupun ikut dengan galang dana milik orang lain. Tidak ada biaya tambahan untuk membeli dan menjual. Benar-benar gratis!
