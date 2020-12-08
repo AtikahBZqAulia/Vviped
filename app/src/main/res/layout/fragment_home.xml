@@ -59,7 +59,7 @@
                 android:inputType="text"
                 android:imeOptions="actionDone"
                 android:gravity="center_vertical"
-                android:hint="Search.." />
+                android:hint="Search" />
 
         </LinearLayout>
 
@@ -69,7 +69,7 @@
     <RelativeLayout
         android:id="@+id/kategori"
         android:layout_width="match_parent"
-        android:layout_height="45dp"
+        android:layout_height="50dp"
         android:layout_below="@id/appBar_home"
         android:background="@color/colorWhite"
         android:paddingBottom="10dp"
@@ -86,7 +86,7 @@
 
             <LinearLayout
                 android:layout_width="wrap_content"
-                android:layout_height="30dp"
+                android:layout_height="50dp"
                 android:orientation="horizontal"
                 android:paddingLeft="12dp"
                 android:paddingRight="12dp"
@@ -94,92 +94,73 @@
 
                 <Button
                     android:id="@+id/kategori1"
-                    style="@style/Widget.AppCompat.Button.Borderless"
                     android:layout_width="wrap_content"
-                    android:layout_height="20dp"
-                    android:layout_gravity="center_vertical"
-                    android:layout_marginTop="5dp"
+                    android:layout_height="30dp"
                     android:layout_marginRight="5dp"
-                    android:layout_marginBottom="5dp"
                     android:background="@drawable/btn_product_category"
                     android:paddingLeft="5dp"
                     android:paddingRight="5dp"
+                    android:layout_gravity="top"
                     android:text="Pakaian"
                     android:textAllCaps="false"
                     android:textColor="@color/colorBlack"
-                    android:textSize="11dp"
-                    tools:layout_marginTop="5dp" />
+                     />
 
                 <Button
                     android:id="@+id/kategori2"
-                    style="@style/Widget.AppCompat.Button.Borderless"
                     android:layout_width="wrap_content"
-                    android:layout_height="20dp"
-                    android:layout_gravity="center_vertical"
-                    android:layout_marginTop="5dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="top"
                     android:layout_marginRight="5dp"
-                    android:layout_marginBottom="5dp"
                     android:background="@drawable/btn_product_category"
                     android:paddingLeft="10dp"
                     android:paddingRight="10dp"
                     android:text="Buku"
                     android:textAllCaps="false"
                     android:textColor="@color/colorBlack"
-                    android:textSize="11dp" />
+                    />
 
                 <Button
                     android:id="@+id/kategori3"
-                    style="@style/Widget.AppCompat.Button.Borderless"
                     android:layout_width="wrap_content"
-                    android:layout_height="20dp"
-                    android:layout_gravity="center_vertical"
-                    android:layout_marginTop="5dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="top"
                     android:layout_marginRight="5dp"
-                    android:layout_marginBottom="5dp"
                     android:paddingLeft="10dp"
                     android:paddingRight="10dp"
                     android:text="Gadget"
                     android:textAllCaps="false"
                     android:background="@drawable/btn_product_category"
                     android:textColor="@color/colorBlack"
-                    android:textSize="11dp"
-                    tools:layout_marginTop="5dp" />
+                     />
 
                 <Button
                     android:id="@+id/kategori4"
-                    style="@style/Widget.AppCompat.Button.Borderless"
                     android:layout_width="wrap_content"
-                    android:layout_height="20dp"
-                    android:layout_gravity="center_vertical"
-                    android:layout_marginTop="5dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="top"
                     android:layout_marginRight="5dp"
-                    android:layout_marginBottom="5dp"
                     android:background="@drawable/btn_product_category"
                     android:textColor="@color/colorBlack"
                     android:paddingLeft="10dp"
                     android:paddingRight="10dp"
                     android:text="Makeup"
                     android:textAllCaps="false"
-                    android:textSize="11dp"
-                    tools:layout_marginTop="5dp" />
+                     />
 
                 <Button
                     android:id="@+id/kategori5"
-                    style="@style/Widget.AppCompat.Button.Borderless"
                     android:layout_width="wrap_content"
-                    android:layout_height="20dp"
-                    android:layout_gravity="center_vertical"
-                    android:layout_marginTop="5dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="top"
                     android:layout_marginRight="5dp"
-                    android:layout_marginBottom="5dp"
                     android:background="@drawable/btn_product_category"
                     android:textColor="@color/colorBlack"
                     android:paddingLeft="10dp"
                     android:paddingRight="10dp"
                     android:text="Skincare"
                     android:textAllCaps="false"
-                    android:textSize="11dp"
-                    tools:layout_marginTop="5dp" />
+                    />
 
             </LinearLayout>
 
@@ -192,7 +173,7 @@
         android:id="@+id/recycleView_home"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="98dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
