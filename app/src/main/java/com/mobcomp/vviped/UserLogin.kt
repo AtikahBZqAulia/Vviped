@@ -3,6 +3,7 @@ package com.mobcomp.vviped
 import android.content.Intent
 import android.os.Build
 import android.os.Bundle
+import android.text.InputType
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
@@ -30,7 +31,6 @@ class UserLogin : AppCompatActivity() {
         setContentView(R.layout.activity_user_login)
 
         sharedPref = PreferenceHelper(this)
-
 
         val buttonLogin = findViewById<Button>(R.id.btn_login_account)
         textCreateAccount.setOnClickListener{
@@ -62,6 +62,15 @@ class UserLogin : AppCompatActivity() {
                 return@setOnClickListener
             }
             userLogin()
+        }
+
+        checkBox_password.setOnClickListener{
+            if(checkBox_password.isChecked){
+                user_password.inputType = 1
+            }
+            else {
+                user_password.inputType = InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_PASSWORD
+            }
         }
 
     }
