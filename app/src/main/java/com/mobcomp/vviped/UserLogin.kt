@@ -64,14 +64,7 @@ class UserLogin : AppCompatActivity() {
             userLogin()
         }
 
-        checkBox_password.setOnClickListener{
-            if(checkBox_password.isChecked){
-                user_password.inputType = 1
-            }
-            else {
-                user_password.inputType = InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_PASSWORD
-            }
-        }
+
 
     }
 
