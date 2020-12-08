@@ -36,7 +36,7 @@ tools:context=".SearchFragment">
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:gravity="center"
-                android:text="Search Result "
+                android:text="Hasil Pencarian "
                 android:layout_marginLeft="12dp"
                 android:textColor="@color/colorBlack"
                 android:textSize="18dp"
@@ -67,7 +67,7 @@ tools:context=".SearchFragment">
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginVertical="10dp"
-        android:text="No item Found."
+        android:text="Item tidak ditemukan."
         android:textColor="@color/colorTextSecondary"
         android:textSize="14sp" />
 </LinearLayout>

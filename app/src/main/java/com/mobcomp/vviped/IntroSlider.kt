@@ -35,17 +35,17 @@ class IntroSlider : AppCompatActivity() {
         val onBoardingData: MutableList<OnBoardingData> = ArrayList()
          onBoardingData.add(OnBoardingData(
             "WELCOME TO VVIPED",
-            "List your products to sell it, and the profit should be donated to a charity campaign you made. " +
-                    "or you can choose others campaign too!",
+            "VVIPED adalah aplikasi media sosial untuk penggalangan dana secara online " +
+                    "dengan cara jual-beli barang sekaligus berdonasi.",
             R.drawable.logoapp))
         onBoardingData.add(OnBoardingData(
-            "PURCHASE THE PRODUCTS TO DONATE THE CAMPAIGN",
-            "You can be both seller or buyer. " +
-                    "Get notified by a message if someone interested in your product, deal with the transaction, and finish the payment." ,
+            "SALE TO DONATE",
+            "Kamu bisa menjual produk yang masih layak pakai atau produk kamu sendiri dan hasil penjualannya akan disumbangkan " +
+                    "untuk penggalangan dana yang bisa kamu buat sendiri ataupun ikut dengan galang dana milik orang lain." ,
             R.drawable.logoapp))
         onBoardingData.add(OnBoardingData(
             "GETTING STARTED IS EASY",
-            "By getting started, you already took the biggest step in sharing your kindness to help each other. ",
+            "Bergabung dengan Vviped, kamu sudah mengambil langkah besar dalam berbagi kebaikan untuk saling membantu!",
             R.drawable.logoapp))
 
         setOnBoardingViewPagerAdapter(onBoardingData)
@@ -67,9 +67,9 @@ class IntroSlider : AppCompatActivity() {
                 override fun onTabSelected(tab: TabLayout.Tab?) {
                     position = tab!!.position
                     if (tab.position == onBoardingData.size - 1) {
-                        nextSlide!!.text = "Get Started"
+                        nextSlide!!.text = "MULAI"
                     } else {
-                        nextSlide!!.text = "Next"
+                        nextSlide!!.text = "Selanjutnya"
 
                     }
                 }

@@ -55,7 +55,7 @@
                     android:gravity="center_horizontal"
                     android:paddingStart="10dp"
                     android:paddingEnd="10dp"
-                    android:text="Create Account"
+                    android:text="Daftar Akun"
                     android:textColor="@color/colorTextPrimary"
                     android:textSize="20sp"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -171,7 +171,7 @@
                     android:background="@color/colorWhite"
                     android:paddingStart="6dp"
                     android:paddingEnd="6dp"
-                    android:text="Full Name"
+                    android:text="Nama lengkap"
                     android:textSize="14dp"
                     android:textAllCaps="true"
                     android:textColor="@color/ColorGrey"
@@ -315,7 +315,8 @@
                 android:layout_marginTop="30dp"
                 android:layout_marginRight="32dp"
                 android:background="@drawable/btn_register_login"
-                android:text="create account"
+                android:text="Daftar"
+                android:textSize="16sp"
                 android:textColor="@color/colorWhite"
                 android:textStyle="bold" />
 
@@ -325,7 +326,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
                 android:layout_marginTop="24dp"
-                android:text="Already have an account?"
+                android:text="Sudah punya akun?"
                 android:textColor="@color/colorTextSecondary"
                 android:textSize="14sp"/>
 
@@ -336,7 +337,6 @@
                 android:gravity="center_horizontal"
                 android:layout_marginLeft="4dp"
                 android:layout_marginBottom="40dp"
-
                 android:text="Sign in "
                 android:textColor="@color/colorAccent"
                 android:textSize="16sp"

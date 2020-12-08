@@ -20,4 +20,14 @@
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="search_txt">Search for product</string>
 
+    <string name="create_campaign_1"> Campaign adalah sebutan untuk penggalangan dana di Vviped.
+        Kamu atau orang lain bisa menjual produk
+        dengan campaign yang kamu buat dan donasikan hasil penjualannya ke campaign tersebut</string>
+
+
+    <string name="create_campaign_deskripsi">Latar belakang dan kondisi orang yang ingin kamu bantu.</string>
+    <string name="create_campaign_penerimadonasi">Kepada siapa donasi kamu ditujukan.</string>
+    <string name="create_campaign_detail_penggunaan">Jelaskan detail penggunaan biaya akan digunakan untuk apa saja jika donasi terkumpul.</string>
+    <string name="create_campaign_2">Campaign ini akan dipublikasikan dan siapapun dapat memilih campaign kamu untuk ikut berdonasi.
+        Mohon pastikan form diisi dengan benar. </string>
 </resources>

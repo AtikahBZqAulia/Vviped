@@ -9,21 +9,30 @@
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appBar_Layout"
-        android:layout_width="match_parent" android:layout_height="60sp"
-    tools:ignore="MissingConstraints">
+        android:layout_width="match_parent"
+        android:layout_height="50sp"
+        tools:ignore="MissingConstraints">
 
     <androidx.appcompat.widget.Toolbar
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/colorWhite">
 
+        <ImageView
+            android:id="@+id/backspace"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/ic_keyboard_backspace"
+            app:tint="@color/colorTextPrimary" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:gravity="center"
-            android:text="Details Product to sell"
+            android:text="Form Jual Produk"
             android:textColor="@color/colorAccent2"
-            android:textSize="20dp"
+            android:textSize="18dp"
             android:textStyle="bold" />
 
     </androidx.appcompat.widget.Toolbar>
@@ -73,7 +82,7 @@
                         android:textStyle="bold"
                         android:fontFamily="@font/cabin"
                         android:text="Donasi Hijrah by Salim FMIPA UNJ"
-                        android:textColor="@color/colorBlack"
+                        android:textColor="@color/colorAccentLight"
                         android:textSize="14sp"
 
                         />
@@ -98,7 +107,7 @@
                             android:layout_width="150dp"
                             android:layout_height="wrap_content"
                             android:paddingLeft="10dp"
-                            android:text="Choose photos of your product"
+                            android:text="Upload foto produk"
                             android:fontFamily="@font/cabin"
                             android:textStyle="bold"
                             android:textColor="@color/colorBlack"
@@ -145,11 +154,11 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:paddingLeft="10dp"
-                            android:text="Price"
+                            android:text="Harga"
                             android:fontFamily="@font/cabin"
                             android:textColor="@color/colorBlack"
                             android:textStyle="bold"
-                            android:textSize="15dp" />
+                            android:textSize="15sp" />
 
                     </LinearLayout>
 
@@ -168,7 +177,7 @@
                             android:inputType="phone"
                             android:paddingLeft="10dp"
                             android:paddingRight="10dp"
-                            android:textSize="15dp" />
+                            android:textSize="15sp" />
 
                     </LinearLayout>
 
@@ -184,7 +193,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Product Name"
+                        android:text="Nama Produk"
                         android:fontFamily="@font/cabin"
                         android:textStyle="bold"
                         android:textColor="@color/colorBlack"
@@ -204,7 +213,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Include Brand of the Item."
+                        android:text="Sertakan Merk Item."
                         android:textSize="12dp"
                         android:layout_marginTop="5dp"
                         android:textColor="@color/colorTextSecondary"
@@ -224,7 +233,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Condition of Product"
+                        android:text="Kondisi produk"
                         android:fontFamily="@font/cabin"
                         android:textStyle="bold"
                         android:textColor="@color/colorBlack"
@@ -242,13 +251,13 @@
                             android:id="@+id/radiobtn1"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="New" />
+                            android:text="Baru" />
 
                         <RadioButton
                             android:id="@+id/radiobtn2"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Used" />
+                            android:text="Bekas" />
 
                     </RadioGroup>
                 </LinearLayout>
@@ -263,7 +272,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Description"
+                        android:text="Deskripsi Produk"
                         android:fontFamily="@font/cabin"
                         android:textStyle="bold"
                         android:textColor="@color/colorBlack"
@@ -284,7 +293,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Describe what you are selling and include any details a buyer might be insterested in.  "
+                        android:text="Jelaskan detil dan kondisi produk."
                         android:textSize="12dp"
                         android:layout_marginTop="5dp"
                         android:textColor="@color/colorTextSecondary"
@@ -304,7 +313,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Location"
+                        android:text="Lokasi"
                         android:fontFamily="@font/cabin"
                         android:textColor="@color/colorBlack"
                         android:textSize="15dp"
@@ -325,7 +334,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Help buyer to estimate the delivery fees."
+                        android:text="Bantu pembeli untuk memperkirakan biaya pengiriman."
                         android:textSize="12dp"
                         android:layout_marginTop="5dp"
                         android:textColor="@color/colorTextSecondary"
@@ -344,7 +353,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Whatsapp Number"
+                        android:text="Nomor Whatsapp"
                         android:fontFamily="@font/cabin"
                         android:textColor="@color/colorBlack"
                         android:textSize="15dp"
@@ -370,6 +379,7 @@
                             android:imeOptions="actionDone"
                             android:inputType="phone"
                             android:textSize="15dp"
+                            android:hint="811223344"
                             android:padding="10dp"
                             android:layout_marginTop="5dp"
                             android:background="@drawable/btn_corner"/>
@@ -381,7 +391,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="The buyers will contact you if they interested in this product. Make sure the whatsapp number is active. "
+                        android:text=" Pembeli akan menghubungi kamu jika tertarik dengan produk ini. Pastikan nomor Whatsapp aktif."
                         android:textSize="12dp"
                         android:layout_marginTop="5dp"
                         android:textColor="@color/colorTextSecondary"
@@ -421,7 +431,7 @@
                     android:layout_marginTop="20dp"
                     android:layout_marginBottom="100dp"
                     android:background="@drawable/btn_radiusbg"
-                    android:text="Sell my product!"
+                    android:text="Daftarkan produk saya!"
                     android:textStyle="bold"
                     android:textSize="16sp"
                     android:fontFamily="@font/cabin"

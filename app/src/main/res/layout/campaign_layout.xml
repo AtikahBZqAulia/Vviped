@@ -75,7 +75,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:clickable="false"
-                android:text="Description:"
+                android:text="Deskripsi :"
                 android:textColor="@color/colorBlack"
                 android:textSize="14sp"
                 android:textStyle="bold" />
@@ -89,7 +89,7 @@
                 android:background="@drawable/btn_background"
                 android:paddingLeft="10dp"
                 android:paddingRight="10dp"
-                android:text="Donate by Selling"
+                android:text="Jual Produk Saya"
                 android:textColor="@color/colorWhite"
                 android:textSize="14dp"
                 android:textStyle="bold"
@@ -120,7 +120,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
-            android:text="Category:"
+            android:text="Kategori :"
             android:textColor="@color/colorBlack"
             android:textSize="15sp"
             android:textStyle="bold" />
@@ -140,7 +140,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
-            android:text="Donation go to :"
+            android:text="Penerima donasi :"
             android:textColor="@color/colorBlack"
             android:textSize="14sp"
             android:textStyle="bold" />
@@ -160,7 +160,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
-            android:text="Usage Donation Details:"
+            android:text="Detail Penggunaan biaya :"
             android:textColor="@color/colorBlack"
             android:textSize="14sp"
             android:textStyle="bold" />

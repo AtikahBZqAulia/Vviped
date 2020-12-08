@@ -31,7 +31,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:gravity="center"
-                android:text="Create Campaign"
+                android:text="Buat Campaign"
                 android:textColor="@color/colorAccent2"
                 android:textSize="18dp"
                 android:textStyle="bold" />
@@ -71,7 +71,7 @@
                         android:paddingTop="10dp"
                         android:paddingBottom="10dp"
                         android:textSize="14sp"
-                        android:text="By creating a campaign, you or others can sell products and donate 100% of the earnings of your sales to the campaign you create" />
+                        android:text="@string/create_campaign_1" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -83,7 +83,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Campaign Category"
+                            android:text="Kategori"
                             android:textStyle="bold"
                             android:textColor="@color/colorBlack"
                             android:textSize="16sp" />
@@ -98,7 +98,19 @@
                             android:padding="10dp"
                             android:background="@drawable/btn_corner"
                             android:textSize="15sp"
-                            android:hint="ex: Kegiatan Sosial, Bantuan Pendidikan, Lingkungan, Kemanusiaan"/>
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="ex: Kegiatan Sosial"
+                            android:textSize="12dp"
+                            android:layout_marginTop="5dp"
+                            android:textColor="@color/colorTextSecondary"
+
+                            />
+
+
                     </LinearLayout>
 
 
@@ -112,7 +124,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Campaign Title"
+                            android:text="Judul"
                             android:textStyle="bold"
                             android:textColor="@color/colorBlack"
                             android:textSize="16sp" />
@@ -127,10 +139,19 @@
                             android:layout_marginTop="5dp"
                             android:padding="10dp"
                             android:textSize="15sp"
-                            android:hint="ex: Berbagi Makanan untuk Pedagang Jalanan"/>
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="ex: Berbagi Makanan untuk Pedagang Jalanan"
+                            android:textSize="12dp"
+                            android:layout_marginTop="5dp"
+                            android:textColor="@color/colorTextSecondary"
+                            />
+
+
                     </LinearLayout>
-
-
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -143,7 +164,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Campaign Description"
+                            android:text="Deskripsi"
                             android:textColor="@color/colorBlack"
                             android:textSize="16sp"
                             android:textStyle="bold" />
@@ -158,8 +179,18 @@
                             android:padding="10dp"
                             android:layout_marginTop="5dp"
                             android:background="@drawable/btn_corner"
-                            android:hint="ex: Dengan adanya wabah covid-19, Para pedagang keliling hanya bisa pasrah dengan penghasilan seadanya, bahkan terkadang tidak ada sama sekali. Untuk itu saya ingin sedikit membantu mereka yang berjualan dipinggir jalan.Donasi dari teman-teman akan disalurkan dalam bentuk makanan yang akan langsung saya berikan kepada para pedagang keliling yang membutuhkan di sekitar rumah saya."
                             />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/create_campaign_deskripsi"
+                            android:textSize="12dp"
+                            android:layout_marginTop="5dp"
+                            android:textColor="@color/colorTextSecondary"
+                            />
+
+
                     </LinearLayout>
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -171,7 +202,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Where the donation go"
+                            android:text="Penerima donasi"
                             android:textStyle="bold"
                             android:textColor="@color/colorBlack"
                             android:textSize="16sp" />
@@ -186,7 +217,19 @@
                             android:layout_marginTop="5dp"
                             android:padding="10dp"
                             android:textSize="15sp"
-                            android:hint="ex: Para pedagang keliling di lingkungan Bintara Bekasi Barat"/>
+                           />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/create_campaign_penerimadonasi"
+                            android:textSize="12dp"
+                            android:layout_marginTop="5dp"
+                            android:textColor="@color/colorTextSecondary"
+                            />
+
+
+
                     </LinearLayout>
 
                     <LinearLayout
@@ -216,8 +259,18 @@
                             android:padding="10dp"
                             android:layout_marginTop="5dp"
                             android:background="@drawable/btn_corner"
-                            android:hint="ex: Pembelian paket makanan berisi menu utama, Minuman botol, buah, sendok plastik, tissue "
+
                             />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/create_campaign_detail_penggunaan"
+                            android:textSize="12dp"
+                            android:layout_marginTop="5dp"
+                            android:textColor="@color/colorTextSecondary"
+                            />
+
                     </LinearLayout>
 
 
@@ -238,7 +291,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
                                 android:paddingLeft="10dp"
-                                android:text="Upload Campaign Image"
+                                android:text="Upload Foto Campaign"
                                 android:textStyle="bold"
                                 android:textColor="@color/colorBlack"
                                 android:textSize="15dp" />
@@ -278,7 +331,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Phone Number"
+                            android:text="Nomor Telepon"
                             android:textStyle="bold"
                             android:textColor="@color/colorBlack"
                             android:textSize="16sp" />
@@ -292,7 +345,7 @@
                             android:inputType="phone"
                             android:padding="10dp"
                             android:background="@drawable/btn_corner"
-                            android:textSize="12sp"
+                            android:textSize="15sp"
                             android:hint="ex: 081222334455"/>
                     </LinearLayout>
 
@@ -318,7 +371,9 @@
                         android:id="@+id/textView3"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="This campaign will go public and others can choose your campaign to donate. Please make sure all fields are filled in correctly." />
+                        android:textColor="@color/colorAccentLight"
+                        android:text="@string/create_campaign_2"/>
+
 
                     <ProgressBar
                         android:id="@+id/progress_bar"
