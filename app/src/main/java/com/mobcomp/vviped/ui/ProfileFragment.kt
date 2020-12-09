@@ -58,7 +58,8 @@ class ProfileFragment : Fragment() {
         Picasso.get().load(sharedPref.getString(Constant.PREF_PROFPIC)).into(profpic)
 
         editprofile_btn.setOnClickListener{
-            (context as MainActivity).changeFragment(EditProfileFragment())
+            val intent = Intent(activity, EditProfile::class.java)
+            startActivity(intent)
         }
 
         btn_logout.setOnClickListener{
