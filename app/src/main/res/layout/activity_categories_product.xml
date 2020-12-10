@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorWhite"
-    tools:context=".FilteredCategoriesFragment">
+    tools:context=".CategoriesProduct">
+
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appBar_Layout"
@@ -51,6 +52,7 @@
 
     </com.google.android.material.appbar.AppBarLayout>
 
+
     <LinearLayout
         android:id="@+id/tv_noitem"
         android:layout_width="match_parent"
@@ -71,6 +73,5 @@
             android:textColor="@color/colorTextSecondary"
             android:textSize="14sp" />
     </LinearLayout>
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

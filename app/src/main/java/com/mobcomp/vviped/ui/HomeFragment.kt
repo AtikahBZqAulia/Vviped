@@ -1,5 +1,6 @@
 package com.mobcomp.vviped.ui
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.KeyEvent
@@ -7,6 +8,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.inputmethod.InputMethodManager
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -64,28 +66,47 @@ class HomeFragment : Fragment() {
             }
             false
         })
-        kategori2.setOnClickListener {
-            (context as MainActivity).changeFragment(FilteredCategoriesFragment())
-//            title_category_appbar.setText(kategori2.getText().toString())
-
-        }
 
         kategori1.setOnClickListener {
-            (context as MainActivity).changeFragment(FilteredCategoriesFragment())
-//            title_category_appbar.setText(kategori1.getText().toString())
+            val tv_kategori1 = kategori1.text.toString()
+            val context = kategori1.context
+            val intent = Intent(context, CategoriesProduct::class.java)
+            intent.putExtra("kategori", tv_kategori1 )
+            context.startActivity(intent)
+        }
+
+        kategori2.setOnClickListener {
+            val tv_kategori2 = kategori2.text.toString()
+            val context = kategori2.context
+            val intent = Intent(context, CategoriesProduct::class.java)
+            intent.putExtra("kategori", tv_kategori2 )
+            context.startActivity(intent)
         }
 
         kategori3.setOnClickListener {
-            (context as MainActivity).changeFragment(FilteredCategoriesFragment())
-//            title_category_appbar.setText(kategori3.getText().toString())
+            val tv_kategori3 = kategori3.text.toString()
+            val context = kategori3.context
+            val intent = Intent(context, CategoriesProduct::class.java)
+            intent.putExtra("kategori", tv_kategori3 )
+            context.startActivity(intent)
         }
+
+
         kategori4.setOnClickListener {
-            (context as MainActivity).changeFragment(FilteredCategoriesFragment())
-//            title_category_appbar.setText(kategori4.getText().toString())
+            val tv_kategori4 = kategori4.text.toString()
+            val context = kategori4.context
+            val intent = Intent(context, CategoriesProduct::class.java)
+            intent.putExtra("kategori", tv_kategori4 )
+            context.startActivity(intent)
         }
+
+
         kategori5.setOnClickListener {
-            (context as MainActivity).changeFragment(FilteredCategoriesFragment())
-//            title_category_appbar.setText(kategori5.getText().toString())
+            val tv_kategori5 = kategori5.text.toString()
+            val context = kategori5.context
+            val intent = Intent(context, CategoriesProduct::class.java)
+            intent.putExtra("kategori", tv_kategori5 )
+            context.startActivity(intent)
         }
 
     }
