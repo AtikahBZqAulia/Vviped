@@ -64,6 +64,15 @@ interface RetrofitInterface {
     ): Call<LoginResponse>
 
     @Multipart
+    @POST("api.php?apicall=edituser")
+    fun editUserProfile(
+        @Part image: MultipartBody.Part,
+        @Part("user_id") user_id: Int,
+        @Part("fullname") fullname: RequestBody,
+        @Part("username") username: RequestBody,
+    ): Call<UpdateUserResponse>
+
+    @Multipart
     @POST("api.php?apicall=user")
     fun userLoggedIn(
         @Part image: MultipartBody.Part,
@@ -74,7 +83,6 @@ interface RetrofitInterface {
         @Part("password") password: RequestBody,
         @Part("user_profpic") user_profpic: RequestBody,
     ): Call<LoginResponse>
-
 
     companion object {
         operator fun invoke(): RetrofitInterface {

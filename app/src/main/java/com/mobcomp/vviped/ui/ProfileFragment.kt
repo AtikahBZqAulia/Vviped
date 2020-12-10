@@ -58,7 +58,7 @@ class ProfileFragment : Fragment() {
         Picasso.get().load(sharedPref.getString(Constant.PREF_PROFPIC)).into(profpic)
 
         editprofile_btn.setOnClickListener{
-            val intent = Intent(activity, EditProfile::class.java)
+            val intent = Intent(activity, EditProfileUser::class.java)
             startActivity(intent)
         }
 
