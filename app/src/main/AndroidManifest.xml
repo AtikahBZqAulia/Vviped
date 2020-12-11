@@ -20,7 +20,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".CategoriesProduct"></activity>
+        <activity android:name=".SettingsActivity"></activity>
+        <activity android:name=".CategoriesProduct" />
         <activity android:name=".EditProfileUser" />
         <activity android:name=".EditProfile" />
         <activity

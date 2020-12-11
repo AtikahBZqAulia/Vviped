@@ -67,6 +67,9 @@ class ProfileFragment : Fragment() {
             val intent = Intent(activity, Logout::class.java)
             startActivity(intent)
         }
+        btn_settings.setOnClickListener {
+            (context as MainActivity).changeFragment(SettingsFragment())
+        }
 
         recyclerView = view.findViewById(R.id.recycleView_profile)
         recyclerView?.setHasFixedSize(true)
