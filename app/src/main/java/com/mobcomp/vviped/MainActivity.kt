@@ -43,12 +43,6 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
                     .replace(R.id.fragment_layout, campaignListFrament).commit()
                 return true
             }
-
-//            R.id.navigation_notification -> {
-//                supportFragmentManager.beginTransaction()
-//                    .replace(R.id.fragment_layout, notificationFragment).commit()
-//                return true
-//            }
             R.id.navigation_profile -> {
                 supportFragmentManager.beginTransaction()
                     .replace(R.id.fragment_layout, profileFragment).commit()
@@ -64,6 +58,8 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
         transaction.replace(R.id.fragment_layout, fragment)
         transaction.commit()
     }
+
+
 
 }
 
