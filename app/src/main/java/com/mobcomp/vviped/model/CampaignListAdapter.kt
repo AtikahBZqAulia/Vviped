@@ -35,6 +35,7 @@ class CampaignListAdapter(
         val campaignreceiver = itemView.findViewById<TextView>(R.id.campaign_penerima)
         val usagedetails = itemView.findViewById<TextView>(R.id.usage_detail)
         val donatebyselling = itemView.findViewById<Button>(R.id.donatewithselling_btn)
+        val share_post = itemView.findViewById<ImageButton>(R.id.share_btn)
 
         fun bindView(campaignItem: CampaignModel) {
             organizationnamepost.text = campaignItem.organization_name
@@ -47,6 +48,7 @@ class CampaignListAdapter(
             usagedetails.text = campaignItem.usage_details
 
             val campaign_id = campaignItem.id
+            val campaign_name = campaignname.text.toString()
 
             donatebyselling.setOnClickListener() {
                 val context = donatebyselling.context
@@ -56,6 +58,18 @@ class CampaignListAdapter(
                 intent.putExtra("campaign_id", campaign_id )
 
                 context.startActivity(intent)
+            }
+            share_post.setOnClickListener{
+                val context = share_post.context
+                val shareIntent = Intent()
+                shareIntent.action = Intent.ACTION_SEND
+                shareIntent.type="text/plain"
+                shareIntent.putExtra(Intent.EXTRA_TEXT,
+                    "Saya mendukung kampanye :$campaign_name"
+                )
+                val sendIntent = Intent.createChooser(shareIntent, null)
+                context.startActivity(sendIntent)
+
             }
 
         }
