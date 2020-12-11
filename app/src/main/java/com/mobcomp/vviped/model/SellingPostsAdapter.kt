@@ -32,6 +32,7 @@ class SellingPostsAdapter(
         val buyButton = itemView.findViewById<Button>(R.id.btn_buy)
         val soldTextView = itemView.findViewById<TextView>(R.id.sold_tv)
         val whatsappNumber = itemView.findViewById<TextView>(R.id.whatsapp_number)
+        val share_post = itemView.findViewById<ImageButton>(R.id.share_btn)
 
         fun bindView(sellingPost: SellingPostItem) {
             usernamepost.text = sellingPost.usernamepost
@@ -50,6 +51,7 @@ class SellingPostsAdapter(
             val product_name = productname.text.toString()
             val product_price =  productprice.text.toString()
             val whatsappNumber = whatsappNumber.text.toString()
+            val campaign_title = campaignname.text.toString()
 
             buyButton.setOnClickListener {
                 val context = buyButton.context
@@ -60,11 +62,18 @@ class SellingPostsAdapter(
                 intent.putExtra("product_price", product_price )
                 intent.putExtra("campaign_title", sellingPost.campaign_title.toString() )
                 intent.putExtra("whatsapp", whatsappNumber )
-
-
                 context.startActivity(intent)
-
-
+            }
+            share_post.setOnClickListener{
+                val context = share_post.context
+                val shareIntent = Intent()
+                shareIntent.action = Intent.ACTION_SEND
+                shareIntent.type="text/plain"
+                shareIntent.putExtra(Intent.EXTRA_TEXT,
+                    "Bantu saya berdonasi dengan membeli barang berikut :$product_name seharga $product_price guna mendukung campaign $campaign_title"
+                )
+                val sendIntent = createChooser(shareIntent, null)
+                context.startActivity(sendIntent)
 
             }
         }
