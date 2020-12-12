@@ -20,16 +20,16 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".SettingsActivity"></activity>
+
+        <activity android:name=".SettingsActivity"/>
         <activity android:name=".CategoriesProduct" />
         <activity android:name=".EditProfileUser" />
-        <activity android:name=".EditProfile" />
         <activity
             android:name=".IntroSlider"
-            android:theme="@style/AppTheme.NoStatusBar" />
+            android:theme="@style/AppTheme.NoStatusBar"
+            android:noHistory="true"/>
         <activity android:name=".ChatForBuying" />
         <activity android:name=".model.login.Logout" />
-        <activity android:name=".NotificationDetails" />
         <activity android:name=".create_campaign" />
         <activity
             android:name=".UploadSellingActivity"
@@ -56,9 +56,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainChat" />
-        <activity android:name=".chat_user" />
-        <activity android:name=".chat_myself" />
         <activity
             android:name=".MainActivity"
             android:windowSoftInputMode="stateHidden" />

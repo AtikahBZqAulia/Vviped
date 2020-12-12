@@ -9,6 +9,8 @@ import android.widget.TextView
 import androidx.viewpager.widget.ViewPager
 import com.mobcomp.vviped.model.OnBoardingData
 import com.google.android.material.tabs.TabLayout
+import com.mobcomp.vviped.model.login.Constant
+import com.mobcomp.vviped.model.login.PreferenceHelper
 
 class IntroSlider : AppCompatActivity() {
 
@@ -18,10 +20,14 @@ class IntroSlider : AppCompatActivity() {
     var nextSlide: TextView? = null
     var position = 0
     var sharedPreferences: SharedPreferences? =  null
+    lateinit var sharedPref: PreferenceHelper
+
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        sharedPref = PreferenceHelper(this)
+
 
         if(restorePrefData()) {
             val i = Intent(applicationContext, Landing::class.java)
