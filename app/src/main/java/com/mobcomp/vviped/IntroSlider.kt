@@ -3,12 +3,12 @@ package com.mobcomp.vviped
 import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import androidx.viewpager.widget.ViewPager
-import com.mobcomp.vviped.model.OnBoardingData
 import com.google.android.material.tabs.TabLayout
+import com.mobcomp.vviped.model.OnBoardingData
 
 class IntroSlider : AppCompatActivity() {
 
@@ -44,9 +44,18 @@ class IntroSlider : AppCompatActivity() {
                     "untuk penggalangan dana yang bisa kamu buat sendiri ataupun ikut dengan galang dana milik orang lain." ,
             R.drawable.logoapp))
         onBoardingData.add(OnBoardingData(
+            "HOW TO SALE?",
+            "Tekan tombol 'Jual Produk Saya' pada penggalangan dana yang ingin kamu donasikan yang ada pada halaman Daftar Campaign untuk menjual produk kamu",
+            R.drawable.logoapp))
+        onBoardingData.add(OnBoardingData(
+            "HOW TO MAKE CAMPAIGN?",
+            "Tekan tombol tanda tambah yang ada pada halaman Daftar Campaign untuk membuat penggalangan dana",
+            R.drawable.logoapp))
+        onBoardingData.add(OnBoardingData(
             "GETTING STARTED IS EASY",
             "Bergabung dengan Vviped, kamu sudah mengambil langkah besar dalam berbagi kebaikan untuk saling membantu!",
             R.drawable.logoapp))
+
 
         setOnBoardingViewPagerAdapter(onBoardingData)
 
