@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.ilkom.vviped.Landing
 import com.ilkom.vviped.MainActivity
 import com.ilkom.vviped.R
+import com.ilkom.vviped.SettingsActivity
 import kotlinx.android.synthetic.main.activity_logout.*
 
 class Logout : AppCompatActivity() {

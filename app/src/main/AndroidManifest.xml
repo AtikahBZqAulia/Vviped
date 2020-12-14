@@ -18,47 +18,50 @@
         android:requestLegacyExternalStorage="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme"
+        android:theme="@style/AppTheme.NoStatusBar"
         android:usesCleartextTraffic="true">
 
-        <activity android:name="com.ilkom.vviped.SettingsActivity"/>
-        <activity android:name="com.ilkom.vviped.CategoriesProduct" />
-        <activity android:name="com.ilkom.vviped.EditProfileUser" />
         <activity
-            android:name="com.ilkom.vviped.IntroSlider"
-            android:theme="@style/AppTheme.NoStatusBar"
-            android:noHistory="true"/>
-        <activity android:name="com.ilkom.vviped.ChatForBuying" />
-        <activity android:name="com.ilkom.vviped.model.login.Logout" />
-        <activity android:name="com.ilkom.vviped.create_campaign" />
-        <activity
-            android:name="com.ilkom.vviped.UploadSellingActivity"
-            android:label="@string/title_activity_upload_selling"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:windowSoftInputMode="stateHidden" />
-        <activity
-            android:name="com.ilkom.vviped.Landing"
-            android:theme="@style/AppTheme.NoStatusBar" />
-        <activity
-            android:name="com.ilkom.vviped.UserLogin"
-            android:theme="@style/AppTheme.NoStatusBar"
-            android:windowSoftInputMode="stateHidden" />
-        <activity
-            android:name="com.ilkom.vviped.UserRegister"
-            android:theme="@style/AppTheme.NoStatusBar"
-            android:windowSoftInputMode="stateHidden" />
-        <activity
-            android:name="com.ilkom.vviped.splashScreen"
-            android:theme="@style/AppTheme.NoStatusBar">
+            android:name=".splashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity
-            android:name="com.ilkom.vviped.MainActivity"
+            android:name=".IntroSlider"
+            android:noHistory="true" />
+
+        <activity
+            android:name=".model.login.Logout"
+            android:theme="@style/AppTheme"/>
+
+        <activity
+            android:name=".UploadSellingActivity"
+            android:theme="@style/AppTheme.NoActionBar"
             android:windowSoftInputMode="stateHidden" />
+
+        <activity
+            android:name=".UserLogin"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".UserRegister"
+            android:windowSoftInputMode="stateHidden" />
+
+        <activity
+            android:name=".MainActivity"
+            android:windowSoftInputMode="stateHidden" />
+
+        <activity android:name=".create_campaign" />
+        <activity android:name=".ChatForBuying" />
+        <activity android:name=".SettingsContactUs"/>
+        <activity android:name=".SettingsAbout" />
+        <activity android:name=".SettingsActivity" />
+        <activity android:name=".CategoriesProduct" />
+        <activity android:name=".EditProfileUser" />
+        <activity android:name=".Landing"/>
 
         <meta-data
             android:name="preloaded_fonts"
