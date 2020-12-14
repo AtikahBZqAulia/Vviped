@@ -20,48 +20,44 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoStatusBar"
         android:usesCleartextTraffic="true">
-
-        <activity
-            android:name=".splashScreen">
+        <activity android:name=".settings.ContactMaura"></activity>
+        <activity android:name=".settings.ContactOcta" />
+        <activity android:name=".settings.ContactAtikah" />
+        <activity android:name=".settings.SettingsContactInstagram" />
+        <activity android:name=".splashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".IntroSlider"
             android:noHistory="true" />
-
         <activity
             android:name=".model.login.Logout"
-            android:theme="@style/AppTheme"/>
-
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".UploadSellingActivity"
             android:theme="@style/AppTheme.NoActionBar"
             android:windowSoftInputMode="stateHidden" />
-
         <activity
             android:name=".UserLogin"
             android:windowSoftInputMode="stateHidden" />
         <activity
             android:name=".UserRegister"
             android:windowSoftInputMode="stateHidden" />
-
         <activity
             android:name=".MainActivity"
             android:windowSoftInputMode="stateHidden" />
-
         <activity android:name=".create_campaign" />
         <activity android:name=".ChatForBuying" />
-        <activity android:name=".SettingsContactUs"/>
-        <activity android:name=".SettingsAbout" />
-        <activity android:name=".SettingsActivity" />
+        <activity android:name=".settings.SettingsContactUs" />
+        <activity android:name=".settings.SettingsAbout" />
+        <activity android:name=".settings.SettingsActivity" />
         <activity android:name=".CategoriesProduct" />
         <activity android:name=".EditProfileUser" />
-        <activity android:name=".Landing"/>
+        <activity android:name=".Landing" />
 
         <meta-data
             android:name="preloaded_fonts"

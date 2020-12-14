@@ -14,8 +14,8 @@ import com.ilkom.vviped.model.RetrofitInterface
 import com.ilkom.vviped.model.SellingPostItem
 import com.ilkom.vviped.model.SellingPostProfileAdapter
 import com.ilkom.vviped.model.login.Constant
-import com.ilkom.vviped.model.login.Logout
 import com.ilkom.vviped.model.login.PreferenceHelper
+import com.ilkom.vviped.settings.SettingsActivity
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.activity_user_login.*
 import kotlinx.android.synthetic.main.fragment_profile.*

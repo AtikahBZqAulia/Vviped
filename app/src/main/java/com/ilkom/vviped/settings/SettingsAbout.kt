@@ -1,11 +1,8 @@
-package com.ilkom.vviped
+package com.ilkom.vviped.settings
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import kotlinx.android.synthetic.main.activity_settings.*
-import kotlinx.android.synthetic.main.activity_settings_about.*
-import kotlinx.android.synthetic.main.activity_settings_contact_us.*
+import com.ilkom.vviped.R
 
 class SettingsAbout : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

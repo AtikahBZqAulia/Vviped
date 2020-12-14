@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SettingsContactUs">
+    tools:context=".settings.SettingsContactUs">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appBar_Layout"
@@ -21,7 +21,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:gravity="center"
-                android:text="Contact Us"
+                android:text="Kontak Kami"
                 android:textColor="@color/colorBlack"
                 android:textSize="18dp"
                 android:textStyle="bold" />
@@ -38,38 +38,120 @@
         app:layout_constraintTop_toTopOf="parent">
 
 
+
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_marginTop="60dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
             android:padding="20dp">
-
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:orientation="vertical"
                 android:paddingLeft="12dp"
                 android:paddingRight="12dp">
 
                 <TextView
-                    android:id="@+id/textView4"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Temukan kami di "
+                    android:text="Temukan Vviped"
+                    android:paddingVertical="10dp"
                     android:gravity="center"
-                    android:textColor="@color/colorTextPrimary"
-
+                    android:layout_gravity="center"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/cabin"
+                    android:textColor="@color/colorTextSecondary"
                     />
 
-                <ImageButton
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
                     android:gravity="center"
-                    android:src="@drawable/ic_baseline_person_24"/>
+                    android:layout_marginTop="10dp">
+
+                    <ImageButton
+                        android:id="@+id/link_to_instagram"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:layout_marginHorizontal="20dp"
+                        android:scaleType="fitCenter"
+                        android:background="@color/colorWhite"
+                        android:src="@drawable/instagram" />
+                </LinearLayout>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Tim Pengembang"
+                    android:layout_marginTop="50dp"
+                    android:paddingVertical="10dp"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/cabin"
+                    android:textColor="@color/colorTextSecondary"
+                    />
+
+
+                <Button
+                    android:id="@+id/contact_atikah"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:text="Atikah Aulia Putri"
+                    android:textAllCaps="false"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:gravity="center"
+                    android:textColor="@color/colorTextPrimary"
+                    android:fontFamily="@font/cabin"
+                    android:layout_marginVertical="5dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/field_settings_about"
+                    />
+
+                <Button
+                    android:id="@+id/contact_octa"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:text="Octarina Salsabila"
+                    android:textAllCaps="false"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:gravity="center"
+                    android:textColor="@color/colorTextPrimary"
+                    android:fontFamily="@font/cabin"
+                    android:layout_marginVertical="5dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/field_settings_about"
+                    />
+                <Button
+                    android:id="@+id/contact_maura"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:text="Maura Qoonitah Putri"
+                    android:textAllCaps="false"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:gravity="center"
+                    android:textColor="@color/colorTextPrimary"
+                    android:fontFamily="@font/cabin"
+                    android:layout_marginVertical="5dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/field_settings_about"
+                    />
+
+
+
 
             </LinearLayout>
+
+
 
 
         </LinearLayout>

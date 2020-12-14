@@ -1,8 +1,10 @@
-package com.ilkom.vviped
+package com.ilkom.vviped.settings
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.ilkom.vviped.EditProfileUser
+import com.ilkom.vviped.R
 import com.ilkom.vviped.model.login.Logout
 import kotlinx.android.synthetic.main.activity_settings.*
 
