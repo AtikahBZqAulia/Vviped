@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.mobcomp.vviped">
+    package="com.ilkom.vviped">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
@@ -21,34 +21,34 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
 
-        <activity android:name=".SettingsActivity"/>
-        <activity android:name=".CategoriesProduct" />
-        <activity android:name=".EditProfileUser" />
+        <activity android:name="com.ilkom.vviped.SettingsActivity"/>
+        <activity android:name="com.ilkom.vviped.CategoriesProduct" />
+        <activity android:name="com.ilkom.vviped.EditProfileUser" />
         <activity
-            android:name=".IntroSlider"
+            android:name="com.ilkom.vviped.IntroSlider"
             android:theme="@style/AppTheme.NoStatusBar"
             android:noHistory="true"/>
-        <activity android:name=".ChatForBuying" />
-        <activity android:name=".model.login.Logout" />
-        <activity android:name=".create_campaign" />
+        <activity android:name="com.ilkom.vviped.ChatForBuying" />
+        <activity android:name="com.ilkom.vviped.model.login.Logout" />
+        <activity android:name="com.ilkom.vviped.create_campaign" />
         <activity
-            android:name=".UploadSellingActivity"
+            android:name="com.ilkom.vviped.UploadSellingActivity"
             android:label="@string/title_activity_upload_selling"
             android:theme="@style/AppTheme.NoActionBar"
             android:windowSoftInputMode="stateHidden" />
         <activity
-            android:name=".Landing"
+            android:name="com.ilkom.vviped.Landing"
             android:theme="@style/AppTheme.NoStatusBar" />
         <activity
-            android:name=".UserLogin"
+            android:name="com.ilkom.vviped.UserLogin"
             android:theme="@style/AppTheme.NoStatusBar"
             android:windowSoftInputMode="stateHidden" />
         <activity
-            android:name=".UserRegister"
+            android:name="com.ilkom.vviped.UserRegister"
             android:theme="@style/AppTheme.NoStatusBar"
             android:windowSoftInputMode="stateHidden" />
         <activity
-            android:name=".splashScreen"
+            android:name="com.ilkom.vviped.splashScreen"
             android:theme="@style/AppTheme.NoStatusBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -57,7 +57,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name="com.ilkom.vviped.MainActivity"
             android:windowSoftInputMode="stateHidden" />
 
         <meta-data

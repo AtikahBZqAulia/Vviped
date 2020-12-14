@@ -8,17 +8,17 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.mobcomp.vviped.ui.HomeFragment"
+        android:name="com.ilkom.vviped.ui.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" />
     <fragment
         android:id="@+id/campaignListFragment"
-        android:name="com.mobcomp.vviped.ui.CampaignListFragment"
+        android:name="com.ilkom.vviped.ui.CampaignListFragment"
         android:label="fragment_campaign_list"
         tools:layout="@layout/fragment_campaign_list" />
     <fragment
         android:id="@+id/profileFragment"
-        android:name="com.mobcomp.vviped.ui.ProfileFragment"
+        android:name="com.ilkom.vviped.ui.ProfileFragment"
         android:label="fragment_profile"
         tools:layout="@layout/fragment_profile" >
         <action
@@ -27,7 +27,7 @@
     </fragment>
     <fragment
         android:id="@+id/settingsFragment"
-        android:name="com.mobcomp.vviped.SettingsFragment"
+        android:name="com.ilkom.vviped.SettingsFragment"
         android:label="fragment_settings"
         tools:layout="@layout/fragment_settings" >
         <action
