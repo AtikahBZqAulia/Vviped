@@ -121,6 +121,22 @@ class create_campaign : AppCompatActivity(), UploadRequestBody.UploadCallback {
             }
         })
 
+        RetrofitInterface().userActivities(
+            sharedPref.getInt(Constant.PREF_ID)!!,
+            sharedPref.getString(Constant.PREF_USERNAME)!!,
+            RequestBody.create(MediaType.parse("multipart/form-data"), "Upload new campaign"),
+        ).enqueue(object : Callback<UploadResponse> {
+            override fun onFailure(call: Call<UploadResponse>, t: Throwable) {
+            }
+
+            override fun onResponse(
+                call: Call<UploadResponse>,
+                response: Response<UploadResponse>
+            ) {
+
+            }
+        })
+
     }
 
     override fun onProgressUpdate(percentage: Int) {

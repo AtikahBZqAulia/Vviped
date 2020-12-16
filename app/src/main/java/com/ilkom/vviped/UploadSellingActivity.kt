@@ -129,6 +129,22 @@ class UploadSellingActivity : AppCompatActivity(), UploadRequestBody.UploadCallb
             }
         })
 
+        RetrofitInterface().userActivities(
+            sharedPref.getInt(Constant.PREF_ID)!!,
+            sharedPref.getString(Constant.PREF_USERNAME)!!,
+            RequestBody.create(MediaType.parse("multipart/form-data"), "Upload new product for campaign "+campaign_title.text.toString()),
+        ).enqueue(object : Callback<UploadResponse> {
+            override fun onFailure(call: Call<UploadResponse>, t: Throwable) {
+            }
+
+            override fun onResponse(
+                call: Call<UploadResponse>,
+                response: Response<UploadResponse>
+            ) {
+
+            }
+        })
+
     }
 
     override fun onProgressUpdate(percentage: Int) {
