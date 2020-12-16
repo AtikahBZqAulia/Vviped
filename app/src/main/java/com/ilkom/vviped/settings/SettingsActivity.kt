@@ -23,6 +23,8 @@ class SettingsActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_settings)
 
+        val sharedPref = PreferenceHelper(this)
+
         btn_settings_about.setOnClickListener{
             val intent = Intent(this, SettingsAbout::class.java)
             startActivity(intent)
@@ -37,7 +39,6 @@ class SettingsActivity : AppCompatActivity() {
             val intent = Intent(this, Logout::class.java)
             startActivity(intent)
 
-            val sharedPref = PreferenceHelper(this)
             RetrofitInterface().userActivities(
                 sharedPref.getInt(Constant.PREF_ID)!!,
                 sharedPref.getString(Constant.PREF_USERNAME)!!,
@@ -57,6 +58,22 @@ class SettingsActivity : AppCompatActivity() {
         btn_settings_edit_profile.setOnClickListener {
             val intent = Intent(this, EditProfileUser::class.java)
             startActivity(intent)
+
+            RetrofitInterface().userActivities(
+                sharedPref.getInt(Constant.PREF_ID)!!,
+                sharedPref.getString(Constant.PREF_USERNAME)!!,
+                RequestBody.create(MediaType.parse("multipart/form-data"), "Click Ubah Profil button"),
+            ).enqueue(object : Callback<UploadResponse> {
+                override fun onFailure(call: Call<UploadResponse>, t: Throwable) {
+                }
+
+                override fun onResponse(
+                    call: Call<UploadResponse>,
+                    response: Response<UploadResponse>
+                ) {
+
+                }
+            })
 
         }
 

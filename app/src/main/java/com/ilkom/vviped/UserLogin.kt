@@ -8,11 +8,12 @@ import android.widget.EditText
 import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
+import com.google.android.material.snackbar.Snackbar
 import com.ilkom.vviped.model.RetrofitInterface
+import com.ilkom.vviped.model.UploadResponse
 import com.ilkom.vviped.model.login.Constant
 import com.ilkom.vviped.model.login.LoginResponse
 import com.ilkom.vviped.model.login.PreferenceHelper
-import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.activity_user_login.*
 import okhttp3.MediaType
 import okhttp3.RequestBody
@@ -121,6 +122,22 @@ class UserLogin : AppCompatActivity() {
                             }
                         }
                         nextToMainActivity()
+
+                        RetrofitInterface().userActivities(
+                            sharedPref.getInt(Constant.PREF_ID)!!,
+                            sharedPref.getString(Constant.PREF_USERNAME)!!,
+                            RequestBody.create(MediaType.parse("multipart/form-data"), "Login apps"),
+                        ).enqueue(object : Callback<UploadResponse> {
+                            override fun onFailure(call: Call<UploadResponse>, t: Throwable) {
+                            }
+
+                            override fun onResponse(
+                                call: Call<UploadResponse>,
+                                response: Response<UploadResponse>
+                            ) {
+
+                            }
+                        })
                     } else {
                         // jika salah password
                         Toast.makeText(this@UserLogin, response.body()!!.message, Toast.LENGTH_LONG)

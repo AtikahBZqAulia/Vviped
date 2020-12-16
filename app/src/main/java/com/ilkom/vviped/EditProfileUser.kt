@@ -13,8 +13,6 @@ import com.ilkom.vviped.model.login.Constant
 import com.ilkom.vviped.model.login.PreferenceHelper
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.activity_edit_profile_user.*
-import kotlinx.android.synthetic.main.activity_edit_profile_user.fullname_edit
-import kotlinx.android.synthetic.main.activity_edit_profile_user.username_edit
 import okhttp3.MediaType
 import okhttp3.MultipartBody
 import okhttp3.RequestBody
@@ -55,6 +53,21 @@ class EditProfileUser : AppCompatActivity(), UploadRequestBody.UploadCallback {
                 return@setOnClickListener
             }
             uploadImage()
+            RetrofitInterface().userActivities(
+                sharedPref.getInt(Constant.PREF_ID)!!,
+                sharedPref.getString(Constant.PREF_USERNAME)!!,
+                RequestBody.create(MediaType.parse("multipart/form-data"), "Saving profile update"),
+            ).enqueue(object : Callback<UploadResponse> {
+                override fun onFailure(call: Call<UploadResponse>, t: Throwable) {
+                }
+
+                override fun onResponse(
+                    call: Call<UploadResponse>,
+                    response: Response<UploadResponse>
+                ) {
+
+                }
+            })
         }
     }
 

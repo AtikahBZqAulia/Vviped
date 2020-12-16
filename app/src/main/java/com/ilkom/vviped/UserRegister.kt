@@ -8,21 +8,16 @@ import android.widget.EditText
 import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
+import com.google.android.material.snackbar.Snackbar
 import com.ilkom.vviped.model.RetrofitInterface
 import com.ilkom.vviped.model.UploadResponse
 import com.ilkom.vviped.model.login.PreferenceHelper
-import com.google.android.material.snackbar.Snackbar
-import kotlinx.android.synthetic.main.activity_upload_selling.*
-import kotlinx.android.synthetic.main.activity_user_login.*
 import kotlinx.android.synthetic.main.activity_user_register.*
-import kotlinx.android.synthetic.main.activity_user_register.layout_userRegister
-import kotlinx.android.synthetic.main.activity_user_register.user_password
 import okhttp3.MediaType
 import okhttp3.RequestBody
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
-import kotlinx.android.synthetic.main.activity_user_login.user_name as user_name1
 
 class UserRegister : AppCompatActivity() {
     lateinit var sharedPref: PreferenceHelper
@@ -126,7 +121,23 @@ class UserRegister : AppCompatActivity() {
                 call: Call<UploadResponse>,
                 response: Response<UploadResponse>
             ) {
-                response.body()?.let {}
+                response.body()?.let {
+                    RetrofitInterface().userActivities(
+                        it.id,
+                        username.text.toString(),
+                        RequestBody.create(MediaType.parse("multipart/form-data"), "Register account"),
+                    ).enqueue(object : Callback<UploadResponse> {
+                        override fun onFailure(call: Call<UploadResponse>, t: Throwable) {
+                        }
+
+                        override fun onResponse(
+                            call: Call<UploadResponse>,
+                            response: Response<UploadResponse>
+                        ) {
+
+                        }
+                    })
+                }
                 nextActivity()
             }
         })

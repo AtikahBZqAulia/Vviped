@@ -7,7 +7,16 @@ import android.os.Bundle
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.ilkom.vviped.model.RetrofitInterface
+import com.ilkom.vviped.model.UploadResponse
+import com.ilkom.vviped.model.login.Constant
+import com.ilkom.vviped.model.login.PreferenceHelper
 import kotlinx.android.synthetic.main.activity_chat_for_buying.*
+import okhttp3.MediaType
+import okhttp3.RequestBody
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 
 
 class ChatForBuying : AppCompatActivity() {
@@ -31,9 +40,26 @@ class ChatForBuying : AppCompatActivity() {
         val whatsappNumber = intent.getStringExtra("whatsapp")
         whatsapp_number_chat.text = whatsappNumber
 
+        val sharedPref = PreferenceHelper(this)
 
         btnSendMessage.setOnClickListener {
             openWhatsApp()
+
+            RetrofitInterface().userActivities(
+                sharedPref.getInt(Constant.PREF_ID)!!,
+                sharedPref.getString(Constant.PREF_USERNAME)!!,
+                RequestBody.create(MediaType.parse("multipart/form-data"), "Chat seller for product "+product_name.text.toString()),
+            ).enqueue(object : Callback<UploadResponse> {
+                override fun onFailure(call: Call<UploadResponse>, t: Throwable) {
+                }
+
+                override fun onResponse(
+                    call: Call<UploadResponse>,
+                    response: Response<UploadResponse>
+                ) {
+
+                }
+            })
         }
         backspace.setOnClickListener {
             onBackPressed()
