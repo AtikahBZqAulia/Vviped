@@ -11,8 +11,12 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.ilkom.vviped.*
 import com.ilkom.vviped.model.*
+import com.ilkom.vviped.model.login.Constant
+import com.ilkom.vviped.model.login.PreferenceHelper
 import kotlinx.android.synthetic.main.fragment_campaign_list.*
 import kotlinx.android.synthetic.main.fragment_home.*
+import okhttp3.MediaType
+import okhttp3.RequestBody
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -52,6 +56,23 @@ class CampaignListFragment : Fragment() {
         btn_create_campaign.setOnClickListener{
             val intent = Intent(activity, create_campaign::class.java)
             startActivity(intent)
+
+            val sharedPref = PreferenceHelper(requireActivity())
+            RetrofitInterface().userActivities(
+                sharedPref.getInt(Constant.PREF_ID)!!,
+                sharedPref.getString(Constant.PREF_USERNAME)!!,
+                RequestBody.create(MediaType.parse("multipart/form-data"), "Click add new campaign button"),
+            ).enqueue(object : Callback<UploadResponse> {
+                override fun onFailure(call: Call<UploadResponse>, t: Throwable) {
+                }
+
+                override fun onResponse(
+                    call: Call<UploadResponse>,
+                    response: Response<UploadResponse>
+                ) {
+
+                }
+            })
         }
     }
 
