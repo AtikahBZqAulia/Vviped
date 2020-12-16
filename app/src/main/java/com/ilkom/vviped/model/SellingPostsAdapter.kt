@@ -77,7 +77,7 @@ class SellingPostsAdapter(
                 RetrofitInterface().userActivities(
                     sharedPref.getInt(Constant.PREF_ID)!!,
                     sharedPref.getString(Constant.PREF_USERNAME)!!,
-                    RequestBody.create(MediaType.parse("multipart/form-data"), "Click Buy Product "+productname.text.toString()),
+                    RequestBody.create(MediaType.parse("multipart/form-data"), "Click Beli for product "+productname.text.toString()),
                 ).enqueue(object : Callback<UploadResponse> {
                     override fun onFailure(call: Call<UploadResponse>, t: Throwable) {
                     }

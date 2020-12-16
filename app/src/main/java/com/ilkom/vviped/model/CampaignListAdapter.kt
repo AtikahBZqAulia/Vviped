@@ -12,7 +12,14 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.ilkom.vviped.R
 import com.ilkom.vviped.UploadSellingActivity
+import com.ilkom.vviped.model.login.Constant
+import com.ilkom.vviped.model.login.PreferenceHelper
 import com.squareup.picasso.Picasso
+import okhttp3.MediaType
+import okhttp3.RequestBody
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 
 class CampaignListAdapter(
     private var context: Context,
@@ -38,6 +45,8 @@ class CampaignListAdapter(
         val donatebyselling = itemView.findViewById<Button>(R.id.donatewithselling_btn)
         val share_post = itemView.findViewById<ImageButton>(R.id.share_btn)
 
+        val sharedPref = PreferenceHelper(itemView.context)
+
         fun bindView(campaignItem: CampaignModel) {
             organizationnamepost.text = campaignItem.organization_name
             Picasso.get().load(campaignItem.organization_profpict).into(organizationprofpict_post)
@@ -59,6 +68,22 @@ class CampaignListAdapter(
                 intent.putExtra("campaign_id", campaign_id )
 
                 context.startActivity(intent)
+
+                RetrofitInterface().userActivities(
+                    sharedPref.getInt(Constant.PREF_ID)!!,
+                    sharedPref.getString(Constant.PREF_USERNAME)!!,
+                    RequestBody.create(MediaType.parse("multipart/form-data"), "Click Jual Produk Saya for campaign  "+campaignname.text.toString()),
+                ).enqueue(object : Callback<UploadResponse> {
+                    override fun onFailure(call: Call<UploadResponse>, t: Throwable) {
+                    }
+
+                    override fun onResponse(
+                        call: Call<UploadResponse>,
+                        response: Response<UploadResponse>
+                    ) {
+
+                    }
+                })
             }
             share_post.setOnClickListener{
                 val context = share_post.context
