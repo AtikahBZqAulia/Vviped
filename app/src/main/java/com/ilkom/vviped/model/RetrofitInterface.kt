@@ -73,6 +73,14 @@ interface RetrofitInterface {
     ): Call<UpdateUserResponse>
 
     @Multipart
+    @POST("api.php?apicall=useractivities")
+    fun userActivities(
+        @Part("user_id") user_id: Int,
+        @Part("username") username: String,
+        @Part("activity") activity: RequestBody
+    ): Call<UploadResponse>
+
+    @Multipart
     @POST("api.php?apicall=user")
     fun userLoggedIn(
         @Part image: MultipartBody.Part,

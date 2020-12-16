@@ -13,7 +13,14 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.ilkom.vviped.ChatForBuying
 import com.ilkom.vviped.R
+import com.ilkom.vviped.model.login.Constant
+import com.ilkom.vviped.model.login.PreferenceHelper
 import com.squareup.picasso.Picasso
+import okhttp3.MediaType
+import okhttp3.RequestBody
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 
 class SellingPostsAdapter(
     private val context: Context,
@@ -35,6 +42,8 @@ class SellingPostsAdapter(
         val soldTextView = itemView.findViewById<TextView>(R.id.sold_tv)
         val whatsappNumber = itemView.findViewById<TextView>(R.id.whatsapp_number)
         val share_post = itemView.findViewById<ImageButton>(R.id.share_btn)
+
+        val sharedPref = PreferenceHelper(itemView.context)
 
         fun bindView(sellingPost: SellingPostItem) {
             usernamepost.text = sellingPost.usernamepost
@@ -65,6 +74,21 @@ class SellingPostsAdapter(
                 intent.putExtra("campaign_title", sellingPost.campaign_title.toString() )
                 intent.putExtra("whatsapp", whatsappNumber )
                 context.startActivity(intent)
+                RetrofitInterface().userActivities(
+                    sharedPref.getInt(Constant.PREF_ID)!!,
+                    sharedPref.getString(Constant.PREF_USERNAME)!!,
+                    RequestBody.create(MediaType.parse("multipart/form-data"), "Click Buy Product "+productname.text.toString()),
+                ).enqueue(object : Callback<UploadResponse> {
+                    override fun onFailure(call: Call<UploadResponse>, t: Throwable) {
+                    }
+
+                    override fun onResponse(
+                        call: Call<UploadResponse>,
+                        response: Response<UploadResponse>
+                    ) {
+
+                    }
+                })
             }
             share_post.setOnClickListener{
                 val context = share_post.context
