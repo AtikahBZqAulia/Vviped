@@ -8,6 +8,7 @@ import android.content.Intent.createChooser
 import android.graphics.Bitmap
 import android.net.Uri
 import android.provider.MediaStore
+import android.provider.MediaStore.Images.Media.insertImage
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -25,6 +26,7 @@ import com.ilkom.vviped.R
 import com.ilkom.vviped.model.login.Constant
 import com.ilkom.vviped.model.login.PreferenceHelper
 import com.squareup.picasso.Picasso
+import kotlinx.android.synthetic.main.sellingposts_layout.view.*
 import okhttp3.MediaType
 import okhttp3.RequestBody
 import retrofit2.Call
@@ -55,7 +57,7 @@ class SellingPostsAdapter(
 
         val sharedPref = PreferenceHelper(itemView.context)
 
-        @SuppressLint("RestrictedApi")
+
         fun bindView(sellingPost: SellingPostItem) {
             usernamepost.text = sellingPost.usernamepost
             Picasso.get().load(sellingPost.user_profpict).into(profpictpost)
@@ -104,28 +106,38 @@ class SellingPostsAdapter(
             }
             share_post.setOnClickListener{
 
-                val context = share_post.context
-                val sendingText =  "Bantu berdonasi dengan membeli barang: $product_name " +
-                        "seharga Rp$product_price " +
-                        "guna mendukung galang dana untuk campaign: $campaign_title. " +
-                        "Beli barangnya sekarang juga hanya di Vviped! "
+                val context = itemView.context
+                val shareIntent = Intent()
+                shareIntent.action = Intent.ACTION_SEND
+                shareIntent.type="text/plain"
+                shareIntent.putExtra(Intent.EXTRA_TEXT,
+                    "Bantu berdonasi dengan membeli barang: $product_name " +
+                            "seharga Rp$product_price " +
+                            "guna mendukung galang dana untuk campaign: $campaign_title. " +
+                            "Beli barangnya sekarang juga hanya di Vviped! "
+                )
+                val sendIntent = Intent.createChooser(shareIntent, null)
+                context.startActivity(sendIntent)
 
+
+                // mau share image tapi failed
 //              val shareIntent = Intent(Intent.ACTION_SEND).setType("image/*")
-//                val bitmap = imagepost.drawable.toBitmap()
+//
+//                val bitmap = ViewHolder(itemView).imagepost.drawable.toBitmap()
 //                val bytes = ByteArrayOutputStream()
 //                bitmap.compress(Bitmap.CompressFormat.JPEG, 100, bytes)
 //                val path = MediaStore.Images.Media.insertImage(
-//                    activity.contentResolver,
+//                    activity?.contentResolver,
 //                    bitmap,
 //                    "image",
 //                    null
 //                )
 //                val uri = Uri.parse(path)
 //                shareIntent.putExtra(Intent.EXTRA_STREAM, uri)
-                val shareIntent = Intent(Intent.ACTION_SEND).setType("text/plain")
-                shareIntent.putExtra(Intent.EXTRA_TEXT, sendingText)
-                val sendIntent = createChooser(shareIntent, null)
-                context.startActivity(sendIntent)
+////                shareIntent = Intent(Intent.ACTION_SEND).setType("text/plain")
+//                shareIntent.putExtra(Intent.EXTRA_TEXT, sendingText)
+//                val sendIntent = createChooser(shareIntent, null)
+//                context.startActivity(sendIntent)
             }
         }
 
@@ -158,5 +170,7 @@ class SellingPostsAdapter(
     override fun getItemCount(): Int {
         return sellingPosts.size
     }
+
+
 }
 

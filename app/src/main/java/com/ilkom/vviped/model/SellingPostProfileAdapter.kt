@@ -4,9 +4,10 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
-import android.widget.TextView
+import android.widget.*
+import androidx.appcompat.widget.AppCompatButton
 import androidx.recyclerview.widget.RecyclerView
+import com.ilkom.vviped.BottomSheetProfilePost
 import com.ilkom.vviped.R
 import com.squareup.picasso.Picasso
 
@@ -27,6 +28,8 @@ class SellingPostProfileAdapter(
         val productdesc = itemView.findViewById<TextView>(R.id.produkdeskripsi)
         val sellerlocation = itemView.findViewById<TextView>(R.id.lokasipenjual)
         val soldTextView = itemView.findViewById<TextView>(R.id.sale_tv)
+        val buttonmenu = itemView.findViewById<ImageButton>(R.id.btn_menu_post)
+
 
         fun bindView(sellingPost: SellingPostItem) {
             usernamepost.text = sellingPost.usernamepost
@@ -39,6 +42,16 @@ class SellingPostProfileAdapter(
             productdesc.text = sellingPost.product_description
             sellerlocation.text = sellingPost.seller_location
             soldTextView.text = sellingPost.sold
+
+            val bottomSheetProfilePost = BottomSheetProfilePost()
+
+            buttonmenu.setOnClickListener {
+                val context = buttonmenu.context
+                Toast.makeText(context, "menu button", Toast.LENGTH_SHORT).show()
+            }
+
+
+
         }
     }
 
@@ -47,6 +60,9 @@ class SellingPostProfileAdapter(
         val v = LayoutInflater.from(parent.context)
             .inflate(R.layout.sellingpostprofile_layout, parent, false)
         return ViewHolder(v)
+
+
+
     }
 
     override fun onBindViewHolder(viewHolder: ViewHolder, position: Int) {
@@ -59,6 +75,9 @@ class SellingPostProfileAdapter(
         viewHolder.sellerlocation.text = sellingPosts[position].seller_location
         viewHolder.soldTextView.text = sellingPosts[position].sold
         viewHolder.bindView(sellingPosts[position])
+
+
+
 
     }
 

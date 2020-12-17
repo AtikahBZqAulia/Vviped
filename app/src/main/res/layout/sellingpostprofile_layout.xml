@@ -38,10 +38,22 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="5dp"
-                android:gravity="center"
+                android:gravity = "center_vertical|left|start"
                 android:text="akunsaya"
+                android:layout_weight="1"
                 android:textColor="@color/colorBlack"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                />
+
+            <ImageButton
+                android:id="@+id/btn_menu_post"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="end"
+                android:src="@drawable/ic_menu_dots"
+                app:backgroundTint="@color/colorWhite" />
+
+
         </LinearLayout>
 
         <ImageView
