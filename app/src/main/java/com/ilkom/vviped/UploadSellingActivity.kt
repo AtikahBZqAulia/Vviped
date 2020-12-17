@@ -13,7 +13,11 @@ import androidx.appcompat.app.AppCompatActivity
 import com.ilkom.vviped.model.*
 import com.ilkom.vviped.model.login.Constant
 import com.ilkom.vviped.model.login.PreferenceHelper
+import kotlinx.android.synthetic.main.activity_create_campaign.*
 import kotlinx.android.synthetic.main.activity_upload_selling.*
+import kotlinx.android.synthetic.main.activity_upload_selling.backspace
+import kotlinx.android.synthetic.main.activity_upload_selling.button_upload
+import kotlinx.android.synthetic.main.activity_upload_selling.progress_bar
 import okhttp3.MediaType
 import okhttp3.MultipartBody
 import okhttp3.RequestBody
@@ -43,6 +47,9 @@ class UploadSellingActivity : AppCompatActivity(), UploadRequestBody.UploadCallb
 
         button_upload.setOnClickListener {
             uploadImage()
+        }
+        backspace.setOnClickListener {
+            onBackPressed()
         }
 
     }

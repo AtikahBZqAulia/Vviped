@@ -91,7 +91,9 @@ class CampaignListAdapter(
                 shareIntent.action = Intent.ACTION_SEND
                 shareIntent.type="text/plain"
                 shareIntent.putExtra(Intent.EXTRA_TEXT,
-                    "Saya mendukung kampanye :$campaign_name"
+                    "Saya mendukung kampanye: $campaign_name. " +
+                            "Bantu donasi dengan menjual barang kamu atau membeli barang untuk " +
+                            "ikut mendukung campaign ini hanya di Vviped! (link)"
                 )
                 val sendIntent = Intent.createChooser(shareIntent, null)
                 context.startActivity(sendIntent)

@@ -1,8 +1,13 @@
 package com.ilkom.vviped.model
 
+import android.annotation.SuppressLint
+import android.content.ContentResolver
 import android.content.Context
 import android.content.Intent
 import android.content.Intent.createChooser
+import android.graphics.Bitmap
+import android.net.Uri
+import android.provider.MediaStore
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -10,8 +15,12 @@ import android.widget.Button
 import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.core.content.ContextCompat.startActivity
+import androidx.core.graphics.drawable.toBitmap
 import androidx.recyclerview.widget.RecyclerView
+import com.google.android.material.internal.ContextUtils.getActivity
 import com.ilkom.vviped.ChatForBuying
+import com.ilkom.vviped.MainActivity
 import com.ilkom.vviped.R
 import com.ilkom.vviped.model.login.Constant
 import com.ilkom.vviped.model.login.PreferenceHelper
@@ -21,6 +30,7 @@ import okhttp3.RequestBody
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
+import java.io.ByteArrayOutputStream
 
 class SellingPostsAdapter(
     private val context: Context,
@@ -45,6 +55,7 @@ class SellingPostsAdapter(
 
         val sharedPref = PreferenceHelper(itemView.context)
 
+        @SuppressLint("RestrictedApi")
         fun bindView(sellingPost: SellingPostItem) {
             usernamepost.text = sellingPost.usernamepost
             Picasso.get().load(sellingPost.user_profpict).into(profpictpost)
@@ -63,6 +74,7 @@ class SellingPostsAdapter(
             val product_price =  productprice.text.toString()
             val whatsappNumber = whatsappNumber.text.toString()
             val campaign_title = campaignname.text.toString()
+            val product_img =  sellingPost.image_post
 
             buyButton.setOnClickListener {
                 val context = buyButton.context
@@ -91,18 +103,35 @@ class SellingPostsAdapter(
                 })
             }
             share_post.setOnClickListener{
+
                 val context = share_post.context
-                val shareIntent = Intent()
-                shareIntent.action = Intent.ACTION_SEND
-                shareIntent.type="text/plain"
-                shareIntent.putExtra(Intent.EXTRA_TEXT,
-                    "Bantu saya berdonasi dengan membeli barang berikut :$product_name seharga $product_price guna mendukung campaign $campaign_title"
-                )
+                val sendingText =  "Bantu berdonasi dengan membeli barang: $product_name " +
+                        "seharga Rp$product_price " +
+                        "guna mendukung galang dana untuk campaign: $campaign_title. " +
+                        "Beli barangnya sekarang juga hanya di Vviped! "
+
+//              val shareIntent = Intent(Intent.ACTION_SEND).setType("image/*")
+//                val bitmap = imagepost.drawable.toBitmap()
+//                val bytes = ByteArrayOutputStream()
+//                bitmap.compress(Bitmap.CompressFormat.JPEG, 100, bytes)
+//                val path = MediaStore.Images.Media.insertImage(
+//                    activity.contentResolver,
+//                    bitmap,
+//                    "image",
+//                    null
+//                )
+//                val uri = Uri.parse(path)
+//                shareIntent.putExtra(Intent.EXTRA_STREAM, uri)
+                val shareIntent = Intent(Intent.ACTION_SEND).setType("text/plain")
+                shareIntent.putExtra(Intent.EXTRA_TEXT, sendingText)
                 val sendIntent = createChooser(shareIntent, null)
                 context.startActivity(sendIntent)
-
             }
         }
+
+
+
+
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {

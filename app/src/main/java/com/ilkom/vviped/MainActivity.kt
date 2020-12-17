@@ -1,5 +1,6 @@
 package com.ilkom.vviped
 
+import android.content.ContentResolver
 import android.os.Bundle
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
@@ -9,7 +10,9 @@ import com.ilkom.vviped.ui.CampaignListFragment
 import com.ilkom.vviped.ui.HomeFragment
 import com.ilkom.vviped.ui.ProfileFragment
 
+
 class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemSelectedListener {
+
     private var homeFragment = HomeFragment()
     private var profileFragment = ProfileFragment()
     private var campaignListFrament = CampaignListFragment()
@@ -21,6 +24,8 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
 
         val navView: BottomNavigationView = findViewById(R.id.nav_view)
         navView.setOnNavigationItemSelectedListener(this)
+
+
 
     }
 
@@ -58,6 +63,8 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
         transaction.replace(R.id.fragment_layout, fragment)
         transaction.commit()
     }
+
+
 
 
 
