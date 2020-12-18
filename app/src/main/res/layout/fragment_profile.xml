@@ -143,11 +143,31 @@
 
             </LinearLayout>
 
-
-
         </LinearLayout>
 
+    </LinearLayout>
 
+    <LinearLayout
+        android:id="@+id/tabProfile"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        tools:ignore="MissingConstraints"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/colorWhite"
+            android:src="@drawable/ic_baseline_spa_24" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_campaign"
+            android:background="@color/colorWhite"
+            android:layout_weight="1"/>
 
 
     </LinearLayout>
@@ -156,11 +176,11 @@
         android:id="@+id/recycleView_profile"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="180dp"
+        android:layout_marginTop="216dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:layout_constraintTop_toBottomOf="@+id/tabProfile"
         tools:ignore="MissingConstraints">
 
     </androidx.recyclerview.widget.RecyclerView>
