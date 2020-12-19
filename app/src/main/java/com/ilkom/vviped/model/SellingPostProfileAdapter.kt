@@ -51,11 +51,15 @@ class SellingPostProfileAdapter(
                 pop.setOnMenuItemClickListener { item ->
                     when(item.itemId){
                         R.id.menu_edit_post->{
-                            Toast.makeText(context, "edit", Toast.LENGTH_SHORT).show()
+                            Toast.makeText(context, "Ubah", Toast.LENGTH_SHORT).show()
 
                         }
                         R.id.menu_delete_post->{
-                            Toast.makeText(context, "delete", Toast.LENGTH_SHORT).show()
+                            Toast.makeText(context, "Hapus", Toast.LENGTH_SHORT).show()
+
+                        }
+                        R.id.menu_share_post->{
+                            Toast.makeText(context, "Bagikan", Toast.LENGTH_SHORT).show()
 
                         }
                     }

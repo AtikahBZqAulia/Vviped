@@ -12,4 +12,10 @@
         android:title="Hapus"
         android:icon="@drawable/ic_delete">
     </item>
+
+    <item
+        android:id="@+id/menu_share_post"
+        android:title="Bagikan"
+        android:icon="@drawable/ic_baseline_share_24">
+    </item>
 </menu>
