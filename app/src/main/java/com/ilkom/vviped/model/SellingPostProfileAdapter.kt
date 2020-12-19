@@ -43,12 +43,11 @@ class SellingPostProfileAdapter(
             sellerlocation.text = sellingPost.seller_location
             soldTextView.text = sellingPost.sold
 
-
+            //menu  edit dan hapus product post
             buttonContextMenu.setOnClickListener {
                 val context = buttonContextMenu.context
                 val pop= PopupMenu(context, it)
                 pop.inflate(R.menu.context_menu_post)
-
                 pop.setOnMenuItemClickListener { item ->
                     when(item.itemId){
                         R.id.menu_edit_post->{
