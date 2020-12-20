@@ -1,14 +1,7 @@
 package com.ilkom.vviped.model
 
-import android.annotation.SuppressLint
-import android.content.ContentResolver
 import android.content.Context
 import android.content.Intent
-import android.content.Intent.createChooser
-import android.graphics.Bitmap
-import android.net.Uri
-import android.provider.MediaStore
-import android.provider.MediaStore.Images.Media.insertImage
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -16,17 +9,12 @@ import android.widget.Button
 import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.core.content.ContextCompat.startActivity
-import androidx.core.graphics.drawable.toBitmap
 import androidx.recyclerview.widget.RecyclerView
-import com.google.android.material.internal.ContextUtils.getActivity
 import com.ilkom.vviped.ChatForBuying
-import com.ilkom.vviped.MainActivity
 import com.ilkom.vviped.R
 import com.ilkom.vviped.model.login.Constant
 import com.ilkom.vviped.model.login.PreferenceHelper
 import com.squareup.picasso.Picasso
-import kotlinx.android.synthetic.main.sellingposts_layout.view.*
 import okhttp3.MediaType
 import okhttp3.RequestBody
 import retrofit2.Call
@@ -55,7 +43,7 @@ class SellingPostsAdapter(
         val whatsappNumber = itemView.findViewById<TextView>(R.id.whatsapp_number)
         val share_post = itemView.findViewById<ImageButton>(R.id.share_btn)
 
-        val sharedPref = PreferenceHelper(itemView.context)
+        val sharedPref = PreferenceHelper(share_post.context)
 
 
         fun bindView(sellingPost: SellingPostItem) {
@@ -106,7 +94,7 @@ class SellingPostsAdapter(
             }
             share_post.setOnClickListener{
 
-                val context = itemView.context
+                val context = share_post.context
                 val shareIntent = Intent()
                 shareIntent.action = Intent.ACTION_SEND
                 shareIntent.type="text/plain"
