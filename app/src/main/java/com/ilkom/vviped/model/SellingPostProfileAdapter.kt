@@ -16,6 +16,7 @@ import com.ilkom.vviped.model.login.Constant.Companion.PREF_ID
 import com.ilkom.vviped.model.login.PreferenceHelper
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.activity_edit_profile_user.*
+import kotlinx.android.synthetic.main.activity_upload_selling.*
 import okhttp3.MediaType
 import okhttp3.RequestBody
 import retrofit2.Call
@@ -60,6 +61,7 @@ class SellingPostProfileAdapter(
             val sharedPref = PreferenceHelper(itemView.context)
 
             val product_id = sellingPost.id
+            val productId = product_id.toString()
 
 
             val product_name = productname.text.toString()
@@ -80,28 +82,27 @@ class SellingPostProfileAdapter(
 
                         }
                         R.id.menu_delete_post->{
-                            Toast.makeText(context, "hapus id:" + product_id, Toast.LENGTH_SHORT).show()
+                            Toast.makeText(context, "hapus id:" + productId, Toast.LENGTH_SHORT).show()
 
                             RetrofitInterface().deleteProductProfile(
-                                sharedPref.getInt(Constant.PREF_ID)!!
+                                RequestBody.create(
+                                    MediaType.parse("multipart/form-data"),
+                                    productId
+                                ),
                             ).enqueue(object : Callback<MutableList<SellingPostItem>> {
 
                                 override fun onFailure(call: Call<MutableList<SellingPostItem>>, t: Throwable) {
-                                    Toast.makeText(context, "Gagal dihapus", Toast.LENGTH_SHORT).show()
-
+                                    Toast.makeText(context, "Gagal dihapus.", Toast.LENGTH_SHORT).show()
                                 }
-
                                 override fun onResponse(
                                     call: Call<MutableList<SellingPostItem>>,
                                     response: Response<MutableList<SellingPostItem>>
                                 ) {
                                     Toast.makeText(context, "Berhasil dihapus", Toast.LENGTH_SHORT).show()
-
                                 }
                             })
                         }
                         R.id.menu_share_post->{
-                            Toast.makeText(context, "Bagikan", Toast.LENGTH_SHORT).show()
                             val context = buttonContextMenu.context
                             val shareIntent = Intent()
                             shareIntent.action = Intent.ACTION_SEND
@@ -113,7 +114,7 @@ class SellingPostProfileAdapter(
                                         "guna mendukung galang dana untuk campaign: $campaign_title. " +
                                         "Beli barangnya sekarang juga hanya di Vviped! "
                             )
-                            val sendIntent = Intent.createChooser(shareIntent, null)
+                            val sendIntent = Intent.createChooser(shareIntent, "Bagikan product ini ")
                             context.startActivity(sendIntent)
                         }
                     }

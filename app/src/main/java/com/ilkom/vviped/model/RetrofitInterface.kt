@@ -48,7 +48,7 @@ interface RetrofitInterface {
     @Multipart
     @POST("api.php?apicall=delete_sellingpost")
     fun deleteProductProfile(
-        @Part("id") id: Int,
+        @Part("id") id: RequestBody,
     ): Call<MutableList<SellingPostItem>>
 
     @Multipart
