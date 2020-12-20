@@ -1,6 +1,8 @@
 package com.ilkom.vviped.model
 
+import android.app.AlertDialog
 import android.content.Context
+import android.content.DialogInterface
 import android.content.Intent
 import android.content.SharedPreferences
 import android.util.Log
@@ -82,25 +84,34 @@ class SellingPostProfileAdapter(
 
                         }
                         R.id.menu_delete_post->{
-                            Toast.makeText(context, "hapus id:" + productId, Toast.LENGTH_SHORT).show()
 
-                            RetrofitInterface().deleteProductProfile(
-                                RequestBody.create(
-                                    MediaType.parse("multipart/form-data"),
-                                    productId
-                                ),
-                            ).enqueue(object : Callback<MutableList<SellingPostItem>> {
+                            AlertDialog.Builder(context)
 
-                                override fun onFailure(call: Call<MutableList<SellingPostItem>>, t: Throwable) {
-                                    Toast.makeText(context, "Gagal dihapus.", Toast.LENGTH_SHORT).show()
-                                }
-                                override fun onResponse(
-                                    call: Call<MutableList<SellingPostItem>>,
-                                    response: Response<MutableList<SellingPostItem>>
-                                ) {
-                                    Toast.makeText(context, "Berhasil dihapus", Toast.LENGTH_SHORT).show()
-                                }
-                            })
+                                .setMessage("Hapus barang ini?")
+                                .setPositiveButton("Ya", DialogInterface.OnClickListener { dialogInterface, i ->
+
+                                    RetrofitInterface().deleteProductProfile(
+                                        RequestBody.create(
+                                            MediaType.parse("multipart/form-data"),
+                                            productId
+                                        ),
+                                    ).enqueue(object : Callback<MutableList<SellingPostItem>> {
+
+                                        override fun onFailure(call: Call<MutableList<SellingPostItem>>, t: Throwable) {
+                                            Toast.makeText(context, "Gagal dihapus.", Toast.LENGTH_SHORT).show()
+                                        }
+                                        override fun onResponse(
+                                            call: Call<MutableList<SellingPostItem>>,
+                                            response: Response<MutableList<SellingPostItem>>
+                                        ) {
+                                            Toast.makeText(context, "Berhasil dihapus", Toast.LENGTH_SHORT).show()
+                                        }
+                                    })
+                                })
+                                .setNegativeButton("Tidak", DialogInterface.OnClickListener { dialogInterface, i ->
+                                })
+                                .show()
+
                         }
                         R.id.menu_share_post->{
                             val context = buttonContextMenu.context
