@@ -13,7 +13,6 @@ import androidx.appcompat.app.AppCompatActivity
 import com.ilkom.vviped.model.*
 import com.ilkom.vviped.model.login.Constant
 import com.ilkom.vviped.model.login.PreferenceHelper
-import kotlinx.android.synthetic.main.activity_create_campaign.*
 import kotlinx.android.synthetic.main.activity_upload_selling.*
 import kotlinx.android.synthetic.main.activity_upload_selling.backspace
 import kotlinx.android.synthetic.main.activity_upload_selling.button_upload
