@@ -10,9 +10,7 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.ilkom.vviped.*
-import com.ilkom.vviped.model.RetrofitInterface
-import com.ilkom.vviped.model.SellingPostItem
-import com.ilkom.vviped.model.SellingPostProfileAdapter
+import com.ilkom.vviped.model.*
 import com.ilkom.vviped.model.login.Constant
 import com.ilkom.vviped.model.login.PreferenceHelper
 import com.ilkom.vviped.settings.SettingsActivity
@@ -34,6 +32,7 @@ class ProfileFragment : Fragment() {
 
     private var recyclerView: RecyclerView? = null
     private var sellingPostProfileAdapter: SellingPostProfileAdapter? = null
+    private var campaignListProfileAdapter: CampaignListProfileAdapter? = null
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -42,7 +41,7 @@ class ProfileFragment : Fragment() {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_profile, container, false)
 
-        getData()
+        getSellingPostData()
 
         return view
     }
@@ -62,13 +61,21 @@ class ProfileFragment : Fragment() {
             startActivity(intent)
         }
 
+        product_btn.setOnClickListener {
+            getSellingPostData()
+        }
+
+        campaign_btn.setOnClickListener {
+            getCampaignListData()
+        }
+
         recyclerView = view.findViewById(R.id.recycleView_profile)
         recyclerView?.setHasFixedSize(true)
         recyclerView?.layoutManager = LinearLayoutManager(context)
 
     }
 
-    fun getData(){
+    fun getSellingPostData(){
 
         val sharedPref = PreferenceHelper(requireActivity())
 
@@ -86,6 +93,29 @@ class ProfileFragment : Fragment() {
             }
 
             override fun onFailure(call: Call<MutableList<SellingPostItem>>, t: Throwable) {
+                Log.e("tag", t.toString())
+            }
+        })
+    }
+
+    fun getCampaignListData(){
+
+        val sharedPref = PreferenceHelper(requireActivity())
+
+        RetrofitInterface().campaignPostProfile(
+            sharedPref.getInt(Constant.PREF_ID)!!
+        ).enqueue(object : Callback<MutableList<CampaignModel>> {
+
+            override fun onResponse(
+                call: Call<MutableList<CampaignModel>>,
+                response: Response<MutableList<CampaignModel>>
+            ) {
+                campaignListProfileAdapter = context?.let { CampaignListProfileAdapter(it, response.body() as MutableList<CampaignModel>) }
+                recyclerView?.adapter = campaignListProfileAdapter
+                campaignListProfileAdapter?.notifyDataSetChanged()
+            }
+
+            override fun onFailure(call: Call<MutableList<CampaignModel>>, t: Throwable) {
                 Log.e("tag", t.toString())
             }
         })

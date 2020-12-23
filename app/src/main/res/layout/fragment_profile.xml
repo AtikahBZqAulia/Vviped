@@ -156,6 +156,7 @@
         app:layout_constraintTop_toBottomOf="@+id/linearLayout">
 
         <ImageButton
+            android:id="@+id/product_btn"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -163,11 +164,12 @@
             android:src="@drawable/ic_baseline_spa_24" />
 
         <ImageButton
+            android:id="@+id/campaign_btn"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:src="@drawable/ic_campaign"
+            android:layout_weight="1"
             android:background="@color/colorWhite"
-            android:layout_weight="1"/>
+            android:src="@drawable/ic_campaign" />
 
 
     </LinearLayout>
