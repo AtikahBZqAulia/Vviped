@@ -17,6 +17,7 @@ import com.ilkom.vviped.model.login.PreferenceHelper
 import com.ilkom.vviped.settings.SettingsActivity
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.activity_user_login.*
+import kotlinx.android.synthetic.main.fragment_home.*
 import kotlinx.android.synthetic.main.fragment_profile.*
 import kotlinx.android.synthetic.main.fragment_profile.view.*
 import retrofit2.Call
@@ -106,6 +107,11 @@ class ProfileFragment : Fragment() {
                 recyclerView?.adapter = sellingPostProfileAdapter
                 sellingPostProfileAdapter?.notifyDataSetChanged()
                 refreshProduct()
+                if(progressBarTabProfile != null) {
+                    progressBarTabProfile.visibility = View.GONE
+                } else {
+                    progressBarTabProfile.visibility = View.VISIBLE
+                }
 
             }
 
@@ -131,6 +137,11 @@ class ProfileFragment : Fragment() {
                 recyclerView?.adapter = campaignListProfileAdapter
                 campaignListProfileAdapter?.notifyDataSetChanged()
                 refreshCampaign()
+                if(progressBarTabProfile != null) {
+                    progressBarTabProfile.visibility = View.GONE
+                } else {
+                    progressBarTabProfile.visibility = View.VISIBLE
+                }
             }
 
             override fun onFailure(call: Call<MutableList<CampaignModel>>, t: Throwable) {

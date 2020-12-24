@@ -49,6 +49,7 @@ class HomeFragment : Fragment() {
         recyclerView?.layoutManager = LinearLayoutManager(context)
 
         getData()
+
         return view
     }
 
@@ -113,7 +114,6 @@ class HomeFragment : Fragment() {
 
 
     fun getData(){
-
         val feedsService = SellingPostRepository.create()
         feedsService.getFeeds().enqueue(object : Callback<MutableList<SellingPostItem>> {
             override fun onResponse(
@@ -124,6 +124,13 @@ class HomeFragment : Fragment() {
                 recyclerView?.adapter = sellingPostAdapter
                 sellingPostAdapter?.notifyDataSetChanged()
                 refreshTabHomeProduct()
+                if(progressBarTabHome != null) {
+                    progressBarTabHome.visibility = View.GONE
+                } else {
+                    progressBarTabHome.visibility = View.VISIBLE
+                }
+
+
             }
 
             override fun onFailure(call: Call<MutableList<SellingPostItem>>, t: Throwable) {

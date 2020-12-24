@@ -87,6 +87,11 @@ class CampaignListFragment : Fragment() {
                 recyclerView?.adapter = campaignListAdapter
                 campaignListAdapter?.notifyDataSetChanged()
                 refreshTabCampaign()
+                if(progressBarTabCampign != null) {
+                    progressBarTabCampign.visibility = View.GONE
+                } else {
+                    progressBarTabCampign.visibility = View.VISIBLE
+                }
             }
 
             override fun onFailure(call: Call<MutableList<CampaignModel>>, t: Throwable) {

@@ -61,6 +61,7 @@
             android:scaleType="centerCrop"
             android:src="@drawable/profilpic" />
 
+
         <TextView
             android:id="@+id/product_name"
             android:layout_width="match_parent"
