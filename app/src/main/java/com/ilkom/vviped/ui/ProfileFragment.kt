@@ -77,21 +77,19 @@ class ProfileFragment : Fragment() {
 
     }
 
-    private fun refreshProduct() {
-        swipeToRefreshProfileLayout.setOnRefreshListener {
-            Toast.makeText(context, "product page refreshed!", Toast.LENGTH_SHORT).show()
-            swipeToRefreshProfileLayout.isRefreshing = false
-
-        }
-    }
-
     private fun refreshCampaign() {
         swipeToRefreshProfileLayout.setOnRefreshListener {
-            Toast.makeText(context, "product campaign refreshed!", Toast.LENGTH_SHORT).show()
+            getCampaignListData()
             swipeToRefreshProfileLayout.isRefreshing = false
-
         }
     }
+    private fun refreshProduct() {
+        swipeToRefreshProfileLayout.setOnRefreshListener {
+            getSellingPostData()
+            swipeToRefreshProfileLayout.isRefreshing = false
+        }
+    }
+
 
     fun getSellingPostData(){
         val sharedPref = PreferenceHelper(requireActivity())

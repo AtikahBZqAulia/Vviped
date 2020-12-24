@@ -102,7 +102,7 @@ class SellingPostProfileAdapter(
                                             call: Call<MutableList<SellingPostItem>>,
                                             response: Response<MutableList<SellingPostItem>>
                                         ) {
-                                            Toast.makeText(context, "Berhasil dihapus", Toast.LENGTH_SHORT).show()
+                                            Toast.makeText(context, "Berhasil dihapus! Swipe down untuk refresh halaman", Toast.LENGTH_LONG).show()
                                         }
                                     })
                                 })

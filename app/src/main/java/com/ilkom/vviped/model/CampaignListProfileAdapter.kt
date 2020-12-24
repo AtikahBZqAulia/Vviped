@@ -12,6 +12,7 @@ import android.widget.*
 import androidx.recyclerview.widget.RecyclerView
 import com.ilkom.vviped.R
 import com.squareup.picasso.Picasso
+import kotlinx.android.synthetic.main.fragment_profile.*
 import okhttp3.MediaType
 import okhttp3.RequestBody
 import retrofit2.Call
@@ -78,7 +79,7 @@ class CampaignListProfileAdapter(
                                             call: Call<MutableList<CampaignModel>>,
                                             response: Response<MutableList<CampaignModel>>
                                         ) {
-                                            Toast.makeText(context, "Berhasil dihapus", Toast.LENGTH_SHORT).show()
+                                            Toast.makeText(context, "Berhasil dihapus! Swipe down untuk refresh halaman", Toast.LENGTH_LONG).show()
                                         }
                                     })
                                 })
@@ -119,6 +120,7 @@ class CampaignListProfileAdapter(
             }
         }
     }
+
 
     override fun onCreateViewHolder(
         parent: ViewGroup,
