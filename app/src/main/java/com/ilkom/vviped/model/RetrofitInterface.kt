@@ -57,6 +57,12 @@ interface RetrofitInterface {
         @Part("id") id: RequestBody,
     ): Call<MutableList<SellingPostItem>>
 
+    @Multipart
+    @POST("api.php?apicall=delete_campaignpost")
+    fun deleteCampaignProfile(
+        @Part("id") id: RequestBody,
+    ): Call<MutableList<CampaignModel>>
+
 
     @Multipart
     @POST("api.php?apicall=register")

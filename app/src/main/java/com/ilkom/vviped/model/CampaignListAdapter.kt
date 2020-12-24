@@ -72,7 +72,8 @@ class CampaignListAdapter(
                 RetrofitInterface().userActivities(
                     sharedPref.getInt(Constant.PREF_ID)!!,
                     sharedPref.getString(Constant.PREF_USERNAME)!!,
-                    RequestBody.create(MediaType.parse("multipart/form-data"), "Click Jual Produk Saya for campaign  "+campaignname.text.toString()),
+                    RequestBody.create(MediaType.parse("multipart/form-data"),
+                        "Click Jual Produk Saya for campaign  "+campaignname.text.toString()),
                 ).enqueue(object : Callback<UploadResponse> {
                     override fun onFailure(call: Call<UploadResponse>, t: Throwable) {
                     }
@@ -91,9 +92,9 @@ class CampaignListAdapter(
                 shareIntent.action = Intent.ACTION_SEND
                 shareIntent.type="text/plain"
                 shareIntent.putExtra(Intent.EXTRA_TEXT,
-                    "Saya mendukung kampanye: $campaign_name. " +
+                    "Saya mendukung campaign: $campaign_name. " +
                             "Bantu donasi dengan menjual barang kamu atau membeli barang untuk " +
-                            "ikut mendukung campaign ini hanya di Vviped! (link)"
+                            "ikut mendukung penggalangan dana ini hanya di Vviped! (link)"
                 )
                 val sendIntent = Intent.createChooser(shareIntent, null)
                 context.startActivity(sendIntent)

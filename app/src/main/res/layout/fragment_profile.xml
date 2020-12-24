@@ -169,7 +169,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="@color/colorWhite"
-            android:src="@drawable/ic_campaign" />
+            android:src="@drawable/ic_campaign_post" />
 
 
     </LinearLayout>

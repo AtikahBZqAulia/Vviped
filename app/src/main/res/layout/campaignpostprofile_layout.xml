@@ -43,6 +43,14 @@
                 android:text="akunsaya"
                 android:textColor="@color/colorBlack" />
 
+            <ImageButton
+                android:id="@+id/btn_context_menu_campaign"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="end"
+                android:src="@drawable/ic_menu_dots"
+                app:backgroundTint="@color/colorWhite" />
+
         </LinearLayout>
 
         <ImageView
