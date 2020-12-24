@@ -108,15 +108,16 @@
 
             <TextView
                 android:id="@+id/campaigntitle"
-                android:layout_width="wrap_content"
+                android:layout_width="300dp"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/cabin"
                 android:paddingLeft="5dp"
                 android:paddingRight="5dp"
-                android:text="Donasi Hijrah by Salim FMIPA UNJ"
+                android:text="Donasi Hijrah by Salim FMIPA UNJDonasi Hijrah by Salim FMIPA UNJDonasi Hijrah by Salim FMIPA UNJ"
                 android:layout_marginBottom="8dp"
                 android:textColor="@color/colorBlack"
-                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textSize="14sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toEndOf="@id/icon_campaign"
                 app:layout_constraintTop_toTopOf="parent"
@@ -124,47 +125,73 @@
                 tools:layout_editor_absoluteX="40dp" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <RelativeLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:orientation="horizontal">
 
+
             <TextView
                 android:id="@+id/deskripsi"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginStart="10dp"
                 android:layout_marginLeft="10dp"
+                android:layout_toStartOf="@+id/harga_produk"
+                android:layout_toLeftOf="@+id/harga_produk"
                 android:text="Deskripsi :"
                 android:textColor="@color/colorBlack"
                 android:textSize="14sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:layout_editor_absoluteY="2dp" />
+
+            <TextView
+                android:id="@+id/rp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rp"
+                android:layout_marginRight="2dp"
+                android:textColor="@color/colorBlack"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/hargaproduk"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@+id/deskripsi"
+                tools:layout_editor_absoluteY="0dp" />
+
 
             <TextView
                 android:id="@+id/hargaproduk"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
+                android:layout_marginRight="22dp"
                 android:gravity="end"
-                android:text="Rp1.000.000"
+                android:text="1.000.000"
                 android:textAlignment="textEnd"
                 android:textColor="@color/colorBlack"
                 android:textSize="16sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent" />
 
-        </RelativeLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
 
         <TextView
             android:id="@+id/produkdeskripsi"
-            android:layout_width="wrap_content"
+            android:layout_width="280dp"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
-            android:text="Buku bekas, kualitas masih sekitar 90%. "
+            android:text="Buku bekas, kualitas masih sekitar 90% Buku bekas, kualitas masih sekitar 90% Buku bekas, kualitas masih sekitar 90%. "
             android:textColor="@color/colorBlack"
             android:textSize="14sp" />
+
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -172,42 +199,42 @@
             android:layout_marginTop="8dp"
             android:orientation="horizontal">
 
+
             <TextView
                 android:id="@+id/lokasi"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
-                android:text="Lokasi :"
+                android:text="Lokasi:"
                 android:textColor="@color/colorBlack"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/sale_tv"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="end"
                 android:layout_marginRight="20dp"
-                android:gravity="end"
-                android:text="SALE"
-                android:textAlignment="textEnd"
-                android:textColor="@color/colorBlack"
-                android:textSize="16sp"
-                android:textStyle="bold" />
+                android:layout_marginBottom="5dp"
+                android:text="ON SALE"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:layout_marginEnd="20dp" />
+
         </RelativeLayout>
 
         <TextView
             android:id="@+id/lokasipenjual"
-            android:layout_width="wrap_content"
+            android:layout_width="280dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
-            android:paddingBottom="5dp"
+            android:paddingBottom="10dp"
             android:text="Rawamangun, Jakarta Timur"
             android:textColor="@color/colorBlack"
             android:textSize="14sp"
-            android:layout_marginBottom="20dp"/>
-
+            android:layout_marginBottom="30dp"/>
         <TextView
             android:id="@+id/whatsapp_number"
             android:layout_width="wrap_content"

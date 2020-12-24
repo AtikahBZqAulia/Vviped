@@ -39,7 +39,6 @@ class SellingPostsAdapter(
         val productdesc = itemView.findViewById<TextView>(R.id.produk_deskripsi)
         val sellerlocation = itemView.findViewById<TextView>(R.id.lokasi_penjual)
         val buyButton = itemView.findViewById<Button>(R.id.btn_buy)
-        val soldTextView = itemView.findViewById<TextView>(R.id.sold_tv)
         val whatsappNumber = itemView.findViewById<TextView>(R.id.whatsapp_number)
         val share_post = itemView.findViewById<ImageButton>(R.id.share_btn)
 
@@ -56,7 +55,6 @@ class SellingPostsAdapter(
             productprice.text = sellingPost.product_price
             productdesc.text = sellingPost.product_description
             sellerlocation.text = sellingPost.seller_location
-            soldTextView.text = sellingPost.sold
             whatsappNumber.text = sellingPost.whatsapp
 
             val seller_username = usernamepost.text.toString()
@@ -149,7 +147,6 @@ class SellingPostsAdapter(
         viewHolder.productprice.text = sellingPosts[position].product_price
         viewHolder.productdesc.text = sellingPosts[position].product_description
         viewHolder.sellerlocation.text = sellingPosts[position].seller_location
-        viewHolder.soldTextView.text = sellingPosts[position].sold
         viewHolder.whatsappNumber.text = sellingPosts[position].whatsapp
         viewHolder.bindView(sellingPosts[position])
 

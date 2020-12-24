@@ -6,6 +6,7 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -56,6 +57,7 @@ class ProfileFragment : Fragment() {
         view.user_email.text = sharedPref.getString(Constant.PREF_EMAIL)
         Picasso.get().load(sharedPref.getString(Constant.PREF_PROFPIC)).into(profpic)
 
+
         btn_settings.setOnClickListener {
             val intent = Intent(activity, SettingsActivity::class.java)
             startActivity(intent)
@@ -75,8 +77,23 @@ class ProfileFragment : Fragment() {
 
     }
 
-    fun getSellingPostData(){
+    private fun refreshProduct() {
+        swipeToRefreshProfileLayout.setOnRefreshListener {
+            Toast.makeText(context, "product page refreshed!", Toast.LENGTH_SHORT).show()
+            swipeToRefreshProfileLayout.isRefreshing = false
 
+        }
+    }
+
+    private fun refreshCampaign() {
+        swipeToRefreshProfileLayout.setOnRefreshListener {
+            Toast.makeText(context, "product campaign refreshed!", Toast.LENGTH_SHORT).show()
+            swipeToRefreshProfileLayout.isRefreshing = false
+
+        }
+    }
+
+    fun getSellingPostData(){
         val sharedPref = PreferenceHelper(requireActivity())
 
         RetrofitInterface().sellingPostProfile(
@@ -90,6 +107,8 @@ class ProfileFragment : Fragment() {
                 sellingPostProfileAdapter = context?.let { SellingPostProfileAdapter(it, response.body() as MutableList<SellingPostItem>) }
                 recyclerView?.adapter = sellingPostProfileAdapter
                 sellingPostProfileAdapter?.notifyDataSetChanged()
+                refreshProduct()
+
             }
 
             override fun onFailure(call: Call<MutableList<SellingPostItem>>, t: Throwable) {
@@ -113,6 +132,7 @@ class ProfileFragment : Fragment() {
                 campaignListProfileAdapter = context?.let { CampaignListProfileAdapter(it, response.body() as MutableList<CampaignModel>) }
                 recyclerView?.adapter = campaignListProfileAdapter
                 campaignListProfileAdapter?.notifyDataSetChanged()
+                refreshCampaign()
             }
 
             override fun onFailure(call: Call<MutableList<CampaignModel>>, t: Throwable) {

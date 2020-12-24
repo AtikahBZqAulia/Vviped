@@ -44,7 +44,6 @@ class SellingPostProfileAdapter(
         val productprice = itemView.findViewById<TextView>(R.id.hargaproduk)
         val productdesc = itemView.findViewById<TextView>(R.id.produkdeskripsi)
         val sellerlocation = itemView.findViewById<TextView>(R.id.lokasipenjual)
-        val soldTextView = itemView.findViewById<TextView>(R.id.sale_tv)
         val buttonContextMenu = itemView.findViewById<ImageButton>(R.id.btn_context_menu)
 
 
@@ -58,7 +57,6 @@ class SellingPostProfileAdapter(
             productprice.text = sellingPost.product_price
             productdesc.text = sellingPost.product_description
             sellerlocation.text = sellingPost.seller_location
-            soldTextView.text = sellingPost.sold
 
             val sharedPref = PreferenceHelper(itemView.context)
 
@@ -88,7 +86,7 @@ class SellingPostProfileAdapter(
                             AlertDialog.Builder(context)
 
                                 .setMessage("Hapus barang ini?")
-                                .setPositiveButton("Ya", DialogInterface.OnClickListener { dialogInterface, i ->
+                                .setPositiveButton("Ya",  { dialogInterface, i ->
 
                                     RetrofitInterface().deleteProductProfile(
                                         RequestBody.create(
@@ -169,7 +167,6 @@ class SellingPostProfileAdapter(
         viewHolder.productprice.text = sellingPosts[position].product_price
         viewHolder.productdesc.text = sellingPosts[position].product_description
         viewHolder.sellerlocation.text = sellingPosts[position].seller_location
-        viewHolder.soldTextView.text = sellingPosts[position].sold
         viewHolder.bindView(sellingPosts[position])
 
 
