@@ -86,11 +86,19 @@ class CampaignListFragment : Fragment() {
                 campaignListAdapter = context?.let { CampaignListAdapter(it, response.body() as MutableList<CampaignModel>) }
                 recyclerView?.adapter = campaignListAdapter
                 campaignListAdapter?.notifyDataSetChanged()
+                refreshTabCampaign()
             }
 
             override fun onFailure(call: Call<MutableList<CampaignModel>>, t: Throwable) {
                 Log.e("tag", t.toString())
             }
         })
+    }
+
+    private fun refreshTabCampaign() {
+        swipeRefreshTabCampaign.setOnRefreshListener {
+            getData()
+            swipeRefreshTabCampaign.isRefreshing = false
+        }
     }
 }

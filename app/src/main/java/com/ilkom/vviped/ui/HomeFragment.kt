@@ -111,6 +111,7 @@ class HomeFragment : Fragment() {
     }
 
 
+
     fun getData(){
 
         val feedsService = SellingPostRepository.create()
@@ -122,6 +123,7 @@ class HomeFragment : Fragment() {
                 sellingPostAdapter = context?.let { SellingPostsAdapter(it, response.body() as MutableList<SellingPostItem>) }
                 recyclerView?.adapter = sellingPostAdapter
                 sellingPostAdapter?.notifyDataSetChanged()
+                refreshTabHomeProduct()
             }
 
             override fun onFailure(call: Call<MutableList<SellingPostItem>>, t: Throwable) {
@@ -129,7 +131,15 @@ class HomeFragment : Fragment() {
             }
         })
     }
-    
+
+    private fun refreshTabHomeProduct() {
+        swipeRefreshTabHomeProduct.setOnRefreshListener {
+            getData()
+            swipeRefreshTabHomeProduct.isRefreshing = false
+        }
+    }
+
+
     fun View.hideKeyboard() {
         val inputMethodManager = requireContext().getSystemService(android.content.Context.INPUT_METHOD_SERVICE) as? InputMethodManager
         inputMethodManager?.hideSoftInputFromWindow(this.windowToken, 0)
