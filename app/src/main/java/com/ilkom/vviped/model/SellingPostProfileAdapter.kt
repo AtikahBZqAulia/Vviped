@@ -10,15 +10,14 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.*
+import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
+import com.ilkom.vviped.EditProduct
 import com.ilkom.vviped.R
-import com.ilkom.vviped.UploadSellingActivity
 import com.ilkom.vviped.model.login.Constant
 import com.ilkom.vviped.model.login.Constant.Companion.PREF_ID
 import com.ilkom.vviped.model.login.PreferenceHelper
 import com.squareup.picasso.Picasso
-import kotlinx.android.synthetic.main.activity_edit_profile_user.*
-import kotlinx.android.synthetic.main.activity_upload_selling.*
 import okhttp3.MediaType
 import okhttp3.RequestBody
 import retrofit2.Call
@@ -44,6 +43,7 @@ class SellingPostProfileAdapter(
         val productprice = itemView.findViewById<TextView>(R.id.hargaproduk)
         val productdesc = itemView.findViewById<TextView>(R.id.produkdeskripsi)
         val sellerlocation = itemView.findViewById<TextView>(R.id.lokasipenjual)
+        val whatsappNumber = itemView.findViewById<TextView>(R.id.whatsapp_number)
         val buttonContextMenu = itemView.findViewById<ImageButton>(R.id.btn_context_menu)
 
 
@@ -57,16 +57,18 @@ class SellingPostProfileAdapter(
             productprice.text = sellingPost.product_price
             productdesc.text = sellingPost.product_description
             sellerlocation.text = sellingPost.seller_location
-
-            val sharedPref = PreferenceHelper(itemView.context)
+            whatsappNumber.text = sellingPost.whatsapp
 
             val product_id = sellingPost.id
             val productId = product_id.toString()
 
-
             val product_name = productname.text.toString()
             val product_price =  productprice.text.toString()
             val campaign_title = campaignname.text.toString()
+            val product_desc = productdesc.text.toString()
+            val product_loc = sellerlocation.text.toString()
+            val no_whatsapp = whatsappNumber.text.toString()
+
 
             //menu  edit dan hapus product post
             buttonContextMenu.setOnClickListener {
@@ -78,8 +80,16 @@ class SellingPostProfileAdapter(
                 pop.setOnMenuItemClickListener { item ->
                     when(item.itemId){
                         R.id.menu_edit_post->{
-                            Toast.makeText(context, "Ubah", Toast.LENGTH_SHORT).show()
-
+                            val context = buttonContextMenu.context
+                            val intent = Intent(context, EditProduct::class.java)
+                            intent.putExtra("nama_campaign", campaign_title )
+                            intent.putExtra("nama_produk", product_name )
+                            intent.putExtra("harga_produk", product_price )
+                            intent.putExtra("deskripsi_produk", product_desc )
+                            intent.putExtra("lokasi_produk", product_loc )
+                            intent.putExtra("whatsapp_penjual", no_whatsapp )
+                            intent.putExtra("id_product", sellingPost.id.toString() )
+                            context.startActivity(intent)
                         }
                         R.id.menu_delete_post->{
 

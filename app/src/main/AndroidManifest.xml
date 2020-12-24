@@ -20,7 +20,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoStatusBar"
         android:usesCleartextTraffic="true">
-        <activity android:name=".settings.ContactMaura"></activity>
+        <activity android:name=".EditProduct"></activity>
+        <activity android:name=".settings.ContactMaura" />
         <activity android:name=".settings.ContactOcta" />
         <activity android:name=".settings.ContactAtikah" />
         <activity android:name=".settings.SettingsContactInstagram" />

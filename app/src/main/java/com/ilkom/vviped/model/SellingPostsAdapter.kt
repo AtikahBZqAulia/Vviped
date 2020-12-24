@@ -44,7 +44,6 @@ class SellingPostsAdapter(
 
         val sharedPref = PreferenceHelper(share_post.context)
 
-
         fun bindView(sellingPost: SellingPostItem) {
             usernamepost.text = sellingPost.usernamepost
             Picasso.get().load(sellingPost.user_profpict).into(profpictpost)
@@ -67,7 +66,6 @@ class SellingPostsAdapter(
             buyButton.setOnClickListener {
                 val context = buyButton.context
                 val intent = Intent(context, ChatForBuying::class.java)
-
                 intent.putExtra("seller_username", seller_username )
                 intent.putExtra("product_name", product_name )
                 intent.putExtra("product_price", product_price )
