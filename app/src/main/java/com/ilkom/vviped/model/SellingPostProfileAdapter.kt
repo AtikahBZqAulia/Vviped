@@ -123,7 +123,7 @@ class SellingPostProfileAdapter(
                                 "Bantu berdonasi dengan membeli barang: $product_name " +
                                         "seharga Rp$product_price " +
                                         "guna mendukung galang dana untuk campaign: $campaign_title. " +
-                                        "Beli barangnya sekarang hanya di Vviped! ( http://bit.ly/Vviped_App )"
+                                        "Beli barangnya sekarang hanya di Vviped! http://bit.ly/Vviped_App "
                             )
                             val sendIntent = Intent.createChooser(shareIntent, "Bagikan product ini ")
                             context.startActivity(sendIntent)

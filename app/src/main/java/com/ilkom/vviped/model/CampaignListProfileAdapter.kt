@@ -4,6 +4,7 @@ import android.app.AlertDialog
 import android.content.Context
 import android.content.DialogInterface
 import android.content.Intent
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -16,6 +17,7 @@ import okhttp3.RequestBody
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
+import java.lang.Exception
 
 class CampaignListProfileAdapter(
     private var context: Context,
@@ -32,7 +34,7 @@ class CampaignListProfileAdapter(
         val campaigncategory = itemView.findViewById<TextView>(R.id.campaign_category)
         val campaignreceiver = itemView.findViewById<TextView>(R.id.campaign_penerima)
         val usagedetails = itemView.findViewById<TextView>(R.id.usage_detail)
-        val buttonContextMenuCampaign = itemView.findViewById<ImageButton>(R.id.btn_context_menu_campaign)
+        val btnContextMenuCampaign = itemView.findViewById<ImageButton>(R.id.btn_context_menu_campaign)
 
 
         fun bindView(campaignItem: CampaignModel) {
@@ -49,78 +51,72 @@ class CampaignListProfileAdapter(
             val campaignId = campaign_id.toString()
             val campaign_name = campaignname.text.toString()
 
-
-            //menu  edit, hapus, share product campaign
-            buttonContextMenuCampaign.setOnClickListener {
-                Toast.makeText(context, "clicked", Toast.LENGTH_SHORT).show()
-
-//                val context = buttonContextMenuCampaign.context
-//                val popCampaign = PopupMenu(context, it)
-//                popCampaign.inflate(R.menu.context_menu_campaign)
-
-                val context = buttonContextMenuCampaign.context
-                val pop = PopupMenu(context, it)
-                pop.inflate(R.menu.context_menu_campaign)
-
-                pop.setOnMenuItemClickListener { item ->
-                    Toast.makeText(context, "clicked dalem", Toast.LENGTH_SHORT).show()
-
-                    when(item.itemId){
-                        R.id.menu_edit_campaign->{
-//                            Toast.makeText(context, "Ubah", Toast.LENGTH_SHORT).show()
-
+            btnContextMenuCampaign.setOnClickListener {
+                val popup = PopupMenu(context, it)
+                popup.inflate(R.menu.context_menu_post)
+                popup.setOnMenuItemClickListener { itemCampaign ->
+                    when(itemCampaign.itemId){
+                        R.id.menu_edit_post->{
+                            Toast.makeText(context, "Ubah", Toast.LENGTH_SHORT).show()
                         }
-                        R.id.menu_delete_campaign->{
+                        R.id.menu_delete_post->{
+                            AlertDialog.Builder(context)
+                                .setMessage("Hapus campaign ini?")
+                                .setPositiveButton("Ya", DialogInterface.OnClickListener { dialogInterface, i ->
 
-//                            AlertDialog.Builder(context)
-//
-//                                .setMessage("Hapus campaign ini?")
-//                                .setPositiveButton("Ya", DialogInterface.OnClickListener { dialogInterface, i ->
-//
-//                                    RetrofitInterface().deleteCampaignProfile(
-//                                        RequestBody.create(
-//                                            MediaType.parse("multipart/form-data"),
-//                                            campaignId
-//                                        ),
-//                                    ).enqueue(object : Callback<MutableList<CampaignModel>> {
-//
-//                                        override fun onFailure(call: Call<MutableList<CampaignModel>>, t: Throwable) {
-//                                            Toast.makeText(context, "Gagal dihapus.", Toast.LENGTH_SHORT).show()
-//                                        }
-//                                        override fun onResponse(
-//                                            call: Call<MutableList<CampaignModel>>,
-//                                            response: Response<MutableList<CampaignModel>>
-//                                        ) {
-//                                            Toast.makeText(context, "Berhasil dihapus", Toast.LENGTH_SHORT).show()
-//                                        }
-//                                    })
-//                                })
-//                                .setNegativeButton("Tidak", DialogInterface.OnClickListener { dialogInterface, i ->
-//                                })
-//                                .show()
+                                    RetrofitInterface().deleteCampaignProfile(
+                                        RequestBody.create(
+                                            MediaType.parse("multipart/form-data"),
+                                            campaignId
+                                        ),
+                                    ).enqueue(object : Callback<MutableList<CampaignModel>> {
 
+                                        override fun onFailure(call: Call<MutableList<CampaignModel>>, t: Throwable) {
+                                            Toast.makeText(context, "Gagal dihapus.", Toast.LENGTH_SHORT).show()
+                                        }
+                                        override fun onResponse(
+                                            call: Call<MutableList<CampaignModel>>,
+                                            response: Response<MutableList<CampaignModel>>
+                                        ) {
+                                            Toast.makeText(context, "Berhasil dihapus", Toast.LENGTH_SHORT).show()
+                                        }
+                                    })
+                                })
+                                .setNegativeButton("Tidak", DialogInterface.OnClickListener { dialogInterface, i ->
+                                })
+                                .show()
                         }
-                        R.id.menu_share_campaign->{
-//                            val context = buttonContextMenuCampaign.context
-//                            val shareIntent = Intent()
-//                            shareIntent.action = Intent.ACTION_SEND
-//                            shareIntent.type="text/plain"
-//                            shareIntent.putExtra(
-//                                Intent.EXTRA_TEXT,
-//                                "Saya mendukung campaign: $campaign_name. " +
-//                                        "Bantu donasi dengan menjual barang kamu atau membeli barang untuk " +
-//                                        "ikut mendukung penggalangan dana ini hanya di Vviped! ( http://bit.ly/Vviped_App )"
-//                            )
-//                            val sendIntent = Intent.createChooser(shareIntent, "Bagikan product ini ")
-//                            context.startActivity(sendIntent)
+                        R.id.menu_share_post->{
+                            val context = btnContextMenuCampaign.context
+                            val shareIntent = Intent()
+                            shareIntent.action = Intent.ACTION_SEND
+                            shareIntent.type="text/plain"
+                            shareIntent.putExtra(Intent.EXTRA_TEXT,
+                                "Saya mendukung campaign: $campaign_name. " +
+                                        "Bantu donasi dengan menjual barang kamu atau membeli barang untuk " +
+                                        "ikut dukung penggalangan dana ini hanya di Vviped! http://bit.ly/Vviped_App "
+                            )
+                            val sendIntent = Intent.createChooser(shareIntent, null)
+                            context.startActivity(sendIntent)
+
                         }
                     }
                     true
                 }
-
+                // munculin icon
+                try {
+                    val fieldMPopup = PopupMenu::class.java.getDeclaredField("mPopup")
+                    fieldMPopup.isAccessible = true
+                    val mPopup = fieldMPopup.get(popup)
+                    mPopup.javaClass
+                        .getDeclaredMethod("setForceShowIcon", Boolean::class.java)
+                        .invoke(mPopup, true)
+                } catch (e: Exception){
+                    Log.e("Main", "Error showing menu icons", e )
+                } finally {
+                    popup.show()
+                }
             }
-
-
         }
     }
 
