@@ -76,7 +76,7 @@
                     android:id="@+id/layoutCreateEmail"
                     android:layout_width="match_parent"
                     android:layout_height="55dp"
-                    android:layout_marginTop="40dp"
+                    android:layout_marginTop="20dp"
                     android:background="@drawable/btn_corner"
                     android:gravity="center_vertical"
                     android:orientation="horizontal"
@@ -92,7 +92,8 @@
                         android:layout_marginLeft="10dp"
                         android:layout_marginBottom="10dp"
                         android:src="@drawable/ic_email"
-                        app:tint="@color/colorAccent" />
+                        app:tint="@color/colorRedDarken2"
+                        />
 
                     <com.google.android.material.textfield.TextInputLayout
                         android:layout_width="match_parent"
@@ -129,7 +130,7 @@
                     android:id="@+id/layoutCreateFullname"
                     android:layout_width="match_parent"
                     android:layout_height="55dp"
-                    android:layout_marginTop="25dp"
+                    android:layout_marginTop="20dp"
                     android:background="@drawable/btn_corner"
                     android:gravity="center_vertical"
                     android:orientation="horizontal"
@@ -144,7 +145,8 @@
                         android:layout_marginLeft="10dp"
                         android:layout_marginBottom="10dp"
                         android:src="@drawable/ic_account"
-                        app:tint="@color/colorAccent" />
+                        app:tint="@color/colorRedDarken2"
+                        />
 
                     <com.google.android.material.textfield.TextInputLayout
                         android:layout_width="match_parent"
@@ -182,7 +184,7 @@
                     android:id="@+id/layoutCreateUsername"
                     android:layout_width="match_parent"
                     android:layout_height="55dp"
-                    android:layout_marginTop="25dp"
+                    android:layout_marginTop="20dp"
                     android:background="@drawable/btn_corner"
                     android:gravity="center_vertical"
                     android:orientation="horizontal"
@@ -196,7 +198,8 @@
                         android:layout_marginLeft="10dp"
                         android:layout_marginBottom="10dp"
                         android:src="@drawable/ic_baseline_person_24"
-                        app:tint="@color/colorAccent" />
+                        app:tint="@color/colorRedDarken2"
+                        />
 
                     <com.google.android.material.textfield.TextInputLayout
                         android:layout_width="match_parent"
@@ -236,7 +239,7 @@
                     android:id="@+id/layoutPassword"
                     android:layout_width="match_parent"
                     android:layout_height="55dp"
-                    android:layout_marginTop="25dp"
+                    android:layout_marginTop="20dp"
                     android:background="@drawable/btn_corner"
                     android:gravity="center_vertical"
                     android:orientation="horizontal"
@@ -251,13 +254,14 @@
                         android:layout_marginBottom="12dp"
                         android:contentDescription="@string/app_name"
                         android:src="@drawable/ic_lock"
-                        app:tint="@color/colorAccent" />
+                        app:tint="@color/colorRedDarken2"
+                        />
 
                     <com.google.android.material.textfield.TextInputLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         app:passwordToggleEnabled="true"
-                        app:passwordToggleTint="@color/colorAccent2">
+                        app:passwordToggleTint="@color/colorRedDarken2">
 
                         <com.google.android.material.textfield.TextInputEditText
                             android:id="@+id/user_password"
@@ -328,7 +332,7 @@
                 android:layout_marginLeft="4dp"
                 android:layout_marginBottom="40dp"
                 android:text="Sign in "
-                android:textColor="@color/colorAccent"
+                android:textColor="@color/colorRedDarken2"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 />

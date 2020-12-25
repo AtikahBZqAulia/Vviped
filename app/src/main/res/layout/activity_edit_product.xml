@@ -36,7 +36,7 @@
                     android:layout_height="match_parent"
                     android:gravity="center"
                     android:text="Edit Product"
-                    android:textColor="@color/colorAccent2"
+                    android:textColor="@color/colorBlack"
                     android:textSize="18dp"
                     android:textStyle="bold" />
 
@@ -103,7 +103,7 @@
                         android:paddingLeft="5dp"
                         android:paddingRight="5dp"
                         android:text="Donasi Hijrah by Salim FMIPA UNJ"
-                        android:textColor="@color/colorAccentLight"
+                        android:textColor="@color/colorRedDarken2"
                         android:textSize="14sp"
                         android:textStyle="bold" />
 

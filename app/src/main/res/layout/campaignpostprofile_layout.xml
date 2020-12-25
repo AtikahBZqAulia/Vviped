@@ -41,7 +41,10 @@
                 android:gravity = "center_vertical|left|start"
                 android:textStyle="bold"
                 android:text="akunsaya"
-                android:textColor="@color/colorBlack" />
+                android:textColor="@color/colorBlack"
+                android:fontFamily="@font/cabin"
+                android:textSize="16dp"
+                />
 
             <ImageButton
                 android:id="@+id/btn_context_menu_campaign"
@@ -68,6 +71,8 @@
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="5dp"
+            android:layout_marginRight="10dp"
+            android:paddingRight="10dp"
             android:text="Bantu Pak Somat Mengobati Penyakit Kanker"
             android:textColor="@color/colorAccent2"
             android:textSize="18dp"
@@ -76,7 +81,7 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="10dp"
             android:orientation="horizontal"
             app:layout_constraintEnd_toEndOf="@+id/linear_layout1">
 
@@ -108,7 +113,8 @@
             android:textColor="@color/colorBlack"
             android:paddingBottom="5dp"
             android:textSize="14sp"
-            android:layout_alignParentLeft="true" />
+            android:layout_alignParentLeft="true"
+            android:fontFamily="@font/cabin"/>
 
         <TextView
             android:id="@+id/category"
@@ -129,7 +135,8 @@
             android:paddingBottom="3dp"
             android:text="Kegiatan Sosial, Kesehatan"
             android:textColor="@color/colorBlack"
-            android:textSize="14sp" />
+            android:textSize="14sp"
+            android:fontFamily="@font/cabin"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -149,7 +156,8 @@
             android:paddingBottom="3dp"
             android:text="Pak Somat Baharuddin"
             android:textColor="@color/colorBlack"
-            android:textSize="14sp" />
+            android:textSize="14sp"
+            android:fontFamily="@font/cabin"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -170,7 +178,8 @@
             android:paddingBottom="6dp"
             android:text="Biaya rumah sakit Rp.1.000.000"
             android:textColor="@color/colorBlack"
-            android:textSize="14sp" />
+            android:textSize="14sp"
+            android:fontFamily="@font/cabin"/>
 
 
     </LinearLayout>

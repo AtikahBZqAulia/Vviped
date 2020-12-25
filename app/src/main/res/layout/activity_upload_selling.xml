@@ -82,7 +82,7 @@
                         android:textStyle="bold"
                         android:fontFamily="@font/cabin"
                         android:text="Donasi Hijrah by Salim FMIPA UNJ"
-                        android:textColor="@color/colorAccentLight"
+                        android:textColor="@color/colorRedDarken2"
                         android:textSize="14sp"
 
                         />

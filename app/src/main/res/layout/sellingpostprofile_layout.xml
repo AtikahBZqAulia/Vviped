@@ -43,6 +43,8 @@
                 android:layout_weight="1"
                 android:textColor="@color/colorBlack"
                 android:textStyle="bold"
+                android:fontFamily="@font/cabin"
+                android:textSize="16dp"
                 />
 
 
@@ -71,10 +73,14 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:paddingRight="10dp"
             android:text="Buku Materi Matematika SMA"
             android:textColor="@color/colorAccent2"
             android:textSize="18dp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:fontFamily="@font/cabin"
+            />
         <TextView
             android:id="@+id/produkkondisi"
             android:layout_width="wrap_content"
@@ -111,7 +117,6 @@
                 android:id="@+id/campaigntitle"
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/cabin"
                 android:paddingLeft="5dp"
                 android:paddingRight="5dp"
                 android:text="Donasi Hijrah by Salim FMIPA UNJDonasi Hijrah by Salim FMIPA UNJDonasi Hijrah by Salim FMIPA UNJ"
@@ -191,7 +196,9 @@
             android:layout_marginRight="10dp"
             android:text="Buku bekas, kualitas masih sekitar 90% Buku bekas, kualitas masih sekitar 90% Buku bekas, kualitas masih sekitar 90%. "
             android:textColor="@color/colorBlack"
-            android:textSize="14sp" />
+            android:textSize="14sp"
+            android:fontFamily="@font/cabin"
+            />
 
 
         <RelativeLayout
@@ -235,7 +242,9 @@
             android:text="Rawamangun, Jakarta Timur"
             android:textColor="@color/colorBlack"
             android:textSize="14sp"
-            android:layout_marginBottom="30dp"/>
+            android:layout_marginBottom="30dp"
+            android:fontFamily="@font/cabin"
+            />
         <TextView
             android:id="@+id/whatsapp_number"
             android:layout_width="wrap_content"

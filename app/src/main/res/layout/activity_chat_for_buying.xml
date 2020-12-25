@@ -71,19 +71,17 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/productimage" />
+             />
 
         <TextView
             android:id="@+id/rp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="4dp"
-
             android:text="Rp"
-            android:textColor="@color/colorAccent2"
+            android:textColor="@color/colorRedDarken2"
             android:textSize="16sp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
             app:layout_constraintEnd_toStartOf="@+id/product_price"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
@@ -100,7 +98,7 @@
             android:paddingLeft="5dp"
             android:paddingRight="5dp"
             android:text="70.000"
-            android:textColor="@color/colorAccent2"
+            android:textColor="@color/colorRedDarken2"
             android:textSize="16sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
