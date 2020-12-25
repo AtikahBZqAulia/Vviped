@@ -59,7 +59,8 @@
                 android:inputType="text"
                 android:imeOptions="actionDone"
                 android:gravity="center_vertical"
-                android:hint="Search" />
+                android:hint="Search"
+                android:fontFamily="@font/cabin"/>
 
         </LinearLayout>
 
@@ -90,7 +91,8 @@
                 android:orientation="horizontal"
                 android:paddingLeft="12dp"
                 android:paddingRight="12dp"
-                android:scrollbarStyle="outsideOverlay">
+                android:scrollbarStyle="outsideOverlay"
+                >
 
                 <Button
                     android:id="@+id/kategori1"
@@ -104,6 +106,8 @@
                     android:text="Pakaian"
                     android:textAllCaps="false"
                     android:textColor="@color/colorBlack"
+                    android:fontFamily="@font/cabin"
+
                      />
 
                 <Button
@@ -118,6 +122,7 @@
                     android:text="Buku"
                     android:textAllCaps="false"
                     android:textColor="@color/colorBlack"
+                    android:fontFamily="@font/cabin"
                     />
 
                 <Button
@@ -132,6 +137,7 @@
                     android:textAllCaps="false"
                     android:background="@drawable/btn_product_category"
                     android:textColor="@color/colorBlack"
+                    android:fontFamily="@font/cabin"
                      />
 
                 <Button
@@ -146,6 +152,7 @@
                     android:paddingRight="10dp"
                     android:text="Makeup"
                     android:textAllCaps="false"
+                    android:fontFamily="@font/cabin"
                      />
 
                 <Button
@@ -160,6 +167,7 @@
                     android:paddingRight="10dp"
                     android:text="Skincare"
                     android:textAllCaps="false"
+                    android:fontFamily="@font/cabin"
                     />
 
             </LinearLayout>

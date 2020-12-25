@@ -4,7 +4,7 @@
 
 
     <solid
-        android:color="@color/colorAccent2"
+        android:color="@color/colorRedDarken2"
         ></solid>
 
     <corners

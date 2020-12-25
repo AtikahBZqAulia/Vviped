@@ -36,7 +36,9 @@
                     android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:fontFamily="@font/cabin"
+                    />
 
                 <ImageButton
                     android:id="@+id/btn_settings"
@@ -80,7 +82,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/info_layout"
             android:layout_marginLeft="30dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="15dp"
             >
 
             <de.hdodenhof.circleimageview.CircleImageView
@@ -118,7 +120,9 @@
                     android:textAlignment="center"
                     android:textColor="@color/colorBlack"
                     android:textSize="18sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:fontFamily="@font/cabin"
+                    />
             </LinearLayout>
 
             <LinearLayout
@@ -137,10 +141,11 @@
                         android:id="@+id/user_email"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="email"
+                        android:text="mauraqoonitah@gmail.com"
                         android:textColor="@color/colorTextSecondary"
                         android:textSize="14sp"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        />
 
                 </LinearLayout>
 
@@ -153,26 +158,60 @@
     <LinearLayout
         android:id="@+id/tabProfile"
         android:layout_width="match_parent"
-        android:layout_height="35dp"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp"
         tools:ignore="MissingConstraints"
         android:orientation="horizontal"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout">
 
-        <ImageButton
-            android:id="@+id/product_btn"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@color/colorWhite"
-            android:src="@drawable/ic_baseline_spa_24" />
+            android:orientation="vertical"
+            android:layout_gravity="center">
+
+            <ImageButton
+                android:id="@+id/product_btn"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="@color/colorWhite"
+                android:src="@drawable/ic_baseline_spa_24" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Product saya"
+                android:textSize="10sp"
+                android:gravity="center_horizontal">
+
+            </TextView>
+        </LinearLayout>
+
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_weight="1"
+            android:layout_gravity="center">
 
         <ImageButton
             android:id="@+id/campaign_btn"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
             android:layout_weight="1"
             android:background="@color/colorWhite"
             android:src="@drawable/ic_campaign_post" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Campaign saya"
+                android:textSize="10sp"
+                android:gravity="center_horizontal">
+
+            </TextView>
+
+    </LinearLayout>
 
 
     </LinearLayout>
@@ -190,7 +229,7 @@
         android:id="@+id/swipeToRefreshProfileLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="185dp"
+        android:layout_marginTop="195dp"
         >
 
         <androidx.recyclerview.widget.RecyclerView

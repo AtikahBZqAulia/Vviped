@@ -42,7 +42,12 @@
                     android:textStyle="bold"
                     android:layout_weight="1"
                     android:gravity = "center_vertical|left|start"
-                    android:layout_alignParentLeft="true"/>
+                    android:layout_alignParentLeft="true"
+                    android:fontFamily="@font/cabin"
+                    android:textSize="16dp"
+
+                    />
+
                 <ImageButton
                     android:id="@+id/share_btn"
                     android:layout_width="50dp"
@@ -50,6 +55,7 @@
                     android:src="@drawable/ic_baseline_share_24"
                     android:layout_gravity="end|center_vertical"
                     app:backgroundTint="@color/colorWhite"
+
                      />
         </LinearLayout>
 
@@ -68,10 +74,13 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:paddingRight="10dp"
             android:text="Buku Materi Matematika SMA"
             android:textColor="@color/colorAccent2"
             android:textSize="18dp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:fontFamily="@font/cabin"/>
         <TextView
             android:id="@+id/produk_kondisi"
             android:layout_width="wrap_content"
@@ -108,7 +117,6 @@
                 android:id="@+id/campaign_title"
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/cabin"
                 android:paddingLeft="5dp"
                 android:paddingRight="5dp"
                 android:text="Donasi Hijrah by Salim FMIPA UNJDonasi Hijrah by Salim FMIPA UNJDonasi Hijrah by Salim FMIPA UNJ"
@@ -126,7 +134,7 @@
          <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="10dp"
             android:orientation="horizontal">
 
 
@@ -173,7 +181,8 @@
                  android:textColor="@color/colorBlack"
                  android:textSize="16sp"
                  android:textStyle="bold"
-                 app:layout_constraintEnd_toEndOf="parent" />
+                 app:layout_constraintEnd_toEndOf="parent"
+                 />
 
          </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -186,7 +195,8 @@
             android:layout_marginRight="10dp"
             android:text="Buku bekas, kualitas masih sekitar 90% Buku bekas, kualitas masih sekitar 90% Buku bekas, kualitas masih sekitar 90%. "
             android:textColor="@color/colorBlack"
-            android:textSize="14sp" />
+            android:textSize="14sp"
+            android:fontFamily="@font/cabin"/>
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -200,6 +210,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
+                android:layout_marginTop="8dp"
                 android:text="Lokasi:"
                 android:textColor="@color/colorBlack"
                 android:textSize="14sp"
@@ -208,19 +219,20 @@
             <Button
                 android:id="@+id/btn_buy"
                 android:layout_width="wrap_content"
-                android:layout_height="20dp"
+                android:layout_height="22dp"
                 android:layout_alignParentRight="true"
                 android:layout_gravity="end"
                 android:layout_marginRight="20dp"
                 android:layout_marginBottom="5dp"
                 android:background="@drawable/btn_radiusbg"
                 android:text="BELI"
-                android:paddingHorizontal="15dp"
+                android:paddingHorizontal="10dp"
                 android:textColor="@color/colorWhite"
                 android:textSize="14sp"
                 android:textStyle="bold"
                 android:visibility="visible"
-                android:layout_marginEnd="20dp" />
+                android:layout_marginEnd="20dp"
+                android:fontFamily="@font/cabin"/>
 
         </RelativeLayout>
 
@@ -234,7 +246,8 @@
             android:text="Rawamangun, Jakarta Timur"
             android:textColor="@color/colorBlack"
             android:textSize="14sp"
-            android:layout_marginBottom="30dp"/>
+            android:layout_marginBottom="30dp"
+            android:fontFamily="@font/cabin"/>
 
         <TextView
             android:id="@+id/whatsapp_number"
