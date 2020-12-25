@@ -52,6 +52,17 @@ interface RetrofitInterface {
     ): Call<MutableList<CampaignModel>>
 
     @Multipart
+    @POST("api.php?apicall=editproduct")
+    fun editProduct(
+        @Part("id") id: Int,
+        @Part("product_price") product_price: RequestBody,
+        @Part("product_name") product_name: RequestBody,
+        @Part("product_desc") product_desc: RequestBody,
+        @Part("seller_loc") seller_loc: RequestBody,
+        @Part("whatsapp") whatsapp: RequestBody
+    ): Call<UploadResponse>
+
+    @Multipart
     @POST("api.php?apicall=delete_sellingpost")
     fun deleteProductProfile(
         @Part("id") id: RequestBody,
