@@ -54,12 +54,9 @@ class CampaignListProfileAdapter(
 
             btnContextMenuCampaign.setOnClickListener {
                 val popup = PopupMenu(context, it)
-                popup.inflate(R.menu.context_menu_post)
+                popup.inflate(R.menu.context_menu_campaign)
                 popup.setOnMenuItemClickListener { itemCampaign ->
                     when(itemCampaign.itemId){
-                        R.id.menu_edit_post->{
-                            Toast.makeText(context, "Ubah", Toast.LENGTH_SHORT).show()
-                        }
                         R.id.menu_delete_post->{
                             AlertDialog.Builder(context)
                                 .setMessage("Hapus campaign ini?")
