@@ -38,28 +38,34 @@ class IntroSlider : AppCompatActivity() {
         tabLayout = findViewById(R.id.tab_indicator)
         nextSlide = findViewById(R.id.next_slide)
         val onBoardingData: MutableList<OnBoardingData> = ArrayList()
-         onBoardingData.add(OnBoardingData(
+
+        onBoardingData.add(OnBoardingData(
             "WELCOME TO VVIPED",
-            "VVIPED adalah aplikasi media sosial untuk penggalangan dana secara online " +
+            "Aplikasi media sosial untuk penggalangan dana secara online " +
                     "dengan cara jual-beli barang sekaligus berdonasi.",
-            R.drawable.logoapp))
+            R.drawable.slider_welcome))
+
         onBoardingData.add(OnBoardingData(
-            "SALE TO DONATE",
-            "Kamu bisa menjual produk yang masih layak pakai atau produk kamu sendiri dan hasil penjualannya akan disumbangkan " +
-                    "untuk penggalangan dana yang bisa kamu buat sendiri ataupun ikut dengan galang dana milik orang lain." ,
-            R.drawable.logoapp))
+            "JUAL UNTUK DONASI",
+            "Jual produk kamu dan hasil penjualan disumbangkan " +
+                    "ke penggalangan dana milik kamu ataupun orang lain." ,
+            R.drawable.slider_jualuntukdonasi))
+
         onBoardingData.add(OnBoardingData(
-            "HOW TO SALE?",
-            "Tekan tombol 'Jual Produk Saya' pada penggalangan dana yang ingin kamu donasikan yang ada pada halaman Daftar Campaign untuk menjual produk kamu",
-            R.drawable.logoapp))
+            "CARA BUAT CAMPAIGN",
+            "Tekan tombol tanda tambah pada halaman Daftar Campaign untuk buat penggalangan dana",
+            R.drawable.slider_buat_campaign))
+
         onBoardingData.add(OnBoardingData(
-            "HOW TO MAKE CAMPAIGN?",
-            "Tekan tombol tanda tambah yang ada pada halaman Daftar Campaign untuk membuat penggalangan dana",
-            R.drawable.logoapp))
+            "CARA JUAL PRODUK",
+            "Tekan tombol 'Jual Produk Saya' di penggalangan dana yang ingin kamu donasikan " +
+                    "yang ada pada halaman Daftar Campaign untuk menjual produk kamu",
+            R.drawable.slider_jualproduksaya))
+
         onBoardingData.add(OnBoardingData(
-            "GETTING STARTED IS EASY",
-            "Bergabung dengan Vviped, kamu sudah mengambil langkah besar dalam berbagi kebaikan untuk saling membantu!",
-            R.drawable.logoapp))
+            "",
+            "",
+            R.drawable.slider_getstarted))
 
 
         setOnBoardingViewPagerAdapter(onBoardingData)
@@ -83,7 +89,7 @@ class IntroSlider : AppCompatActivity() {
                     if (tab.position == onBoardingData.size - 1) {
                         nextSlide!!.text = "MULAI"
                     } else {
-                        nextSlide!!.text = "Selanjutnya"
+                        nextSlide!!.text = "Next"
 
                     }
                 }
@@ -122,4 +128,3 @@ class IntroSlider : AppCompatActivity() {
     }
 
 }
-
