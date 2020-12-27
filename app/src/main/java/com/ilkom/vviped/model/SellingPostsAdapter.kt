@@ -56,6 +56,7 @@ class SellingPostsAdapter(
             sellerlocation.text = sellingPost.seller_location
             whatsappNumber.text = sellingPost.whatsapp
 
+            val image_link = sellingPost.image_post
             val seller_username = usernamepost.text.toString()
             val product_name = productname.text.toString()
             val product_price =  productprice.text.toString()
@@ -98,7 +99,7 @@ class SellingPostsAdapter(
                     "Bantu berdonasi dengan membeli barang: $product_name " +
                             "seharga Rp$product_price " +
                             "guna mendukung galang dana untuk campaign: $campaign_title. " +
-                            "Beli barangnya sekarang juga hanya di Vviped! "
+                            "Beli barangnya sekarang juga hanya di Vviped! Lihat gambar disini : $image_link
                 )
                 val sendIntent = Intent.createChooser(shareIntent, null)
                 context.startActivity(sendIntent)
