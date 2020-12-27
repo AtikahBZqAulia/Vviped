@@ -57,6 +57,7 @@ class CampaignListAdapter(
             campaignreceiver.text = campaignItem.donation_goes
             usagedetails.text = campaignItem.usage_details
 
+            val image_link = campaignItem.image_campaign
             val campaign_id = campaignItem.id
             val campaign_name = campaignname.text.toString()
 
@@ -94,7 +95,7 @@ class CampaignListAdapter(
                 shareIntent.putExtra(Intent.EXTRA_TEXT,
                     "Saya mendukung campaign: $campaign_name. " +
                             "Bantu donasi dengan menjual barang kamu atau membeli barang untuk " +
-                            "ikut dukung penggalangan dana ini hanya di Vviped! http://bit.ly/Vviped_App "
+                            "ikut dukung penggalangan dana ini hanya di Vviped! http://bit.ly/Vviped_App .Lihat gambar disini : $image_link"
                 )
                 val sendIntent = Intent.createChooser(shareIntent, null)
                 context.startActivity(sendIntent)
