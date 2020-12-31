@@ -99,7 +99,7 @@ class SellingPostsAdapter(
                     "Bantu berdonasi dengan membeli barang: $product_name " +
                             "seharga Rp$product_price " +
                             "guna mendukung galang dana untuk campaign: $campaign_title. " +
-                            "Beli barangnya sekarang juga hanya di Vviped! Lihat gambar disini : $image_link
+                            "Beli barangnya sekarang juga hanya di Vviped! Lihat gambar disini: $image_link"
                 )
                 val sendIntent = Intent.createChooser(shareIntent, null)
                 context.startActivity(sendIntent)
