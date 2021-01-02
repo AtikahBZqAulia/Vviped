@@ -30,6 +30,7 @@ class SearchProduct : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_search)
 
         val EditTextSearch = findViewById<EditText>(R.id.et_search_product)
         EditTextSearch.setOnKeyListener(View.OnKeyListener { v, keyCode, event ->
@@ -37,8 +38,8 @@ class SearchProduct : AppCompatActivity() {
                 val searchEditTextValue = EditTextSearch.text.toString()
                 Toast.makeText(
                         this,
-                        "search for: "+ searchEditTextValue,
-                        Toast.LENGTH_LONG)
+                        "search: "+ searchEditTextValue,
+                        Toast.LENGTH_SHORT)
                         .show()
                 getDataSearch()
                 return@OnKeyListener true
@@ -53,7 +54,7 @@ class SearchProduct : AppCompatActivity() {
     }
 
     private fun getDataSearch(){
-        setContentView(R.layout.activity_search)
+
         recycleView_search.setHasFixedSize(true)
         recycleView_search.layoutManager = LinearLayoutManager(this)
 
@@ -66,6 +67,21 @@ class SearchProduct : AppCompatActivity() {
                 searchAdapter = getApplicationContext().let { SearchAdapter(it, response.body() as MutableList<SellingPostItem>) }
                 recycleView_search.adapter = searchAdapter
                 searchAdapter?.notifyDataSetChanged()
+
+                val EditTextSearch = findViewById<EditText>(R.id.et_search_product)
+                EditTextSearch.setOnKeyListener(View.OnKeyListener { v, keyCode, event ->
+                    if (keyCode == KeyEvent.KEYCODE_ENTER && event.action == KeyEvent.ACTION_UP) {
+                        val searchEditTextValue = EditTextSearch.text.toString()
+                        Toast.makeText(
+                            this@SearchProduct,
+                            "next search: "+ searchEditTextValue,
+                            Toast.LENGTH_SHORT)
+                            .show()
+                        getDataSearch()
+                        return@OnKeyListener true
+                    }
+                    false
+                })
             }
 
             override fun onFailure(call: Call<MutableList<SellingPostItem>>, t: Throwable) {
@@ -74,5 +90,10 @@ class SearchProduct : AppCompatActivity() {
             }
 
         })
+
+
+
+
     }
+
 }
