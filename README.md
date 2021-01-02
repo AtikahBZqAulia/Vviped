@@ -9,7 +9,7 @@
 
 
 #### Members :
-- Atikah Aulia Putri (Team leader)
+- Atikah Aulia Putri
 - Octarina Salsabila
 - Maura Qoonitah Putri
 
@@ -31,8 +31,5 @@ Kamu bisa menjual produk yang masih layak pakai, ataupun menjual produk kamu sen
 - Tertarik dengan produknya dan sudah mengetahui tujuan donasi untuk produk tersebut? Tekan tombol beli dan akan langsung tertuju ke obrolan WhatsApp penjual. Pastikan untuk bertanya lebih rinci tentang kondisi produk, detil galangan dana, detil transaksi ataupun menegosiasikan harga sebelum kamu membelinya.
 
 ## Our app is now available on Google Play : 
-<https://play.google.com/store/apps/details?id=com.mobcomp.vviped>
-
-_(Aplikasi ini belum dirilis secara resmi dan masih memiliki beberapa fitur yang belum diimplementasikan)_
- 
+<https://play.google.com/store/apps/details?id=com.ilkom.vviped>
 
