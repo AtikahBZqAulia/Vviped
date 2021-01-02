@@ -109,22 +109,11 @@ interface RetrofitInterface {
     ): Call<UploadResponse>
 
     @Multipart
-    @POST("api.php?apicall=user")
-    fun userLoggedIn(
-        @Part image: MultipartBody.Part,
-        @Part("id") id: RequestBody,
-        @Part("email") email: RequestBody,
-        @Part("fullname") fullname: RequestBody,
-        @Part("username") username: RequestBody,
-        @Part("password") password: RequestBody,
-        @Part("user_profpic") user_profpic: RequestBody,
-    ): Call<LoginResponse>
-
-    @Multipart
     @POST("api.php?apicall=searchSellingProducts")
     fun getFeedSearch(
-        @Path("product_name") product_name : String
+        @Part("product_name") product_name : RequestBody
     ): Call<MutableList<SellingPostItem>>
+
 
 
     companion object {

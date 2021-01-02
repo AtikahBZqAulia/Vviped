@@ -35,12 +35,6 @@ class SearchProduct : AppCompatActivity() {
         val EditTextSearch = findViewById<EditText>(R.id.et_search_product)
         EditTextSearch.setOnKeyListener(View.OnKeyListener { v, keyCode, event ->
             if (keyCode == KeyEvent.KEYCODE_ENTER && event.action == KeyEvent.ACTION_UP) {
-                val searchEditTextValue = EditTextSearch.text.toString()
-                Toast.makeText(
-                        this,
-                        "search: "+ searchEditTextValue,
-                        Toast.LENGTH_SHORT)
-                        .show()
                 getDataSearch()
                 return@OnKeyListener true
             }
@@ -55,11 +49,18 @@ class SearchProduct : AppCompatActivity() {
 
     private fun getDataSearch(){
 
+        val EditTextSearch = findViewById<EditText>(R.id.et_search_product)
+        val searchEditTextValue = EditTextSearch.text.toString()
+
         recycleView_search.setHasFixedSize(true)
         recycleView_search.layoutManager = LinearLayoutManager(this)
 
-        val feedsService = SellingPostRepository.create()
-        feedsService.getFeeds().enqueue(object : Callback<MutableList<SellingPostItem>> {
+       RetrofitInterface().getFeedSearch(
+           RequestBody.create(
+               MediaType.parse("multipart/form-data"),
+               searchEditTextValue
+           )
+       ).enqueue(object : Callback<MutableList<SellingPostItem>> {
             override fun onResponse(
                 call: Call<MutableList<SellingPostItem>>,
                 response: Response<MutableList<SellingPostItem>>
@@ -68,15 +69,8 @@ class SearchProduct : AppCompatActivity() {
                 recycleView_search.adapter = searchAdapter
                 searchAdapter?.notifyDataSetChanged()
 
-                val EditTextSearch = findViewById<EditText>(R.id.et_search_product)
                 EditTextSearch.setOnKeyListener(View.OnKeyListener { v, keyCode, event ->
                     if (keyCode == KeyEvent.KEYCODE_ENTER && event.action == KeyEvent.ACTION_UP) {
-                        val searchEditTextValue = EditTextSearch.text.toString()
-                        Toast.makeText(
-                            this@SearchProduct,
-                            "next search: "+ searchEditTextValue,
-                            Toast.LENGTH_SHORT)
-                            .show()
                         getDataSearch()
                         return@OnKeyListener true
                     }
@@ -86,7 +80,11 @@ class SearchProduct : AppCompatActivity() {
 
             override fun onFailure(call: Call<MutableList<SellingPostItem>>, t: Throwable) {
                 Log.e("tag", t.toString())
-
+//                Toast.makeText(
+//                    this@SearchProduct,
+//                    "tidak ditemukan",
+//                    Toast.LENGTH_SHORT)
+//                    .show()
             }
 
         })
