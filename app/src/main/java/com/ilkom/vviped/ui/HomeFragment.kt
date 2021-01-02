@@ -127,6 +127,7 @@ class HomeFragment : Fragment() {
                 sellingPostAdapter = context?.let { SellingPostsAdapter(it, response.body() as MutableList<SellingPostItem>) }
                 recyclerView?.adapter = sellingPostAdapter
                 sellingPostAdapter?.notifyDataSetChanged()
+
                 refreshTabHomeProduct()
                 if(progressBarTabHome != null) {
                     progressBarTabHome.visibility = View.GONE
