@@ -30,7 +30,7 @@
         <LinearLayout
             android:id="@+id/search_field"
             android:layout_width="match_parent"
-            android:layout_height="30dp"
+            android:layout_height="35dp"
             android:layout_marginStart="10dp"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
@@ -50,17 +50,17 @@
                 android:src="@drawable/ic_search" />
 
             <EditText
-                android:id="@+id/search_edit_text"
+                android:id="@+id/search_et"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginLeft="2dp"
+                android:layout_marginLeft="5dp"
                 android:background="@null"
                 android:cursorVisible="false"
-                android:inputType="text"
-                android:imeOptions="actionDone"
                 android:gravity="center_vertical"
+                android:focusable="false"
                 android:hint="Search"
                 android:fontFamily="@font/cabin"/>
+
 
         </LinearLayout>
 

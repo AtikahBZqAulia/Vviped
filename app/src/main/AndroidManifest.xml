@@ -20,7 +20,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoStatusBar"
         android:usesCleartextTraffic="true">
-        <activity android:name=".EditProduct"></activity>
+        <activity android:name=".SearchProduct"
+            android:windowSoftInputMode="stateVisible"></activity>
+        <activity android:name=".EditProduct" />
         <activity android:name=".settings.ContactMaura" />
         <activity android:name=".settings.ContactOcta" />
         <activity android:name=".settings.ContactAtikah" />
@@ -37,8 +39,7 @@
             android:noHistory="true" />
         <activity
             android:name=".model.login.Logout"
-            android:theme="@style/AppTheme.NoActionBar"
-            />
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".UploadSellingActivity"
             android:theme="@style/AppTheme.NoActionBar"
@@ -55,8 +56,7 @@
         <activity
             android:name=".create_campaign"
             android:theme="@style/AppTheme.NoActionBar"
-            android:windowSoftInputMode="stateHidden"
-            />
+            android:windowSoftInputMode="stateHidden" />
         <activity android:name=".ChatForBuying" />
         <activity android:name=".settings.SettingsContactUs" />
         <activity android:name=".settings.SettingsAbout" />

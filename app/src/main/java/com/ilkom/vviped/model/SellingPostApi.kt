@@ -7,7 +7,7 @@ interface SellingPostApi {
     companion object{
         const val BASE_URL = "http://127.0.0.1:5000/"
     }
-    @GET("search")
+    @GET("SearchProduct")
     suspend fun searchProduct(
         @Query("query") query: String.Companion = String,
         @Query("page") page: Int.Companion = Int,

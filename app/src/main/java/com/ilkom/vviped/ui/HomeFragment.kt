@@ -13,7 +13,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.ilkom.vviped.*
 import com.ilkom.vviped.model.*
-import com.ilkom.vviped.SearchFragment
+import com.ilkom.vviped.settings.SettingsActivity
 import kotlinx.android.synthetic.main.fragment_home.*
 import kotlinx.android.synthetic.main.fragment_profile.*
 import kotlinx.android.synthetic.main.sellingposts_layout.*
@@ -56,16 +56,20 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-
-        search_edit_text.setOnKeyListener(View.OnKeyListener { v, keyCode, event ->
-            if (keyCode == KeyEvent.KEYCODE_ENTER && event.action == KeyEvent.ACTION_UP) {
-                (context as MainActivity).changeFragment(SearchFragment())
-                v.hideKeyboard()
-                v.clearFocus()
-                return@OnKeyListener true
+            search_et.setOnClickListener {
+                val intent = Intent(activity, SearchProduct::class.java)
+                startActivity(intent)
             }
-            false
-        })
+
+//        search_edit_text.setOnKeyListener(View.OnKeyListener { v, keyCode, event ->
+//            if (keyCode == KeyEvent.KEYCODE_ENTER && event.action == KeyEvent.ACTION_UP) {
+//                (context as MainActivity).changeFragment(SearchFragment())
+//                v.hideKeyboard()
+//                v.clearFocus()
+//                return@OnKeyListener true
+//            }
+//            false
+//        })
 
         kategori1.setOnClickListener {
             val tv_kategori1 = kategori1.text.toString()
