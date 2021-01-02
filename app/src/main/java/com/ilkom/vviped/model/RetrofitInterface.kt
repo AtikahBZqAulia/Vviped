@@ -6,9 +6,7 @@ import okhttp3.RequestBody
 import retrofit2.Call
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
-import retrofit2.http.Multipart
-import retrofit2.http.POST
-import retrofit2.http.Part
+import retrofit2.http.*
 
 interface RetrofitInterface {
     @Multipart
@@ -121,6 +119,13 @@ interface RetrofitInterface {
         @Part("password") password: RequestBody,
         @Part("user_profpic") user_profpic: RequestBody,
     ): Call<LoginResponse>
+
+    @Multipart
+    @POST("api.php?apicall=searchSellingProducts")
+    fun getFeedSearch(
+        @Path("product_name") product_name : String
+    ): Call<MutableList<SellingPostItem>>
+
 
     companion object {
         operator fun invoke(): RetrofitInterface {
