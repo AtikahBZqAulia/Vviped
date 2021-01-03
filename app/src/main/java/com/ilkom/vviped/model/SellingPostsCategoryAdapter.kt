@@ -50,6 +50,7 @@ class SellingPostsCategoryAdapter(
             Picasso.get().load(sellingPost.user_profpict).into(profpictpost)
             Picasso.get().load(sellingPost.image_post).into(imagepost)
             productname.text = sellingPost.product_name
+
             productcondition.text = sellingPost.product_condition
             campaignname.text = sellingPost.campaign_title
             productprice.text = sellingPost.product_price
@@ -64,6 +65,10 @@ class SellingPostsCategoryAdapter(
             val whatsappNumber = whatsappNumber.text.toString()
             val campaign_title = campaignname.text.toString()
             val product_img =  sellingPost.image_post
+            val ktg_product_condition = productcondition.text.toString()
+            val ktg_product_desc = productdesc.text.toString()
+            val ktg_sellerlocation = sellerlocation.text.toString()
+
 
             buyButton.setOnClickListener {
                 val context = buyButton.context
@@ -107,14 +112,22 @@ class SellingPostsCategoryAdapter(
                 context.startActivity(sendIntent)
             }
 
-//            cardViewCategory.setOnClickListener{
-//                val context = cardViewCategory.context
-//                val intent = Intent(context, SellingPostsCategoryItem::class.java)
-//
-//                intent.putExtra("product_name", product_name )
-//
-//                context.startActivity(intent)
-//            }
+            cardViewCategory.setOnClickListener{
+                val context = cardViewCategory.context
+                val intent = Intent(context, SellingPostsCategoryItem::class.java)
+
+                intent.putExtra("product_name", product_name )
+                intent.putExtra("ktg_product_condition", ktg_product_condition )
+                intent.putExtra("ktg_product_desc", ktg_product_desc )
+                intent.putExtra("ktg_sellerlocation", ktg_sellerlocation )
+                intent.putExtra("seller_username", seller_username )
+                intent.putExtra("product_price", product_price )
+                intent.putExtra("campaign_title", sellingPost.campaign_title.toString() )
+                intent.putExtra("whatsapp", whatsappNumber )
+                intent.putExtra("image_link", image_link)
+
+                context.startActivity(intent)
+            }
 
 
         }
