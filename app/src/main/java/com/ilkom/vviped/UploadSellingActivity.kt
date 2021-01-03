@@ -1,5 +1,6 @@
 package com.ilkom.vviped
 
+import android.annotation.SuppressLint
 import android.app.Activity
 import android.content.Intent
 import android.net.Uri

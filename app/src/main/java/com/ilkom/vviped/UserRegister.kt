@@ -22,7 +22,6 @@ import retrofit2.Response
 class UserRegister : AppCompatActivity() {
     lateinit var sharedPref: PreferenceHelper
 
-
     @RequiresApi(Build.VERSION_CODES.KITKAT)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

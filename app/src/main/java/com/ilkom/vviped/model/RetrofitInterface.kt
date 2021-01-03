@@ -114,7 +114,11 @@ interface RetrofitInterface {
         @Part("product_name") product_name : RequestBody
     ): Call<MutableList<SellingPostItem>>
 
-
+    @Multipart
+    @POST("api.php?apicall=categorySellingProducts")
+    fun getFeedCategory(
+        @Part("product_category") product_category: String,
+    ): Call<MutableList<SellingPostItem>>
 
     companion object {
         operator fun invoke(): RetrofitInterface {
