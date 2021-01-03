@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SellingPostsCategoryItem">
+    tools:context=".model.SellingPostsCategoryItem">
 
 
     <com.google.android.material.appbar.AppBarLayout
@@ -88,7 +88,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="280dp"
                 android:layout_marginTop="5dp"
-                android:scaleType="centerCrop"
+                android:scaleType="fitCenter"
                 android:src="@drawable/profilpic" />
 
 

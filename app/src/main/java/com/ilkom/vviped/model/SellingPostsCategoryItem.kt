@@ -1,34 +1,40 @@
-package com.ilkom.vviped
+package com.ilkom.vviped.model
 
 import android.content.Intent
+import android.icu.number.NumberFormatter.with
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageButton
 import android.widget.ImageView
-import com.ilkom.vviped.model.RetrofitInterface
-import com.ilkom.vviped.model.UploadResponse
-import com.ilkom.vviped.model.login.Constant
-import kotlinx.android.synthetic.main.activity_chat_for_buying.*
+import com.ilkom.vviped.ChatForBuying
+import com.ilkom.vviped.R
+import com.squareup.picasso.Picasso
+import kotlinx.android.synthetic.main.activity_landing.view.*
 import kotlinx.android.synthetic.main.activity_selling_posts_category_item.*
-import kotlinx.android.synthetic.main.sellingposts_category_layout.*
 import kotlinx.android.synthetic.main.sellingposts_category_layout.product_name
 import kotlinx.android.synthetic.main.sellingposts_category_layout.produk_deskripsi
 import kotlinx.android.synthetic.main.sellingposts_category_layout.produk_kondisi
-import okhttp3.MediaType
-import okhttp3.RequestBody
-import retrofit2.Call
-import retrofit2.Callback
-import retrofit2.Response
 
 class SellingPostsCategoryItem : AppCompatActivity() {
+    private val sellingPosts: MutableList<SellingPostItem>? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_selling_posts_category_item)
 
+        val profpictpost = findViewById<ImageView>(R.id.user_profpict_post)
+        val imagepost = findViewById<ImageView>(R.id.imagepost_layout)
+
+        val image_link = intent.getStringExtra("image_link")
+        Picasso.get().load(image_link).into(imagepost)
+
+        val profpic = intent.getStringExtra("profpic")
+        Picasso.get().load(profpic).into(profpictpost)
+
         val buyButton = findViewById<Button>(R.id.btn_buy2)
         val sharePost = findViewById<ImageButton>(R.id.share_btn2)
-        val backspace = findViewById<ImageView>(R.id.backspace2)
+        val backspace2 = findViewById<ImageView>(R.id.backspace2)
 
         val productName = intent.getStringExtra("product_name")
         product_name.text = productName
@@ -54,7 +60,6 @@ class SellingPostsCategoryItem : AppCompatActivity() {
         val whatsapp = intent.getStringExtra("whatsapp")
         whatsapp_number2.text = whatsapp
 
-        val image_link = intent.getStringExtra("image_link")
 
         val whatsappNumber =  whatsapp_number2.text.toString()
         val seller_username =  username_post2.text.toString()

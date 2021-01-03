@@ -56,7 +56,6 @@ class SellingPostsAdapter(
             sellerlocation.text = sellingPost.seller_location
             whatsappNumber.text = sellingPost.whatsapp
 
-
             val image_link = sellingPost.image_post
             val seller_username = usernamepost.text.toString()
             val product_name = productname.text.toString()

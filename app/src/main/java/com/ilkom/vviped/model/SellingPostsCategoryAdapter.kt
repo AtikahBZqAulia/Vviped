@@ -13,7 +13,6 @@ import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import com.ilkom.vviped.ChatForBuying
 import com.ilkom.vviped.R
-import com.ilkom.vviped.SellingPostsCategoryItem
 import com.ilkom.vviped.model.login.Constant
 import com.ilkom.vviped.model.login.PreferenceHelper
 import com.squareup.picasso.Picasso
@@ -58,7 +57,9 @@ class SellingPostsCategoryAdapter(
             sellerlocation.text = sellingPost.seller_location
             whatsappNumber.text = sellingPost.whatsapp
 
+            val prof_pic = sellingPost.user_profpict
             val image_link = sellingPost.image_post
+            val image_post =  Picasso.get().load(sellingPost.image_post).into(imagepost).toString()
             val seller_username = usernamepost.text.toString()
             val product_name = productname.text.toString()
             val product_price =  productprice.text.toString()
@@ -125,6 +126,8 @@ class SellingPostsCategoryAdapter(
                 intent.putExtra("campaign_title", sellingPost.campaign_title.toString() )
                 intent.putExtra("whatsapp", whatsappNumber )
                 intent.putExtra("image_link", image_link)
+                intent.putExtra("profpic", prof_pic)
+                intent.putExtra("imagepost", image_post)
 
                 context.startActivity(intent)
             }
