@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.ilkom.vviped.ui.CampaignListFragment
+import com.ilkom.vviped.ui.CategoryFragment
 import com.ilkom.vviped.ui.HomeFragment
 import com.ilkom.vviped.ui.ProfileFragment
 
@@ -16,6 +17,7 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
     private var homeFragment = HomeFragment()
     private var profileFragment = ProfileFragment()
     private var campaignListFrament = CampaignListFragment()
+    private var categoryFragment = CategoryFragment()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -41,6 +43,11 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
             R.id.navigation_home -> {
                 supportFragmentManager.beginTransaction()
                     .replace(R.id.fragment_layout, homeFragment).commit()
+                return true
+            }
+            R.id.navigation_category -> {
+                supportFragmentManager.beginTransaction()
+                    .replace(R.id.fragment_layout, categoryFragment).commit()
                 return true
             }
             R.id.navigation_campaignlist -> {

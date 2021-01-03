@@ -19,9 +19,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoStatusBar"
-        android:usesCleartextTraffic="true">
-        <activity android:name=".SearchProduct"
-            android:windowSoftInputMode="stateVisible"></activity>
+        android:usesCleartextTraffic="true"
+        android:largeHeap="true"
+        android:hardwareAccelerated="false">
+        <activity android:name=".SellingPostsCategoryItem"></activity>
+        <activity
+            android:name=".SearchProduct"
+            android:windowSoftInputMode="stateVisible" />
         <activity android:name=".EditProduct" />
         <activity android:name=".settings.ContactMaura" />
         <activity android:name=".settings.ContactOcta" />
@@ -52,7 +56,8 @@
             android:windowSoftInputMode="stateHidden" />
         <activity
             android:name=".MainActivity"
-            android:windowSoftInputMode="stateHidden" />
+            android:windowSoftInputMode="stateHidden"
+            android:hardwareAccelerated="true"/>
         <activity
             android:name=".create_campaign"
             android:theme="@style/AppTheme.NoActionBar"
