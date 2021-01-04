@@ -1,17 +1,18 @@
 package com.ilkom.vviped
 
-import android.annotation.SuppressLint
 import android.app.Activity
 import android.content.Intent
 import android.net.Uri
 import android.os.Build
 import android.os.Bundle
+import android.util.Log
 import android.widget.EditText
 import android.widget.RadioButton
 import android.widget.RadioGroup
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import com.ilkom.vviped.model.*
+import com.ilkom.vviped.model.SellingPostRepository.create
 import com.ilkom.vviped.model.login.Constant
 import com.ilkom.vviped.model.login.PreferenceHelper
 import kotlinx.android.synthetic.main.activity_upload_selling.*
@@ -91,6 +92,7 @@ class UploadSellingActivity : AppCompatActivity(), UploadRequestBody.UploadCallb
         val radioButton = findViewById<RadioButton>(intSelectButton)
         val whatsapp = findViewById<EditText>(R.id.whatsapp)
         val sharedPref = PreferenceHelper(this)
+        val object_name = ""
         val campaign_id = intent.getIntExtra("campaign_id", -1)
 
         val parcelFileDescriptor = contentResolver.openFileDescriptor(selectedImageUri!!, "r", null) ?: return
@@ -127,11 +129,29 @@ class UploadSellingActivity : AppCompatActivity(), UploadRequestBody.UploadCallb
                 call: Call<UploadResponse>,
                 response: Response<UploadResponse>
             ) {
-                response.body()?.let {
+                response.body()?.let { it ->
                     //layout_root.snackbar(it.message)
                     layout_root.snackbar(it.message)
                     progress_bar.progress = 100
+                    Log.d("image", it.image)
 
+//                    create().detectedObject(it.image).enqueue(object : Callback<DetectedItem>{
+//
+//                        override fun onResponse(
+//                            call: Call<DetectedItem>,
+//                            response: Response<DetectedItem>
+//                        ) {
+//                            Log.d("TAG", "onResponse: ConfigurationListener::"+call.request().url());
+//                            response.body()?.let{
+//                                it.objectName?.let { it1 -> Log.d("Detected object is ", it1) }
+//                            }
+//                        }
+//
+//                        override fun onFailure(call: Call<DetectedItem>, t: Throwable) {
+//                            TODO("Not yet implemented")
+//                        }
+//
+//                    })
                 }
             }
         })
