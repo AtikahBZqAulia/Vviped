@@ -29,6 +29,8 @@ data class SellingPostItem (
     val sold: String? = null,
     @field:SerializedName("whatsapp")
     val whatsapp: String? = null,
+    @field:SerializedName("product_category")
+    val product_category: String? = null,
     @field:SerializedName("campaign_id")
     val campaign_id: Int? = null,
     @field:SerializedName("campaign_title")

@@ -1,16 +1,13 @@
-package com.ilkom.vviped.model
+package com.ilkom.vviped
 
 import android.content.Intent
-import android.icu.number.NumberFormatter.with
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageButton
 import android.widget.ImageView
-import com.ilkom.vviped.ChatForBuying
-import com.ilkom.vviped.R
+import com.ilkom.vviped.model.SellingPostItem
 import com.squareup.picasso.Picasso
-import kotlinx.android.synthetic.main.activity_landing.view.*
 import kotlinx.android.synthetic.main.activity_selling_posts_category_item.*
 import kotlinx.android.synthetic.main.sellingposts_category_layout.product_name
 import kotlinx.android.synthetic.main.sellingposts_category_layout.produk_deskripsi
