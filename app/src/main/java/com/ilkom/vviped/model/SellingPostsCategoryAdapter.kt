@@ -74,20 +74,16 @@ class SellingPostsCategoryAdapter(
             val ktg_product_desc = productdesc.text.toString()
             val ktg_sellerlocation = sellerlocation.text.toString()
 
-
-            buyButton.setOnClickListener {
-                val context = buyButton.context
-                val intent = Intent(context, ChatForBuying::class.java)
-                intent.putExtra("seller_username", seller_username )
-                intent.putExtra("product_name", product_name )
-                intent.putExtra("product_price", product_price )
-                intent.putExtra("campaign_title", sellingPost.campaign_title.toString() )
-                intent.putExtra("whatsapp", whatsappNumber )
+            cardViewCategory.setOnClickListener{
+                val context = cardViewCategory.context
+                val intent = Intent(context, CategoriesProduct::class.java)
+                intent.putExtra("kategori", product_category.text.toString() )
                 context.startActivity(intent)
+
                 RetrofitInterface().userActivities(
                     sharedPref.getInt(Constant.PREF_ID)!!,
                     sharedPref.getString(Constant.PREF_USERNAME)!!,
-                    RequestBody.create(MediaType.parse("multipart/form-data"), "Click Beli for product "+productname.text.toString()),
+                    RequestBody.create(MediaType.parse("multipart/form-data"), "Click category "+product_category.text.toString()),
                 ).enqueue(object : Callback<UploadResponse> {
                     override fun onFailure(call: Call<UploadResponse>, t: Throwable) {
                     }
@@ -99,32 +95,6 @@ class SellingPostsCategoryAdapter(
 
                     }
                 })
-            }
-            share_post.setOnClickListener{
-
-                val context = share_post.context
-                val shareIntent = Intent()
-                shareIntent.action = Intent.ACTION_SEND
-                shareIntent.type="text/plain"
-                shareIntent.putExtra(
-                    Intent.EXTRA_TEXT,
-                    "Yuk, bantu berdonasi dengan membeli barang: $product_name " +
-                            "seharga Rp$product_price " +
-                            "guna mendukung galang dana untuk campaign: $campaign_title. " +
-                            "Beli barangnya sekarang juga hanya di Vviped! Lihat gambar disini: $image_link ." +
-                            " -- INSTALL NOW: https://play.google.com/store/apps/details?id=com.ilkom.vviped "
-                )
-                val sendIntent = Intent.createChooser(shareIntent, null)
-                context.startActivity(sendIntent)
-            }
-
-            cardViewCategory.setOnClickListener{
-                val context = cardViewCategory.context
-                val intent = Intent(context, CategoriesProduct::class.java)
-
-                intent.putExtra("kategori", product_category.text.toString() )
-
-                context.startActivity(intent)
             }
 
 
