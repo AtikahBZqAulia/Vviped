@@ -59,6 +59,8 @@ class SellingPostProfileAdapter(
             sellerlocation.text = sellingPost.seller_location
             whatsappNumber.text = sellingPost.whatsapp
 
+            val sharedPref = PreferenceHelper(buttonContextMenu.context)
+
             val product_id = sellingPost.id
             val productId = product_id.toString()
 
@@ -90,6 +92,22 @@ class SellingPostProfileAdapter(
                             intent.putExtra("whatsapp_penjual", no_whatsapp )
                             intent.putExtra("id_product", sellingPost.id.toString() )
                             context.startActivity(intent)
+
+                            RetrofitInterface().userActivities(
+                                sharedPref.getInt(Constant.PREF_ID)!!,
+                                sharedPref.getString(Constant.PREF_USERNAME)!!,
+                                RequestBody.create(MediaType.parse("multipart/form-data"), "Click edit product "+productname.text.toString()),
+                            ).enqueue(object : Callback<UploadResponse> {
+                                override fun onFailure(call: Call<UploadResponse>, t: Throwable) {
+                                }
+
+                                override fun onResponse(
+                                    call: Call<UploadResponse>,
+                                    response: Response<UploadResponse>
+                                ) {
+
+                                }
+                            })
                         }
                         R.id.menu_delete_post->{
 
@@ -113,6 +131,21 @@ class SellingPostProfileAdapter(
                                             response: Response<MutableList<SellingPostItem>>
                                         ) {
                                             Toast.makeText(context, "Berhasil dihapus! Swipe down untuk refresh halaman", Toast.LENGTH_LONG).show()
+                                        }
+                                    })
+                                    RetrofitInterface().userActivities(
+                                        sharedPref.getInt(Constant.PREF_ID)!!,
+                                        sharedPref.getString(Constant.PREF_USERNAME)!!,
+                                        RequestBody.create(MediaType.parse("multipart/form-data"), "Delete product "+productname.text.toString()),
+                                    ).enqueue(object : Callback<UploadResponse> {
+                                        override fun onFailure(call: Call<UploadResponse>, t: Throwable) {
+                                        }
+
+                                        override fun onResponse(
+                                            call: Call<UploadResponse>,
+                                            response: Response<UploadResponse>
+                                        ) {
+
                                         }
                                     })
                                 })
