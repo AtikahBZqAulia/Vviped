@@ -9,8 +9,8 @@ interface SellingPostService {
     @GET("api.php?apicall=sellingproducts")
     fun getFeeds(): Call<MutableList<SellingPostItem>>
 
-    @GET("detect/object?={object_name}")
-    fun detectedObject(@Path("object_name") nameObject: String):Call<MutableList<DetectedItem>>
+    // @GET("detect/object?={object_name}")
+    //fun detectedObject(@Path("object_name") nameObject: String):Call<MutableList<DetectedItem>>
 }
 
 

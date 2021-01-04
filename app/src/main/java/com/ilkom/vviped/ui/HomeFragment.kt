@@ -70,49 +70,6 @@ class HomeFragment : Fragment() {
 //            }
 //            false
 //        })
-
-        kategori1.setOnClickListener {
-            val tv_kategori1 = kategori1.text.toString()
-            val context = kategori1.context
-            val intent = Intent(context, CategoriesProduct::class.java)
-            intent.putExtra("kategori", tv_kategori1 )
-            context.startActivity(intent)
-        }
-
-        kategori2.setOnClickListener {
-            val tv_kategori2 = kategori2.text.toString()
-            val context = kategori2.context
-            val intent = Intent(context, CategoriesProduct::class.java)
-            intent.putExtra("kategori", tv_kategori2 )
-            context.startActivity(intent)
-        }
-
-        kategori3.setOnClickListener {
-            val tv_kategori3 = kategori3.text.toString()
-            val context = kategori3.context
-            val intent = Intent(context, CategoriesProduct::class.java)
-            intent.putExtra("kategori", tv_kategori3 )
-            context.startActivity(intent)
-        }
-
-
-        kategori4.setOnClickListener {
-            val tv_kategori4 = kategori4.text.toString()
-            val context = kategori4.context
-            val intent = Intent(context, CategoriesProduct::class.java)
-            intent.putExtra("kategori", tv_kategori4 )
-            context.startActivity(intent)
-        }
-
-
-        kategori5.setOnClickListener {
-            val tv_kategori5 = kategori5.text.toString()
-            val context = kategori5.context
-            val intent = Intent(context, CategoriesProduct::class.java)
-            intent.putExtra("kategori", tv_kategori5 )
-            context.startActivity(intent)
-        }
-
     }
 
 

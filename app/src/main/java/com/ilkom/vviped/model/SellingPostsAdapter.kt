@@ -41,6 +41,7 @@ class SellingPostsAdapter(
         val buyButton = itemView.findViewById<Button>(R.id.btn_buy)
         val whatsappNumber = itemView.findViewById<TextView>(R.id.whatsapp_number)
         val share_post = itemView.findViewById<ImageButton>(R.id.share_btn)
+        val category_product = itemView.findViewById<TextView>(R.id.item_category)
 
         val sharedPref = PreferenceHelper(share_post.context)
 
@@ -55,6 +56,7 @@ class SellingPostsAdapter(
             productdesc.text = sellingPost.product_description
             sellerlocation.text = sellingPost.seller_location
             whatsappNumber.text = sellingPost.whatsapp
+            category_product.text = sellingPost.product_category
 
             val image_link = sellingPost.image_post
             val seller_username = usernamepost.text.toString()
