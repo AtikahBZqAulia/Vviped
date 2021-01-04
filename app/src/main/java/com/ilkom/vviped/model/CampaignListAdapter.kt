@@ -95,7 +95,9 @@ class CampaignListAdapter(
                 shareIntent.putExtra(Intent.EXTRA_TEXT,
                     "Saya mendukung campaign: $campaign_name. " +
                             "Bantu donasi dengan menjual barang kamu atau membeli barang untuk " +
-                            "ikut dukung penggalangan dana ini hanya di Vviped! http://bit.ly/Vviped_App .Lihat gambar disini : $image_link"
+                            "ikut dukung penggalangan dana ini hanya di Vviped!" +
+                            " Lihat gambar disini : $image_link" +
+                            " -- INSTALL NOW: https://play.google.com/store/apps/details?id=com.ilkom.vviped "
                 )
                 val sendIntent = Intent.createChooser(shareIntent, null)
                 context.startActivity(sendIntent)
