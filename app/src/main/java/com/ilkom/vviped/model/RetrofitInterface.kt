@@ -24,12 +24,20 @@ interface RetrofitInterface {
         @Part("campaign_id") campaign_id: Int
         ): Call<UploadResponse>
     
+//    @Multipart
+//    @POST("api.php?apicall=upload")
+//    fun uploadDetectionResult(
+//        @Part("product_category") product_category: RequestBody
+//    ) : Call<UploadResponse>
+
     @Multipart
-    @POST("api.php?apicall=upload")
+    @POST("api.php?apicall=uploadDetectionResult")
     fun uploadDetectionResult(
-        @Part("product_category") product_category: RequestBody
+        @Part("id") id: Int,
+        @Part("product_category") product_category: String,
     ) : Call<UploadResponse>
-    
+
+
     @Multipart
     @POST("api.php?apicall=uploadCampaign")
     fun uploadCampaign(

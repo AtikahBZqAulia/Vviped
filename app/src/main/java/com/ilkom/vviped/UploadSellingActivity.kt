@@ -9,7 +9,6 @@ import android.util.Log
 import android.widget.EditText
 import android.widget.RadioButton
 import android.widget.RadioGroup
-import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import com.ilkom.vviped.model.*
@@ -148,9 +147,9 @@ class UploadSellingActivity : AppCompatActivity(), UploadRequestBody.UploadCallb
 //                                    layout_root.snackbar("Objek terdeteksi : "+ it.toString())
 //                                }
                                 for(c in response.body()!!){
-                                    layout_root.snackbar("Objek terdeteksi : "+ c.object_name.toString())
+                                    layout_root.snackbar("Berhasil Upload! OBJEK TERDETEKSI: "+ c.object_name.toString() )
                                     RetrofitInterface().uploadDetectionResult(
-                                        RequestBody.create(MediaType.parse("multipart/form-data"), c.object_name.toString())
+                                            it.id, c.object_name.toString()
                                     ).enqueue(object : Callback<UploadResponse>{
                                         override fun onResponse(
                                             call: Call<UploadResponse>,
