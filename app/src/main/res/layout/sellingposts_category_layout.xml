@@ -84,8 +84,8 @@
             android:paddingVertical="10dp"
             android:text="Nama Kategori"
             android:textColor="@color/colorBlack"
-            android:textSize="14sp">
-
+            android:textSize="16sp"
+            android:textStyle="bold">
         </TextView>
 
         <TextView
