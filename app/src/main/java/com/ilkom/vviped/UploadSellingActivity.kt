@@ -9,6 +9,7 @@ import android.util.Log
 import android.widget.EditText
 import android.widget.RadioButton
 import android.widget.RadioGroup
+import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import com.ilkom.vviped.model.*
@@ -135,23 +136,56 @@ class UploadSellingActivity : AppCompatActivity(), UploadRequestBody.UploadCallb
                     progress_bar.progress = 100
                     Log.d("image", it.image)
 
-//                    create().detectedObject(it.image).enqueue(object : Callback<DetectedItem>{
-//
-//                        override fun onResponse(
-//                            call: Call<DetectedItem>,
-//                            response: Response<DetectedItem>
-//                        ) {
-//                            Log.d("TAG", "onResponse: ConfigurationListener::"+call.request().url());
-//                            response.body()?.let{
-//                                it.objectName?.let { it1 -> Log.d("Detected object is ", it1) }
-//                            }
-//                        }
-//
-//                        override fun onFailure(call: Call<DetectedItem>, t: Throwable) {
-//                            TODO("Not yet implemented")
-//                        }
-//
-//                    })
+                    create().detectedObject(it.image).enqueue(object :
+                        Callback<List<DetectedItem>> {
+                        override fun onResponse(
+                            call: Call<List<DetectedItem>>,
+                            response: Response<List<DetectedItem>>
+                        ) {
+                            if (response.isSuccessful) {
+                                Log.d("ceeeek", response.body().toString())
+//                                response.body()?.let{ it->
+//                                    layout_root.snackbar("Objek terdeteksi : "+ it.toString())
+//                                }
+                                for(c in response.body()!!){
+                                    layout_root.snackbar("Objek terdeteksi : "+ c.object_name.toString())
+                                    RetrofitInterface().uploadDetectionResult(
+                                        RequestBody.create(MediaType.parse("multipart/form-data"), c.object_name.toString())
+                                    ).enqueue(object : Callback<UploadResponse>{
+                                        override fun onResponse(
+                                            call: Call<UploadResponse>,
+                                            response: Response<UploadResponse>
+                                        ) {
+//                                            layout_root.snackbar(it.message)
+                                        }
+
+                                        override fun onFailure(
+                                            call: Call<UploadResponse>,
+                                            t: Throwable
+                                        ) {
+                                            layout_root.snackbar(t.message!!)
+                                            progress_bar.progress = 0
+                                        }
+
+                                    })
+                                }
+
+                            } else {
+                                Log.d(
+                                    "TAG",
+                                    "onResponse: ConfigurationListener::" + call.request().url()
+                                )
+                            }
+
+
+                        }
+
+                        override fun onFailure(call: Call<List<DetectedItem>>, t: Throwable) {
+                            TODO("Not yet implemented")
+                        }
+
+
+                    })
                 }
             }
         })
