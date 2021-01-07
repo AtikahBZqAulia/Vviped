@@ -12,9 +12,7 @@ import android.widget.TextView
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import com.ilkom.vviped.CategoriesProduct
-import com.ilkom.vviped.ChatForBuying
 import com.ilkom.vviped.R
-import com.ilkom.vviped.SellingPostsCategoryItem
 import com.ilkom.vviped.model.login.Constant
 import com.ilkom.vviped.model.login.PreferenceHelper
 import com.squareup.picasso.Picasso

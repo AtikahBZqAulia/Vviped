@@ -26,43 +26,43 @@ class SearchAdapter(
     private val sellingPosts: MutableList<SellingPostItem>
 ) : RecyclerView.Adapter<SearchAdapter.ViewHolder>()
 {
-    inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+    class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
-        val usernamepost = itemView.findViewById<TextView>(R.id.username_post)
-        val profpictpost = itemView.findViewById<ImageView>(R.id.user_profpict_post)
-        val imagepost = itemView.findViewById<ImageView>(R.id.imagepost_layout)
-        val productname = itemView.findViewById<TextView>(R.id.product_name)
-        val productcondition = itemView.findViewById<TextView>(R.id.produk_kondisi)
-        val campaignname = itemView.findViewById<TextView>(R.id.campaign_title)
-        val productprice = itemView.findViewById<TextView>(R.id.harga_produk)
-        val productdesc = itemView.findViewById<TextView>(R.id.produk_deskripsi)
-        val sellerlocation = itemView.findViewById<TextView>(R.id.lokasi_penjual)
-        val buyButton = itemView.findViewById<Button>(R.id.btn_buy)
-        val whatsappNumber = itemView.findViewById<TextView>(R.id.whatsapp_number)
-        val share_post = itemView.findViewById<ImageButton>(R.id.share_btn)
+        val usernamepost = itemView.findViewById<TextView>(R.id.username_post3)
+        val profpictpost = itemView.findViewById<ImageView>(R.id.user_profpict_post3)
+        val imagepost = itemView.findViewById<ImageView>(R.id.imagepost_layout3)
+        val productname = itemView.findViewById<TextView>(R.id.product_name3)
+        val productcondition = itemView.findViewById<TextView>(R.id.produk_kondisi3)
+        val campaignname = itemView.findViewById<TextView>(R.id.campaign_title3)
+        val productprice = itemView.findViewById<TextView>(R.id.harga_produk3)
+        val productdesc = itemView.findViewById<TextView>(R.id.produk_deskripsi3)
+        val sellerlocation = itemView.findViewById<TextView>(R.id.lokasi_penjual3)
+        val buyButton = itemView.findViewById<Button>(R.id.btn_buy3)
+        val whatsappNumber = itemView.findViewById<TextView>(R.id.whatsapp_number3)
+        val share_post = itemView.findViewById<ImageButton>(R.id.share_btn3)
 
         val sharedPref = PreferenceHelper(share_post.context)
 
 
         fun bindView (sellingPost: SellingPostItem){
-        usernamepost.text = sellingPost.usernamepost
-        Picasso.get().load(sellingPost.user_profpict).into(profpictpost)
-        Picasso.get().load(sellingPost.image_post).into(imagepost)
-        productname.text = sellingPost.product_name
-        productcondition.text = sellingPost.product_condition
-        campaignname.text = sellingPost.campaign_title
-        productprice.text = sellingPost.product_price
-        productdesc.text = sellingPost.product_description
-        sellerlocation.text = sellingPost.seller_location
-        whatsappNumber.text = sellingPost.whatsapp
+            usernamepost.text = sellingPost.usernamepost
+            Picasso.get().load(sellingPost.user_profpict).into(profpictpost)
+            Picasso.get().load(sellingPost.image_post).into(imagepost)
+            productname.text = sellingPost.product_name
+            productcondition.text = sellingPost.product_condition
+            campaignname.text = sellingPost.campaign_title
+            productprice.text = sellingPost.product_price
+            productdesc.text = sellingPost.product_description
+            sellerlocation.text = sellingPost.seller_location
+            whatsappNumber.text = sellingPost.whatsapp
 
-        val image_link = sellingPost.image_post
-        val seller_username = usernamepost.text.toString()
-        val product_name = productname.text.toString()
-        val product_price =  productprice.text.toString()
-        val whatsappNumber = whatsappNumber.text.toString()
-        val campaign_title = campaignname.text.toString()
-        val product_img =  sellingPost.image_post
+            val image_link = sellingPost.image_post
+            val seller_username = usernamepost.text.toString()
+            val product_name = productname.text.toString()
+            val product_price =  productprice.text.toString()
+            val whatsappNumber = whatsappNumber.text.toString()
+            val campaign_title = campaignname.text.toString()
+            val product_img =  sellingPost.image_post
 
             buyButton.setOnClickListener {
                 val context = buyButton.context
@@ -110,7 +110,7 @@ class SearchAdapter(
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val v = LayoutInflater.from(parent.context)
-            .inflate(R.layout.sellingposts_layout, parent, false)
+            .inflate(R.layout.sellingpostcategory_layout, parent, false)
         return ViewHolder(v)
 
     }
