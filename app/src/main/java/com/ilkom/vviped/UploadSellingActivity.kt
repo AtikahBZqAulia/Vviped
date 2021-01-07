@@ -2,6 +2,7 @@ package com.ilkom.vviped
 
 import android.app.Activity
 import android.content.Intent
+import android.content.pm.PackageManager
 import android.net.Uri
 import android.os.Build
 import android.os.Bundle
@@ -43,7 +44,8 @@ class UploadSellingActivity : AppCompatActivity(), UploadRequestBody.UploadCallb
 
 
         image_view.setOnClickListener {
-            openImageChooser()
+//            openImageChooser()
+            checkPermissionForImage()
         }
 
         button_upload.setOnClickListener {
@@ -55,20 +57,37 @@ class UploadSellingActivity : AppCompatActivity(), UploadRequestBody.UploadCallb
 
     }
 
+
+
+    private fun checkPermissionForImage(){
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            if ((checkSelfPermission(android.Manifest.permission.READ_EXTERNAL_STORAGE) == PackageManager.PERMISSION_DENIED)
+                && (checkSelfPermission(android.Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_DENIED)
+            ) {
+                val permission = arrayOf(android.Manifest.permission.READ_EXTERNAL_STORAGE)
+                val permissionCoarse = arrayOf(android.Manifest.permission.WRITE_EXTERNAL_STORAGE)
+
+                requestPermissions(permission, PERMISSION_CODE_READ)
+                requestPermissions(permissionCoarse, PERMISSION_CODE_WRITE)
+            } else {
+                openImageChooser()
+            }
+        }
+    }
     private fun openImageChooser() {
         Intent(Intent.ACTION_PICK).also {
             it.type = "image/*"
             val mimeTypes = arrayOf("image/jpeg", "image/png")
             it.putExtra(Intent.EXTRA_MIME_TYPES, mimeTypes)
-            startActivityForResult(it, REQUEST_CODE_PICK_IMAGE)
+            startActivityForResult(it, IMAGE_PICK_CODE)
         }
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
-        if (resultCode == Activity.RESULT_OK) {
+        if (resultCode == Activity.RESULT_OK && requestCode == IMAGE_PICK_CODE) {
             when (requestCode) {
-                REQUEST_CODE_PICK_IMAGE -> {
+                IMAGE_PICK_CODE -> {
                     selectedImageUri = data?.data
                     image_view.setImageURI(selectedImageUri)
                 }
@@ -92,7 +111,6 @@ class UploadSellingActivity : AppCompatActivity(), UploadRequestBody.UploadCallb
         val radioButton = findViewById<RadioButton>(intSelectButton)
         val whatsapp = findViewById<EditText>(R.id.whatsapp)
         val sharedPref = PreferenceHelper(this)
-        val object_name = ""
         val campaign_id = intent.getIntExtra("campaign_id", -1)
 
         val parcelFileDescriptor = contentResolver.openFileDescriptor(selectedImageUri!!, "r", null) ?: return
@@ -213,6 +231,9 @@ class UploadSellingActivity : AppCompatActivity(), UploadRequestBody.UploadCallb
 
     companion object {
         const val REQUEST_CODE_PICK_IMAGE = 101
+        const val IMAGE_PICK_CODE = 1000;
+        const val PERMISSION_CODE_READ = 1001;
+        const val PERMISSION_CODE_WRITE = 1002;
     }
 
 }

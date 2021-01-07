@@ -40,7 +40,11 @@
             android:layout_toRightOf="@+id/backspace_btn"
             android:gravity="center_horizontal"
             android:orientation="horizontal"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintTop_toTopOf="parent"
+            android:selectAllOnFocus="true"
+            android:focusableInTouchMode="true"
+            android:descendantFocusability="beforeDescendants"
+            >
 
             <ImageView
                 android:layout_width="20dp"
