@@ -3,6 +3,8 @@ package com.ilkom.vviped.model
 import com.google.gson.annotations.SerializedName
 
 data class DetectedItem(
-    @SerializedName("object_name")
-    val objectName: String? = null
+    @field:SerializedName("link")
+    val link: String? = null,
+    @field:SerializedName("object_name")
+    val object_name: String? = null
 )
