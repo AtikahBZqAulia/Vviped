@@ -1,4 +1,17 @@
-#### Group A
+### Group A
+### Members :
+- Atikah Aulia Putri
+- Octarina Salsabila
+- Maura Qoonitah Putri
+
+### Our app is now available on Google Play : 
+https://play.google.com/store/apps/details?id=com.ilkom.vviped
+
+### Final Report 
+https://github.com/AtikahBZqAulia/Vviped/blob/master/final_report.pdf
+
+
+### Link
 [You are now in the page of VVIPED-Frontend Repo](https://github.com/AtikahBZqAulia/Vviped)
 
 [Click here to see VVIPED- **Backend Repo**](https://github.com/AtikahBZqAulia/Vviped-Backend/)
@@ -7,11 +20,6 @@
 
 [Click here to see our  **sprint Backlogs**](https://www.notion.so/2211bb67dff7463aa22412926b6de731?v=850f8478b92c4e679cc2df9f4f9802e7)
 
-
-#### Members :
-- Atikah Aulia Putri (Team leader)
-- Octarina Salsabila
-- Maura Qoonitah Putri
 
 
 <img src="https://github.com/AtikahBZqAulia/Vviped/blob/Sprint-11/logo_full.png" width="250"> 
@@ -32,9 +40,5 @@ Kamu bisa menjual produk yang masih layak pakai, ataupun menjual produk kamu sen
 
 - Tertarik dengan produknya dan sudah mengetahui tujuan donasi untuk produk tersebut? Tekan tombol beli dan akan langsung tertuju ke obrolan WhatsApp penjual. Pastikan untuk bertanya lebih rinci tentang kondisi produk, detil galangan dana, detil transaksi ataupun menegosiasikan harga sebelum kamu membelinya.
 
-## Our app is now available on Google Play : 
-<https://play.google.com/store/apps/details?id=com.ilkom.vviped>
 
-_(Aplikasi ini belum dirilis secara resmi dan masih memiliki beberapa fitur yang belum diimplementasikan)_
- 
 
